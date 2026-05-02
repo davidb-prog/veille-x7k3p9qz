@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veille IA — Index</title>
+<style>
+  html, body { margin: 0; padding: 0; width: 100%; font-family: -apple-system, system-ui, "Segoe UI", Roboto, sans-serif; font-size: 18px; line-height: 1.55; -webkit-text-size-adjust: 100%; }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 24px 16px 64px 16px; box-sizing: border-box; }
+  h1 { font-size: 26px; margin: 0 0 8px 0; }
+  .sub { color: #666; font-size: 15px; margin-bottom: 28px; }
+  ul { padding-left: 20px; }
+  li { margin: 8px 0; }
+  a { color: #1d4ed8; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Veille IA — Briefs</h1>
+<div class="sub">Liste des briefs publiés. Le plus récent en haut.</div>
+<ul id="list"></ul>
+<script>
+// Liste générée dynamiquement à chaque déploiement
+const briefs = [  "briefing-ia-2026-05-02.html"];
+const list = document.getElementById('list');
+briefs.sort().reverse().forEach(name => {
+  const li = document.createElement('li');
+  li.innerHTML = '<a href="' + name + '">' + name.replace('briefing-ia-', '').replace('.html', '') + '</a>';
+  list.appendChild(li);
+});
+</script>
+</div>
+</body>
+</html>
