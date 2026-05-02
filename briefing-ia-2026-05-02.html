@@ -3,304 +3,323 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Briefing — Veille IA & Sport endurance — 2 mai 2026</title>
+<title>Briefing — Veille IA &amp; Sport endurance — 2 mai 2026</title>
 <style>
   :root {
-    --fg: #1a1a1a;
-    --fg-muted: #5a5a5a;
-    --fg-faint: #8a8a8a;
-    --bg: #ffffff;
-    --rule: #e5e5e5;
-    --link: #1d4ed8;
-    --analyse-bg: #f5f7ff;
-    --analyse-border: #4f46e5;
-    --chip-ia-bg: #eef2ff;       --chip-ia-fg: #3730a3;
-    --chip-ma-bg: #fef3c7;       --chip-ma-fg: #92400e;
-    --chip-ianative-bg: #ecfdf5; --chip-ianative-fg: #065f46;
-    --chip-sport-bg: #fee2e2;    --chip-sport-fg: #991b1b;
+    --bg: #fafafa;
+    --card: #ffffff;
+    --border: #e5e5e5;
+    --text: #1a1a1a;
+    --muted: #6b6b6b;
+    --accent: #c8312f;
+    --tldr-bg: #fff7ed;
+    --tldr-border: #f59e0b;
+    --analysis-bg: #f0f9ff;
+    --analysis-border: #2563eb;
+    --chip-ia-bg: #ede9fe;     --chip-ia-fg: #5b21b6;
+    --chip-ma-bg: #fef3c7;     --chip-ma-fg: #92400e;
+    --chip-ian-bg: #d1fae5;    --chip-ian-fg: #065f46;
+    --chip-sport-bg: #ffe4e6;  --chip-sport-fg: #9f1239;
   }
   * { box-sizing: border-box; }
   html, body {
+    width: 100%;
     margin: 0;
     padding: 0;
-    width: 100%;
-    background: var(--bg);
-    color: var(--fg);
-    font-family: -apple-system, system-ui, "Segoe UI", Roboto, sans-serif;
-    font-size: 18px;
-    line-height: 1.55;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.55;
   }
-  .wrap {
+  .container {
     max-width: 640px;
-    margin: 0 auto;
-    padding: 20px 16px 64px 16px;
     width: 100%;
-    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 20px 16px 48px;
   }
   h1 {
     font-size: 26px;
-    line-height: 1.2;
-    margin: 0 0 8px 0;
+    line-height: 1.25;
+    margin: 0 0 8px;
+    font-weight: 700;
     letter-spacing: -0.01em;
   }
   .subtitle {
-    color: var(--fg-muted);
+    color: var(--muted);
     font-size: 15px;
-    margin-bottom: 24px;
+    margin: 0 0 24px;
   }
   h2 {
     font-size: 20px;
-    line-height: 1.3;
-    margin: 32px 0 14px 0;
-    padding-top: 14px;
-    border-top: 1px solid var(--rule);
+    margin: 36px 0 12px;
+    font-weight: 700;
     letter-spacing: -0.01em;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 6px;
   }
-  h2:first-of-type { border-top: none; padding-top: 0; }
-  .tldr-block {
-    background: #fafafa;
-    border: 1px solid var(--rule);
+  /* TL;DR */
+  .tldr {
+    background: var(--tldr-bg);
+    border: 1px solid var(--tldr-border);
+    border-left: 4px solid var(--tldr-border);
     border-radius: 8px;
     padding: 18px 16px;
-    margin-bottom: 28px;
+    margin: 20px 0 8px;
   }
-  .tldr-block h2 {
-    margin-top: 0;
-    border-top: none;
-    padding-top: 0;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--fg-muted);
-  }
-  .headline {
-    margin: 16px 0;
-    padding-bottom: 16px;
-    border-bottom: 1px dashed var(--rule);
-  }
-  .headline:last-child { border-bottom: none; padding-bottom: 0; }
-  .headline-title { font-weight: 600; margin: 6px 0 4px 0; font-size: 18px; line-height: 1.3; }
-  .headline-context { color: var(--fg-muted); font-size: 17px; margin: 0 0 8px 0; }
-  .headline-link a { font-size: 16px; line-height: 1.6; min-height: 22px; display: inline-block; }
-  .item {
-    margin: 24px 0;
-  }
-  .item-title { font-weight: 600; font-size: 19px; margin: 0 0 8px 0; line-height: 1.3; }
-  .item-fact { margin: 0 0 8px 0; font-size: 18px; }
-  .item-links {
+  .tldr-title {
+    font-weight: 700;
     font-size: 16px;
-    color: var(--fg-muted);
-    margin: 8px 0 0 0;
-    word-break: break-word;
-  }
-  .item-links a { word-break: break-word; }
-  .analyse {
-    background: var(--analyse-bg);
-    border-left: 3px solid var(--analyse-border);
-    padding: 14px 16px;
-    margin: 12px 0 0 0;
-    border-radius: 0 6px 6px 0;
-    font-size: 17px;
-  }
-  .analyse-label {
-    font-weight: 600;
-    color: var(--analyse-border);
-    font-size: 14px;
+    margin: 0 0 12px;
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    display: block;
-    margin-bottom: 4px;
+    color: #92400e;
+  }
+  .headline {
+    padding: 12px 0;
+    border-top: 1px solid rgba(245, 158, 11, 0.25);
+  }
+  .headline:first-of-type { border-top: 0; padding-top: 0; }
+  .headline-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 6px 0;
+  }
+  .headline-context {
+    font-size: 17px;
+    margin: 4px 0 6px;
+    color: #2a2a2a;
+  }
+  .headline a, .item a {
+    color: var(--accent);
+    text-decoration: underline;
+    word-break: break-word;
+    display: inline-block;
+    min-height: 28px;
+    line-height: 1.4;
+  }
+  .item-links { font-size: 16px; color: var(--muted); }
+  /* Item du corps */
+  .item {
+    padding: 16px 0;
+    border-top: 1px solid var(--border);
+  }
+  .item:first-of-type { border-top: 0; }
+  .item-title {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    line-height: 1.3;
+  }
+  .item-fact {
+    font-size: 18px;
+    margin: 0 0 8px;
   }
   .empty {
-    color: var(--fg-muted);
+    color: var(--muted);
     font-style: italic;
     font-size: 17px;
-    margin: 8px 0 0 0;
+    padding: 8px 0;
   }
+  /* Analyse */
+  .analysis {
+    background: var(--analysis-bg);
+    border-left: 3px solid var(--analysis-border);
+    padding: 10px 14px;
+    margin: 8px 0 4px;
+    border-radius: 4px;
+    font-size: 17px;
+  }
+  .analysis-prefix {
+    font-weight: 700;
+    color: #1d4ed8;
+  }
+  /* Chips */
   .chip {
     display: inline-block;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
-    padding: 3px 9px;
+    letter-spacing: 0.04em;
+    padding: 3px 8px;
     border-radius: 999px;
     vertical-align: middle;
     margin-right: 4px;
   }
-  .chip-ia        { background: var(--chip-ia-bg);        color: var(--chip-ia-fg); }
-  .chip-ma        { background: var(--chip-ma-bg);        color: var(--chip-ma-fg); }
-  .chip-ianative  { background: var(--chip-ianative-bg);  color: var(--chip-ianative-fg); }
-  .chip-sport     { background: var(--chip-sport-bg);     color: var(--chip-sport-fg); }
-  a { color: var(--link); text-decoration: underline; }
-  a:hover { text-decoration: underline; }
+  .chip-IA      { background: var(--chip-ia-bg); color: var(--chip-ia-fg); }
+  .chip-MA      { background: var(--chip-ma-bg); color: var(--chip-ma-fg); }
+  .chip-IAN     { background: var(--chip-ian-bg); color: var(--chip-ian-fg); }
+  .chip-Sport   { background: var(--chip-sport-bg); color: var(--chip-sport-fg); }
+  /* Sources */
   .sources {
-    margin-top: 12px;
+    margin-top: 32px;
+    padding: 16px;
+    background: #f3f4f6;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .sources-title {
+    font-weight: 700;
+    margin: 0 0 8px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+  .source-chips {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px 10px;
-    font-size: 15px;
+    gap: 6px;
   }
-  .sources span {
-    display: inline-block;
-    background: #fafafa;
-    border: 1px solid var(--rule);
-    border-radius: 999px;
-    padding: 5px 11px;
-    color: var(--fg-muted);
+  .source-chip {
+    background: #fff;
+    border: 1px solid var(--border);
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 13px;
+    white-space: nowrap;
   }
-  .footer-audit {
-    margin-top: 48px;
-    padding-top: 16px;
-    border-top: 1px solid var(--rule);
-    font-size: 14px;
-    color: var(--fg-faint);
-    line-height: 1.5;
+  .footer-note {
+    margin-top: 24px;
+    font-size: 12px;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
   }
-  /* Desktop : colonne plus large, typographie plus généreuse */
+  /* Desktop */
   @media (min-width: 768px) {
-    .wrap {
-      max-width: 760px;
-      padding: 40px 48px 80px 48px;
-    }
     body { font-size: 17px; }
+    .container { max-width: 760px; padding: 56px 48px 80px; }
     h1 { font-size: 30px; }
-    h2 { font-size: 22px; margin: 44px 0 18px 0; padding-top: 18px; }
-    .subtitle { font-size: 15px; margin-bottom: 36px; }
-    .tldr-block { padding: 24px 28px; }
-    .tldr-block h2 { font-size: 14px; }
+    h2 { font-size: 22px; margin-top: 44px; }
+    .subtitle { font-size: 15px; }
+    .tldr { padding: 24px 28px; }
     .headline-title { font-size: 18px; }
     .headline-context { font-size: 16px; }
     .item-title { font-size: 19px; }
     .item-fact { font-size: 17px; }
-    .analyse { font-size: 16px; padding: 14px 18px; }
-    .footer-audit { font-size: 13px; }
+    .analysis { font-size: 16px; }
   }
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="container">
 
-<h1>Briefing — Veille IA &amp; Sport endurance — 2 mai 2026</h1>
-<div class="subtitle">Samedi 2 mai 2026 · Lecture : ~5 min · 5 items · fenêtre &lt; 24h</div>
+  <h1>Briefing — Veille IA &amp; Sport endurance — 2 mai 2026</h1>
+  <p class="subtitle">Samedi 2 mai 2026 · Lecture : ~5 min · 6 items couverts · fenêtre &lt; 24h (avec quelques signaux du 30 avril qui prolongent leur impact dans la journée)</p>
 
-<!-- BLOC 2 — TL;DR -->
-<div class="tldr-block">
-<h2>À la une</h2>
+  <!-- ─── BLOC 2 — À LA UNE ─── -->
+  <div class="tldr">
+    <p class="tldr-title">À la une</p>
 
-<div class="headline">
-  <span class="chip chip-ma">M&amp;A</span>
-  <div class="headline-title">Le Pentagone signe avec 8 majors IA pour ses réseaux classifiés — Anthropic exclu</div>
-  <p class="headline-context">DoD officialise des accords avec OpenAI, Google, Microsoft, AWS, Nvidia, SpaceX, Reflection puis Oracle. Anthropic, classé "supply-chain risk" en mars, perd un canal de revenu majeur que ses concurrents récupèrent — re-distribution durable du marché classifié.</p>
-  <div class="headline-link"><a href="https://www.defensenews.com/news/pentagon-congress/2026/05/01/pentagon-freezes-out-anthropic-as-it-signs-deals-with-ai-rivals/" target="_blank" rel="noopener">DefenseNews — 1 mai</a></div>
-</div>
+    <div class="headline">
+      <span class="chip chip-MA">M&amp;A</span>
+      <div class="headline-title">Le Pentagone signe avec 8 acteurs IA, Anthropic explicitement écarté</div>
+      <p class="headline-context">Le DoD a annoncé le 1<sup>er</sup> mai des accords IL6/IL7 avec OpenAI, Google, Microsoft, AWS, NVIDIA, SpaceX, Reflection puis Oracle. Anthropic est listé comme « risque chaîne d'approvisionnement » pour avoir refusé d'autoriser un usage offensif sans garde-fous.</p>
+      <p class="item-links">→ <a href="https://www.cnn.com/2026/05/01/tech/pentagon-ai-anthropic">CNN, 1 mai</a> · <a href="https://defensescoop.com/2026/05/01/dod-expands-classified-ai-work-with-8-companies-excluding-anthropic/">DefenseScoop, 1 mai</a></p>
+    </div>
 
-<div class="headline">
-  <span class="chip chip-ia">IA</span>
-  <div class="headline-title">Anthropic blacklisté côté Pentagone, mais Mythos utilisé par la NSA</div>
-  <p class="headline-context">Le CTO du DoD Emil Michael clarifie le 1er mai : Mythos est un "moment séparé" parce qu'il trouve des zero-days — milliers déjà identifiés par Anthropic, dont une faille OpenBSD vieille de 27 ans. Bras de fer politique vs valeur cyber concrète du modèle.</p>
-  <div class="headline-link"><a href="https://www.cnbc.com/2026/05/01/pentagon-anthropic-blacklist-mythos-michael.html" target="_blank" rel="noopener">CNBC — 1 mai</a></div>
-</div>
+    <div class="headline">
+      <span class="chip chip-Sport">Sport</span>
+      <div class="headline-title">Garmin Connect : une fuite confirme le pivot social anti-Strava</div>
+      <p class="headline-context">Une fuite d'app store indique que Garmin Connect bascule vers un modèle « followers / friend requests » à la Strava — le mutual-connect historique disparaît. Un signal de pivot UX/social pour un acteur qui pesait 45 M d'utilisateurs actifs et 42 % de croissance fitness en Q1.</p>
+      <p class="item-links">→ <a href="https://the5krunner.com/2026/05/01/garmin-vs-strava-connect/">the5krunner, 1 mai</a></p>
+      <div class="analysis"><span class="analysis-prefix">→ Pour le lecteur :</span> si Garmin Connect ouvre vraiment un terrain social, l'avantage différenciant « plan adaptatif sur contraintes » devient encore plus stratégique : c'est la couche logicielle, pas la couche sensor + social, qui distingue.</div>
+    </div>
 
-<div class="headline">
-  <span class="chip chip-sport">Sport</span>
-  <div class="headline-title">Zwift acquiert Rouvy (et FulGaz) — consolidation massive de l'indoor cycling</div>
-  <p class="headline-context">Annonce officielle le 30 avril. Les deux apps continuent en parallèle, mais Zwift verrouille de facto l'écosystème "vélo indoor". Le segment se réorganise autour de plateformes, pas d'apps de coaching.</p>
-  <div class="headline-link"><a href="https://www.dcrainmaker.com/2026/04/zwift-acquires-rouvy-including-fulgaz.html" target="_blank" rel="noopener">DC Rainmaker — 30 avril</a></div>
-  <div class="analyse">
-    <span class="analyse-label">→ Pour le lecteur</span>
-    Zwift consolide la couche "expérience indoor" mais ne touche pas l'adaptatif côté plan. Confirme que la couche logicielle de planification reste un gisement non capté — l'adversaire pour vous, c'est TrainerRoad/TrainingPeaks, pas Zwift.
+    <div class="headline">
+      <span class="chip chip-IA">IA</span>
+      <div class="headline-title">OpenAI rétropédale et restreint l'accès à GPT-5.5-Cyber</div>
+      <p class="headline-context">Trois semaines après avoir critiqué Anthropic pour avoir bridé Mythos, OpenAI annonce le 30 avril que GPT-5.5-Cyber sera réservé aux « critical cyber defenders » via son programme Trusted Access for Cyber. Capacités : pentest, exploitation de vulnérabilités, reverse-engineering de malware.</p>
+      <p class="item-links">→ <a href="https://techcrunch.com/2026/04/30/after-dissing-anthropic-for-limiting-mythos-openai-restricts-access-to-cyber-too/">TechCrunch, 30 avril</a> · <a href="https://openai.com/index/trusted-access-for-cyber/">OpenAI, 30 avril</a></p>
+    </div>
+
+    <div class="headline">
+      <span class="chip chip-MA">M&amp;A</span>
+      <div class="headline-title">Apple abandonne sa cible « net-cash-neutral » : signal M&amp;A IA</div>
+      <p class="headline-context">Sur l'earnings call du 30 avril, le CFO Kevan Parekh annonce la fin du dogme cash-neutral d'Apple. Wedbush et plusieurs analystes lisent cela comme la préparation d'une acquisition IA majeure — chiffre d'affaires Q2 à 111,2 Md$, +17 % YoY.</p>
+      <p class="item-links">→ <a href="https://www.cnbc.com/2026/04/30/apple-delivers-a-nearly-perfect-quarter-with-a-ceo-change-and-an-ai-update-ahead.html">CNBC, 30 avril</a> · <a href="https://macdailynews.com/2026/05/01/apple-just-gave-a-clue-that-a-major-ai-acquisition-may-be-coming/">MacDailyNews, 1 mai</a></p>
+    </div>
+
+    <div class="headline">
+      <span class="chip chip-IAN">IA-native</span>
+      <div class="headline-title">Parallel Web Systems lève 100 M$ à 2 Md$ pour le « web des agents »</div>
+      <p class="headline-context">La startup de Parag Agrawal (ex-CEO Twitter) clôt un Series B mené par Sequoia, cinq mois seulement après son Series A. Plus de 100 000 développeurs et clients comme Notion, Harvey, Clay, Opendoor utilisent ses APIs de search/research pour agents IA.</p>
+      <p class="item-links">→ <a href="https://techcrunch.com/2026/04/29/parallel-web-systems-hits-2b-valuation-five-months-after-its-last-big-raise/">TechCrunch, 29 avril</a></p>
+      <div class="analysis"><span class="analysis-prefix">→ Pour le lecteur :</span> brique potentiellement réutilisable côté produit — agent qui va chercher la météo, l'état de l'épreuve cible, les disponibilités calendaires de l'athlète, sans rebuilder un crawler. À benchmarker vs. tooling natif Anthropic/OpenAI avant de s'engager.</div>
+    </div>
   </div>
-</div>
 
-<div class="headline">
-  <span class="chip chip-sport">Sport</span>
-  <div class="headline-title">Leak Garmin Connect : refonte façon Strava avec followers</div>
-  <p class="headline-context">the5krunner publie le 1er mai des éléments d'app montrant un Garmin Connect qui passe du modèle "mutual connection" à un modèle "follow / follow request" — Garmin assume sa stratégie de plateforme sociale post-rachat de Strava ($2,1Bn confirmé en avril).</p>
-  <div class="headline-link"><a href="https://the5krunner.com/2026/05/01/garmin-vs-strava-connect/" target="_blank" rel="noopener">the5krunner — 1 mai</a></div>
-</div>
+  <!-- ─── BLOC 3 — CORPS ─── -->
 
-</div><!-- /tldr-block -->
+  <h2>1. IA — modèles, produits, communications</h2>
 
-
-<!-- BLOC 3 — Corps -->
-
-<h2><span class="chip chip-ia">IA</span> IA — modèles, produits, communications</h2>
-
-<div class="item">
-  <div class="item-title">Le Pentagone garde Anthropic blacklisté, mais la NSA continue à tester Mythos</div>
-  <p class="item-fact">Le 1er mai, le CTO du Department of War (ex-DoD) Emil Michael indique que la classification d'Anthropic comme "supply-chain risk" reste en place, mais que l'utilisation par la NSA du modèle Mythos pour identifier des vulnérabilités logicielles est "un moment de sécurité nationale séparé". Anthropic affirme que Mythos a découvert des milliers de zero-days dans tous les OS et navigateurs majeurs, dont une faille OpenBSD vieille de 27 ans. Accès toujours restreint à un groupe vérifié sous "Project Glasswing" ; la Maison-Blanche bloque l'extension à 70 organisations supplémentaires pour raisons de capacité de compute et de sécurité.</p>
-  <p class="item-links">Sources : <a href="https://www.cnbc.com/2026/05/01/pentagon-anthropic-blacklist-mythos-michael.html" target="_blank" rel="noopener">CNBC — 1 mai</a> · <a href="https://www.theregister.com/2026/05/01/mythos_complicates_anthropic_us_gov_breakup/" target="_blank" rel="noopener">The Register — 1 mai</a> · <a href="https://www.bloomberg.com/news/articles/2026-04-30/nsa-testing-anthropic-s-mythos-to-find-flaws-in-microsoft-tech" target="_blank" rel="noopener">Bloomberg — 30 avril</a></p>
-</div>
-
-
-<h2><span class="chip chip-ma">M&amp;A</span> M&amp;A &amp; investissements IA</h2>
-
-<div class="item">
-  <div class="item-title">Le Pentagone officialise 8 contrats IA pour réseaux classifiés, Anthropic absent</div>
-  <p class="item-fact">Le 1er mai, le DoD annonce un premier batch de 7 fournisseurs autorisés à déployer leurs modèles sur ses réseaux les plus sensibles — OpenAI, Google, Microsoft, AWS, Nvidia, SpaceX et Reflection — auquel Oracle s'ajoute quelques heures plus tard. Le périmètre couvre des usages classifiés, avec selon OpenAI "plus de garde-fous que tout accord précédent". Le différend avec Anthropic porte spécifiquement sur le refus du labo de céder un accès non restreint à Claude pour des armes autonomes et la surveillance domestique de masse. Aucune valorisation publique des contrats individuels n'a été communiquée, mais l'ordre de grandeur cumulé dépasse plusieurs centaines de M$.</p>
-  <p class="item-links">Sources : <a href="https://www.defensenews.com/news/pentagon-congress/2026/05/01/pentagon-freezes-out-anthropic-as-it-signs-deals-with-ai-rivals/" target="_blank" rel="noopener">DefenseNews — 1 mai</a> · <a href="https://www.cnn.com/2026/05/01/tech/pentagon-ai-anthropic" target="_blank" rel="noopener">CNN Business — 1 mai</a> · <a href="https://siliconangle.com/2026/05/01/pentagon-inks-ai-procurement-deals-seven-companies-leaves-anthropic/" target="_blank" rel="noopener">SiliconAngle — 1 mai</a> · <a href="https://www.washingtonpost.com/technology/2026/05/01/pentagon-ai-deals-microsoft-amazon-google-classified-military/" target="_blank" rel="noopener">Washington Post — 1 mai</a></p>
-</div>
-
-
-<h2><span class="chip chip-ianative">IA-native</span> Sociétés innovantes IA-native</h2>
-
-<div class="item">
-  <div class="item-title">Reflection AI émerge — seule jeune pousse parmi les 8 fournisseurs classifiés du Pentagone</div>
-  <p class="item-fact">Reflection AI, fondée en 2024 par d'anciens chercheurs Google DeepMind et qui avait levé environ 2 Md$ en 2025, est le seul nom non installé dans la liste publiée le 1er mai. Validation publique forte d'un acteur frontier-adjacent, qui se positionne sur l'agentique pour environnements hautement régulés. À surveiller comme baromètre du fait que les "petits" labos peuvent désormais trouver une voie de revenus institutionnelle sans passer par les hyperscalers.</p>
-  <p class="item-links">Sources : <a href="https://siliconangle.com/2026/05/01/pentagon-inks-ai-procurement-deals-seven-companies-leaves-anthropic/" target="_blank" rel="noopener">SiliconAngle — 1 mai</a> · <a href="https://breakingdefense.com/2026/05/pentagon-clears-7-tech-firms-to-deploy-their-ai-on-its-classified-networks/" target="_blank" rel="noopener">Breaking Defense — 1 mai</a></p>
-</div>
-
-
-<h2><span class="chip chip-sport">Sport</span> Applications d'entraînement sportif</h2>
-
-<div class="item">
-  <div class="item-title">Zwift rachète Rouvy (incluant FulGaz) — la plus grosse consolidation indoor cycling depuis l'IPO Strava</div>
-  <p class="item-fact">Annonce officielle le 30 avril. Zwift et Rouvy continueront à opérer en parallèle, avec roadmap et abonnements distincts. Les trainers "Zwift Ready" et le "Zwift Ride" deviendront compatibles avec Rouvy. Pas de montant divulgué. Rouvy avait absorbé FulGaz en janvier 2025 après le bradage par Ironman. Le mouvement scelle la position dominante de Zwift sur le segment "monde virtuel" indoor cycling.</p>
-  <p class="item-links">Sources : <a href="https://news.zwift.com/en-WW/264934-zwift-accelerates-mission-to-make-more-people-more-active-more-often-with-the-acquisition-of-rouvy/" target="_blank" rel="noopener">Zwift Newsroom — 30 avril</a> · <a href="https://www.dcrainmaker.com/2026/04/zwift-acquires-rouvy-including-fulgaz.html" target="_blank" rel="noopener">DC Rainmaker — 30 avril</a> · <a href="https://the5krunner.com/2026/04/30/zwift-acquires-rouvy/" target="_blank" rel="noopener">the5krunner — 30 avril</a></p>
-  <div class="analyse">
-    <span class="analyse-label">→ Pour le lecteur</span>
-    Zwift achète une couche "monde virtuel + bibliothèque de routes/films", pas un moteur de planification adaptative. Le segment "plan d'entraînement multisport qui s'adapte aux contraintes" reste structurellement non couvert par cette consolidation — votre angle reste libre. Mais : Zwift devient un partenaire d'intégration encore plus incontournable pour la séance ; pensez à comment vous y branchez vos plans, pas à le concurrencer.
+  <div class="item">
+    <p class="item-title">OpenAI rend GPT-5.5-Cyber inaccessible au grand public</p>
+    <p class="item-fact">Sam Altman a confirmé le 30 avril le déploiement progressif de GPT-5.5-Cyber via Trusted Access for Cyber (TAC), réservé aux équipes de défense « critiques » : milliers de defenders vérifiés, centaines d'équipes responsables d'infrastructures logicielles. Capacités explicitement listées : pentest, identification &amp; exploitation de vulnérabilités, reverse-engineering de malware. Le ton est notable : OpenAI avait publiquement reproché à Anthropic d'avoir limité l'accès à Mythos il y a trois semaines, et adopte aujourd'hui exactement la même posture.</p>
+    <p class="item-links">→ <a href="https://techcrunch.com/2026/04/30/after-dissing-anthropic-for-limiting-mythos-openai-restricts-access-to-cyber-too/">TechCrunch — 30 avril</a> · <a href="https://openai.com/index/trusted-access-for-cyber/">Communiqué OpenAI — 30 avril</a></p>
+    <div class="analysis"><span class="analysis-prefix">→ Pour le lecteur :</span> hors périmètre direct (pas de signal pour l'endurance), mais signal de marché à noter : les grands labos convergent sur un modèle de gating par cas d'usage. Les API « ouvertes par défaut » deviennent l'exception côté capacités sensibles — à anticiper si un futur module IA du produit touche à des données médicales/sensibles.</div>
   </div>
-</div>
 
-<div class="item">
-  <div class="item-title">Garmin Connect — leak d'app montre un pivot vers un modèle "followers" type Strava</div>
-  <p class="item-fact">the5krunner publie le 1er mai des extraits de l'app indiquant que Garmin remplace son modèle "mutual connection" (acceptation réciproque obligatoire) par un système de "follow / follow request" calqué sur Strava, avec des limites de suivi. À mettre en perspective avec le rachat confirmé de Strava par Garmin pour 2,1 Md$ le 1er avril : Garmin ré-architecture Connect comme une plateforme sociale de masse adossée à sa base de ~45M d'utilisateurs actifs. Pas de communication officielle Garmin à date.</p>
-  <p class="item-links">Source : <a href="https://the5krunner.com/2026/05/01/garmin-vs-strava-connect/" target="_blank" rel="noopener">the5krunner — 1 mai</a> [source secondaire — leak app, pas de communiqué officiel Garmin]</p>
-  <div class="analyse">
-    <span class="analyse-label">→ Pour le lecteur</span>
-    Garmin investit son énergie sur la couche social/feed, pas sur l'adaptatif intelligent. Le silo "plan multisport adaptatif" reste vacant côté grands acteurs. Lecture inverse cependant : Garmin verrouille progressivement les couches en aval (capteur, social, communauté) — l'unique défense long-terme d'un challenger comme vous est la qualité du moteur de personnalisation, pas la fidélisation par feature.
+  <h2>2. M&amp;A &amp; investissements IA</h2>
+
+  <div class="item">
+    <p class="item-title">Pentagone : 8 contrats IL6/IL7, Anthropic publiquement exclu</p>
+    <p class="item-fact">Le Department of Defense a annoncé le 1<sup>er</sup> mai des accords pour déployer de l'IA frontière sur ses réseaux classifiés Impact Level 6 et 7 (planification de mission, analyse de renseignement, ciblage). Liste initiale de 7 — OpenAI, Google, Microsoft, AWS, NVIDIA, SpaceX, Reflection (startup IA-native backée NVIDIA) — Oracle ajouté quelques heures plus tard. Anthropic est exclu nommément après avoir refusé d'autoriser un usage « lawful purpose » sans garde-fous sur surveillance domestique et armes autonomes ; en février, Hegseth l'avait labellisée « supply chain risk », et Anthropic a porté plainte contre le DoD pour représailles. Le marché prend acte : une partie significative du revenu IA gouvernemental américain à 5 ans bascule vers les 8 retenus.</p>
+    <p class="item-links">→ <a href="https://www.cnn.com/2026/05/01/tech/pentagon-ai-anthropic">CNN — 1 mai</a> · <a href="https://defensescoop.com/2026/05/01/dod-expands-classified-ai-work-with-8-companies-excluding-anthropic/">DefenseScoop — 1 mai</a> · <a href="https://www.defensenews.com/news/pentagon-congress/2026/05/01/pentagon-freezes-out-anthropic-as-it-signs-deals-with-ai-rivals/">Defense News — 1 mai</a></p>
   </div>
-</div>
 
+  <div class="item">
+    <p class="item-title">Apple : abandon de la cible « net-cash-neutral », signal d'acquisition IA</p>
+    <p class="item-fact">Sur l'earnings call du 30 avril (Q2 fiscal 2026 : 111,2 Md$ de CA, +17 % YoY), le CFO Kevan Parekh confirme l'abandon de la cible historique de neutralité cash-dette qu'Apple maintenait depuis plus d'une décennie. Justification officielle : « optimiser la structure cash/dette pour soutenir le business ». Lecture industrie : Wedbush (Dan Ives) et plusieurs analystes lisent cela comme la préparation d'une acquisition de plusieurs dizaines de milliards, vraisemblablement IA, au moment où Apple confirme un changement de CEO et un retard relatif sur Apple Intelligence. Aucune cible publiquement nommée.</p>
+    <p class="item-links">→ <a href="https://www.cnbc.com/2026/04/30/apple-delivers-a-nearly-perfect-quarter-with-a-ceo-change-and-an-ai-update-ahead.html">CNBC — 30 avril</a> · <a href="https://macdailynews.com/2026/05/01/apple-just-gave-a-clue-that-a-major-ai-acquisition-may-be-coming/">MacDailyNews — 1 mai</a></p>
+  </div>
 
-<!-- BLOC 4 — Qualité des sources -->
-<h2>Qualité des sources</h2>
-<div class="sources">
-  <span>defensenews.com 🟢</span>
-  <span>cnn.com 🟢</span>
-  <span>washingtonpost.com 🟢</span>
-  <span>cnbc.com 🟢</span>
-  <span>bloomberg.com 🟢</span>
-  <span>theregister.com 🟢</span>
-  <span>siliconangle.com 🟢</span>
-  <span>breakingdefense.com 🟢</span>
-  <span>news.zwift.com 🟢</span>
-  <span>dcrainmaker.com 🟡</span>
-  <span>the5krunner.com 🟡</span>
-</div>
+  <h2>3. Sociétés innovantes IA-native</h2>
 
+  <div class="item">
+    <p class="item-title">Parallel Web Systems : 100 M$ Series B à 2 Md$ pour le « web des agents »</p>
+    <p class="item-fact">Annoncé fin avril, le tour de Parag Agrawal (ex-CEO Twitter) est mené par Sequoia, avec Kleiner, Index, Khosla, First Round, Spark, Terrain. Total levé depuis création : 230 M$. Produit : suite d'APIs de search/research conçues pour les agents IA (vs. usage humain), avec clients déjà déployés Notion, Harvey, Clay, Opendoor — et un base de 100 000+ développeurs. Le timing — Series B 5 mois après Series A — illustre la dynamique de pricing du segment « agent infrastructure ».</p>
+    <p class="item-links">→ <a href="https://techcrunch.com/2026/04/29/parallel-web-systems-hits-2b-valuation-five-months-after-its-last-big-raise/">TechCrunch — 29 avril</a></p>
+    <div class="analysis"><span class="analysis-prefix">→ Pour le lecteur :</span> la couche « web/recherche pour agents » se consolide vite — pertinent si le plan adaptatif intègre des agents qui interrogent des sources externes (météo, profil de course, calendrier, news équipement). À garder en watchlist comme alternative ou complément aux tools natifs OpenAI/Anthropic, surtout pour des cas où la fraîcheur et la couverture web priment sur le coût marginal.</div>
+  </div>
 
-<!-- AUDIT NOTIFICATION -->
-<div class="footer-audit">
-  Notification envoyée : <strong>oui</strong> — priorité <strong>4 (high)</strong> · ntfy id <code>pKDK9LDXKahF</code>.<br>
-  Mode : <strong>push systématique (phase de calibration)</strong>. Politique mise à jour le 2 mai 2026 — élargissement du trigger 2 pour couvrir les acquisitions/pivots structurants des acteurs indirects (Zwift, Garmin, Strava, Wahoo, Coros, Whoop), IA ou non.<br>
-  Triggers matchés : 2 (mouvement structurant marché adjacent — Zwift × Rouvy + FulGaz, leak Garmin Connect façon Strava). Triggers non matchés : 1 (pas de mouvement concurrent direct), 3 (pas de release frontier &lt; 24h), 4 (contrats Pentagone non chiffrés publiquement par fournisseur), 5 (pas de brique technique nouvelle directement réutilisable).<br>
-  Headlines poussées : Zwift × Rouvy/FulGaz (30 avr.) et leak Garmin Connect (1 mai).
-</div>
+  <div class="item">
+    <p class="item-title">Reflection AI fait son entrée dans le club des fournisseurs gouvernementaux</p>
+    <p class="item-fact">Plus discret que les six géants, Reflection AI — startup IA-native backée NVIDIA — figure dans les 7 entreprises retenues le 1<sup>er</sup> mai par le Pentagone pour le déploiement IL6/IL7. Premier contrat institutionnel structurant pour la jeune société, qui se positionne explicitement comme alternative américaine open-source aux modèles chinois (DeepSeek). Aucun chiffre de contrat publié, mais l'effet de signal vis-à-vis du capital-risque est immédiat.</p>
+    <p class="item-links">→ <a href="https://breakingdefense.com/2026/05/pentagon-clears-7-tech-firms-to-deploy-their-ai-on-its-classified-networks/">Breaking Defense — 1 mai</a></p>
+  </div>
+
+  <h2>4. Applications d'entraînement sportif</h2>
+
+  <div class="item">
+    <p class="item-title">Garmin Connect : la fuite confirme le pivot anti-Strava</p>
+    <p class="item-fact">Une fuite d'éléments d'app indique que Garmin Connect quitte le modèle historique « mutual connection avec approbation » pour adopter un modèle Strava : followers, follow requests, friends. Au-delà du social, le post de the5krunner souligne le contexte : 45 M d'utilisateurs actifs Garmin Connect estimés, 42 % de croissance fitness en Q1 2026, une stack capteur (FirstBeat, métriques physiologiques) que Strava ne peut pas répliquer côté hardware. Ce qui reste flou : la date de release publique, et l'éventuel coaching adaptatif ajouté en parallèle (non documenté dans la fuite). Le pivot social isolé ne crée pas de menace directe sur le segment « plan adaptatif multisport », mais ouvre la voie à un produit Garmin de coaching consolidé sur la base élargie.</p>
+    <p class="item-links">→ <a href="https://the5krunner.com/2026/05/01/garmin-vs-strava-connect/">the5krunner — 1 mai</a></p>
+    <div class="analysis"><span class="analysis-prefix">→ Pour le lecteur :</span> Garmin transforme sa base captive en réseau social ; à terme, le pricing power se déplace vers la couche logicielle « ce que je fais de mes data ». La promesse « le plan s'adapte aux contraintes de l'athlète » reste un positionnement orthogonal au social, mais le risque c'est que Garmin sorte rapidement un coaching adaptatif intégré — à surveiller dans les 6-9 mois. Côté opportunité : un Garmin Connect plus ouvert socialement crée des hooks de viralité (partage de plans, follow d'athlètes) potentiellement adressables via API si Garmin l'autorise.</div>
+  </div>
+
+  <!-- ─── BLOC 4 — QUALITÉ DES SOURCES ─── -->
+  <div class="sources">
+    <p class="sources-title">Qualité des sources</p>
+    <div class="source-chips">
+      <span class="source-chip">cnn.com 🟢</span>
+      <span class="source-chip">defensescoop.com 🟢</span>
+      <span class="source-chip">defensenews.com 🟢</span>
+      <span class="source-chip">breakingdefense.com 🟢</span>
+      <span class="source-chip">cnbc.com 🟢</span>
+      <span class="source-chip">techcrunch.com 🟢</span>
+      <span class="source-chip">openai.com 🟢</span>
+      <span class="source-chip">the5krunner.com 🟡</span>
+      <span class="source-chip">macdailynews.com 🟠</span>
+    </div>
+  </div>
+
+  <p class="footer-note">Notification haut-impact envoyée : oui — triggers : Pentagone IL6/IL7 (M&amp;A IA majeur, contrat institutionnel structurant) + Garmin Connect pivot social (mouvement structurant marché adjacent) — priorité : 4.</p>
 
 </div>
 </body>
