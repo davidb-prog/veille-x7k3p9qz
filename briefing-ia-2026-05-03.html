@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — Veille IA &amp; Sport endurance — 3 mai 2026</title>
+<style>
+  :root {
+    --bg: #fafafa;
+    --card: #ffffff;
+    --border: #e5e5e5;
+    --text: #1a1a1a;
+    --muted: #6b6b6b;
+    --accent: #c8312f;
+    --tldr-bg: #fff7ed;
+    --tldr-border: #f59e0b;
+    --analysis-bg: #f0f9ff;
+    --analysis-border: #2563eb;
+    --chip-ia-bg: #ede9fe;     --chip-ia-fg: #5b21b6;
+    --chip-ma-bg: #fef3c7;     --chip-ma-fg: #92400e;
+    --chip-ian-bg: #d1fae5;    --chip-ian-fg: #065f46;
+    --chip-sport-bg: #ffe4e6;  --chip-sport-fg: #9f1239;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.55;
+  }
+  .container {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 16px 48px;
+  }
+  h1 {
+    font-size: 26px;
+    line-height: 1.25;
+    margin: 0 0 8px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 15px;
+    margin: 0 0 24px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 36px 0 12px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 6px;
+  }
+  /* TL;DR */
+  .tldr {
+    background: var(--tldr-bg);
+    border: 1px solid var(--tldr-border);
+    border-left: 4px solid var(--tldr-border);
+    border-radius: 8px;
+    padding: 18px 16px;
+    margin: 20px 0 8px;
+  }
+  .tldr-title {
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0 0 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #92400e;
+  }
+  .headline {
+    padding: 12px 0;
+    border-top: 1px solid rgba(245, 158, 11, 0.25);
+  }
+  .headline:first-of-type { border-top: 0; padding-top: 0; }
+  .headline-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 6px 0;
+  }
+  .headline-context {
+    font-size: 17px;
+    margin: 4px 0 6px;
+    color: #2a2a2a;
+  }
+  .headline a, .item a {
+    color: var(--accent);
+    text-decoration: underline;
+    word-break: break-word;
+    display: inline-block;
+    min-height: 28px;
+    line-height: 1.4;
+  }
+  .item-links { font-size: 16px; color: var(--muted); }
+  /* Item du corps */
+  .item {
+    padding: 16px 0;
+    border-top: 1px solid var(--border);
+  }
+  .item:first-of-type { border-top: 0; }
+  .item-title {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    line-height: 1.3;
+  }
+  .item-fact {
+    font-size: 18px;
+    margin: 0 0 8px;
+  }
+  .empty {
+    color: var(--muted);
+    font-style: italic;
+    font-size: 17px;
+    padding: 8px 0;
+  }
+  /* Analyse */
+  .analysis {
+    background: var(--analysis-bg);
+    border-left: 3px solid var(--analysis-border);
+    padding: 10px 14px;
+    margin: 8px 0 4px;
+    border-radius: 4px;
+    font-size: 17px;
+  }
+  .analysis-prefix {
+    font-weight: 700;
+    color: #1d4ed8;
+  }
+  /* Chips */
+  .chip {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 3px 8px;
+    border-radius: 999px;
+    vertical-align: middle;
+    margin-right: 4px;
+  }
+  .chip-IA      { background: var(--chip-ia-bg); color: var(--chip-ia-fg); }
+  .chip-MA      { background: var(--chip-ma-bg); color: var(--chip-ma-fg); }
+  .chip-IAN     { background: var(--chip-ian-bg); color: var(--chip-ian-fg); }
+  .chip-Sport   { background: var(--chip-sport-bg); color: var(--chip-sport-fg); }
+  /* Sources */
+  .sources {
+    margin-top: 32px;
+    padding: 16px;
+    background: #f3f4f6;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .sources-title {
+    font-weight: 700;
+    margin: 0 0 8px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+  .source-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .source-chip {
+    background: #fff;
+    border: 1px solid var(--border);
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+  .footer-note {
+    margin-top: 24px;
+    font-size: 12px;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+  }
+  /* Desktop */
+  @media (min-width: 768px) {
+    body { font-size: 17px; }
+    .container { max-width: 760px; padding: 56px 48px 80px; }
+    h1 { font-size: 30px; }
+    h2 { font-size: 22px; margin-top: 44px; }
+    .subtitle { font-size: 15px; }
+    .tldr { padding: 24px 28px; }
+    .headline-title { font-size: 18px; }
+    .headline-context { font-size: 16px; }
+    .item-title { font-size: 19px; }
+    .item-fact { font-size: 17px; }
+    .analysis { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h1>Briefing — Veille IA &amp; Sport endurance — 3 mai 2026</h1>
+  <p class="subtitle">Dimanche 3 mai 2026 · Lecture : ~5 min · 6 items couverts · fenêtre &lt; 24h (journée plate côté sport — week-end calme post-leak Garmin déjà traité hier)</p>
+
+  <!-- ─── BLOC 2 — À LA UNE ─── -->
+  <div class="tldr">
+    <p class="tldr-title">À la une</p>
+
+    <div class="headline">
+      <span class="chip chip-IA">IA</span>
+      <div class="headline-title">Microsoft Agent 365 passe en GA — premier « control plane » agentique cross-cloud</div>
+      <p class="headline-context">Microsoft a basculé Agent 365 en disponibilité générale le 1<sup>er</sup> mai (15 $/utilisateur/mois). L'outil étend Entra/Defender/Intune aux agents IA — y compris ceux d'AWS Bedrock, Google Cloud et agents locaux type OpenClaw — pour gouverner le « shadow AI » qui prolifère dans les entreprises.</p>
+      <p class="item-links">→ <a href="https://www.microsoft.com/en-us/security/blog/2026/05/01/microsoft-agent-365-now-generally-available-expands-capabilities-and-integrations/">Microsoft Security Blog, 1 mai</a></p>
+    </div>
+
+    <div class="headline">
+      <span class="chip chip-IA">IA</span>
+      <div class="headline-title">Italie ferme ses enquêtes contre DeepSeek, Mistral et Nova AI sur les hallucinations</div>
+      <p class="headline-context">L'AGCM accepte des engagements contraignants des trois acteurs (avertissements en italien sur les risques d'hallucination, disclaimers permanents in-app) avec une fenêtre de conformité de 120 jours et amende potentielle de 11,6 M$. Premier dossier consumer protection IA fermé en Europe sur ce motif précis.</p>
+      <p class="item-links">→ <a href="https://thenextweb.com/news/agcm-deepseek-mistral-nova-ai-hallucination-probes">TNW, 1 mai</a> · <a href="https://www.investing.com/news/economy-news/italy-closes-probe-into-deepseek-after-commitments-to-warn-of-ai-hallucination-risks-4430621">Reuters via Investing, 1 mai</a></p>
+      <div class="analysis"><span class="analysis-prefix">→ Pour le lecteur :</span> jurisprudence européenne directement transposable à un produit qui génère des conseils d'entraînement IA — la transparence sur les limites (incertitude, écart sur séries temporelles capteurs, risque de mauvaise prescription) devient un critère consumer protection, pas un wishlist UX. À intégrer dès la v1 plutôt qu'à patcher sous régulateur.</div>
+    </div>
+
+    <div class="headline">
+      <span class="chip chip-IAN">IA-native</span>
+      <div class="headline-title">MoonPay MoonAgents Card — première Mastercard virtuelle pour agents IA</div>
+      <p class="headline-context">MoonPay a lancé le 1<sup>er</sup> mai une carte Mastercard virtuelle qui permet aux agents IA de dépenser des stablecoins on-chain chez n'importe quel marchand acceptant Mastercard, avec révocation des droits à tout moment. UK et Amérique latine d'abord, US/EU à suivre.</p>
+      <p class="item-links">→ <a href="https://www.prnewswire.com/news-releases/moonpay-announces-moonagents-card-enabling-ai-agents-to-spend-stablecoins-anywhere-mastercard-is-accepted-302760128.html">Communiqué MoonPay, 1 mai</a></p>
+    </div>
+  </div>
+
+  <!-- ─── BLOC 3 — CORPS ─── -->
+
+  <h2>1. IA — modèles, produits, communications</h2>
+
+  <div class="item">
+    <p class="item-title">Microsoft Agent 365 : disponibilité générale et écosystème de partenaires</p>
+    <p class="item-fact">Annoncé en preview à Ignite 2025, Agent 365 est officiellement en GA depuis le 1<sup>er</sup> mai 2026, à 15 $/utilisateur/mois côté commercial. Microsoft positionne l'outil comme le pendant gouvernance de Microsoft 365 : observabilité, contrôle d'accès via Entra, blocage de connexions sortantes vers des destinations non approuvées, détection de prompts hostiles, et — c'est nouveau au GA — synchronisation de registre avec AWS Bedrock et Google Cloud (en preview). Côté écosystème, agents partenaires gérables nativement : Genspark, Zensai, Egnyte, Zendesk, plus les agents construits sur Kasisto, Kore et n8n. Reste en preview pour juin 2026 : context mapping, runtime blocking via Intune/Defender.</p>
+    <p class="item-links">→ <a href="https://www.microsoft.com/en-us/security/blog/2026/05/01/microsoft-agent-365-now-generally-available-expands-capabilities-and-integrations/">Microsoft Security Blog — 1 mai</a> · <a href="https://learn.microsoft.com/en-us/microsoft-agent-365/overview">Microsoft Learn — overview</a></p>
+    <div class="analysis"><span class="analysis-prefix">→ Pour le lecteur :</span> hors périmètre direct B2C, mais signal structurel : la « gouvernance d'agents » devient une catégorie de produit à part entière. Si l'app devait s'attaquer plus tard au marché des coachs / clubs / fédérations en B2B, ce type de couche (audit, contrôle, journalisation) sera demandé d'emblée — à anticiper dans l'architecture plutôt qu'à bolt-on.</div>
+  </div>
+
+  <div class="item">
+    <p class="item-title">Italie : engagements contraignants pour DeepSeek, Mistral, Nova AI</p>
+    <p class="item-fact">L'AGCM (autorité de la concurrence et de la consommation italienne) a clôturé le 1<sup>er</sup> mai trois enquêtes ouvertes en 2024 contre DeepSeek, Mistral AI et Scaleup Yazilim (opérateur de Nova AI). Les trois sociétés s'engagent à afficher de manière proéminente les risques d'hallucination dans leurs interfaces, en italien, avec disclaimers permanents. DeepSeek va plus loin : traduction complète des conditions, formations internes, et — inhabituel — un engagement technique à investir dans la réduction du taux d'hallucination. Nova AI doit aussi clarifier que son produit est un agrégateur (ChatGPT, Gemini, Claude, DeepSeek). Fenêtre de conformité 120 jours, amende potentielle ~11,6 M$ par dossier en cas de manquement.</p>
+    <p class="item-links">→ <a href="https://thenextweb.com/news/agcm-deepseek-mistral-nova-ai-hallucination-probes">The Next Web — 1 mai</a> · <a href="https://www.investing.com/news/economy-news/italy-closes-probe-into-deepseek-after-commitments-to-warn-of-ai-hallucination-risks-4430621">Reuters via Investing — 1 mai</a></p>
+    <div class="analysis"><span class="analysis-prefix">→ Pour le lecteur :</span> précédent réglementaire à intégrer dans la roadmap UX. Une app qui prescrit du training par IA est plus exposée que ChatGPT — l'erreur a des conséquences physiques. À traduire en patterns concrets : disclaimer permanent visible, calibration explicite (« recommandation basée sur 14 jours de données capteurs, marge d'erreur sur la VFC »), et probablement, à terme, une politique claire sur ce que l'IA ne fait pas (pas de prescription médicale, pas de retour de blessure). Mieux vaut le poser comme avantage de transparence que comme contrainte subie.</div>
+  </div>
+
+  <div class="item">
+    <p class="item-title">Replit ouvre 24h d'accès gratuit à son Agent pour ses 10 ans</p>
+    <p class="item-fact">Pour son 10<sup>e</sup> anniversaire, Replit a ouvert le 2 mai un accès gratuit illimité à son Agent (vibe coding) pendant 24 heures, sans plafond ni crédit, de 5h PT samedi à 5h PT dimanche. Promo couplée à un buildathon doté de 100 k$. Coup marketing classique mais qui souligne la pression concurrentielle sur le segment agentic coding (Cursor, Cognition, OpenAI Codex), où Replit cherche à élargir sa base au-delà des développeurs amateurs.</p>
+    <p class="item-links">→ <a href="https://replit.com/birthday">Replit Birthday — 2 mai</a></p>
+  </div>
+
+  <div class="item">
+    <p class="item-title">Qwen × Fireworks AI : deal d'inférence à bas coût pour les modèles closed-weights</p>
+    <p class="item-fact">Annoncé le 2 mai, partenariat stratégique entre Alibaba (Qwen) et Fireworks AI pour déployer les modèles closed-weights de Qwen avec une latence réduite et un coût d'inférence abaissé. Pas de chiffre public sur le pricing ou le volume. Le mouvement s'inscrit dans la stratégie de Qwen pour pénétrer le marché US/EU enterprise via des fournisseurs d'inférence indépendants, là où l'usage direct via Alibaba Cloud est freiné par les contraintes géopolitiques.</p>
+    <p class="item-links">→ <a href="https://blog.mean.ceo/ai-news-may-2026/">Mean.ceo digest — 2 mai</a> [agrégateur — communiqué primaire indisponible au moment de la rédaction]</p>
+  </div>
+
+  <h2>2. M&amp;A &amp; investissements IA</h2>
+
+  <p class="empty">Rien à signaler aujourd'hui sur ce volet — la vague hebdomadaire (Pentagone IL6/IL7, Google ↔ Anthropic 40 Md$, Apple net-cash-neutral) a déjà été intégrée dans les éditions précédentes, et aucun deal nouveau majeur (≥ 500 M$) n'a été annoncé sur les 24 dernières heures.</p>
+
+  <h2>3. Sociétés innovantes IA-native</h2>
+
+  <div class="item">
+    <p class="item-title">MoonPay : MoonAgents Card, une Mastercard virtuelle pour agents IA</p>
+    <p class="item-fact">MoonPay a lancé le 1<sup>er</sup> mai sa MoonAgents Card, en partenariat avec Monavate (infrastructure de paiement régulée) et Exodus (wallet self-custody). La carte permet à un agent IA de dépenser des stablecoins on-chain chez n'importe quel marchand acceptant Mastercard, avec conversion crypto/fiat au point de vente, et révocation des droits par l'utilisateur à tout moment. Disponible en UK et Amérique latine, déploiement US/EU dans les prochains mois (sous KYC). MoonPay annonce 4 millions d'appels API depuis le lancement de son CLI — premier million en 30 jours, deuxième million en 7 jours. Signal d'accélération du segment « agentic commerce ».</p>
+    <p class="item-links">→ <a href="https://www.prnewswire.com/news-releases/moonpay-announces-moonagents-card-enabling-ai-agents-to-spend-stablecoins-anywhere-mastercard-is-accepted-302760128.html">Communiqué MoonPay — 1 mai</a> · <a href="https://decrypt.co/366341/moonpay-launches-debit-mastercard-ai-agents-pay-stablecoins">Decrypt — 1 mai</a></p>
+  </div>
+
+  <div class="item">
+    <p class="item-title">B.AI (Justin Sun) : passerelle multi-LLM avec paiement crypto et sans KYC</p>
+    <p class="item-fact">Justin Sun (Tron) a lancé le 2 mai B.AI, une API gateway unifiée donnant accès à Claude, GPT, Gemini, Kimi, GLM et MiniMax, payable en crypto, sans KYC. Le pitch officiel : abstraction multi-fournisseur pour les développeurs et les agents. Lecture industrie : émerge un marché parallèle d'agrégation LLM qui contourne les politiques d'usage des labos (région, identité, journalisation). Aucun chiffre client ou volume publié pour l'instant.</p>
+    <p class="item-links">→ <a href="https://www.cryptointegrat.com/p/ai-news-may-2-2026">Crypto Integrated — 2 mai</a> [agrégateur — pas de communiqué primaire identifié]</p>
+    <div class="analysis"><span class="analysis-prefix">→ Pour le lecteur :</span> contre-intuitivement, ce type de gateway est à éviter pour un produit santé/sport — risque de violation des CGU des labos (suspension d'API du jour au lendemain), et angle mort RGPD (où vivent les prompts de l'utilisateur, qui les stocke ?). À retenir comme repère de marché plus que comme outil candidat.</div>
+  </div>
+
+  <h2>4. Applications d'entraînement sportif</h2>
+
+  <p class="empty">Rien à signaler aujourd'hui sur ce volet — week-end calme côté watchlist, sans annonce produit, lancement, levée ou pivot dans les 24 dernières heures. La fuite Garmin Connect du 1<sup>er</sup> mai a été couverte hier ; pas de relance ou contre-annonce d'un concurrent direct (TrainingPeaks, TrainerRoad, Athletica.ai, Humango, Enduco) ce week-end.</p>
+
+  <!-- ─── BLOC 4 — QUALITÉ DES SOURCES ─── -->
+  <div class="sources">
+    <p class="sources-title">Qualité des sources</p>
+    <div class="source-chips">
+      <span class="source-chip">microsoft.com 🟢</span>
+      <span class="source-chip">prnewswire.com 🟢</span>
+      <span class="source-chip">decrypt.co 🟢</span>
+      <span class="source-chip">thenextweb.com 🟢</span>
+      <span class="source-chip">investing.com (Reuters) 🟢</span>
+      <span class="source-chip">replit.com 🟢</span>
+      <span class="source-chip">learn.microsoft.com 🟢</span>
+      <span class="source-chip">blog.mean.ceo 🟠</span>
+      <span class="source-chip">cryptointegrat.com 🟠</span>
+    </div>
+  </div>
+
+  <p class="footer-note">Notification haut-impact envoyée : non — aucun trigger ne matche aujourd'hui (pas de mouvement direct sur la watchlist sport, pas de M&amp;A IA &gt; 500 M$, pas de modèle frontier). Push systématique (mode calibration) envoyé en priorité 2.</p>
+
+</div>
+</body>
+</html>
