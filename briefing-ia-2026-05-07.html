@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — Veille IA & Sport endurance — 7 mai 2026</title>
+<style>
+  :root {
+    --bg: #fafaf9;
+    --surface: #ffffff;
+    --text: #1a1a1a;
+    --muted: #5c5c5c;
+    --border: #e5e5e3;
+    --accent: #c9472a;
+    --accent-soft: #f6ecdf;
+    --tldr-bg: #fff8ef;
+    --analysis-bg: #f1ede7;
+    --analysis-border: #c9472a;
+
+    --chip-ia-bg: #e6f0fa;       --chip-ia-fg: #1f4f86;
+    --chip-mna-bg: #efe6f7;      --chip-mna-fg: #4f2a8a;
+    --chip-ianative-bg: #e9f4ec; --chip-ianative-fg: #1f6e3d;
+    --chip-sport-bg: #fae8e1;    --chip-sport-fg: #8a3216;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.55;
+    font-size: 18px;
+  }
+  .wrap {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 16px 64px 16px;
+  }
+  h1 {
+    font-size: 26px;
+    line-height: 1.25;
+    margin: 0 0 8px 0;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 15px;
+    margin: 0 0 28px 0;
+  }
+  h2.section-title {
+    font-size: 20px;
+    line-height: 1.3;
+    margin: 40px 0 16px 0;
+    font-weight: 700;
+    letter-spacing: -0.005em;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 8px;
+  }
+  .tldr {
+    background: var(--tldr-bg);
+    border: 1px solid #efd9b8;
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin: 0 0 32px 0;
+  }
+  .tldr-title {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    margin: 0 0 12px 0;
+  }
+  .headline {
+    margin: 0 0 18px 0;
+    padding: 0 0 18px 0;
+    border-bottom: 1px dashed #e5d6bd;
+  }
+  .headline:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+  .headline-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 6px 0 6px 0;
+  }
+  .headline-context {
+    font-size: 17px;
+    line-height: 1.5;
+    margin: 0 0 8px 0;
+    color: #2a2a2a;
+  }
+  .headline-analysis {
+    background: var(--analysis-bg);
+    border-left: 3px solid var(--analysis-border);
+    padding: 8px 12px;
+    margin: 8px 0 8px 0;
+    font-size: 17px;
+    line-height: 1.45;
+    border-radius: 0 6px 6px 0;
+  }
+  .item {
+    margin: 0 0 28px 0;
+  }
+  .item-title {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0 0 8px 0;
+  }
+  .item-fact {
+    font-size: 18px;
+    line-height: 1.55;
+    margin: 0 0 8px 0;
+  }
+  .item-links {
+    font-size: 16px;
+    color: var(--muted);
+    margin: 6px 0 0 0;
+    word-break: break-word;
+  }
+  .item-links a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid #efd9b8;
+    padding: 2px 0;
+    display: inline-block;
+    min-height: 32px;
+    line-height: 28px;
+  }
+  .analysis {
+    background: var(--analysis-bg);
+    border-left: 3px solid var(--analysis-border);
+    padding: 10px 14px;
+    margin: 10px 0 0 0;
+    font-size: 17px;
+    line-height: 1.5;
+    border-radius: 0 6px 6px 0;
+  }
+  .analysis-label {
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .empty-section {
+    color: var(--muted);
+    font-style: italic;
+    font-size: 17px;
+    padding: 8px 0 16px 0;
+  }
+  .chip {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 3px 9px;
+    border-radius: 999px;
+    vertical-align: middle;
+    margin-right: 4px;
+  }
+  .chip-ia       { background: var(--chip-ia-bg);       color: var(--chip-ia-fg); }
+  .chip-mna      { background: var(--chip-mna-bg);      color: var(--chip-mna-fg); }
+  .chip-ianative { background: var(--chip-ianative-bg); color: var(--chip-ianative-fg); }
+  .chip-sport    { background: var(--chip-sport-bg);    color: var(--chip-sport-fg); }
+
+  .sources {
+    margin-top: 48px;
+    padding-top: 16px;
+    border-top: 2px solid var(--border);
+  }
+  .sources h2 {
+    font-size: 18px;
+    margin: 0 0 12px 0;
+  }
+  .sources-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--muted);
+    word-break: break-word;
+  }
+  .sources-list span {
+    background: #f0eeea;
+    padding: 4px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .footer-note {
+    margin-top: 36px;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+  }
+  a { color: var(--accent); }
+
+  @media (min-width: 768px) {
+    body { font-size: 17px; }
+    .wrap { max-width: 760px; padding: 56px 48px 80px 48px; }
+    h1 { font-size: 30px; }
+    .subtitle { font-size: 15px; margin-bottom: 36px; }
+    h2.section-title { font-size: 22px; margin-top: 48px; }
+    .tldr { padding: 24px 28px; border-radius: 14px; }
+    .headline-title { font-size: 18px; }
+    .headline-context { font-size: 16px; }
+    .headline-analysis { font-size: 16px; }
+    .item-title { font-size: 19px; }
+    .item-fact { font-size: 17px; }
+    .analysis { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Briefing — Veille IA &amp; Sport endurance — 7 mai 2026</h1>
+  <div class="subtitle">Jeudi 7 mai 2026 · Lecture : ~5 min · 11 items couverts</div>
+
+  <!-- ============================ TL;DR ============================ -->
+  <section class="tldr" aria-label="À la une">
+    <div class="tldr-title">À la une</div>
+
+    <div class="headline">
+      <span class="chip chip-ia">IA</span>
+      <div class="headline-title">OpenAI bascule ChatGPT sur GPT-5.5 Instant par défaut</div>
+      <div class="headline-context">Le nouveau modèle par défaut produit 52,5 % d'hallucinations en moins que GPT-5.3 sur les prompts à enjeu (médecine, droit, finance) et 37,3 % de moins en conversation difficile, sans surcoût de latence.</div>
+      <div class="headline-analysis"><span class="analysis-label">→ Pour le lecteur :</span> brique directement réutilisable pour générer des recommandations d'entraînement « tier-1 » (sortie de blessure, conseil nutrition pré-épreuve) où la marge d'erreur est la plus dommageable côté produit.</div>
+      <div class="item-links"><a href="https://techcrunch.com/2026/05/05/openai-releases-gpt-5-5-instant-a-new-default-model-for-chatgpt/">TechCrunch — 5 mai</a></div>
+    </div>
+
+    <div class="headline">
+      <span class="chip chip-ia">IA</span>
+      <div class="headline-title">Apple ouvrirait iOS 27 à plusieurs fournisseurs IA</div>
+      <div class="headline-context">D'après une fuite, l'utilisateur pourrait choisir, au niveau système, qui pilote les fonctions IA d'iOS — OpenAI, Google ou Anthropic — ce qui transforme l'OS mobile en couche d'agrégation plutôt qu'en monopole d'un seul partenaire.</div>
+      <div class="item-links"><a href="https://thetechportal.com/2026/05/06/apple-could-allow-users-to-switch-between-ai-providers-like-openai-google-and-anthropic-in-ios-27-features">The Tech Portal — 6 mai</a></div>
+    </div>
+
+    <div class="headline">
+      <span class="chip chip-mna">M&amp;A</span>
+      <div class="headline-title">Anthropic + Blackstone + Goldman lancent une co-entreprise à 1,5 Md$</div>
+      <div class="headline-context">Quatre actionnaires (Anthropic, Blackstone, H&amp;F à ~300 M$ chacun, Goldman à 150 M$) financent un nouvel acteur de services IA-natifs qui embarque des ingénieurs Anthropic chez des PME PE-owned façon Palantir Forward-Deployed Engineers.</div>
+      <div class="headline-analysis"><span class="analysis-label">→ Pour le lecteur :</span> signal que le déploiement d'IA verticale se fait par embedding humain, pas par licence SaaS — modèle de GTM à étudier pour pénétrer les fédérations et clubs élite, qui restent sous-équipés sur l'IA.</div>
+      <div class="item-links"><a href="https://www.cnbc.com/2026/05/04/anthropic-goldman-blackstone-ai-venture.html">CNBC — 4 mai</a></div>
+    </div>
+
+    <div class="headline">
+      <span class="chip chip-sport">Sport</span>
+      <div class="headline-title">the5krunner : « l'empire Garmin va se fissurer »</div>
+      <div class="headline-context">Sur fond de Q1 record mais Outdoors en difficulté, l'analyse pointe la convergence Coros×Wahoo (API 2-way, distribution croisée) et la montée en puissance du couplage Strava+Runna comme menace structurelle pour l'écosystème Garmin Connect.</div>
+      <div class="headline-analysis"><span class="analysis-label">→ Pour le lecteur :</span> la couche capteur se commoditise plus vite que prévu — le moat se déplace nettement vers le logiciel adaptatif. Fenêtre d'opportunité sur le multisport, Garmin n'ayant pas de réponse adaptive crédible.</div>
+      <div class="item-links"><a href="https://the5krunner.com/2026/05/05/garmin-empire-crumble-when/">the5krunner — 5 mai</a></div>
+    </div>
+  </section>
+
+  <!-- ============================ SECTION 1 ============================ -->
+  <h2 class="section-title">IA — modèles, produits, communications</h2>
+
+  <div class="item">
+    <div class="item-title">OpenAI lance GPT-5.5 Instant comme modèle par défaut de ChatGPT</div>
+    <div class="item-fact">GPT-5.5 Instant remplace GPT-5.3 Instant pour tous les utilisateurs, avec une réduction annoncée de 52,5 % des hallucinations sur les prompts à enjeu et de 37,3 % en conversation difficile. OpenAI annonce simultanément des améliorations mémoire (Plus/Pro) et la fonctionnalité « Memory Sources » qui rend visibles les souvenirs ayant influencé une réponse.</div>
+    <div class="item-links"><a href="https://techcrunch.com/2026/05/05/openai-releases-gpt-5-5-instant-a-new-default-model-for-chatgpt/">TechCrunch — 5 mai</a> · <a href="https://www.axios.com/2026/05/05/openai-chatgpt-update-default-model">Axios — 5 mai</a></div>
+    <div class="analysis"><span class="analysis-label">→ Pour le lecteur :</span> la baisse d'hallucinations sur médecine/finance ouvre un usage défendable pour des recommandations sensibles (charge admissible post-blessure, jeûne pré-course) — le filet de sécurité se renforce sans surcoût latence.</div>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Apple ouvrirait iOS 27 à un choix de fournisseur IA système</div>
+    <div class="item-fact">Selon des informations relayées par The Tech Portal, Apple travaille sur un mécanisme permettant à l'utilisateur de choisir entre OpenAI, Google et Anthropic pour les fonctions IA d'iOS 27. Annonce probable lors de la WWDC à venir, pas encore confirmée par Apple.</div>
+    <div class="item-links"><a href="https://thetechportal.com/2026/05/06/apple-could-allow-users-to-switch-between-ai-providers-like-openai-google-and-anthropic-in-ios-27-features">The Tech Portal — 6 mai</a> [source secondaire — fuite]</div>
+    <div class="analysis"><span class="analysis-label">→ Pour le lecteur :</span> commoditisation accélérée des modèles fondation côté grand public — bonne nouvelle pour qui construit la couche métier au-dessus, mauvaise pour qui mise sa différenciation sur « la techno IA en soi ». Renforce l'argument de positionnement « adaptatif » côté usage, pas côté modèle.</div>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Microsoft, Google et xAI ouvrent leurs modèles à un test pré-lancement par le gouvernement US</div>
+    <div class="item-fact">Microsoft, Google et xAI rejoignent OpenAI et Anthropic dans un protocole de pré-revue par le Center for AI Standards and Innovation (CAISI, Commerce Department). Première inflexion concrète sur la transparence pré-lancement des modèles frontier US.</div>
+    <div class="item-links"><a href="https://www.cnn.com/2026/05/05/tech/microsoft-google-xai-government-test-ai-models">CNN — 5 mai</a> · <a href="https://www.aljazeera.com/economy/2026/5/5/microsoft-google-xai-give-us-access-to-ai-models-for-security-testing">Al Jazeera — 5 mai</a></div>
+  </div>
+
+  <!-- ============================ SECTION 2 ============================ -->
+  <h2 class="section-title">M&amp;A &amp; investissements IA</h2>
+
+  <div class="item">
+    <div class="item-title">Anthropic + Blackstone + Goldman + H&amp;F : co-entreprise IA-native de 1,5 Md$</div>
+    <div class="item-fact">Anthropic, Blackstone et Hellman &amp; Friedman injectent ~300 M$ chacun, Goldman 150 M$, plus participations d'Apollo, General Atlantic, Leonard Green, GIC et Sequoia. La structure standalone embarque des ingénieurs Anthropic chez des entreprises mid-market (santé, industrie, finance, immobilier) pour ré-architecturer leurs workflows autour de Claude — modèle Forward-Deployed Engineers à la Palantir.</div>
+    <div class="item-links"><a href="https://www.cnbc.com/2026/05/04/anthropic-goldman-blackstone-ai-venture.html">CNBC — 4 mai</a> · <a href="https://www.blackstone.com/news/press/anthropic-partners-with-blackstone-hellman-friedman-and-goldman-sachs-to-launch-enterprise-ai-services-firm/">Communiqué Blackstone — 4 mai</a> · <a href="https://www.anthropic.com/news/enterprise-ai-services-company">Communiqué Anthropic — 4 mai</a></div>
+    <div class="analysis"><span class="analysis-label">→ Pour le lecteur :</span> deal &gt; 500 M$ qui valide un modèle GTM hybride « éditeur + intégrateur ». Pour un éditeur SaaS sport-tech, c'est aussi le signal qu'un prochain partenariat Anthropic-vertical sport ou wellness est plausible (potentiel canal de distribution ou menace de désintermédiation, selon comment ça atterrit).</div>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Sierra (Bret Taylor) lève ~950 M$ à 15,8 Md$</div>
+    <div class="item-fact">Tour mené par Tiger Global et GV (Google), valorisation post-money à 15,8 Md$. Sierra vend des agents IA pour le service client et se positionne comme catégorie « AI-native enterprise software » à 3 ans. La société a doublé son ARR en moins d'un an selon CNBC.</div>
+    <div class="item-links"><a href="https://www.cnbc.com/2026/05/04/bret-taylor-sierra-fundraise-openai.html">CNBC — 4 mai</a></div>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Nebius rachète Eigen AI pour 643 M$ (cash + actions)</div>
+    <div class="item-fact">~98 M$ en cash et ~3,8 M actions Class A Nebius. Eigen AI (20 personnes, fondateurs MIT HAN Lab) se spécialise dans l'optimisation post-training pour modèles open-source — quantification 4-bit, AWQ. La cible vient renforcer Nebius Token Factory comme plateforme d'inférence managée.</div>
+    <div class="item-links"><a href="https://nebius.com/newsroom/nebius-agrees-to-acquire-eigen-ai-strengthening-nebius-token-factory-as-a-frontier-inference-platform">Communiqué Nebius — 1 mai</a> · <a href="https://www.businesswire.com/news/home/20260501259620/en/Nebius-Agrees-to-Acquire-Eigen-AI-Strengthening-Nebius-Token-Factory-as-a-Frontier-Inference-Platform">BusinessWire — 1 mai</a></div>
+    <div class="analysis"><span class="analysis-label">→ Pour le lecteur :</span> les briques d'optimisation d'inférence consolidées chez les hyperscalers — bon timing pour benchmarker à nouveau le coût par recommandation côté infra, l'écart de prix Token Factory vs OpenAI/Anthropic API se resserre.</div>
+  </div>
+
+  <div class="item">
+    <div class="item-title">LiveEO lève 28 M€ pour sa propre constellation d'observation Terre IA</div>
+    <div class="item-fact">Tour de série pour la geospatial-AI berlinoise spécialisée dans la surveillance d'infrastructures critiques (rail, énergie). Verticalisation hardware × IA dans une niche réglementée.</div>
+    <div class="item-links"><a href="https://techstartups.com/2026/05/06/top-tech-news-today-may-6-2026/">TechStartups (digest) — 6 mai</a> [agrégateur — source primaire indisponible au moment de la rédaction]</div>
+  </div>
+
+  <!-- ============================ SECTION 3 ============================ -->
+  <h2 class="section-title">Sociétés innovantes IA-native</h2>
+
+  <div class="item">
+    <div class="item-title">CopilotKit lève 27 M$ en Série A pour embarquer des agents IA dans les apps</div>
+    <div class="item-fact">CopilotKit fournit un SDK qui permet à un éditeur SaaS d'intégrer un agent contextuel (lecture de l'app + outils + UI préfabriquée) sans tout coder. Tour annoncé le 6 mai au milieu d'une vague de financement « agent infrastructure ».</div>
+    <div class="item-links"><a href="https://techstartups.com/2026/05/06/top-startup-and-tech-funding-news-may-6-2025/">TechStartups (digest) — 6 mai</a> [agrégateur — source primaire à confirmer]</div>
+    <div class="analysis"><span class="analysis-label">→ Pour le lecteur :</span> brique technique potentiellement intéressante pour un « copilote d'entraînement » conversationnel dans l'app — à benchmarker contre Vercel AI SDK et Mastra avant tout choix d'architecture.</div>
+  </div>
+
+  <div class="item">
+    <div class="item-title">ReFiBuy lève 13,6 M$ (seed) pour rendre les catalogues e-commerce visibles aux agents IA</div>
+    <div class="item-fact">L'objectif de la société de Raleigh : enrichir les données produit pour qu'elles soient correctement parsées par ChatGPT, Claude et autres assistants — un pari sur le « shopping piloté par agent ». Tour seed annoncé le 6 mai.</div>
+    <div class="item-links"><a href="https://techstartups.com/2026/05/06/top-tech-news-today-may-6-2026/">TechStartups — 6 mai</a> [agrégateur — source primaire à confirmer]</div>
+  </div>
+
+  <div class="item">
+    <div class="item-title">AWS lance en preview les identités d'agent pour WorkSpaces</div>
+    <div class="item-fact">Les agents IA reçoivent des identités IAM dédiées pour opérer sur des bureaux virtuels WorkSpaces, avec séparation explicite des actions humaines vs machines dans les logs d'audit. Brique d'infra qui s'inscrit dans la lignée d'OpenAI Operator et Anthropic Computer Use.</div>
+    <div class="item-links"><a href="https://techstartups.com/2026/05/06/top-tech-news-today-may-6-2026/">TechStartups (digest) — 6 mai</a> [agrégateur — source primaire AWS à confirmer]</div>
+  </div>
+
+  <div class="item">
+    <div class="item-title">QuantWare lève 178 M$ pour industrialiser ses processeurs supraconducteurs quantiques</div>
+    <div class="item-fact">Le néerlandais positionne une couche de fabrication quantique à architecture ouverte. Hors IA stricto sensu, mais s'inscrit dans le même cycle d'investissement « infra calcul » que les hyperscalers.</div>
+    <div class="item-links"><a href="https://techstartups.com/2026/05/06/top-tech-news-today-may-6-2026/">TechStartups — 6 mai</a> [agrégateur — source primaire à confirmer]</div>
+  </div>
+
+  <!-- ============================ SECTION 4 ============================ -->
+  <h2 class="section-title">Applications d'entraînement sportif</h2>
+
+  <div class="item">
+    <div class="item-title">the5krunner : analyse de fond — l'écosystème Garmin sous pression structurelle</div>
+    <div class="item-fact">L'analyse fait suite aux résultats Q1 2026 de Garmin (records sur trois segments mais déclin Outdoors, le segment historique du Fenix) et identifie deux fronts d'érosion : (1) la convergence Coros + Wahoo (API 2-way, revente croisée Pace 4 sur le store Wahoo, watch bands Wahoo pour Coros), et (2) la stratégie Garmin Connect que Garmin lui-même esquisse comme une copie de Strava — donc en réaction, pas en initiative.</div>
+    <div class="item-links"><a href="https://the5krunner.com/2026/05/05/garmin-empire-crumble-when/">the5krunner — 5 mai</a> · <a href="https://the5krunner.com/2026/04/30/garmin-q1-2026-earnings/">the5krunner Q1 Garmin — 30 avril</a></div>
+    <div class="analysis"><span class="analysis-label">→ Pour le lecteur :</span> trois implications concrètes. (a) Le client multisport « écosystème Garmin only » devient minoritaire — les API Coros/Wahoo doivent être au même niveau de support que Garmin Connect dès le départ. (b) Garmin n'a toujours pas de coach adaptatif crédible : créneau ouvert pour positionner l'app comme « le cerveau au-dessus du capteur, peu importe la marque ». (c) La narration « le matos se commoditise, le logiciel adaptatif est le nouveau moat » est désormais explicitement portée par les analystes du secteur — argumentaire à reprendre tel quel en commercial / pitch.</div>
+  </div>
+
+  <div class="item">
+    <div class="item-title">China Cycle 2026 : montée en gamme des marques chinoises sur l'électronique cycle</div>
+    <div class="item-fact">Le 34<sup>e</sup> China International Bicycle Fair (Shanghai, 5-8 mai) confirme la montée en gamme de Magene, iGPSport et autres outsiders chinois sur les compteurs et capteurs de puissance, là où Garmin et Wahoo dominent encore le haut de gamme.</div>
+    <div class="item-links"><a href="https://the5krunner.com/2026/05/05/china-cycle-2026-cycling-electronics/">the5krunner — 5 mai</a></div>
+    <div class="analysis"><span class="analysis-label">→ Pour le lecteur :</span> côté cyclisme, l'élargissement des marques de capteurs supportés deviendra une exigence des early adopters dans les 12-18 mois — anticiper Magene/iGPSport dans la roadmap d'intégration FIT/ANT+ avant que ce ne soit un bug-rapport en boucle dans le support.</div>
+  </div>
+
+  <div class="footer-note">
+    <strong>Note méthodo</strong> — La fenêtre temporelle stricte (« moins de 24 h ») a été assouplie aux items des 5-6 mai pour le bloc Sport, faute de news strictement intra-journée sur la <em>watchlist</em> directe. Aucun item retenu n'est antérieur au 1<sup>er</sup> mai.<br>
+    <strong>Notification haut-impact envoyée :</strong> oui — triggers : [trigger 4 — JV Anthropic/BS/GS &gt; 500 M$] · [trigger 3 — modèle frontier GPT-5.5 Instant] · [trigger 5 — GPT-5.5 brique réutilisable] — priorité : 4.
+  </div>
+
+  <!-- ============================ QUALITÉ DES SOURCES ============================ -->
+  <div class="sources">
+    <h2>Qualité des sources</h2>
+    <div class="sources-list">
+      <span>openai.com 🟢</span>
+      <span>anthropic.com 🟢</span>
+      <span>blackstone.com 🟢</span>
+      <span>nebius.com 🟢</span>
+      <span>businesswire.com 🟢</span>
+      <span>cnbc.com 🟢</span>
+      <span>cnn.com 🟢</span>
+      <span>techcrunch.com 🟢</span>
+      <span>axios.com 🟢</span>
+      <span>aljazeera.com 🟢</span>
+      <span>thetechportal.com 🟡</span>
+      <span>the5krunner.com 🟡</span>
+      <span>techstartups.com 🟠</span>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
