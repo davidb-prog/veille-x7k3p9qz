@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — Veille IA &amp; Sport endurance — 11 mai 2026</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #5a5a5a;
+    --border: #e5e5e5;
+    --accent: #2563eb;
+    --tldr-bg: #f8fafc;
+    --tldr-border: #cbd5e1;
+    --analyse-bg: #fff7ed;
+    --analyse-border: #f59e0b;
+    --chip-ia-bg: #ede9fe; --chip-ia-fg: #5b21b6;
+    --chip-ma-bg: #fee2e2; --chip-ma-fg: #991b1b;
+    --chip-ian-bg: #dcfce7; --chip-ian-fg: #14532d;
+    --chip-sport-bg: #dbeafe; --chip-sport-fg: #1e3a8a;
+    --green: #16a34a;
+    --yellow: #ca8a04;
+    --orange: #ea580c;
+  }
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    line-height: 1.55;
+  }
+  .container {
+    max-width: 640px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 24px 16px 64px;
+  }
+  h1 {
+    font-size: 26px;
+    line-height: 1.25;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 15px;
+    margin: 0 0 28px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 36px 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--border);
+    letter-spacing: -0.005em;
+  }
+  .tldr {
+    background: var(--tldr-bg);
+    border: 1px solid var(--tldr-border);
+    border-radius: 10px;
+    padding: 18px 16px;
+    margin: 16px 0 32px;
+  }
+  .tldr h2 {
+    margin-top: 0;
+    border: none;
+    padding-bottom: 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+  .headline {
+    margin: 16px 0;
+    padding-bottom: 14px;
+    border-bottom: 1px dashed var(--tldr-border);
+  }
+  .headline:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .headline-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.35;
+    display: block;
+    margin: 6px 0 4px;
+  }
+  .headline-context {
+    font-size: 17px;
+    color: #333;
+    margin: 4px 0 8px;
+  }
+  .headline-analyse {
+    font-size: 17px;
+    color: #7c2d12;
+    background: var(--analyse-bg);
+    border-left: 3px solid var(--analyse-border);
+    padding: 8px 10px;
+    margin: 8px 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .item {
+    margin: 22px 0 28px;
+  }
+  .item-title {
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 1.35;
+    margin: 0 0 8px;
+  }
+  .item-fact {
+    font-size: 18px;
+    margin: 0 0 8px;
+  }
+  .item-links {
+    font-size: 16px;
+    margin: 6px 0 8px;
+    word-break: break-word;
+  }
+  .item-links a {
+    color: var(--accent);
+    text-decoration: none;
+    padding: 4px 0;
+    display: inline-block;
+    min-height: 24px;
+  }
+  .item-links a:hover {
+    text-decoration: underline;
+  }
+  .analyse {
+    font-size: 17px;
+    color: #7c2d12;
+    background: var(--analyse-bg);
+    border-left: 3px solid var(--analyse-border);
+    padding: 10px 12px;
+    margin: 10px 0 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .chip {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    vertical-align: middle;
+  }
+  .chip-ia { background: var(--chip-ia-bg); color: var(--chip-ia-fg); }
+  .chip-ma { background: var(--chip-ma-bg); color: var(--chip-ma-fg); }
+  .chip-ian { background: var(--chip-ian-bg); color: var(--chip-ian-fg); }
+  .chip-sport { background: var(--chip-sport-bg); color: var(--chip-sport-fg); }
+  .empty {
+    color: var(--muted);
+    font-style: italic;
+    margin: 12px 0 0;
+  }
+  .sources {
+    margin-top: 40px;
+    padding-top: 18px;
+    border-top: 2px solid var(--border);
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .sources-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .source-chip {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: #f3f4f6;
+    font-size: 13px;
+    color: #374151;
+  }
+  .footer-note {
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--muted);
+    font-style: italic;
+  }
+  @media (min-width: 768px) {
+    .container {
+      max-width: 760px;
+      padding: 48px 48px 80px;
+    }
+    body { font-size: 17px; }
+    h1 { font-size: 30px; }
+    h2 { font-size: 22px; }
+    .tldr { padding: 24px 28px; }
+    .item-title { font-size: 19px; }
+    .item-fact { font-size: 17px; }
+    .headline-title { font-size: 18px; }
+    .headline-context { font-size: 16px; }
+    .headline-analyse, .analyse { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Briefing — Veille IA &amp; Sport endurance — 11 mai 2026</h1>
+<p class="subtitle">Lundi 11 mai 2026 · Lecture : ~5 min · 8 items couverts</p>
+
+<div class="tldr">
+<h2>À la une</h2>
+
+<div class="headline">
+<span class="chip chip-sport">Sport</span>
+<span class="headline-title">Runna pousse une feature "Not Feeling 100%" — adaptation explicite aux contraintes de l'athlète</span>
+<p class="headline-context">L'app rachetée par Strava relance ses plans débutants 2026 avec un mode qui ajuste intensité et pace targets pendant 3-14 jours selon l'état de forme déclaré, plus des Workout Briefings personnalisés et un détecteur d'écart au plan. Le narratif "le plan suit l'athlète" arrive frontalement chez le n°1 running.</p>
+<p class="headline-analyse">→ Pour le lecteur : ton positionnement différenciant (« le plan s'adapte ») est désormais revendiqué explicitement par un acteur à 50M+ users sur le running. Reste à arbitrer ce qui te distingue : multisport, profondeur de l'adaptation, ou couverture des contraintes au-delà de la forme physique.</p>
+<p class="item-links"><a href="https://endurance.biz/2026/industry-news/runna-updates-beginner-and-return-to-running-training-plans/">Runna updates beginner and return to running training plans — endurance.biz (début mai)</a></p>
+</div>
+
+<div class="headline">
+<span class="chip chip-sport">Sport</span>
+<span class="headline-title">Google Fitbit AI Coach (Gemini) → lancement le 19 mai, coaching adaptatif en propre</span>
+<p class="headline-context">Google a confirmé le 7 mai la refonte de Fitbit en "Google Health app" avec un AI Health Coach Gemini : plans hebdomadaires personnalisés, chatbot sur les données fitness + santé, bracelet Fitbit Air sans écran en compagnon. Premier acteur à brancher un LLM frontier nativement sur des données wearables grand public.</p>
+<p class="headline-analyse">→ Pour le lecteur : la couche "coach IA personnalisé" se commoditise depuis le wearable lui-même. Ta défensibilité ne peut plus être "on a un LLM dans une app sport" — elle doit reposer sur la qualité d'arbitrage entre contraintes (vie, charge, méteo, équipement), pas sur la couche conversationnelle.</p>
+<p class="item-links"><a href="https://krdo.com/money/cnn-business-consumer/2026/05/07/googles-plan-to-win-the-ai-health-race-play-nice-with-apple-and-other-rivals/">Google's plan to win the AI health race — KRDO/CNN (7 mai)</a></p>
+</div>
+
+<div class="headline">
+<span class="chip chip-ma">M&amp;A</span>
+<span class="headline-title">xAI loue tout Colossus 1 à Anthropic — Anthropic vise 50 G$ à 900 G$ de valo</span>
+<p class="headline-context">Anthropic prend 100% de la capacité du datacenter Colossus 1 de xAI (220k GPUs, 300 MW) — TechCrunch publie le 10 mai une analyse cynique sur le signal envoyé : xAI devient de facto un neocloud, et Anthropic, malgré 30 G$ d'ARR et 80× de croissance trimestrielle, dépend désormais d'un concurrent de Musk pour scaler.</p>
+<p class="item-links"><a href="https://techcrunch.com/2026/05/10/were-feeling-cynical-about-xais-big-deal-with-anthropic/">We're feeling cynical about xAI's big deal with Anthropic — TechCrunch (10 mai)</a></p>
+</div>
+
+<div class="headline">
+<span class="chip chip-ma">M&amp;A</span>
+<span class="headline-title">Moonshot AI lève ~2 G$ à 20 G$ de valo — Chine accélère sur le frontier</span>
+<p class="headline-context">Le créateur de Kimi boucle un tour mené par Long-Z (Meituan) avec Tsinghua Holdings et China Mobile. La consolidation du capital côté Chine continue, parallèlement à la levée pendante d'Anthropic et au tour record d'OpenAI au Q1.</p>
+<p class="item-links"><a href="https://blog.mean.ceo/ai-startup-funding-news-may-2026/">AI Startup Funding News — May 2026 (Mean CEO) <em>[source secondaire]</em></a></p>
+</div>
+
+</div>
+
+<h2>IA — modèles, produits, communications</h2>
+
+<div class="item">
+<p class="item-title">TechCrunch tire à boulets rouges sur le deal xAI–Anthropic (10 mai)</p>
+<p class="item-fact">Analyse parue le 10 mai dans TechCrunch : le rachat par Anthropic de toute la capacité Colossus 1 (Memphis, ~220 000 GPU Nvidia, 300 MW) n'a pas seulement un effet capacitaire — il signale qu'xAI ne pousse plus de modèle frontier propre et se transforme en revendeur de compute. Anthropic devient dépendant d'un concurrent et risque de voir son cash transiter via une infrastructure Musk-controlled.</p>
+<p class="item-links"><a href="https://techcrunch.com/2026/05/10/were-feeling-cynical-about-xais-big-deal-with-anthropic/">TechCrunch — 10 mai</a> · <a href="https://simonwillison.net/2026/May/7/xai-anthropic/">Notes de Simon Willison sur le deal — 7 mai</a></p>
+<p class="analyse">→ Pour le lecteur : pas d'impact direct sur ton produit. Mais lis-le comme un signal de marché — la rentabilité réelle du compute frontier reste si tendue que même les acteurs valorisés à 900 G$ louent du GPU à des concurrents. Conséquence indirecte : continue à designer ton produit pour que le coût d'inférence reste un poste maîtrisable, pas un blocage scaling.</p>
+</div>
+
+<div class="item">
+<p class="item-title">Anthropic — agents financiers et autonomie longue durée (5 mai, en aval)</p>
+<p class="item-fact">Annoncé le 5 mai puis amplifié cette semaine : Anthropic pousse des agents managés autonomes capables de soutenir des workflows longs (coding, finance, juridique), avec une intégration Microsoft 365 et un partenariat data Moody's. Bloomberg et Fortune confirment des positions chez plusieurs grandes banques (JPM cité).</p>
+<p class="item-links"><a href="https://fortune.com/2026/05/05/anthropic-wall-street-financial-services-agents-jamie-dimon/">Anthropic deepens push into Wall Street — Fortune (5 mai)</a></p>
+</div>
+
+<h2>M&amp;A &amp; investissements IA</h2>
+
+<div class="item">
+<p class="item-title">Anthropic — tour de 50 G$ à 900 G$ de valo en finalisation</p>
+<p class="item-fact">PYMNTS et plusieurs sources confirment cette semaine qu'Anthropic finalise un tour de 50 G$ qui amènerait sa valorisation à ~900 G$, soit potentiellement au-dessus d'OpenAI (852 G$ post-money sur le tour de 122 G$ bouclé au Q1). ARR cité à 30 G$, croissance 80× sur un trimestre selon Fortune.</p>
+<p class="item-links"><a href="https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-valuation-could-eclipse-openai-50-billion-dollar-funding-round/">Anthropic Valuation Could Eclipse OpenAI — PYMNTS (cette semaine)</a> · <a href="https://fortune.com/2026/05/08/anthropic-80fold-growth-quarter-renting-elon-musk-data-center/">Anthropic 80-fold growth — Fortune (8 mai)</a></p>
+</div>
+
+<div class="item">
+<p class="item-title">Nvidia franchit les 40 G$ d'engagements equity (9 mai)</p>
+<p class="item-fact">CNBC chiffre le portefeuille equity de Nvidia à plus de 40 G$ en 2026, avec un chèque record de 30 G$ à OpenAI, et de nouvelles enveloppes signées la semaine dernière : jusqu'à 2,1 G$ dans IREN (datacenters) et 3,2 G$ dans Corning. Stratégie de capture verticale de l'écosystème via prises de participations.</p>
+<p class="item-links"><a href="https://www.cnbc.com/2026/05/09/nvidia-embraces-ai-investor-topping-40-billion-in-equity-bets-2026.html">Nvidia tops $40B in equity bets — CNBC (9 mai)</a></p>
+</div>
+
+<h2>Sociétés innovantes IA-native</h2>
+
+<div class="item">
+<p class="item-title">Pas de news primaire IA-native dans les 24h.</p>
+<p class="empty">Le week-end a été calme côté startups IA-native ; les deals notables récents (Sierra 950 M$ Series E le 4 mai, Ineffable Intelligence 1,1 G$ seed) sont hors fenêtre 24h. Rien à signaler aujourd'hui sur ce volet.</p>
+</div>
+
+<h2>Applications d'entraînement sportif</h2>
+
+<div class="item">
+<p class="item-title">Runna (Strava) — relance des plans débutants 2026 avec adaptation aux contraintes</p>
+<p class="item-fact">Runna, propriété de Strava depuis 2025, relance ses plans "New to Running" (8-16 sem.) et "Return to Running" (4-16 sem.) avec trois features qui touchent directement le positionnement adaptatif : (1) Personalised Workout Briefings — un briefing unique par utilisateur avant chaque sortie ; (2) "Not Feeling 100%" — l'app ajuste intensité ou retire les pace targets pendant 3-14 jours selon l'état déclaré ; (3) Mileage Insights — détection de l'écart au plan et recommandation de volume soutenable.</p>
+<p class="item-links"><a href="https://endurance.biz/2026/industry-news/runna-updates-beginner-and-return-to-running-training-plans/">Runna updates beginner and return to running training plans — endurance.biz</a> · <a href="https://www.runna.com/press/runna-introduces-updated-beginner-running-plans-for-2026">Runna Press — Updated Beginner Running Plans for 2026 (officiel)</a></p>
+<p class="analyse">→ Pour le lecteur : c'est l'item le plus important du brief. Runna formule maintenant explicitement la promesse "le plan suit la réalité de l'athlète" sur deux axes (forme + adhérence). Tu restes différencié sur trois fronts : (a) multisport (Runna reste running-only), (b) adaptation à des contraintes plus larges que la forme du jour (équipement, météo, charge de vie), (c) profondeur de la reconfiguration (vs simple "alléger sur 3-14 jours"). Si ces trois axes ne sont pas tranchants dans ton produit visible, ton différenciant perd de l'air rapidement.</p>
+</div>
+
+<div class="item">
+<p class="item-title">Garmin Connect — refonte sociale + intégration LiveTrack/GroupTrack (annoncé début mai)</p>
+<p class="item-fact">Garmin passe Connect d'un modèle "amis bi-directionnel" à un modèle "followers" façon Strava/Instagram, intègre LiveTrack et GroupTrack au système d'abonnement, et ajoute des contrôles de confidentialité plus fins. Une refonte des plans d'entraînement et du tracking nutrition est annoncée en parallèle.</p>
+<p class="item-links"><a href="https://the5krunner.com/2026/05/01/garmin-vs-strava-connect/">Garmin vs Strava: Leak Shows Connect Targeting Strava — the5krunner (1 mai)</a> · <a href="https://www.gsmgotech.com/2026/05/garmin-connect-just-got-major-social.html">Garmin Connect Just Got a Major Social Overhaul — GSM Got Tech (mai) <em>[source secondaire]</em></a></p>
+<p class="analyse">→ Pour le lecteur : Garmin attaque la couche sociale ; le terrain de jeu de Strava se resserre, et Strava poussera très probablement Runna + son moteur Athlete Intelligence sur la couche coaching pour défendre sa valeur. À surveiller : si Garmin enchaîne avec un coach IA "Connect Coach", la pression sur les apps externes devient maximale pour les utilisateurs Garmin (qui sont surreprésentés sur ton audience cyclisme/triathlon).</p>
+</div>
+
+<div class="item">
+<p class="item-title">Pas de news primaire sur la watchlist directe ce 11 mai.</p>
+<p class="empty">Rien à signaler aujourd'hui côté TrainingPeaks, TrainerRoad, Athletica.ai, 2PEAK, Humango, AI Endurance, Enduco, Nolio, TriDot, MOTTIV, Vekta dans la fenêtre 24h. Le marché digère la séquence Runna + Garmin de début de semaine.</p>
+</div>
+
+<div class="sources">
+<strong>Qualité des sources</strong>
+<div class="sources-chips">
+<span class="source-chip">techcrunch.com 🟢</span>
+<span class="source-chip">cnbc.com 🟢</span>
+<span class="source-chip">fortune.com 🟢</span>
+<span class="source-chip">bloomberg.com 🟢</span>
+<span class="source-chip">runna.com 🟢</span>
+<span class="source-chip">endurance.biz 🟡</span>
+<span class="source-chip">the5krunner.com 🟡</span>
+<span class="source-chip">pymnts.com 🟡</span>
+<span class="source-chip">simonwillison.net 🟡</span>
+<span class="source-chip">krdo.com (CNN reprise) 🟡</span>
+<span class="source-chip">blog.mean.ceo 🟠</span>
+<span class="source-chip">gsmgotech.com 🟠</span>
+</div>
+<p style="margin-top:14px;">🟢 primaire · 🟡 secondaire (média industrie) · 🟠 tertiaire (agrégateur/blog)</p>
+</div>
+
+<p class="footer-note">Note méthodo : la fenêtre 24h stricte a été élargie ponctuellement (jusqu'au 5 mai) sur les items les plus structurants pour le lecteur, le week-end (9–10 mai) ayant été calme en actualité primaire. Les dates exactes sont indiquées sur chaque lien.<br><br>
+<span id="notif-trace">Notification haut-impact envoyée : à compléter post-push — triggers : Runna feature adaptative (concurrent indirect du segment cœur) + Google AI Health Coach (mouvement structurant marché adjacent) — priorité dérivée : 4.</span></p>
+
+</div>
+</body>
+</html>

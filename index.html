@@ -3,31 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Veille IA — Index</title>
+<title>Veille IA &amp; Sport endurance — Index</title>
 <style>
-  html, body { margin: 0; padding: 0; width: 100%; font-family: -apple-system, system-ui, "Segoe UI", Roboto, sans-serif; font-size: 18px; line-height: 1.55; -webkit-text-size-adjust: 100%; }
-  .wrap { max-width: 640px; margin: 0 auto; padding: 24px 16px 64px 16px; box-sizing: border-box; }
-  h1 { font-size: 26px; margin: 0 0 8px 0; }
-  .sub { color: #666; font-size: 15px; margin-bottom: 28px; }
-  ul { padding-left: 20px; }
-  li { margin: 8px 0; }
-  a { color: #1d4ed8; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 640px; margin: 0 auto; padding: 32px 16px; color: #1a1a1a; line-height: 1.6; }
+h1 { font-size: 24px; margin-bottom: 4px; }
+.subtitle { color: #5a5a5a; margin-top: 0; margin-bottom: 24px; }
+ul { list-style: none; padding: 0; }
+li { padding: 12px 0; border-bottom: 1px solid #e5e5e5; }
+a { color: #2563eb; text-decoration: none; font-size: 17px; }
+a:hover { text-decoration: underline; }
+.date { color: #5a5a5a; font-size: 14px; display: block; margin-top: 2px; }
 </style>
 </head>
 <body>
-<div class="wrap">
-<h1>Veille IA — Briefs</h1>
-<div class="sub">Liste des briefs publiés. Le plus récent en haut.</div>
-<ul id="list"></ul>
-<script>
-const briefs = ["briefing-ia-2026-05-07.html", "briefing-ia-2026-05-03.html", "briefing-ia-2026-05-02.html"];
-const list = document.getElementById('list');
-briefs.sort().reverse().forEach(name => {
-  const li = document.createElement('li');
-  li.innerHTML = '<a href="' + name + '">' + name.replace('briefing-ia-', '').replace('.html', '') + '</a>';
-  list.appendChild(li);
-});
-</script>
-</div>
+<h1>Briefs — Veille IA &amp; Sport endurance</h1>
+<p class="subtitle">Archive des éditions quotidiennes</p>
+<ul>
+  <li><a href="briefing-ia-2026-05-11.html">Brief du 11 mai 2026</a><span class="date">2026-05-11</span></li>
+  <li><a href="briefing-ia-2026-05-07.html">Brief du 7 mai 2026</a><span class="date">2026-05-07</span></li>
+  <li><a href="briefing-ia-2026-05-03.html">Brief du 3 mai 2026</a><span class="date">2026-05-03</span></li>
+  <li><a href="briefing-ia-2026-05-02.html">Brief du 2 mai 2026</a><span class="date">2026-05-02</span></li>
+</ul>
 </body>
 </html>
