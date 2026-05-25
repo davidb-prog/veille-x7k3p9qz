@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — Veille IA &amp; Sport endurance — 25 mai 2026</title>
+<style>
+  :root{
+    --bg:#ffffff;
+    --fg:#161616;
+    --fg-soft:#3a3a3a;
+    --fg-mute:#6b6b6b;
+    --rule:#e6e6e6;
+    --tldr-bg:#f5f4ef;
+    --tldr-border:#e2dfd1;
+    --analyse-bg:#f0f6ff;
+    --analyse-border:#1e63d0;
+    --chip-ia-bg:#e7efff;     --chip-ia-fg:#15407a;
+    --chip-ma-bg:#f1e9ff;     --chip-ma-fg:#5a2ea0;
+    --chip-iana-bg:#e6f6ec;   --chip-iana-fg:#1c6b3a;
+    --chip-sport-bg:#fdebe5;  --chip-sport-fg:#9a3412;
+    --link:#0b4fbf;
+  }
+  html,body{
+    width:100%;
+    -webkit-text-size-adjust:100%;
+    text-size-adjust:100%;
+  }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:18px;
+    line-height:1.55;
+    word-wrap:break-word;
+  }
+  .wrap{
+    max-width:640px;
+    width:100%;
+    margin:0 auto;
+    padding:24px 16px 64px;
+    box-sizing:border-box;
+  }
+  h1{
+    font-size:26px;
+    line-height:1.25;
+    margin:0 0 6px;
+    letter-spacing:-0.01em;
+  }
+  .subtitle{
+    font-size:15px;
+    color:var(--fg-mute);
+    margin:0 0 28px;
+  }
+  h2{
+    font-size:20px;
+    margin:36px 0 14px;
+    padding-bottom:6px;
+    border-bottom:1px solid var(--rule);
+    letter-spacing:-0.005em;
+  }
+  a{ color:var(--link); }
+  a:visited{ color:var(--link); }
+  .tldr{
+    background:var(--tldr-bg);
+    border:1px solid var(--tldr-border);
+    border-radius:10px;
+    padding:18px 16px;
+    margin:16px 0 8px;
+  }
+  .tldr h2{
+    margin:0 0 12px;
+    padding:0;
+    border:0;
+    font-size:18px;
+    color:var(--fg);
+  }
+  .headline{
+    padding:12px 0;
+    border-top:1px dashed var(--tldr-border);
+  }
+  .headline:first-of-type{ border-top:0; padding-top:4px; }
+  .headline-title{
+    font-size:18px;
+    font-weight:700;
+    margin:6px 0 4px;
+    line-height:1.35;
+  }
+  .headline-context{
+    font-size:17px;
+    color:var(--fg-soft);
+    margin:0 0 6px;
+  }
+  .headline-analyse{
+    font-size:17px;
+    color:#0b3d8c;
+    background:var(--analyse-bg);
+    border-left:3px solid var(--analyse-border);
+    padding:8px 12px;
+    border-radius:6px;
+    margin:8px 0 6px;
+  }
+  .headline-link{
+    font-size:16px;
+    min-height:44px;
+    display:inline-flex;
+    align-items:center;
+  }
+  .item{
+    padding:14px 0 18px;
+    border-top:1px solid var(--rule);
+  }
+  .item:first-of-type{ border-top:0; }
+  .item-title{
+    font-size:19px;
+    font-weight:700;
+    margin:4px 0 8px;
+    line-height:1.35;
+  }
+  .item-fact{
+    font-size:18px;
+    color:var(--fg-soft);
+    margin:0 0 8px;
+  }
+  .item-links{
+    font-size:16px;
+    color:var(--fg-mute);
+    margin:6px 0;
+  }
+  .item-links a{ min-height:44px; display:inline-block; padding:6px 0; }
+  .item-analyse{
+    font-size:17px;
+    color:#0b3d8c;
+    background:var(--analyse-bg);
+    border-left:3px solid var(--analyse-border);
+    padding:10px 14px;
+    border-radius:6px;
+    margin:8px 0 4px;
+  }
+  .item-analyse strong{ color:#0a2d6a; }
+  .empty{
+    color:var(--fg-mute);
+    font-style:italic;
+    padding:8px 0 4px;
+  }
+  .chip{
+    display:inline-block;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    padding:3px 8px;
+    border-radius:999px;
+    vertical-align:middle;
+  }
+  .chip-ia{ background:var(--chip-ia-bg); color:var(--chip-ia-fg); }
+  .chip-ma{ background:var(--chip-ma-bg); color:var(--chip-ma-fg); }
+  .chip-iana{ background:var(--chip-iana-bg); color:var(--chip-iana-fg); }
+  .chip-sport{ background:var(--chip-sport-bg); color:var(--chip-sport-fg); }
+  .sources{
+    margin-top:24px;
+    padding:14px 16px;
+    background:#fafafa;
+    border:1px solid var(--rule);
+    border-radius:10px;
+    font-size:14px;
+    color:var(--fg-mute);
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px 10px;
+  }
+  .sources .lbl{ flex-basis:100%; font-weight:600; color:var(--fg); margin-bottom:4px; }
+  .footnote{
+    margin-top:28px;
+    font-size:13px;
+    color:var(--fg-mute);
+    border-top:1px dashed var(--rule);
+    padding-top:14px;
+  }
+  @media (min-width:768px){
+    body{ font-size:17px; }
+    .wrap{ max-width:760px; padding:56px 48px 80px; }
+    h1{ font-size:30px; }
+    .subtitle{ font-size:15px; }
+    h2{ font-size:22px; margin-top:44px; }
+    .tldr{ padding:26px 28px; }
+    .tldr h2{ font-size:19px; }
+    .headline-title{ font-size:18px; }
+    .headline-context{ font-size:16px; }
+    .headline-analyse{ font-size:16px; }
+    .item-title{ font-size:19px; }
+    .item-fact{ font-size:17px; }
+    .item-analyse{ font-size:16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Briefing — Veille IA &amp; Sport endurance — 25 mai 2026</h1>
+  <p class="subtitle">Lundi 25 mai 2026 · Lecture : ~5 min · 3 items couverts · Fenêtre : moins de 24h</p>
+
+  <div class="tldr">
+    <h2>À la une</h2>
+
+    <div class="headline">
+      <span class="chip chip-ia">IA</span>
+      <div class="headline-title">Le Vatican publie sa première encyclique sur l'IA — et choisit Anthropic comme contrepartie</div>
+      <p class="headline-context">Pope Leo XIV présente aujourd'hui <em>Magnifica Humanitas</em>, première encyclique d'un pape sur l'IA. Christopher Olah (co-fondateur d'Anthropic, responsable interprétabilité) est invité à la présenter à ses côtés au Synode — geste rare qui adoube Anthropic comme l'interlocuteur "safety" légitime de l'industrie.</p>
+      <p class="headline-link"><a href="https://www.vaticannews.va/en/pope/news/2026-05/pope-leo-xiv-first-encyclical-magnifica-humanitas.html">Vatican News — 25 mai</a></p>
+    </div>
+
+    <div class="headline">
+      <span class="chip chip-ma">M&amp;A</span>
+      <div class="headline-title">Anthropic prête à boucler un 2ᵉ tour de $30 Md+ à $900 Md+ — cette semaine</div>
+      <p class="headline-context">Selon Bloomberg, le tour mené par Sequoia / Dragoneer / Altimeter / Greenoaks (≈ $2 Md chacun) doit clore d'ici quelques jours, doublant la valo d'Anthropic depuis février et la plaçant <strong>au-dessus d'OpenAI</strong> ($852 Md). Run-rate annoncé aux investisseurs : $50 Md fin juin.</p>
+      <p class="headline-link"><a href="https://www.bloomberg.com/news/articles/2026-05-22/anthropic-to-close-over-30-billion-round-as-soon-as-next-week">Bloomberg — 22 mai</a></p>
+    </div>
+
+    <div class="headline">
+      <span class="chip chip-sport">Sport</span>
+      <div class="headline-title">Watchlist endurance : silence radio sur 24h, mais le terrain de jeu vient de bouger</div>
+      <p class="headline-context">Aucune annonce de la watchlist sur le strict 24h (week-end de Memorial Day US). En arrière-plan, la semaine du 18–22 a empilé trois signaux structurants : Coros premier wearable MCP-ChatGPT/Claude (20 mai), Garmin Connect bascule en modèle social "followers" (21 mai), Strava lance Strength + 14 intégrations (21 mai). À reprendre demain.</p>
+      <p class="headline-analyse">→ Pour le lecteur : la couche "données capteurs → LLM" se commoditise sous tes pieds. Si Coros laisse ChatGPT répondre aux questions training, ton avantage défendable n'est plus l'analyse — c'est la boucle "plan adaptatif qui se reconfigure tout seul".</p>
+      <p class="headline-link"><a href="https://gearjunkie.com/technology/coros-partner-chatgpt-claude">GearJunkie — Coros×ChatGPT/Claude — 20 mai</a></p>
+    </div>
+  </div>
+
+  <h2>IA — modèles, produits, communications</h2>
+
+  <div class="item">
+    <p class="item-title">Vatican : encyclique <em>Magnifica Humanitas</em>, Anthropic invitée à la tribune</p>
+    <p class="item-fact">Pope Leo XIV publie aujourd'hui à 11h30 (Salle du Synode) sa première encyclique, signée le 15 mai — 135 ans jour pour jour après <em>Rerum Novarum</em> de Léon XIII sur les droits des travailleurs face à la révolution industrielle. Le parallèle est explicite : IA = nouvelle révolution industrielle, et le texte centre la doctrine sur "la sauvegarde de la personne humaine à l'âge de l'IA". Présentation aux côtés du Pape : les cardinaux Fernández (Doctrine de la foi) et Czerny (Développement humain intégral), la théologienne Anna Rowlands (Durham), la professeure Leocadie Lushombo, et <strong>Christopher Olah, co-fondateur d'Anthropic</strong>, responsable de la recherche en interprétabilité.</p>
+    <p class="item-links"><a href="https://www.vaticannews.va/en/pope/news/2026-05/pope-leo-xiv-first-encyclical-magnifica-humanitas.html">Vatican News — 25 mai</a> · <a href="https://www.americamagazine.org/vatican-dispatch/2026/05/18/pope-leo-encyclical-artifical-intelligence-anthropic/">America Magazine — 18 mai</a> · <a href="https://www.ncronline.org/news/why-ai-company-anthropic-helping-launch-pope-leo-xivs-encyclical">NCR — pourquoi Anthropic</a></p>
+    <div class="item-analyse">
+      <strong>→ Pour le lecteur :</strong> ne pas surinterpréter. C'est un signal d'industrie (Anthropic = visage "responsable" de l'IA aux yeux des institutions), pas un signal produit. Aucune incidence directe sur ton stack ni sur la concurrence endurance. À noter mentalement : le narratif "IA + humain" devient un actif marketing — formulation utile à transposer dans ton propre positionnement "l'athlète n'est pas une variable d'ajustement du plan".
+    </div>
+  </div>
+
+  <h2>M&amp;A &amp; investissements IA</h2>
+
+  <div class="item">
+    <p class="item-title">Anthropic : 2ᵉ tour de $30 Md+ à $900 Md+ pré-money, clôture imminente</p>
+    <p class="item-fact">Bloomberg confirme vendredi que le tour mené par Sequoia, Dragoneer, Altimeter et Greenoaks (≈ $2 Md par lead) doit clore <strong>cette semaine</strong>. Y participent aussi Founders Fund et General Catalyst. C'est le 2ᵉ tour à $30 Md d'Anthropic dans la même année calendaire (Série G à $380 Md post-money en février). La valorisation pré-money de $900 Md placerait Anthropic <strong>au-dessus d'OpenAI</strong> ($852 Md post-tour de mars). Run-rate annoncé aux LPs : $50 Md d'ici fin juin (vs $10,9 Md de revenu Q2 selon les chiffres divulgués la semaine dernière).</p>
+    <p class="item-links"><a href="https://www.bloomberg.com/news/articles/2026-05-22/anthropic-to-close-over-30-billion-round-as-soon-as-next-week">Bloomberg — 22 mai</a> · <a href="https://www.techtimes.com/articles/317066/20260523/anthropic-funding-round-top-30b-900b-valuation-would-surpass-openai-most-valuable-ai-startup.htm">TechTimes — 23 mai</a></p>
+    <div class="item-analyse">
+      <strong>→ Pour le lecteur :</strong> impact indirect mais réel. Plus Anthropic capitalise lourd, plus elle pousse vite sur les briques agent (Claude Code, MCP, SDK via Stainless acquise le 18 mai). Or Coros vient justement de choisir Anthropic comme premier partenaire MCP côté wearable. Probabilité qu'un acteur sport-tech ait accès dans les 6 mois à un "agent training Claude" avec context window large et coûts compétitifs : nettement supérieure à il y a un mois. À intégrer dans ton arbitrage Claude vs OpenAI vs Gemini pour la couche raisonnement.
+    </div>
+  </div>
+
+  <h2>Sociétés innovantes IA-native</h2>
+
+  <div class="item">
+    <p class="empty">Rien à signaler aujourd'hui sur ce volet (fenêtre stricte 24h, lendemain de week-end).</p>
+  </div>
+
+  <h2>Applications d'entraînement sportif</h2>
+
+  <div class="item">
+    <p class="empty">Rien à signaler aujourd'hui sur ce volet — aucune annonce de la watchlist dans les 24h.</p>
+    <p class="item-fact">Pour mémoire (hors fenêtre stricte, semaine du 18–22 mai) : Coros devient le premier wearable à officialiser un MCP ChatGPT/Claude (<a href="https://gearjunkie.com/technology/coros-partner-chatgpt-claude">GearJunkie — 20 mai</a>), Garmin Connect bascule en modèle social "followers" type Strava (<a href="https://the5krunner.com/2026/05/20/google-wear-os-7-sports-usage/">the5krunner — 21 mai</a>), Strava lance Strength avec 14 intégrations incluant Garmin, Coros, Whoop, Runna (<a href="https://the5krunner.com/2026/05/21/strava-strength-training/">the5krunner — 21 mai</a>). Ces trois signaux dessinent la même direction : la couche capteurs et la couche social se consolident, la couche logicielle "coach adaptatif" reste l'espace ouvert.</p>
+  </div>
+
+  <h2>Qualité des sources</h2>
+  <div class="sources">
+    <span class="lbl">Sources citées :</span>
+    <span>vaticannews.va 🟢</span>
+    <span>·</span>
+    <span>bloomberg.com 🟢</span>
+    <span>·</span>
+    <span>americamagazine.org 🟢</span>
+    <span>·</span>
+    <span>ncronline.org 🟢</span>
+    <span>·</span>
+    <span>techtimes.com 🟠</span>
+    <span>·</span>
+    <span>gearjunkie.com 🟡</span>
+    <span>·</span>
+    <span>the5krunner.com 🟡</span>
+  </div>
+
+  <p class="footnote">
+    Notification haut-impact envoyée : oui — trigger : "M&amp;A IA majeur > 500 M$" (Anthropic close de tour à $30 Md+ / $900 Md+) — priorité : 4.
+  </p>
+
+</div>
+</body>
+</html>
