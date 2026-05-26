@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — Veille IA & Sport endurance — 26 mai 2026</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #111418;
+    --ink-soft: #4a5158;
+    --ink-muted: #6b7177;
+    --rule: #e6e8eb;
+    --rule-soft: #f0f2f4;
+    --accent: #1a4fb4;
+    --accent-soft: #eef3fc;
+    --analyse-bg: #fff8e7;
+    --analyse-bd: #e3b341;
+    --chip-ia: #2563eb;
+    --chip-ia-bg: #e8efff;
+    --chip-ma: #7c3aed;
+    --chip-ma-bg: #f1e9ff;
+    --chip-iann: #0d9488;
+    --chip-iann-bg: #e2f6f3;
+    --chip-sport: #c2410c;
+    --chip-sport-bg: #fdecd8;
+    --green: #15803d;
+    --yellow: #b45309;
+    --orange: #c2410c;
+  }
+  html, body {
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.55;
+  }
+  .wrap {
+    max-width: 640px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 24px 16px 56px;
+  }
+  h1 {
+    font-size: 26px;
+    line-height: 1.25;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  .subtitle {
+    color: var(--ink-muted);
+    font-size: 15px;
+    margin: 0 0 28px;
+  }
+  h2 {
+    font-size: 20px;
+    line-height: 1.3;
+    margin: 36px 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--rule);
+    letter-spacing: -0.005em;
+  }
+  p { margin: 0 0 10px; }
+  a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; word-break: break-word; }
+  a:hover { color: #0d3380; }
+
+  /* TL;DR */
+  .tldr {
+    background: var(--accent-soft);
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin: 0 0 28px;
+  }
+  .tldr-label {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin: 0 0 12px;
+  }
+  .headline {
+    padding: 10px 0;
+    border-top: 1px solid #d6e1f5;
+  }
+  .headline:first-of-type { border-top: 0; padding-top: 4px; }
+  .headline-title {
+    font-size: 18px;
+    line-height: 1.35;
+    font-weight: 700;
+    margin: 6px 0 6px;
+  }
+  .headline-context {
+    font-size: 17px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    margin: 0 0 8px;
+  }
+  .headline a { display: inline-block; min-height: 22px; padding: 4px 0; font-size: 15px; }
+
+  /* Items du corps */
+  .item { margin: 0 0 24px; }
+  .item-title {
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 1.35;
+    margin: 0 0 8px;
+  }
+  .item-fact {
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--ink);
+    margin: 0 0 8px;
+  }
+  .item-links { font-size: 16px; color: var(--ink-muted); }
+  .item-links a { display: inline-block; padding: 6px 0; min-height: 28px; }
+
+  /* Analyse */
+  .analyse {
+    margin-top: 10px;
+    background: var(--analyse-bg);
+    border-left: 3px solid var(--analyse-bd);
+    padding: 10px 12px;
+    border-radius: 0 8px 8px 0;
+    font-size: 17px;
+    line-height: 1.5;
+    color: #5a4514;
+  }
+  .analyse-label {
+    font-weight: 700;
+    color: #7a5b0d;
+  }
+
+  /* Chips */
+  .chip {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 3px 8px;
+    border-radius: 999px;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+  .chip-IA { background: var(--chip-ia-bg); color: var(--chip-ia); }
+  .chip-MA { background: var(--chip-ma-bg); color: var(--chip-ma); }
+  .chip-IAnative { background: var(--chip-iann-bg); color: var(--chip-iann); }
+  .chip-Sport { background: var(--chip-sport-bg); color: var(--chip-sport); }
+
+  /* Quality */
+  .sources {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 8px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .src {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: var(--rule-soft);
+    color: var(--ink-soft);
+    white-space: nowrap;
+  }
+  .src .dot { font-size: 13px; margin-right: 2px; }
+
+  .empty { font-style: italic; color: var(--ink-muted); }
+
+  .footer-note {
+    margin-top: 36px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    font-size: 13px;
+    color: var(--ink-muted);
+    line-height: 1.45;
+  }
+
+  /* Desktop */
+  @media (min-width: 768px) {
+    body { font-size: 17px; }
+    .wrap { max-width: 760px; padding: 56px 48px 80px; }
+    h1 { font-size: 30px; }
+    h2 { font-size: 22px; }
+    .tldr { padding: 26px 28px; }
+    .headline-title { font-size: 18px; }
+    .headline-context { font-size: 16px; }
+    .item-title { font-size: 19px; }
+    .item-fact { font-size: 17px; }
+    .analyse { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Briefing — Veille IA &amp; Sport endurance — 26 mai 2026</h1>
+<p class="subtitle">Mardi 26 mai 2026 · Lecture : ~5 min · 9 items couverts · fenêtre élargie à ~5 jours (24h strictes trop maigres aujourd'hui)</p>
+
+<!-- TL;DR -->
+<div class="tldr">
+  <p class="tldr-label">À la une</p>
+
+  <div class="headline">
+    <span class="chip chip-MA">M&amp;A</span>
+    <div class="headline-title">Anthropic boucle un tour de plus de 30 Md$ à ~900 Md$ — devant OpenAI</div>
+    <p class="headline-context">Round co-mené par Sequoia, Dragoneer, Altimeter et Greenoaks, ~2 Md$ chacun. Valorisation doublée en 14 semaines depuis la Series G de février. Anthropic projette 10,9 Md$ de revenus au T2 et son premier trimestre rentable.</p>
+    <p class="analyse"><span class="analyse-label">→ Pour le lecteur :</span> capacité d'investissement Anthropic démultipliée → Claude (et ses API) restent un partenaire technique crédible et durable pour bâtir la couche raisonnement/agent du produit. Pas de risque d'évaporation côté infrastructure modèle.</p>
+    <p><a href="https://www.bloomberg.com/news/articles/2026-05-22/anthropic-to-close-over-30-billion-round-as-soon-as-next-week">Bloomberg — 22 mai</a></p>
+  </div>
+
+  <div class="headline">
+    <span class="chip chip-IA">IA</span>
+    <div class="headline-title">Pape Léon XIV publie <em>Magnifica Humanitas</em>, première encyclique sur l'IA</div>
+    <p class="headline-context">235 pages sur la protection de la personne dans l'âge de l'IA. Chris Olah (co-fondateur Anthropic) intervient au lancement officiel — signal fort de la place qu'Anthropic veut occuper dans le débat de gouvernance, en pleine séquence Pentagone défavorable.</p>
+    <p><a href="https://www.cnn.com/2026/05/25/europe/pope-leo-ai-encyclical-magnifica-humanitas-intl">CNN — 25 mai</a></p>
+  </div>
+
+  <div class="headline">
+    <span class="chip chip-MA">M&amp;A</span>
+    <div class="headline-title">SpaceX dévoile dans son S-1 un contrat compute de 45 Md$ avec Anthropic</div>
+    <p class="headline-context">1,25 Md$/mois jusqu'à mai 2029 pour l'accès à Colossus I &amp; II (220 000+ GPU Nvidia). Confirme la dépendance d'Anthropic à un troisième fournisseur de compute en parallèle d'AWS et de Google — la course au GPU devient un sport à somme positive entre rivaux.</p>
+    <p><a href="https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/">TechCrunch — 20 mai</a></p>
+  </div>
+
+  <div class="headline">
+    <span class="chip chip-Sport">Sport</span>
+    <div class="headline-title">Strava refond son expérience musculation : log dédié, muscle maps, 14 partenaires</div>
+    <p class="headline-context">Bascule majeure pour Strava qui rattrape un retard structurant : sets/reps/poids saisissables nativement, génération automatique de cartes musculaires, intégrations Whoop, Garmin, Amazfit, 24 Hour Fitness. La diversification "multisport vie réelle" devient la norme côté plateformes sociales.</p>
+    <p class="analyse"><span class="analyse-label">→ Pour le lecteur :</span> Strava verrouille la couche journal social multisport — le terrain d'adaptation devient plus serré côté tracking. Différencier sur la planification adaptative reste tenable, mais l'argument "multisport" tout court ne suffit plus comme proposition.</p>
+    <p><a href="https://press.strava.com/articles/strava-overhauls-strength-experience-with-expanded-partner-ecosystem-new-workout-log-and-muscle-maps">press.strava.com — 21 mai</a></p>
+  </div>
+
+</div>
+
+<!-- 1. IA modèles, produits, communications -->
+<h2>IA — modèles, produits, communications</h2>
+
+<div class="item">
+  <p class="item-title">Andrej Karpathy rejoint l'équipe pré-entraînement d'Anthropic</p>
+  <p class="item-fact">Co-fondateur d'OpenAI et ex-lead IA Tesla, Karpathy annonce sur X (mardi 19 mai) son arrivée chez Anthropic sous Nick Joseph. Mission : utiliser Claude lui-même pour accélérer la recherche en pré-entraînement. Signal explicite : Anthropic mise sur la recherche assistée par modèle plutôt que sur la course brute au compute pour rester compétitif.</p>
+  <p class="item-links"><a href="https://techcrunch.com/2026/05/19/openai-co-founder-andrej-karpathy-joins-anthropics-pre-training-team/">TechCrunch — 19 mai</a></p>
+</div>
+
+<div class="item">
+  <p class="item-title">Gemini 3.5 Flash en disponibilité générale dès le jour du lancement</p>
+  <p class="item-fact">Google a poussé Gemini 3.5 Flash en GA le 19 mai (I/O 2026), sans période de preview — chose rare pour un modèle frontier-class. Tarification 1,50 $ / 9 $ par M tokens, fenêtre 1M, 76,2 % sur Terminal-Bench 2.1 (au-dessus de Gemini 3.1 Pro). Positionné comme un modèle d'agent avant d'être un modèle de chat.</p>
+  <p class="item-links"><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/">blog.google — 19 mai</a> · <a href="https://techcrunch.com/2026/05/19/with-gemini-3-5-flash-google-bets-its-next-ai-wave-on-agents-not-chatbots/">TechCrunch — 19 mai</a></p>
+  <p class="analyse"><span class="analyse-label">→ Pour le lecteur :</span> brique potentiellement directement utile pour la couche "ré-planifier sous contrainte" — fenêtre 1M tokens permet d'injecter l'historique d'entraînement complet d'un athlète dans le contexte, et la tarification Flash rend ça économiquement réaliste en production.</p>
+</div>
+
+<div class="item">
+  <p class="item-title">Un modèle de raisonnement OpenAI invalide une conjecture de géométrie discrète d'Erdős</p>
+  <p class="item-fact">Annoncé le 20 mai : un modèle interne d'OpenAI a produit, de façon autonome, un contre-exemple à la conjecture des distances unitaires (Erdős, 1946). Première fois qu'un problème ouvert majeur d'un sous-champ mathématique est résolu par un LLM généraliste, sans outillage spécialisé ni entraînement dédié. La preuve passe par la théorie algébrique des nombres.</p>
+  <p class="item-links"><a href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/">openai.com — 20 mai</a></p>
+</div>
+
+<div class="item">
+  <p class="item-title">Encyclique <em>Magnifica Humanitas</em> du pape Léon XIV avec présence d'Anthropic au lancement</p>
+  <p class="item-fact">Premier texte théologique majeur du pontificat, entièrement dédié à la protection de la personne humaine à l'âge de l'IA. La présence officielle de Chris Olah (Anthropic) à la présentation est notable : Anthropic se positionne ouvertement comme interlocuteur "responsable" en pleine séquence où le Pentagone vient de l'écarter de son programme de réseaux classifiés (au profit d'AWS, Google, MSFT, OpenAI, SpaceX, NVIDIA, Reflection, Oracle).</p>
+  <p class="item-links"><a href="https://www.cnn.com/2026/05/25/europe/pope-leo-ai-encyclical-magnifica-humanitas-intl">CNN — 25 mai</a></p>
+</div>
+
+<!-- 2. M&A & investissements -->
+<h2>M&amp;A &amp; investissements IA</h2>
+
+<div class="item">
+  <p class="item-title">Anthropic boucle un tour de >30 Md$ à ~900 Md$ — dépasse OpenAI</p>
+  <p class="item-fact">Round co-mené par Sequoia Capital, Dragoneer, Altimeter et Greenoaks (~2 Md$ chacun), avec participation de Founders Fund et General Catalyst. Valorisation doublée en 14 semaines (380 Md$ → 900 Md$+). Anthropic projette 10,9 Md$ de revenus au T2 et son premier trimestre opérationnellement rentable, run-rate annualisé attendu >50 Md$ à fin juin.</p>
+  <p class="item-links"><a href="https://www.bloomberg.com/news/articles/2026-05-22/anthropic-to-close-over-30-billion-round-as-soon-as-next-week">Bloomberg — 22 mai</a> · <a href="https://finance.yahoo.com/sectors/technology/articles/anthropic-set-close-30-billion-203545596.html">Yahoo Finance — 25 mai</a></p>
+</div>
+
+<div class="item">
+  <p class="item-title">SpaceX expose dans son S-1 un contrat compute Anthropic de 45 Md$</p>
+  <p class="item-fact">S-1 déposé le 20 mai (IPO sous ticker SPCX). Anthropic paiera 1,25 Md$/mois jusqu'à mai 2029 pour l'accès aux clusters Colossus I &amp; II (200 000+ GPU Nvidia, 300+ MW). Clause de sortie à 90 jours pour les deux parties — ce qui rend le revenu théoriquement annulable avant la roadshow. CSA initial signé le 6 mai.</p>
+  <p class="item-links"><a href="https://techcrunch.com/2026/05/20/anthropic-will-pay-xai-1-25-billion-per-month-for-compute/">TechCrunch — 20 mai</a> · <a href="https://www.axios.com/2026/05/20/anthropic-spacex-compute">Axios — 20 mai</a></p>
+</div>
+
+<div class="item">
+  <p class="item-title">Microsoft en discussion pour vendre ses puces Maia 200 à Anthropic</p>
+  <p class="item-fact">CNBC rapporte le 21 mai des discussions entre Microsoft et Anthropic pour la livraison du Maia 200, la 2e génération de puces IA maison de MSFT (la 1re alimente déjà GPT-5.2 chez OpenAI). Microsoft prévoit 190 Md$ de capex 2026 (+25 Md$ liés à la flambée des composants mémoire). Anthropic accumulerait ainsi un 4e fournisseur de compute (AWS, Google, SpaceX, MSFT).</p>
+  <p class="item-links"><a href="https://www.cnbc.com/2026/05/21/anthropic-microsoft-maia-200-ai-chip.html">CNBC — 21 mai</a></p>
+</div>
+
+<!-- 3. Sociétés innovantes IA-native -->
+<h2>Sociétés innovantes IA-native</h2>
+
+<p class="empty">Rien à signaler aujourd'hui sur ce volet (strict &lt; 24h). Les mouvements notables récents — Legora (15 Md$, 4 mai), Hint (Slow Ventures, 13 mai), DeployCo d'OpenAI (4 Md$, 11 mai) — ont déjà été couverts.</p>
+
+<!-- 4. Sport endurance -->
+<h2>Applications d'entraînement sportif</h2>
+
+<div class="item">
+  <p class="item-title">Strava refond son expérience musculation — 14 partenaires, log dédié, muscle maps</p>
+  <p class="item-fact">Annonce du 21 mai : nouveau workout log pour saisir sets / reps / poids, génération automatique d'une carte musculaire à partir des exercices, intégrations natives avec Amazfit, Garmin, Whoop notamment (24 Hour Fitness à l'été). La musculation, sport à plus forte croissance sur Strava (>500 M de uploads en 2025), devient une catégorie de premier niveau.</p>
+  <p class="item-links"><a href="https://press.strava.com/articles/strava-overhauls-strength-experience-with-expanded-partner-ecosystem-new-workout-log-and-muscle-maps">press.strava.com — 21 mai</a> · <a href="https://9to5mac.com/2026/05/21/strava-adds-dedicated-strength-training-support-for-sets-reps-weight-and-muscle-groups/">9to5Mac — 21 mai</a></p>
+  <p class="analyse"><span class="analyse-label">→ Pour le lecteur :</span> Strava se consolide comme hub social multisport — la couche "journal d'entraînement" devient quasi gratuite. La différenciation produit doit absolument se déplacer plus haut dans la stack (planification adaptative, recommandation contextuelle) plutôt que d'essayer de capturer le log.</p>
+</div>
+
+<div class="item">
+  <p class="item-title">Garmin Connect déploie un système de followers et durcit ses contrôles de confidentialité</p>
+  <p class="item-fact">Roll-out commencé le 21 mai : les "connexions" deviennent des "followers", apparition d'une notion de "friends" (follow réciproque), revue de confidentialité forcée au premier ouverture, et nouveau rôle "Authorized Viewer" donnant à un coach/famille un accès consultation seule. Garmin reconfigure clairement Connect en concurrent direct du fil social Strava.</p>
+  <p class="item-links"><a href="https://garminrumors.com/garmin-connect-rolls-out-new-followers-system/">garminrumors.com — 21 mai</a> · <a href="https://the5krunner.com/2026/05/01/garmin-vs-strava-connect/">the5krunner — 1 mai (contexte)</a></p>
+  <p class="analyse"><span class="analyse-label">→ Pour le lecteur :</span> le rôle "Authorized Viewer" est un signal fort — Garmin facilite explicitement la relation coach/athlète depuis sa plateforme, avec accès lecture sur les données brutes. À surveiller : si Garmin push de la planification adaptative au-dessus, ça grignote le segment "coach numérique" sur lequel se positionne le produit.</p>
+</div>
+
+<div class="item">
+  <p class="item-title">DC Rainmaker publie sa review complète du Fitbit Air (embargo levé aujourd'hui)</p>
+  <p class="item-fact">Le Fitbit Air, bracelet sans abonnement à 99 $, attaque frontalement Whoop sur le segment band optique sans subscription. Capteurs HR / SpO2 (rouge + IR), 7 jours d'autonomie, bandes interchangeables. DC Rainmaker note la puissance de distribution Google derrière le produit. Embargo des reviews levé le 26 mai.</p>
+  <p class="item-links"><a href="https://www.dcrainmaker.com/2026/05/fitbit-air-whoop-competitor-everything-details.html">DC Rainmaker — détails produit</a> · <a href="https://www.dcrainmaker.com/2026/05/fitbit-air-first-24-hours-impressions.html">DC Rainmaker — premières impressions 16 mai</a></p>
+  <p class="analyse"><span class="analyse-label">→ Pour le lecteur :</span> commoditisation accélérée de la couche capteur (Fitbit Air à 99 $, sans abonnement). Confirme que la valeur ne viendra plus du hardware ni du suivi brut, mais bien de la logique de coaching adaptative au-dessus — c'est l'arbitrage qui sous-tend déjà le positionnement.</p>
+</div>
+
+<!-- Qualité des sources -->
+<h2>Qualité des sources</h2>
+<div class="sources">
+  <span class="src"><span class="dot">🟢</span> bloomberg.com</span>
+  <span class="src"><span class="dot">🟢</span> techcrunch.com</span>
+  <span class="src"><span class="dot">🟢</span> cnbc.com</span>
+  <span class="src"><span class="dot">🟢</span> cnn.com</span>
+  <span class="src"><span class="dot">🟢</span> axios.com</span>
+  <span class="src"><span class="dot">🟢</span> openai.com</span>
+  <span class="src"><span class="dot">🟢</span> blog.google</span>
+  <span class="src"><span class="dot">🟢</span> press.strava.com</span>
+  <span class="src"><span class="dot">🟡</span> the5krunner.com</span>
+  <span class="src"><span class="dot">🟡</span> dcrainmaker.com</span>
+  <span class="src"><span class="dot">🟡</span> garminrumors.com</span>
+  <span class="src"><span class="dot">🟠</span> 9to5mac.com</span>
+  <span class="src"><span class="dot">🟠</span> yahoo.com</span>
+</div>
+
+<p class="footer-note">
+  Notification ntfy.sh envoyée : oui — triggers : M&amp;A IA > 500 M$ (Anthropic round, SpaceX/Anthropic compute) — priorité : 4 (high).
+  <br>Fenêtre temporelle : strict &lt;24h appliqué pour le sourcing primaire des items "À la une", élargi à 5 jours pour le corps faute de matière dans la fenêtre stricte (journée calme côté annonces).
+</p>
+
+</div>
+</body>
+</html>
