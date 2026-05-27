@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — Veille IA & Sport endurance — 27 mai 2026</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --muted: #5a5a5a;
+    --border: #e5e5e5;
+    --accent: #0f62fe;
+    --tldr-bg: #f7f9fc;
+    --tldr-border: #d6e0f0;
+    --analysis-bg: #fff8ec;
+    --analysis-border: #e0a93b;
+    --chip-ia-bg: #e6f0ff; --chip-ia-fg: #0a3a8a;
+    --chip-ma-bg: #fff1e0; --chip-ma-fg: #9a4a00;
+    --chip-iana-bg: #efe6ff; --chip-iana-fg: #4a1d8a;
+    --chip-sport-bg: #e3f5e8; --chip-sport-fg: #1a5c2c;
+  }
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  .wrap {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+    box-sizing: border-box;
+  }
+  h1 { font-size: 26px; line-height: 1.25; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .subtitle { color: var(--muted); font-size: 15px; margin-bottom: 28px; }
+  h2 { font-size: 20px; line-height: 1.3; margin: 36px 0 14px; border-bottom: 2px solid var(--border); padding-bottom: 8px; }
+  .tldr {
+    background: var(--tldr-bg);
+    border: 1px solid var(--tldr-border);
+    border-radius: 10px;
+    padding: 18px 16px;
+    margin-bottom: 8px;
+  }
+  .tldr-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .headline {
+    padding: 14px 0;
+    border-top: 1px solid var(--tldr-border);
+  }
+  .headline:first-of-type { border-top: none; padding-top: 4px; }
+  .headline-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.35;
+    margin: 4px 0 6px;
+  }
+  .headline-context {
+    font-size: 17px;
+    color: var(--text);
+    margin: 4px 0 8px;
+  }
+  .analysis-line {
+    background: var(--analysis-bg);
+    border-left: 3px solid var(--analysis-border);
+    padding: 8px 10px;
+    margin: 8px 0;
+    font-size: 17px;
+    border-radius: 0 6px 6px 0;
+  }
+  .item {
+    margin-bottom: 22px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .item:last-child { border-bottom: none; }
+  .item-title { font-weight: 700; font-size: 19px; line-height: 1.3; margin: 0 0 8px; }
+  .item-fact { font-size: 18px; margin: 6px 0 10px; }
+  .item-links { font-size: 16px; color: var(--muted); margin: 6px 0; word-break: break-word; }
+  .item-links a { color: var(--accent); text-decoration: none; }
+  .item-links a:hover { text-decoration: underline; }
+  .item-empty { color: var(--muted); font-style: italic; font-size: 17px; }
+  .chip {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+  .chip-ia { background: var(--chip-ia-bg); color: var(--chip-ia-fg); }
+  .chip-ma { background: var(--chip-ma-bg); color: var(--chip-ma-fg); }
+  .chip-iana { background: var(--chip-iana-bg); color: var(--chip-iana-fg); }
+  .chip-sport { background: var(--chip-sport-bg); color: var(--chip-sport-fg); }
+  .sources {
+    background: #f4f4f6;
+    border-radius: 10px;
+    padding: 16px;
+    margin-top: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 12px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .sources strong { display: block; width: 100%; font-size: 13px; color: var(--text); margin-bottom: 4px; letter-spacing: 0.04em; text-transform: uppercase; }
+  .source-item { white-space: nowrap; }
+  .notif-trace {
+    margin-top: 28px;
+    font-size: 13px;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+  }
+  a { color: var(--accent); }
+
+  @media (min-width: 768px) {
+    .wrap { max-width: 760px; padding: 56px 48px 80px; }
+    body { font-size: 17px; }
+    h1 { font-size: 30px; }
+    h2 { font-size: 22px; margin-top: 44px; }
+    .tldr { padding: 26px 28px; }
+    .headline-title { font-size: 18px; }
+    .headline-context { font-size: 16px; }
+    .analysis-line { font-size: 16px; }
+    .item-title { font-size: 19px; }
+    .item-fact { font-size: 17px; }
+    .subtitle { font-size: 15px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Briefing — Veille IA & Sport endurance — 27 mai 2026</h1>
+<div class="subtitle">Mercredi 27 mai 2026 · Lecture : ~5 min · 6 items couverts · Fenêtre : moins de 24h</div>
+
+<div class="tldr">
+  <div class="tldr-label">À la une</div>
+
+  <div class="headline">
+    <span class="chip chip-ma">M&amp;A</span>
+    <div class="headline-title">Baseten en discussions pour $1 Md à $11 Md de valo — l'inference devient la nouvelle gold rush</div>
+    <div class="headline-context">L'infra d'inference Baseten est en talks pour lever $1 Md à $11 Md post-money — sa valo a plus que doublé en trois mois, avec un ARR passé de $200M à $600M en un trimestre. Le marché des couches d'exécution prend une prime massive sur celui de l'entraînement.</div>
+    <div class="analysis-line">→ Pour le lecteur : signal fort que l'infra d'inférence se professionnalise et devient commodifiable. Une app multisport qui consomme du modèle peut viser une marge plus stable côté serving — l'opportunité est d'arbitrer entre Baseten / Fireworks / Modal selon coût et latence plutôt que de bricoler sa stack.</div>
+    <div class="item-links">The Information, 26 mai · <a href="https://www.theinformation.com/articles/ai-inference-provider-baseten-talks-raise-1-billion-11-billion-valuation">theinformation.com</a></div>
+  </div>
+
+  <div class="headline">
+    <span class="chip chip-ma">M&amp;A</span>
+    <div class="headline-title">Fireworks AI vise $15 Md de valo — deuxième méga-deal d'inference en 24 h</div>
+    <div class="headline-context">Bloomberg confirme que Fireworks AI est en discussions pour un tour à $15 Md, quasi-quadruplant sa valo d'octobre. Cumulé à Baseten, on a sur 24 h plus de $26 Md de valo combinée sur la couche d'inférence — signal très net que les capitaux migrent vers le serving.</div>
+    <div class="item-links">Bloomberg, 27 mai · <a href="https://www.bloomberg.com/news/articles/2026-05-27/fireworks-ai-in-talks-for-funding-at-15-billion-valuation">bloomberg.com</a></div>
+  </div>
+
+  <div class="headline">
+    <span class="chip chip-sport">Sport</span>
+    <div class="headline-title">DC Rainmaker publie l'analyse complète de la baisse permanente des Garmin Rally — jusqu'à –$400</div>
+    <div class="headline-context">Deep-dive publié hier sur la coupe de MSRP du capteur de puissance Garmin Rally (jusqu'à –$400 sur la version XC, –$300 sur la Road). Garmin protège son flanc capteur après le rapprochement Coros×Wahoo annoncé en avril. La commoditisation du hardware s'accélère.</div>
+    <div class="analysis-line">→ Pour le lecteur : confirmation supplémentaire que la couche capteur se commoditise. L'avantage d'une app d'entraînement adaptative se déplace vers la couche logicielle / coaching IA — pas la peine de tenter d'aller intégrer du hardware propriétaire.</div>
+    <div class="item-links">DC Rainmaker, 26 mai · <a href="https://www.dcrainmaker.com/2026/05/garmin-rally-x10series-comparison-price-dropr-rk210-xc210-rs210.html">dcrainmaker.com</a></div>
+  </div>
+</div>
+
+<h2>1 — IA — modèles, produits, communications</h2>
+
+<div class="item">
+  <div class="item-title">Demis Hassabis ré-aligne ses prédictions AGI : 2029 plausible, 2030 le scénario de référence</div>
+  <div class="item-fact">À Google I/O Connect, le CEO de Google DeepMind a déclaré qu'il s'attendait toujours à l'AGI vers 2030, mais qu'il considère désormais 2029 comme une possibilité réelle. Il qualifie la phase 2026 "d'ère des agents" comme une "répétition générale". Pas de nouveau modèle annoncé, mais cadrage stratégique notable.</div>
+  <div class="item-links">Couverture Axios/Bloomberg, 26 mai · <a href="https://www.axios.com/2026/05/21/google-ai-anthropic-openai-war">axios.com</a></div>
+</div>
+
+<div class="item">
+  <div class="item-title">OpenAI recrute Colin Fleming (ServiceNow) comme CMO Business</div>
+  <div class="item-fact">OpenAI a confirmé l'arrivée de Colin Fleming, ex-CMO de ServiceNow, à la tête du marketing de son unité Business. Signal de la professionnalisation rapide du go-to-market entreprise — confirmation que la bataille passe désormais autant par le marketing B2B que par les benchmarks techniques.</div>
+  <div class="item-links">Techmeme, 27 mai · <a href="https://www.techmeme.com/">techmeme.com</a> [agrégateur — source primaire encore non publiée à l'heure de la rédaction]</div>
+</div>
+
+<h2>2 — M&amp;A &amp; investissements IA</h2>
+
+<div class="item">
+  <div class="item-title">Baseten en talks pour $1 Md à $11 Md de valo</div>
+  <div class="item-fact">L'infra d'inference Baseten serait en négociations pour une nouvelle levée de $1 Md à $11 Md post-money, plus du double de sa valo de février ($5 Md). Son ARR est passé de $200M à $600M en un seul trimestre. Le tour fait écho à la migration capex vers la couche d'exécution, à mesure que les modèles deviennent commodifiés.</div>
+  <div class="item-links">The Information, 26 mai · <a href="https://www.theinformation.com/articles/ai-inference-provider-baseten-talks-raise-1-billion-11-billion-valuation">theinformation.com</a> · TechStartups · <a href="https://techstartups.com/2026/05/26/ai-inference-startup-baseten-in-talks-to-raise-1-billion-at-11-billion-valuation/">techstartups.com</a></div>
+  <div class="analysis-line">→ Pour le lecteur : la couche serving se stabilise et se rationalise. Pour une app multisport qui appelle un modèle de planification, c'est l'opportunité de découpler la R&amp;D modèle (qui peut être un fine-tune chez un labo) de l'inference (sous-traitable à coût convergent). L'avantage produit reste sur la qualité de la couche de contexte athlète, pas sur l'infra.</div>
+</div>
+
+<div class="item">
+  <div class="item-title">Fireworks AI en talks à $15 Md de valo</div>
+  <div class="item-fact">Bloomberg rapporte que Fireworks AI, autre acteur clé de l'inference, est en discussions pour un nouveau tour valorisant la société autour de $15 Md — quasi-quadruplement vs octobre. Le rythme et la taille des tours sur ce segment sur 24 h (Baseten + Fireworks) signalent un consensus VC très clair : c'est là que se joue la prochaine marge.</div>
+  <div class="item-links">Bloomberg, 27 mai · <a href="https://www.bloomberg.com/news/articles/2026-05-27/fireworks-ai-in-talks-for-funding-at-15-billion-valuation">bloomberg.com</a></div>
+</div>
+
+<div class="item">
+  <div class="item-title">Anthropic boucle un second $30 Md à $900 Md de valo cette semaine</div>
+  <div class="item-fact">Suite des reportings Bloomberg et Investing.com : le tour de $30 Md co-mené par Sequoia, Dragoneer, Greenoaks et Altimeter à $900 Md pré-money devrait être closé d'ici fin de semaine. Anthropic dépasserait OpenAI ($852 Md) comme la plus haute valo privée IA. Annualisé revenue rapporté autour de $45 Md (vs $9 Md fin 2025).</div>
+  <div class="item-links">Bloomberg (22 mai, suivi 26 mai) · <a href="https://www.bloomberg.com/news/articles/2026-05-22/anthropic-to-close-over-30-billion-round-as-soon-as-next-week">bloomberg.com</a></div>
+</div>
+
+<h2>3 — Sociétés innovantes IA-native</h2>
+
+<div class="item">
+  <div class="item-title">L'inference comme nouvelle classe d'unicorns IA-native</div>
+  <div class="item-fact">Au-delà de Baseten et Fireworks, le mouvement de fond pointe une nouvelle vague IA-native non centrée sur les modèles eux-mêmes mais sur la stack opérationnelle qui les sert : routage entre modèles, gouvernance des transactions d'agents (cf. Catena Labs, $30M Series A, 20 mai), contrôle des workflows multi-agents. La proposition de valeur centrale est l'orchestration, pas l'IA brute.</div>
+  <div class="item-links">Roundup TechStartups, 26 mai · <a href="https://techstartups.com/2026/05/26/venture-capital-startup-funding-roundup-may-26-2026/">techstartups.com</a></div>
+  <div class="analysis-line">→ Pour le lecteur : la prochaine vague de différenciation produit IA-native, c'est l'orchestration intelligente du contexte autour du modèle (mémoire utilisateur, contraintes temporelles, contexte multimodal). Pour une app d'entraînement adaptative, c'est précisément le terrain de jeu naturel : un excellent orchestrateur de contraintes athlétiques bat un meilleur modèle générique.</div>
+</div>
+
+<h2>4 — Applications d'entraînement sportif</h2>
+
+<div class="item">
+  <div class="item-title">Garmin baisse durablement les prix Rally — DC Rainmaker publie le deep-dive complet hier</div>
+  <div class="item-fact">DC Rainmaker a publié hier (26 mai) son analyse complète de la coupe permanente du MSRP sur les pédales capteur de puissance Garmin Rally x10 (jusqu'à –$400 sur la XC Dual, –$300 sur la Road Dual). La baisse elle-même date du 14 mai mais le decryption détaillé arrive maintenant. Lecture marché : geste défensif après le rapprochement Coros×Wahoo (24 avril), qui menace le verrouillage Garmin sur l'écosystème capteur cycliste.</div>
+  <div class="item-links">DC Rainmaker, 26 mai · <a href="https://www.dcrainmaker.com/2026/05/garmin-rally-x10series-comparison-price-dropr-rk210-xc210-rs210.html">dcrainmaker.com</a></div>
+  <div class="analysis-line">→ Pour le lecteur : confirmation que le hardware capteur se commoditise (prix en baisse, écosystèmes qui s'ouvrent). L'angle "le plan s'adapte aux contraintes de l'athlète" devient encore plus différenciant : la valeur ne se loge plus dans le capteur mais dans l'interprétation logicielle. À continuer de creuser comme positionnement central.</div>
+</div>
+
+<div class="item item-empty">
+  <em>Pas de mouvement nouveau sur les concurrents directs IA-native (TrainingPeaks, TrainerRoad, Athletica.ai, 2PEAK, Humango, AI Endurance, Enduco, Nolio) dans la fenêtre 24 h. Strava (overhaul Strength du 21 mai) et l'anti-doping MyWhoosh (17 mai) restent les signaux structurants de la semaine — déjà couverts dans les briefs précédents.</em>
+</div>
+
+<div class="sources">
+  <strong>Qualité des sources</strong>
+  <span class="source-item">bloomberg.com 🟢</span>
+  <span class="source-item">theinformation.com 🟢</span>
+  <span class="source-item">techcrunch.com 🟢</span>
+  <span class="source-item">axios.com 🟢</span>
+  <span class="source-item">dcrainmaker.com 🟡</span>
+  <span class="source-item">techstartups.com 🟠</span>
+  <span class="source-item">techmeme.com 🟠</span>
+</div>
+
+<div class="notif-trace">
+  Notification haut-impact envoyée : oui · triggers : [Trigger #4 — M&amp;A IA > $500M, déclenché 2× : Baseten $1B, Fireworks AI $15B valo] · priorité : 4 (high)
+</div>
+
+</div>
+</body>
+</html>
