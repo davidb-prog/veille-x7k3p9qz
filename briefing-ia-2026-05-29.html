@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — Veille IA & Sport endurance — 29 mai 2026</title>
+<style>
+  :root{
+    --bg:#fafaf7;
+    --ink:#16161a;
+    --ink-soft:#3d3d44;
+    --muted:#6b6b75;
+    --line:#e5e3dc;
+    --accent:#1f3a8a;
+    --chip-ia-bg:#e8edff;       --chip-ia-fg:#1f3a8a;
+    --chip-ma-bg:#fff1e0;       --chip-ma-fg:#92400e;
+    --chip-iann-bg:#e7f5ec;     --chip-iann-fg:#14532d;
+    --chip-sport-bg:#fde8ef;    --chip-sport-fg:#9d174d;
+    --analysis-bg:#f3f0ea;
+    --analysis-bar:#1f3a8a;
+  }
+  html, body {
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;
+    font-size:18px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    width:100%;
+    max-width:640px;
+    margin:0 auto;
+    padding:24px 16px 48px;
+  }
+  h1{
+    font-size:26px;
+    line-height:1.25;
+    margin:0 0 8px;
+    letter-spacing:-0.01em;
+  }
+  .subtitle{
+    font-size:15px;
+    color:var(--muted);
+    margin:0 0 28px;
+  }
+  h2{
+    font-size:20px;
+    margin:36px 0 16px;
+    padding-bottom:8px;
+    border-bottom:1px solid var(--line);
+    letter-spacing:-0.005em;
+  }
+  .tldr{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:18px 16px;
+    margin-bottom:32px;
+  }
+  .tldr h2{
+    margin-top:0;
+    border:0;
+    padding:0;
+    font-size:18px;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    color:var(--muted);
+  }
+  .headline{
+    padding:14px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .headline:last-child{border:0;padding-bottom:0;}
+  .headline:first-of-type{padding-top:8px;}
+  .headline-title{
+    font-size:18px;
+    font-weight:700;
+    margin:6px 0 6px;
+    line-height:1.35;
+  }
+  .headline-context{
+    font-size:17px;
+    margin:0 0 6px;
+    color:var(--ink-soft);
+  }
+  .headline-analysis{
+    font-size:17px;
+    margin:8px 0 6px;
+    padding:8px 12px;
+    border-left:3px solid var(--analysis-bar);
+    background:var(--analysis-bg);
+    border-radius:0 6px 6px 0;
+    color:var(--ink-soft);
+  }
+  .headline-link{
+    font-size:16px;
+    display:inline-block;
+    min-height:44px;
+    line-height:44px;
+    color:var(--accent);
+    word-break:break-word;
+  }
+  .item{
+    padding:18px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .item:last-child{border:0;}
+  .item-title{
+    font-size:19px;
+    font-weight:700;
+    margin:0 0 8px;
+    line-height:1.3;
+  }
+  .item-fact{
+    font-size:18px;
+    margin:0 0 10px;
+    color:var(--ink-soft);
+  }
+  .item-analysis{
+    font-size:17px;
+    margin:10px 0;
+    padding:10px 14px;
+    border-left:3px solid var(--analysis-bar);
+    background:var(--analysis-bg);
+    border-radius:0 6px 6px 0;
+    color:var(--ink-soft);
+  }
+  .item-links{
+    font-size:16px;
+    margin-top:8px;
+  }
+  .item-links a{
+    color:var(--accent);
+    word-break:break-word;
+    display:inline-block;
+    margin-right:8px;
+  }
+  .empty{
+    font-style:italic;
+    color:var(--muted);
+    padding:8px 0;
+  }
+  .chip{
+    display:inline-block;
+    font-size:12px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    padding:3px 9px;
+    border-radius:999px;
+    vertical-align:middle;
+  }
+  .chip-ia{background:var(--chip-ia-bg);color:var(--chip-ia-fg);}
+  .chip-ma{background:var(--chip-ma-bg);color:var(--chip-ma-fg);}
+  .chip-iann{background:var(--chip-iann-bg);color:var(--chip-iann-fg);}
+  .chip-sport{background:var(--chip-sport-bg);color:var(--chip-sport-fg);}
+  .sources{
+    margin-top:24px;
+    padding:16px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:12px;
+  }
+  .sources h2{
+    margin:0 0 12px;
+    border:0;
+    padding:0;
+    font-size:14px;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    color:var(--muted);
+  }
+  .sources-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px 10px;
+    font-size:14px;
+    color:var(--ink-soft);
+  }
+  .sources-list span{display:inline-block;}
+  footer{
+    margin-top:40px;
+    font-size:13px;
+    color:var(--muted);
+    text-align:center;
+    line-height:1.5;
+  }
+  a{color:var(--accent);}
+  @media (min-width:768px){
+    body{font-size:17px;}
+    .wrap{max-width:760px;padding:48px 48px 80px;}
+    h1{font-size:30px;}
+    h2{font-size:22px;}
+    .tldr{padding:24px 28px;}
+    .headline-title{font-size:18px;}
+    .headline-context, .headline-analysis{font-size:16px;}
+    .item-title{font-size:19px;}
+    .item-fact{font-size:17px;}
+    .item-analysis{font-size:16px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Briefing — Veille IA &amp; Sport endurance — 29 mai 2026</h1>
+  <p class="subtitle">Vendredi 29 mai 2026 · Lecture : ~5 min · 6 items couverts</p>
+
+  <!-- ========= TL;DR ========= -->
+  <section class="tldr">
+    <h2>À la une</h2>
+
+    <div class="headline">
+      <span class="chip chip-ma">M&amp;A</span>
+      <p class="headline-title">Anthropic lève 65 Md$ en Série H, valorisation 965 Md$</p>
+      <p class="headline-context">Le plus gros tour privé jamais bouclé en tech. Run-rate revenue d'Anthropic dépassé 47 Md$. Anthropic passe devant OpenAI (852 Md$) et devient la startup privée la plus valorisée au monde, à un cheveu du trillion.</p>
+      <p class="headline-analysis">→ Pour le lecteur : la capacité d'Anthropic à pousser le coût d'inférence à la baisse et le modèle agentique au sommet devient encore plus crédible — bonne nouvelle pour ta brique d'adaptation continue, qui dépend de tokens fréquents et pas chers.</p>
+      <a class="headline-link" href="https://www.anthropic.com/news/series-h" target="_blank" rel="noopener">anthropic.com — 28 mai</a>
+    </div>
+
+    <div class="headline">
+      <span class="chip chip-ia">IA</span>
+      <p class="headline-title">Claude Opus 4.8 : honnêteté, sous-agents parallèles, prix inchangé</p>
+      <p class="headline-context">Anthropic publie Opus 4.8 le même jour que sa Série H. Agentic coding 64,3 → 69,2 %, raisonnement multi-disciplinaire 54,7 → 57,9 %, fast mode 2,5× plus rapide. Le modèle est entraîné pour signaler ses incertitudes plutôt que de bluffer.</p>
+      <p class="headline-analysis">→ Pour le lecteur : un coach IA qui dit "je ne sais pas" plutôt que d'inventer une zone d'intensité est exactement ce dont une app adaptative a besoin pour ne pas perdre la confiance de l'athlète. Tester sur la génération de séances pour évaluer le gain d'honnêteté en pratique.</p>
+      <a class="headline-link" href="https://www.anthropic.com/news/claude-opus-4-8" target="_blank" rel="noopener">anthropic.com — 28 mai</a>
+    </div>
+
+    <div class="headline">
+      <span class="chip chip-ia">IA</span>
+      <p class="headline-title">Canada : OpenAI jugé en violation de la loi privacy</p>
+      <p class="headline-context">L'Office of the Privacy Commissioner conclut que l'entraînement de ChatGPT a sur-collecté des données personnelles sans évaluation de proportionnalité ni consentement valide pour le scraping. Précédent juridique sérieux pour tous les acteurs entraînés sur du web public.</p>
+      <a class="headline-link" href="https://www.priv.gc.ca/en/" target="_blank" rel="noopener">priv.gc.ca — 28 mai <em>(via OpenAI release notes)</em></a>
+    </div>
+
+  </section>
+
+  <!-- ========= Section 1 — IA ========= -->
+  <h2>1. IA — modèles, produits, communications</h2>
+
+  <div class="item">
+    <h3 class="item-title">Claude Opus 4.8 — bond d'agentique et discipline d'incertitude</h3>
+    <p class="item-fact">Anthropic publie Opus 4.8 le 28 mai, moins de 2 mois après Opus 4.7. Gains chiffrés : agentic coding 64,3 → 69,2 %, raisonnement multi-disciplinaire avec outils 54,7 → 57,9 %, fast mode environ 2,5× plus rapide. Nouveauté centrale : le modèle est entraîné pour flagger ses doutes — 4× moins de défauts non signalés dans son propre code vs Opus 4.7. Tarifs identiques à 4.7. Anthropic tease en parallèle une "Claude Mythos" attendue dans les semaines à venir.</p>
+    <p class="item-analysis">→ Pour le lecteur : deux briques exploitables. (1) Le "je flag mon incertitude" résout un risque produit majeur — un coach IA qui surcharge un athlète parce qu'il a halluciné une FTP. Câbler ce comportement dans tes prompts de planification. (2) Le bond agentique + sous-agents parallèles ouvre des architectures plus ambitieuses (ex : un agent par sport + un orchestrateur), pour pas plus cher qu'Opus 4.7.</p>
+    <p class="item-links">
+      <a href="https://www.anthropic.com/news/claude-opus-4-8" target="_blank" rel="noopener">anthropic.com — 28 mai</a>
+      <a href="https://www.macrumors.com/2026/05/28/anthropic-claude-opus-4-8/" target="_blank" rel="noopener">macrumors.com — 28 mai</a>
+    </p>
+  </div>
+
+  <div class="item">
+    <h3 class="item-title">Canada juge OpenAI en violation de sa loi privacy</h3>
+    <p class="item-fact">L'Office of the Privacy Commissioner du Canada conclut que le développement de ChatGPT viole la loi canadienne : sur-collecte de données personnelles sans évaluation de proportionnalité, absence de consentement valide pour le scraping web. Pas une condamnation pénale, mais un rapport officiel qui crée un précédent et ouvre la voie à des actions civiles.</p>
+    <p class="item-links">
+      <a href="https://www.priv.gc.ca/en/" target="_blank" rel="noopener">priv.gc.ca <em>[source primaire à confirmer]</em></a>
+      <a href="https://releasebot.io/updates/openai" target="_blank" rel="noopener">releasebot.io — 28 mai</a>
+    </p>
+  </div>
+
+  <div class="item">
+    <h3 class="item-title">Meta ouvre globalement les abonnements Instagram / Facebook / WhatsApp</h3>
+    <p class="item-fact">Annoncé le 27 mai. Meta déploie ses abonnements consommateurs partout, et démarre des tests d'abonnements business, créateurs et Meta AI. C'est la première fois que Meta monétise directement les apps grand public à grande échelle — le coût lié à l'inférence IA est cité comme moteur.</p>
+    <p class="item-links">
+      <a href="https://techcrunch.com/2026/05/27/meta-officially-launches-instagram-facebook-and-whatsapp-subscriptions-with-more-to-come-including-ai-plans/" target="_blank" rel="noopener">techcrunch.com — 27 mai</a>
+    </p>
+  </div>
+
+  <!-- ========= Section 2 — M&A ========= -->
+  <h2>2. M&amp;A &amp; investissements IA</h2>
+
+  <div class="item">
+    <h3 class="item-title">Anthropic — Série H de 65 Md$ à 965 Md$ post-money</h3>
+    <p class="item-fact">Tour mené par Altimeter, Dragoneer, Greenoaks, Sequoia, co-mené par Capital Group, Coatue, D1, GIC, ICONIQ, XN. Inclut 15 Md$ d'engagements antérieurs des hyperscalers (dont 5 Md$ Amazon). Anthropic annonce un run-rate revenue dépassé 47 Md$ ce mois. Plus gros tour privé jamais bouclé en tech, fonds dédiés à la recherche safety/interprétabilité, à l'expansion compute, et au scaling produit. Anthropic passe devant la valorisation privée d'OpenAI (852 Md$ en mars).</p>
+    <p class="item-analysis">→ Pour le lecteur : signal de marché — l'argent va massivement vers la couche modèle, pas vers la couche application. Construire une app verticale sur l'API d'un labo est désormais le pari rationnel : l'arbitrage build-vs-buy sur la couche modèle se durcit chaque trimestre. Avantage clair : pression à la baisse sur le prix par token, et roadmap modèle sans surprise.</p>
+    <p class="item-links">
+      <a href="https://www.anthropic.com/news/series-h" target="_blank" rel="noopener">anthropic.com — 28 mai</a>
+      <a href="https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/" target="_blank" rel="noopener">techcrunch.com — 28 mai</a>
+      <a href="https://www.cnbc.com/2026/05/28/anthropic-open-ai-startup-value.html" target="_blank" rel="noopener">cnbc.com — 28 mai</a>
+    </p>
+  </div>
+
+  <div class="item">
+    <h3 class="item-title">Saris — 28,8 M$ Série A pour des workflows agentiques bancaires</h3>
+    <p class="item-fact">Saris boucle 28,8 M$ en Série A, menée par 8VC, avec Audacious, Homebrew, Btech Consortium et Service Ventures. Cible : agents IA spécialisés banque et credit unions (compliance, opérations, ouverture de comptes). Validation d'une thèse "vertical agent SaaS" sur un secteur régulé.</p>
+    <p class="item-links">
+      <a href="https://techstartups.com/2026/05/28/venture-capital-startup-funding-roundup-may-28-2026/" target="_blank" rel="noopener">techstartups.com — 28 mai</a>
+    </p>
+  </div>
+
+  <div class="item">
+    <h3 class="item-title">Fonoa — 110 M$ Série C + rachat de la plateforme tax indirect de PwC</h3>
+    <p class="item-fact">Fonoa cumule un tour de 110 M$ et acquiert la plateforme PwC Indirect Tax. Stratégie type "AI + infra fiscale réglementée" : la VC ne chasse plus l'IA comme catégorie mais comme moyen de prendre le contrôle de décisions coûteuses dans des verticaux réglementés.</p>
+    <p class="item-links">
+      <a href="https://techstartups.com/2026/05/28/venture-capital-startup-funding-roundup-may-28-2026/" target="_blank" rel="noopener">techstartups.com — 28 mai</a>
+    </p>
+  </div>
+
+  <!-- ========= Section 3 — IA-native ========= -->
+  <h2>3. Sociétés innovantes IA-native</h2>
+
+  <div class="item">
+    <p class="empty"><em>Rien à signaler aujourd'hui sur ce volet hors géants déjà couverts en section 1.</em> Les annonces les plus saillantes des dernières 24h concernent les labos foundation et la couche infrastructure plutôt que les startups IA-native pure-play.</p>
+  </div>
+
+  <!-- ========= Section 4 — Sport ========= -->
+  <h2>4. Applications d'entraînement sportif</h2>
+
+  <div class="item">
+    <p class="empty"><em>Rien de strictement nouveau dans les dernières 24h sur la watchlist.</em></p>
+    <p class="item-fact">Pour contexte, la semaine a vu plusieurs mouvements importants antérieurs au fenêtre 24h, qui restent structurants pour comprendre l'état du marché :</p>
+    <p class="item-fact">• <strong>Strava</strong> a déployé le 21 mai un overhaul majeur du strength training (muscle maps, log de séance, 14 intégrations partenaires dont Garmin, COROS, Whoop, Runna) — signal IPO clair, élargissement TAM.</p>
+    <p class="item-fact">• <strong>Garmin Connect 5.25</strong> rollout du système de "followers" (Android d'abord) — refonte sociale assumée juste avant l'IPO de Strava.</p>
+    <p class="item-fact">• <strong>COROS × ChatGPT / Claude</strong> (13 mai) reste l'événement le plus structurant du mois côté watchlist : COROS est la première marque endurance à publier un serveur MCP officiel donnant accès à l'historique d'entraînement depuis ChatGPT Plus et Claude Pro.</p>
+    <p class="item-analysis">→ Pour le lecteur : la tendance dominante du mois est claire — la couche capteur+plateforme (Strava, Garmin, COROS) se déporte vers le social et l'ouverture MCP. Le coaching adaptatif IA reste, pour l'instant, un trou — c'est ton positionnement. Mais le rapprochement COROS↔Claude rend de plus en plus crédible un "coach Claude natif" branché sur les données capteur — surveiller toute extension côté Garmin ou Strava.</p>
+  </div>
+
+  <!-- ========= Qualité des sources ========= -->
+  <section class="sources">
+    <h2>Qualité des sources</h2>
+    <div class="sources-list">
+      <span>anthropic.com 🟢</span>
+      <span>techcrunch.com 🟢</span>
+      <span>cnbc.com 🟢</span>
+      <span>macrumors.com 🟢</span>
+      <span>techstartups.com 🟡</span>
+      <span>releasebot.io 🟠</span>
+      <span>priv.gc.ca 🟢</span>
+    </div>
+    <p style="font-size:13px;color:var(--muted);margin:12px 0 0;">🟢 primaire · 🟡 secondaire (média d'industrie) · 🟠 tertiaire (digest/agrégateur)</p>
+  </section>
+
+  <footer>
+    Brief généré automatiquement le 29 mai 2026.<br>
+    Notification haut-impact envoyée : oui — triggers : [Anthropic Série H ≥ 500 M$ ; Claude Opus 4.8 frontier release] — priorité : 4
+  </footer>
+
+</div>
+</body>
+</html>
