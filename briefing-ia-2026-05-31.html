@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — Veille IA &amp; Sport endurance — 31 mai 2026</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #6b6b6b;
+    --border: #e6e6e6;
+    --accent: #1f5fd6;
+    --tldr-bg: #f5f7fb;
+    --tldr-border: #d8dff0;
+    --analysis-bg: #fff8e6;
+    --analysis-border: #f0c14b;
+    --chip-ia-bg: #e8f0ff; --chip-ia-fg: #1f3fa5;
+    --chip-ma-bg: #f3e8ff; --chip-ma-fg: #6d28d9;
+    --chip-iana-bg: #e8fff0; --chip-iana-fg: #15803d;
+    --chip-sport-bg: #ffeede; --chip-sport-fg: #b45309;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    line-height: 1.55;
+  }
+  .wrap {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 16px 48px;
+  }
+  h1 {
+    font-size: 26px;
+    line-height: 1.25;
+    margin: 0 0 6px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .subtitle {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 0 0 28px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 36px 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--border);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .section-desc {
+    font-size: 14px;
+    color: var(--muted);
+    margin: -8px 0 16px;
+    font-style: italic;
+  }
+  .tldr {
+    background: var(--tldr-bg);
+    border: 1px solid var(--tldr-border);
+    border-radius: 10px;
+    padding: 18px 16px;
+    margin: 0 0 8px;
+  }
+  .tldr h2 {
+    border-bottom: none;
+    margin: 0 0 12px;
+    padding: 0;
+    font-size: 18px;
+  }
+  .headline {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--tldr-border);
+  }
+  .headline:last-child { border-bottom: none; padding-bottom: 4px; }
+  .headline:first-of-type { padding-top: 4px; }
+  .headline-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.3;
+    margin: 6px 0 4px;
+  }
+  .headline-context {
+    font-size: 17px;
+    line-height: 1.5;
+    margin: 0 0 6px;
+    color: #2a2a2a;
+  }
+  .analysis {
+    background: var(--analysis-bg);
+    border-left: 3px solid var(--analysis-border);
+    padding: 10px 12px;
+    margin: 8px 0;
+    font-size: 17px;
+    line-height: 1.5;
+    border-radius: 0 6px 6px 0;
+  }
+  .analysis::before {
+    content: "→ Pour le lecteur : ";
+    font-weight: 700;
+    color: #8b5a00;
+  }
+  .item {
+    margin: 0 0 28px;
+  }
+  .item-title {
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 1.3;
+    margin: 0 0 8px;
+  }
+  .item-fact {
+    font-size: 18px;
+    line-height: 1.55;
+    margin: 0 0 8px;
+  }
+  .item-links {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--muted);
+    margin: 6px 0;
+    word-break: break-word;
+  }
+  .item-links a {
+    color: var(--accent);
+    text-decoration: none;
+    min-height: 44px;
+    display: inline-block;
+    padding: 4px 0;
+  }
+  .item-links a:hover { text-decoration: underline; }
+  .empty {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 16px;
+  }
+  .chip {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+  .chip-ia { background: var(--chip-ia-bg); color: var(--chip-ia-fg); }
+  .chip-ma { background: var(--chip-ma-bg); color: var(--chip-ma-fg); }
+  .chip-iana { background: var(--chip-iana-bg); color: var(--chip-iana-fg); }
+  .chip-sport { background: var(--chip-sport-bg); color: var(--chip-sport-fg); }
+  .sources {
+    margin-top: 32px;
+    padding-top: 18px;
+    border-top: 2px solid var(--border);
+  }
+  .sources h2 {
+    font-size: 18px;
+    border-bottom: none;
+    margin: 0 0 10px;
+    padding: 0;
+  }
+  .source-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 4px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .source-chip {
+    background: #f4f4f4;
+    padding: 4px 9px;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+  .footer-note {
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  @media (min-width: 768px) {
+    .wrap {
+      max-width: 760px;
+      padding: 56px 48px 80px;
+    }
+    body { font-size: 17px; }
+    h1 { font-size: 30px; }
+    h2 { font-size: 22px; margin-top: 44px; }
+    .subtitle { font-size: 15px; }
+    .tldr { padding: 26px 28px; }
+    .tldr h2 { font-size: 18px; }
+    .headline-title { font-size: 18px; }
+    .headline-context { font-size: 16px; }
+    .analysis { font-size: 16px; }
+    .item-title { font-size: 19px; }
+    .item-fact { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Briefing — Veille IA &amp; Sport endurance — 31 mai 2026</h1>
+<p class="subtitle">Dimanche 31 mai 2026 · Lecture : ~5 min · 9 items couverts (4 sections)</p>
+
+<section class="tldr">
+  <h2>À la une</h2>
+
+  <div class="headline">
+    <span class="chip chip-ma">M&amp;A</span>
+    <div class="headline-title">Anthropic boucle un Series H de 65 G$ à 965 G$ — devant OpenAI sur le papier.</div>
+    <p class="headline-context">Tour mené par Altimeter, Dragoneer, Greenoaks et Sequoia. Run-rate annoncé à ~7 G$/mois ($47B annualisés). Une IPO est envisagée dès octobre. Anthropic dépasse OpenAI (~852 G$) en valorisation privée pour la première fois.</p>
+    <div class="analysis">la consolidation de la valeur en haut de la pile (modèles frontier) accélère. Pour un produit applicatif, l'enjeu n'est pas de rivaliser sur le modèle mais de capter une couche défendable que les frontier labs n'occupent pas — ici la planification adaptative multi-contraintes.</div>
+    <p class="item-links">28 mai · <a href="https://www.anthropic.com/news/series-h">Anthropic news</a> · <a href="https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/">TechCrunch</a></p>
+  </div>
+
+  <div class="headline">
+    <span class="chip chip-ia">IA</span>
+    <div class="headline-title">Claude Opus 4.8 généralisé, Mythos arrive "dans les semaines à venir".</div>
+    <p class="headline-context">Opus 4.8 : fast mode 2,5× plus rapide et 3× moins cher qu'Opus 4.7, mêmes tarifs (5$/25$ par M tokens). Mythos, plus puissant, reste en preview Glasswing pour raisons de cybersécu. Disponible également sur GitHub Copilot.</p>
+    <p class="item-links">28 mai · <a href="https://www.anthropic.com/news/claude-opus-4-8">Anthropic</a> · <a href="https://venturebeat.com/technology/anthropics-claude-opus-4-8-is-here-with-3x-cheaper-fast-mode-and-near-mythos-level-alignment">VentureBeat</a></p>
+  </div>
+
+  <div class="headline">
+    <span class="chip chip-sport">Sport</span>
+    <div class="headline-title">Garmin déploie son système "followers" — Garmin Connect bascule en réseau social façon Strava.</div>
+    <p class="headline-context">Rollout depuis le 21 mai : les contacts existants deviennent des "followers", les invitations en attente sont supprimées, revue de confidentialité au premier lancement. Suit l'acquisition de Strava par Garmin annoncée en avril (2,1 G$).</p>
+    <div class="analysis">Garmin verrouille la couche social/communauté en plus de la couche capteur. La menace concurrentielle pour un acteur indépendant n'est plus seulement "concurrent direct" — c'est un walled garden Garmin/Strava où la couche entraînement IA reste le terrain de jeu encore ouvert.</div>
+    <p class="item-links">en cours mai · <a href="https://the5krunner.com/2026/05/01/garmin-vs-strava-connect/">the5krunner</a></p>
+  </div>
+
+  <div class="headline">
+    <span class="chip chip-iana">IA-native</span>
+    <div class="headline-title">Cognition lève plus d'1 G$ en late-stage.</div>
+    <p class="headline-context">Le créateur de Devin enchaîne après la série précédente. Le marché du "coding agent" autonome se cristallise autour de quelques acteurs malgré le contre-signal Microsoft (annulation des licences Claude Code interne).</p>
+    <p class="item-links">27 mai · <a href="https://techstartups.com/2026/05/27/venture-capital-startup-funding-roundup-may-27-2026/">Tech Startups</a></p>
+  </div>
+</section>
+
+<h2>1. IA — modèles, produits, communications</h2>
+<p class="section-desc">Sorties de modèle, lancements produit, communications notables des labos et grands acteurs.</p>
+
+<div class="item">
+  <div class="item-title">Anthropic publie Claude Opus 4.8 et confirme Mythos pour les "semaines qui viennent"</div>
+  <p class="item-fact">Opus 4.8 généralise le "fast mode" 2,5× plus rapide à un coût 3× inférieur à Opus 4.7 (5$/25$ par M tokens à pleine vitesse). Anthropic positionne Opus 4.8 comme "près du niveau Mythos" sur l'alignement. Mythos lui-même reste réservé à Project Glasswing (cybersécu) le temps que l'organisation valide le profil de risque pour un release plus large. Disponible immédiatement sur l'API Anthropic, AWS Bedrock, Google Vertex et désormais sur GitHub Copilot.</p>
+  <p class="item-links">28 mai · <a href="https://www.anthropic.com/news/claude-opus-4-8">Anthropic — Introducing Claude Opus 4.8</a> · <a href="https://techcrunch.com/2026/05/28/anthropic-releases-opus-4-8-with-new-dynamic-workflow-tool/">TechCrunch</a> · <a href="https://github.blog/changelog/2026-05-28-claude-opus-4-8-is-generally-available-for-github-copilot/">GitHub Changelog</a></p>
+</div>
+
+<div class="item">
+  <div class="item-title">Microsoft Build dans 48h — Windows Agent Framework + Azure AI Foundry multi-modèle attendus</div>
+  <p class="item-fact">Build s'ouvre lundi 2 juin à San Francisco. Annonces téléphonées : Windows Agent Framework (APIs natives pour agents autonomes intégrés au shell), Copilot Agent Mode dans VS Code, Windows Agent Store, et Azure AI Foundry qui intégrerait formellement Claude aux côtés d'OpenAI avec SLA entreprise complet. Le contexte est tendu : Microsoft a annulé en interne ses licences Claude Code mi-mai pour cause de coûts, et doit défendre GitHub Copilot CLI face à la dérive de coûts dénoncée par Uber et NVIDIA.</p>
+  <p class="item-links">à venir 2-3 juin · <a href="https://build.microsoft.com">build.microsoft.com</a> · <a href="https://www.buildfastwithai.com/blogs/ai-news-today-may-30-2026">Build Fast with AI — récap 30 mai</a></p>
+  <div class="analysis">si Foundry intègre Claude avec SLA entreprise + un agent OS-level Windows, le terrain neutre "modèle au choix" devient la norme pour les apps verticales. Cela rend acceptable un pari sur Claude/Mythos comme moteur sans s'enfermer sur un seul fournisseur — utile pour la couche planification IA qui doit rester remplaçable.</div>
+</div>
+
+<div class="item">
+  <div class="item-title">Coros assume sa stack AI-voice-first ; CEO : "voice is the future"</div>
+  <p class="item-fact">Le CEO de Coros, Lewis Wu, a précisé la roadmap voice/AI dans une interview TechRadar fin mai : Voice Control en beta sur Coros Pace 4 et Apex 4, intégration prévue avec une couche AI propriétaire, refus d'aller sur le modèle d'abonnement à la Garmin Connect+ tant que le coût des LLM continue de baisser. Coros parie sur la commande vocale comme principal vecteur d'interaction avec le coaching adaptatif.</p>
+  <p class="item-links">~28 mai · <a href="https://www.techradar.com/health-fitness/we-believe-voice-is-the-future-when-the-era-of-ai-comes-in-a-lot-of-the-interaction-between-the-watch-or-the-app-with-consumers-will-change-why-coros-is-betting-on-voice-to-be-the-key-to-beating-apple-and-garmin">TechRadar — interview Lewis Wu</a></p>
+  <div class="analysis">la couche capteur s'allie de plus en plus à une couche conversationnelle propriétaire. Question stratégique : l'app d'entraînement adaptative doit-elle "parler" (assistant vocal) ou rester data/dashboard ? L'angle vocal devient un attendu côté athlètes, pas un différenciant.</div>
+</div>
+
+<h2>2. M&amp;A &amp; investissements IA</h2>
+<p class="section-desc">Acquisitions, fusions, levées significatives, restructurations capitalistiques, partenariats stratégiques avec impact financier.</p>
+
+<div class="item">
+  <div class="item-title">Anthropic — Series H de 65 G$ à 965 G$ post-money</div>
+  <p class="item-fact">Annoncé jeudi 28 mai. Co-mené par Altimeter, Dragoneer, Greenoaks, Sequoia, avec Capital Group, Coatue, D1, et participation stratégique de Samsung, SK Hynix, Micron. Run-rate revenu déclaré : 47 G$/an (vs 4 G$ il y a un an). Anthropic dépasse OpenAI (~852 G$) en valorisation privée pour la première fois. Forge Global évoque une IPO "dès octobre 2026" — non confirmé par la société.</p>
+  <p class="item-links">28 mai · <a href="https://www.anthropic.com/news/series-h">Anthropic — Series H</a> · <a href="https://www.cnbc.com/2026/05/28/anthropic-open-ai-startup-value.html">CNBC</a> · <a href="https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/">TechCrunch</a></p>
+</div>
+
+<div class="item">
+  <div class="item-title">Cognition lève "plus d'1 G$" en late-stage</div>
+  <p class="item-fact">L'éditeur de Devin et SWE-bench enchaîne après sa précédente levée. La société se positionne sur la verticale "agent de coding autonome" en pleine consolidation, malgré le contre-signal Microsoft (annulation des licences Claude Code interne) et la critique Uber sur la dérive de coûts. Détails et investisseurs non encore publiés.</p>
+  <p class="item-links">27 mai · <a href="https://techstartups.com/2026/05/27/venture-capital-startup-funding-roundup-may-27-2026/">Tech Startups — VC roundup 27 mai</a></p>
+</div>
+
+<div class="item">
+  <div class="item-title">IBM rejoint Project Glasswing — consortium à ~50 organisations</div>
+  <p class="item-fact">Annoncé conjointement le 19 mai (mais qui continue à circuler dans la presse fin mai). IBM Research utilise Claude Mythos Preview pour identifier des vulnérabilités dans des systèmes critiques, et intègre IBM Concert (sa plateforme AI vulnerability management) au workflow Glasswing. Rejoint AWS, Apple, Google, Microsoft, Cisco, JPMorgan Chase, Cloudflare, Mozilla.</p>
+  <p class="item-links">19 mai (rappel) · <a href="https://newsroom.ibm.com/2026-05-19-IBM-Brings-Its-Most-Advanced-AI-Powered-Security-Portfolio-to-Clients,-and-is-Strengthened-by-Ongoing-Project-Glasswing-Work">IBM Newsroom</a></p>
+</div>
+
+<h2>3. Sociétés innovantes IA-native</h2>
+<p class="section-desc">Startups ou produits dont la value-prop centrale repose sur une techno IA (hors géants déjà couverts en 1).</p>
+
+<div class="item">
+  <div class="item-title">Project Glasswing — premier bilan : 10 000+ vulnérabilités trouvées en 30 jours</div>
+  <p class="item-fact">Le 22 mai, Anthropic a publié son premier point d'étape sur Glasswing : Mythos Preview + ~50 partenaires ont identifié plus de 10 000 vulnérabilités haute/critique dans des logiciels systémiques (OpenBSD bug de 27 ans, FFmpeg flaw de 16 ans, WolfSSL CVSS 9.1). Cloudflare a trouvé 2 000 bugs dont 400 critiques sur ses propres systèmes ; Mozilla a corrigé 271 vulns Firefox (10× le rythme précédent). Analyse-clé : le goulot d'étranglement se déplace de la découverte à la correction.</p>
+  <p class="item-links">22 mai (suivi) · <a href="https://www.anthropic.com/glasswing">Anthropic — Glasswing update</a> · <a href="https://www.helpnetsecurity.com/2026/05/26/anthropic-project-glasswing-update/">Help Net Security</a></p>
+</div>
+
+<h2>4. Applications d'entraînement sportif</h2>
+<p class="section-desc">News de la watchlist (concurrents directs, indirects, à surveiller).</p>
+
+<div class="item">
+  <div class="item-title">Garmin Connect — déploiement du modèle "followers", refonte sociale en cours</div>
+  <p class="item-fact">Garmin déploie depuis le 21 mai un système de followers (les anciens contacts en deviennent automatiquement), suppression des invitations en attente, revue de confidentialité au premier lancement. Couplé à l'intégration Strava (acquisition 2,1 G$ confirmée en avril 2026), Garmin Connect+ inclut désormais l'abonnement Strava pour 69,99 $/an. Runna (racheté par Strava en 2025) reste opéré séparément. Garmin a aussi ajouté un overlay d'activité transparent pour partager statistiques sur photos/vidéos.</p>
+  <p class="item-links">21+ mai · <a href="https://the5krunner.com/2026/05/01/garmin-vs-strava-connect/">the5krunner — Connect leak</a> · <a href="https://the5krunner.com/2026/04/01/garmin-acquires-strava/">the5krunner — acquisition Strava</a> · <a href="https://www.t3.com/active/fitness-trackers/garmin-connect-app-transparent-overlay-0426">T3 — overlay</a></p>
+  <div class="analysis">l'axe "social/communauté" est verrouillé par le duo Garmin/Strava. La seule trajectoire défendable pour un nouvel entrant adaptatif multisport, c'est de rester intégrateur côté capteur (sync Garmin Connect/Strava propre) sans tenter de bâtir un graph social. La promesse "le plan s'adapte" ne se joue pas sur la couche social.</div>
+</div>
+
+<div class="item">
+  <div class="item-title">the5krunner publie un "Deep Dive Fix Files" — 7 issues sport-tech recensés</div>
+  <p class="item-fact">Le 30 mai, the5krunner a publié un récap de 7 bugs/issues remontés par la communauté endurance ces dernières semaines (détails complets sur le site). Périodique utile pour anticiper des frictions UX/data côté Garmin/Coros/Strava — typiquement les frictions qui poussent les athlètes ambitieux à essayer des outils alternatifs.</p>
+  <p class="item-links">30 mai · <a href="https://the5krunner.com/">the5krunner — homepage</a> <em>[source primaire à confirmer — la page de l'article spécifique n'a pas été retrouvée par recherche, lien vers la home]</em></p>
+</div>
+
+<div class="item">
+  <div class="item-title">MyWhoosh — Championships 2026, prize pool d'1 M$</div>
+  <p class="item-fact">MyWhoosh confirme la deuxième édition de son championnat mondial virtuel en juillet 2026 : prize pool d'1 M$ réparti entre hommes et femmes sur 6 catégories, format 7 étapes sur une semaine. Renforce sa position face à Zwift sur l'esport cyclisme indoor. Couplé à son programme antidoping biologique annoncé mi-mai (premiers tests sur Sunday Race Club le 17 mai).</p>
+  <p class="item-links">mai · <a href="https://bikerumor.com/win-a-million-dollars-now-that-mywhoosh-2026-championships-are-back/">Bikerumor</a> · <a href="https://the5krunner.com/2026/05/07/virtual-cycling-anti-doping/">the5krunner — antidoping</a></p>
+</div>
+
+<h2 class="sources-h">Qualité des sources</h2>
+<div class="source-chips">
+  <span class="source-chip">anthropic.com 🟢</span>
+  <span class="source-chip">techcrunch.com 🟢</span>
+  <span class="source-chip">cnbc.com 🟢</span>
+  <span class="source-chip">venturebeat.com 🟢</span>
+  <span class="source-chip">github.blog 🟢</span>
+  <span class="source-chip">newsroom.ibm.com 🟢</span>
+  <span class="source-chip">helpnetsecurity.com 🟡</span>
+  <span class="source-chip">techradar.com 🟡</span>
+  <span class="source-chip">the5krunner.com 🟡</span>
+  <span class="source-chip">t3.com 🟡</span>
+  <span class="source-chip">bikerumor.com 🟡</span>
+  <span class="source-chip">techstartups.com 🟠</span>
+  <span class="source-chip">buildfastwithai.com 🟠</span>
+</div>
+
+<p class="footer-note">
+Notification haut-impact envoyée : oui — triggers : [M&amp;A IA &gt; 500 M$ (Anthropic Series H), mouvement structurant marché adjacent (Garmin Connect social refonte)] — priorité : 4 (high). Mode systématique en phase de calibration.<br><br>
+Fenêtre temporelle : moins de 24-72h selon items. Plusieurs stories phares (Anthropic Series H, Opus 4.8) datent du 28 mai, couvertes toute la semaine et toujours en vague médiatique le 30-31 mai.
+</p>
+
+</div>
+</body>
+</html>
