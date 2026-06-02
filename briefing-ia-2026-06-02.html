@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — Veille IA & Sport endurance — 2 juin 2026</title>
+<style>
+  :root {
+    --bg: #fafafa;
+    --surface: #ffffff;
+    --text: #1a1a1a;
+    --muted: #5a5a5a;
+    --border: #e5e5e5;
+    --accent: #1a1a1a;
+    --link: #1453b8;
+    --tldr-bg: #fff8e6;
+    --tldr-border: #f0d97a;
+    --analyse-bg: #eef4ff;
+    --analyse-border: #3b6fd3;
+    --chip-ia-bg: #e8f0ff; --chip-ia-fg: #1a3d8f;
+    --chip-ma-bg: #ffe9e9; --chip-ma-fg: #8f1a1a;
+    --chip-iana-bg: #ecf7ec; --chip-iana-fg: #1f6f1f;
+    --chip-sport-bg: #fff0e0; --chip-sport-fg: #8f4a14;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    line-height: 1.55;
+  }
+  .wrap {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+  }
+  h1 {
+    font-size: 26px;
+    line-height: 1.25;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .subtitle {
+    font-size: 15px;
+    color: var(--muted);
+    margin-bottom: 28px;
+    line-height: 1.45;
+  }
+  h2 {
+    font-size: 20px;
+    line-height: 1.3;
+    margin: 36px 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--accent);
+  }
+  a {
+    color: var(--link);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    word-break: break-word;
+  }
+  a:hover { text-decoration: none; }
+  .chip {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+    margin-right: 6px;
+    vertical-align: middle;
+    letter-spacing: 0.02em;
+  }
+  .chip-ia { background: var(--chip-ia-bg); color: var(--chip-ia-fg); }
+  .chip-ma { background: var(--chip-ma-bg); color: var(--chip-ma-fg); }
+  .chip-iana { background: var(--chip-iana-bg); color: var(--chip-iana-fg); }
+  .chip-sport { background: var(--chip-sport-bg); color: var(--chip-sport-fg); }
+
+  /* TL;DR */
+  .tldr {
+    background: var(--tldr-bg);
+    border: 1px solid var(--tldr-border);
+    border-radius: 10px;
+    padding: 18px 16px;
+    margin-bottom: 20px;
+  }
+  .tldr h2 {
+    border-bottom: none;
+    margin: 0 0 12px;
+    padding: 0;
+    font-size: 18px;
+  }
+  .headline {
+    padding: 10px 0;
+    border-top: 1px dashed #e0c862;
+    min-height: 44px;
+  }
+  .headline:first-of-type { border-top: none; padding-top: 4px; }
+  .headline-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 4px 0 6px;
+  }
+  .headline-context {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #2a2a2a;
+    margin: 0 0 6px;
+  }
+  .headline-link {
+    font-size: 16px;
+  }
+
+  /* Items du corps */
+  .item {
+    margin: 22px 0 28px;
+    padding-bottom: 4px;
+  }
+  .item-title {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0 0 8px;
+  }
+  .item-fact {
+    font-size: 18px;
+    line-height: 1.55;
+    margin: 0 0 8px;
+  }
+  .item-links {
+    font-size: 16px;
+    color: var(--muted);
+    margin: 4px 0 8px;
+  }
+  .analyse {
+    background: var(--analyse-bg);
+    border-left: 4px solid var(--analyse-border);
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+    font-size: 17px;
+    margin: 10px 0 4px;
+    line-height: 1.5;
+  }
+  .analyse strong { color: #1c3a78; }
+  .empty {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 17px;
+  }
+
+  /* Sources */
+  .sources {
+    margin-top: 36px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+  .sources h2 {
+    border-bottom: none;
+    margin-bottom: 10px;
+    padding: 0;
+    font-size: 18px;
+  }
+  .src-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+  .src-chips span { white-space: nowrap; }
+
+  .notif-trace {
+    margin-top: 28px;
+    padding: 10px 12px;
+    background: #f0f0f0;
+    border-radius: 6px;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* Desktop */
+  @media (min-width: 768px) {
+    .wrap {
+      max-width: 760px;
+      padding: 48px 48px 80px;
+    }
+    h1 { font-size: 30px; }
+    h2 { font-size: 22px; }
+    .subtitle { font-size: 15px; }
+    body { font-size: 17px; }
+    .tldr { padding: 24px 28px; }
+    .headline-title { font-size: 18px; }
+    .headline-context { font-size: 16px; }
+    .item-title { font-size: 19px; }
+    .item-fact { font-size: 17px; }
+    .analyse { font-size: 16px; }
+  }
+
+  @media print {
+    body { background: white; }
+    .wrap { max-width: 100%; padding: 16px; }
+    a { color: black; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Briefing — Veille IA &amp; Sport endurance — 2 juin 2026</h1>
+  <div class="subtitle">
+    Mardi 2 juin 2026 · Lecture : ~5 min · 8 items couverts
+  </div>
+
+  <!-- TL;DR -->
+  <section class="tldr">
+    <h2>À la une</h2>
+
+    <div class="headline">
+      <span class="chip chip-sport">Sport</span>
+      <div class="headline-title">Strava lance un connecteur MCP pour Claude — l'analyse de l'historique d'entraînement devient un perk d'abonné</div>
+      <p class="headline-context">Première intégration native d'un assistant IA sur une grande plateforme connected fitness : OAuth read-only sur HR, pace, GPS, puissance, en accès conversationnel direct. Déploiement en cours pour tous les abonnés.</p>
+      <p class="headline-context"><strong>→ Pour le lecteur :</strong> un acteur indirect majeur livre la pièce que tu construis (coach IA sur historique multi-discipline) sans construire de coach — il commoditise la donnée et délègue l'intelligence. La barrière "j'ai ton historique" disparaît côté entrants.</p>
+      <p class="headline-link">→ <a href="https://press.strava.com/articles/strava-launches-mcp-connector">press.strava.com — 1 juin</a></p>
+    </div>
+
+    <div class="headline">
+      <span class="chip chip-ma">M&amp;A</span>
+      <div class="headline-title">Anthropic dépose confidentiellement son S-1 — valorisation ~965 Md$, ARR à 47 Md$</div>
+      <p class="headline-context">Devance OpenAI dans la course à l'IPO. Run rate revenu passé de 10 Md$ à 47 Md$ en un an, tiré par Claude Code. Ouvre potentiellement le plus gros listing tech jamais réalisé.</p>
+      <p class="headline-link">→ <a href="https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html">cnbc.com — 1 juin</a></p>
+    </div>
+
+    <div class="headline">
+      <span class="chip chip-ia">IA</span>
+      <div class="headline-title">Microsoft annonce Project Polaris — fin de la dépendance OpenAI sur GitHub Copilot</div>
+      <p class="headline-context">Modèle de coding maison (mixture-of-experts, chain/tree-of-thought, Maia 200), remplace GPT-4 Turbo en default Copilot dès août. Build 2026 acte aussi Windows Agent Framework 1.0 open source.</p>
+      <p class="headline-link">→ <a href="https://www.techtimes.com/articles/317596/20260602/github-copilot-replaces-gpt-4-project-polaris-ships-multi-agent-vs-code-build.htm">techtimes.com — 2 juin</a></p>
+    </div>
+
+    <div class="headline">
+      <span class="chip chip-ia">IA</span>
+      <div class="headline-title">OpenAI débarque sur AWS Bedrock — GPT-5.5, GPT-5.4 et Codex disponibles</div>
+      <p class="headline-context">Distribution élargie via le canal AWS-native, avec contrôles de gouvernance Bedrock. Suite du deal de 38 Md$ annoncé en avril. Codex sur Bedrock cible les workflows enterprise déjà ancrés AWS.</p>
+      <p class="headline-link">→ <a href="https://openai.com/index/openai-on-aws/">openai.com — 2 juin</a></p>
+    </div>
+
+  </section>
+
+  <!-- Corps -->
+
+  <h2>IA — modèles, produits, communications</h2>
+
+  <div class="item">
+    <div class="item-title">Microsoft Project Polaris : Copilot coupe le cordon OpenAI</div>
+    <p class="item-fact">Annoncé à Build 2026 le 2 juin. Polaris est un modèle MoE spécialisé par langage/framework, avec reasoning chain-of-thought et tree-of-thought à l'inférence, entraîné sur Maia 200 (puce maison Azure). Microsoft revendique des gains sur HumanEval et MBPP vs GPT-4 Turbo, particulièrement sur Rust et Haskell. Remplacement par défaut sur tous les abonnements GitHub Copilot à partir d'août, fallback GPT-4 optionnel jusqu'en novembre.</p>
+    <p class="item-links">→ <a href="https://www.techtimes.com/articles/317596/20260602/github-copilot-replaces-gpt-4-project-polaris-ships-multi-agent-vs-code-build.htm">techtimes.com — 2 juin</a> · <a href="https://aiweekly.co/alerts/microsoft-targets-claude-code-with-project-polaris">aiweekly.co — 2 juin</a></p>
+    <div class="analyse">
+      <strong>→ Pour le lecteur :</strong> signal large que les plateformes (Microsoft ici, peut-être Strava côté sport) préfèrent désormais leur stack maison plutôt qu'une dépendance à un modèle externe. À mesure que le coût d'inférence chute (~10x/an), construire son propre layer de reasoning sur des données capteurs devient économiquement défendable — c'est exactement la fenêtre dans laquelle ton produit doit accélérer.
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-title">OpenAI frontier models et Codex disponibles sur AWS Bedrock</div>
+    <p class="item-fact">GPT-5.5, GPT-5.4 et Codex désormais accessibles dans AWS Bedrock avec gouvernance et sécurité AWS-native. Annoncé conjointement par OpenAI et Amazon le 2 juin, en prolongement du deal stratégique de 38 Md$ d'avril. "Codex on Bedrock" cible explicitement les workflows enterprise de software engineering. Mention d'une future intégration "Daybreak" (vision OpenAI sur la transformation du dev).</p>
+    <p class="item-links">→ <a href="https://openai.com/index/openai-on-aws/">openai.com — 2 juin</a> · <a href="https://www.aboutamazon.com/news/aws/bedrock-openai-models">aboutamazon.com — 2 juin</a></p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Build 2026 : Windows Agent Framework 1.0 open source, Azure Agent Mesh, Foundry Local GA</div>
+    <p class="item-fact">Microsoft pousse Windows comme plateforme d'agents : framework 1.0 MIT-licensed, Azure Agent Mesh pour exécution fédérée multi-cloud/multi-device, Foundry Local en GA (modèles IA on-device sur Windows/macOS/Linux), et Agent Mode passé en default dans Office 365 Copilot. Le pivot de fond : faire de l'OS un substrat d'orchestration d'agents plutôt qu'un simple host d'apps.</p>
+    <p class="item-links">→ <a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-2-2026">buildfastwithai.com — 2 juin</a> · <a href="https://chatforest.com/builders-log/microsoft-build-2026-recap-windows-agent-platform-project-polaris-copilot-workspace/">chatforest.com — 2 juin</a></p>
+    <div class="analyse">
+      <strong>→ Pour le lecteur :</strong> Foundry Local GA = brique technique potentiellement réutilisable. Possibilité de faire tourner un layer IA on-device pour ton coach adaptatif (latence, vie privée des données capteurs, coûts) sans dépendre d'un appel API distant à chaque interaction. À évaluer concrètement contre tes contraintes mobile/wear.
+    </div>
+  </div>
+
+  <h2>M&amp;A &amp; investissements IA</h2>
+
+  <div class="item">
+    <div class="item-title">Anthropic dépose confidentiellement son S-1 — IPO en ligne de mire</div>
+    <p class="item-fact">Filing confidentiel auprès de la SEC le 1 juin, post-money valorisation ~965 Md$ après la Série H de 65 Md$ en mai. Revenu run rate passé de 10 Md$ (2025) à 47 Md$ (mai 2026), tiré principalement par Claude Code. Anthropic devance OpenAI, qui prépare un filing similaire. Aucun prix ni nombre d'actions fixés à ce stade — l'IPO effective dépendra des conditions de marché.</p>
+    <p class="item-links">→ <a href="https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html">cnbc.com — 1 juin</a> · <a href="https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/">techcrunch.com — 1 juin</a></p>
+    <div class="analyse">
+      <strong>→ Pour le lecteur :</strong> Anthropic public = lecture publique de la marge brute, du churn, du coût d'inférence par token et de la concentration client. C'est le premier vrai benchmark économique d'un fournisseur frontier — utile pour calibrer ton propre BP côté hypothèses coût d'API et durabilité du modèle "wrapper sur LLM".
+    </div>
+  </div>
+
+  <h2>Sociétés innovantes IA-native</h2>
+
+  <div class="item">
+    <div class="item-title">Wayve lance Wayve Labs — embodied AI au-delà de l'auto</div>
+    <p class="item-fact">La startup britannique d'autonomous driving annonce le 1 juin la création de Wayve Labs, structure de recherche sur l'embodied AI étendue à la robotique et à l'intelligence du monde physique au sens large. Signal d'un repositionnement : du vehicle stack vers un foundation model multi-domaine du physique.</p>
+    <p class="item-links">→ <a href="https://techstartups.com/2026/06/01/venture-capital-startup-funding-roundup-june-1-2026/">techstartups.com — 1 juin</a></p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">SpeedLabs lève 6,5 M$ seed pour ses "Momentum Markets" sur le sport live</div>
+    <p class="item-fact">Round mené par Parlay Capital (Bullpen Capital, TA Ventures, EdgeEquity). Le produit : créer et pricer en temps réel de nouveaux marchés tradables pendant les événements sportifs en direct, plutôt que de reprice des lignes existantes. Croisement IA temps réel × tabou des paris, ciblage US.</p>
+    <p class="item-links">→ <a href="https://techstartups.com/2026/06/01/venture-capital-startup-funding-roundup-june-1-2026/">techstartups.com — 1 juin</a></p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Waypoint Bio lève 20 M$ Série A — biotech IA-native sur CAR T tumeurs solides</div>
+    <p class="item-fact">Tour mené par Amplify Partners (General Catalyst, Lux Capital, Hummingbird Ventures, Mitsui Global, Time BioVentures). Stack : spatial biology + computer vision + pooled screening pour designer des thérapies CAR T in vivo nouvelle génération sur tumeurs solides. Signal de la vague "AI-native applied à un vertical infrastructure" plutôt que SaaS générique.</p>
+    <p class="item-links">→ <a href="https://techstartups.com/2026/06/01/venture-capital-startup-funding-roundup-june-1-2026/">techstartups.com — 1 juin</a></p>
+  </div>
+
+  <h2>Applications d'entraînement sportif</h2>
+
+  <div class="item">
+    <div class="item-title">Strava ouvre l'accès complet à son historique via Claude (MCP connector)</div>
+    <p class="item-fact">Lancement officiel le 1 juin pour tous les abonnés Strava. Le connecteur expose en read-only via OAuth les streams par seconde (HR, pace), GPS, puissance vélo, et métadonnées clubs/événements. L'utilisateur pose des questions en langage naturel à Claude qui répond depuis la donnée live Strava — pas un export figé. Strava se positionne comme la première grande plateforme connected fitness à expédier une intégration assistant IA native. À distinguer d'Athlete Intelligence (résumé post-activité, déjà déployé) : le MCP est conversationnel sur l'historique long.</p>
+    <p class="item-links">→ <a href="https://press.strava.com/articles/strava-launches-mcp-connector">press.strava.com — 1 juin</a> · <a href="https://support.strava.com/hc/en-us/articles/46190267796237-Strava-MCP-Connector">support.strava.com — 1 juin</a> · <a href="https://the5krunner.com/2026/06/01/strava-death-warrant-ai/">the5krunner.com — 1 juin</a></p>
+    <div class="analyse">
+      <strong>→ Pour le lecteur :</strong> menace directe sur deux axes — (1) un athlète Strava peut désormais obtenir une analyse adaptive personnelle "à coût d'abonnement déjà payé" via Claude, ce qui érode le willingness-to-pay pour un coach IA standalone ; (2) ton positionnement "le plan s'adapte aux contraintes" reste défendable si tu agis (planification multi-horizon, contraintes vie, intégration météo/équipement) là où Claude+Strava sert surtout l'analyse rétrospective. Le5krunner note d'ailleurs que la vraie barrière déjà tombée, c'était Apple/Google Health en janvier — Strava ne fait que formaliser un canal contrôlé. Conséquence : la valeur ne vient plus de la possession de la donnée mais de la qualité du modèle d'arbitrage en aval.
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Strava + Runna : challenge Global Running Day 5K le 3 juin</div>
+    <p class="item-fact">Strava et Runna (acquis 2025) lancent un challenge conjoint pour battre le record du plus grand nombre de 5K en une journée, le 3 juin (Global Running Day). Inclusion (course OU marche) plutôt que compétition. Moins une nouveauté produit qu'un signal d'intégration marketing post-acquisition.</p>
+    <p class="item-links">→ <a href="https://endurance.biz/2026/industry-news/strava-and-runna-aim-for-most-5k-activities-record-with-global-running-day-5k/">endurance.biz — 1 juin</a></p>
+  </div>
+
+  <!-- Sources -->
+  <div class="sources">
+    <h2>Qualité des sources</h2>
+    <div class="src-chips">
+      <span>openai.com 🟢</span>
+      <span>aboutamazon.com 🟢</span>
+      <span>press.strava.com 🟢</span>
+      <span>support.strava.com 🟢</span>
+      <span>cnbc.com 🟢</span>
+      <span>techcrunch.com 🟢</span>
+      <span>techtimes.com 🟢</span>
+      <span>endurance.biz 🟡</span>
+      <span>the5krunner.com 🟡</span>
+      <span>buildfastwithai.com 🟠</span>
+      <span>chatforest.com 🟠</span>
+      <span>aiweekly.co 🟠</span>
+      <span>techstartups.com 🟠</span>
+    </div>
+  </div>
+
+  <div class="notif-trace">
+    Notification haut-impact envoyée : oui — triggers : [marché adjacent — Strava lance coach IA en propre] + [M&amp;A IA majeur — Anthropic S-1] — priorité : 4.
+  </div>
+
+</div>
+</body>
+</html>
