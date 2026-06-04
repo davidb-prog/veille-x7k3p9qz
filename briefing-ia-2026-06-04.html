@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — Veille IA & Sport endurance — 4 juin 2026</title>
+<style>
+  :root {
+    --bg: #fafafa;
+    --surface: #ffffff;
+    --text: #1a1a1a;
+    --muted: #5a5a5a;
+    --border: #e5e5e5;
+    --accent: #1a1a1a;
+    --link: #1453b8;
+    --tldr-bg: #fff8e6;
+    --tldr-border: #f0d97a;
+    --analyse-bg: #eef4ff;
+    --analyse-border: #3b6fd3;
+    --chip-ia-bg: #e8f0ff; --chip-ia-fg: #1a3d8f;
+    --chip-ma-bg: #ffe9e9; --chip-ma-fg: #8f1a1a;
+    --chip-iana-bg: #ecf7ec; --chip-iana-fg: #1f6f1f;
+    --chip-sport-bg: #fff0e0; --chip-sport-fg: #8f4a14;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    line-height: 1.55;
+  }
+  .wrap {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+  }
+  h1 {
+    font-size: 26px;
+    line-height: 1.25;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .subtitle {
+    font-size: 15px;
+    color: var(--muted);
+    margin-bottom: 28px;
+    line-height: 1.45;
+  }
+  h2 {
+    font-size: 20px;
+    line-height: 1.3;
+    margin: 36px 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--accent);
+  }
+  a {
+    color: var(--link);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    word-break: break-word;
+  }
+  a:hover { text-decoration: none; }
+  .chip {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+    margin-right: 6px;
+    vertical-align: middle;
+    letter-spacing: 0.02em;
+  }
+  .chip-ia { background: var(--chip-ia-bg); color: var(--chip-ia-fg); }
+  .chip-ma { background: var(--chip-ma-bg); color: var(--chip-ma-fg); }
+  .chip-iana { background: var(--chip-iana-bg); color: var(--chip-iana-fg); }
+  .chip-sport { background: var(--chip-sport-bg); color: var(--chip-sport-fg); }
+
+  /* TL;DR */
+  .tldr {
+    background: var(--tldr-bg);
+    border: 1px solid var(--tldr-border);
+    border-radius: 10px;
+    padding: 18px 16px;
+    margin-bottom: 20px;
+  }
+  .tldr h2 {
+    border-bottom: none;
+    margin: 0 0 12px;
+    padding: 0;
+    font-size: 18px;
+  }
+  .headline {
+    padding: 10px 0;
+    border-top: 1px dashed #e0c862;
+    min-height: 44px;
+  }
+  .headline:first-of-type { border-top: none; padding-top: 4px; }
+  .headline-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 4px 0 6px;
+  }
+  .headline-context {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #2a2a2a;
+    margin: 0 0 6px;
+  }
+  .headline-link {
+    font-size: 16px;
+  }
+
+  /* Items du corps */
+  .item {
+    margin: 22px 0 28px;
+    padding-bottom: 4px;
+  }
+  .item-title {
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0 0 8px;
+  }
+  .item-fact {
+    font-size: 18px;
+    line-height: 1.55;
+    margin: 0 0 8px;
+  }
+  .item-links {
+    font-size: 16px;
+    color: var(--muted);
+    margin: 4px 0 8px;
+  }
+  .analyse {
+    background: var(--analyse-bg);
+    border-left: 4px solid var(--analyse-border);
+    padding: 10px 14px;
+    border-radius: 0 6px 6px 0;
+    font-size: 17px;
+    margin: 10px 0 4px;
+    line-height: 1.5;
+  }
+  .analyse strong { color: #1c3a78; }
+  .empty {
+    font-style: italic;
+    color: var(--muted);
+    font-size: 17px;
+  }
+
+  /* Sources */
+  .sources {
+    margin-top: 36px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+  .sources h2 {
+    border-bottom: none;
+    margin-bottom: 10px;
+    padding: 0;
+    font-size: 18px;
+  }
+  .src-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.7;
+  }
+  .src-chips span { white-space: nowrap; }
+
+  .notif-trace {
+    margin-top: 28px;
+    padding: 10px 12px;
+    background: #f0f0f0;
+    border-radius: 6px;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* Desktop */
+  @media (min-width: 768px) {
+    .wrap {
+      max-width: 760px;
+      padding: 48px 48px 80px;
+    }
+    h1 { font-size: 30px; }
+    h2 { font-size: 22px; }
+    .subtitle { font-size: 15px; }
+    body { font-size: 17px; }
+    .tldr { padding: 24px 28px; }
+    .headline-title { font-size: 18px; }
+    .headline-context { font-size: 16px; }
+    .item-title { font-size: 19px; }
+    .item-fact { font-size: 17px; }
+    .analyse { font-size: 16px; }
+  }
+
+  @media print {
+    body { background: white; }
+    .wrap { max-width: 100%; padding: 16px; }
+    a { color: black; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Briefing — Veille IA &amp; Sport endurance — 4 juin 2026</h1>
+  <div class="subtitle">
+    Jeudi 4 juin 2026 · Lecture : ~5 min · 3 items couverts
+  </div>
+
+  <!-- TL;DR -->
+  <section class="tldr">
+    <h2>À la une</h2>
+
+    <div class="headline">
+      <span class="chip chip-ma">M&amp;A</span>
+      <div class="headline-title">DeepSeek finalise une première levée de ~7,4 Md$ à une valo proche de 59 Md$</div>
+      <p class="headline-context">Tour mené par Tencent et CATL, avec le fonds national chinois de l'IA et le fondateur Liang Wenfeng (qui mettrait ~3 Md$ au pot). Valorisation multipliée par ~6 depuis avril — l'open-weight chinois s'industrialise et se capitalise lourdement.</p>
+      <p class="headline-context"><strong>→ Pour le lecteur :</strong> la couche modèle continue de se commoditiser par le bas (open-weight performant, coûts d'inférence en baisse). La différenciation d'un produit de coaching ne peut plus venir du LLM mais de la logique d'adaptation et de la donnée propriétaire.</p>
+      <p class="headline-link">→ <a href="https://www.scmp.com/tech/big-tech/article/3355818/deepseek-nears-us7b-haul-first-ever-funding-round-backing-tencent-catl">scmp.com — 3 juin</a> · <a href="https://www.cnbc.com/2026/06/03/deepseek-slated-to-draw-7-billion-in-maiden-fundraising-sources-say.html">cnbc.com — 3 juin</a></p>
+    </div>
+
+    <div class="headline">
+      <span class="chip chip-ia">IA</span>
+      <div class="headline-title">NVIDIA livre Nemotron 3 Ultra — modèle ouvert 550B MoE taillé pour les agents long-running</div>
+      <p class="headline-context">Disponible aujourd'hui (4 juin) sur Hugging Face / build.nvidia.com. Inférence jusqu'à 5× plus rapide et coût jusqu'à 30% inférieur vs modèles ouverts comparables ; post-entraîné pour LangChain Deep Agents, OpenHands, OpenCode et autres harnesses d'agents.</p>
+      <p class="headline-context"><strong>→ Pour le lecteur :</strong> brique potentiellement réutilisable pour une couche d'orchestration de coach adaptatif (raisonnement multi-étapes, mémoire, appels d'outils) à coût maîtrisé, en open-weight self-hostable plutôt qu'API propriétaire.</p>
+      <p class="headline-link">→ <a href="https://nvidianews.nvidia.com/news/enterprise-software-leaders-build-ai-agents-with-nvidia">nvidianews.nvidia.com — dispo 4 juin</a></p>
+    </div>
+
+    <div class="headline">
+      <span class="chip chip-ia">IA</span>
+      <div class="headline-title">Anthropic structure son réseau de partenaires : Services Track + Partner Hub</div>
+      <p class="headline-context">Programme à trois paliers (Select / Preferred / Global Premier) basés sur le nombre de praticiens certifiés et de déploiements en production ; un Partner Hub public référence les intégrateurs qualifiés. Signal de maturité commerciale avant une possible IPO.</p>
+      <p class="headline-link">→ <a href="https://www.anthropic.com/news/services-track-partner-hub">anthropic.com — 3 juin</a></p>
+    </div>
+
+  </section>
+
+  <!-- CORPS -->
+
+  <h2>IA — modèles, produits, communications</h2>
+
+  <div class="item">
+    <div class="item-title">NVIDIA Nemotron 3 Ultra : un modèle ouvert 550B MoE pour agents persistants</div>
+    <p class="item-fact">Annoncé au GTC Taipei, Nemotron 3 Ultra est un mixture-of-experts de 550 milliards de paramètres positionné comme « frontier-level » pour des agents long-running (codage, recherche, workflows d'entreprise). NVIDIA revendique jusqu'à 5× d'inférence en plus et jusqu'à 30% de coût en moins par rapport aux modèles ouverts de sa catégorie. Le modèle est post-entraîné pour les principaux harnesses d'agents (Hermes Agent, LangChain Deep Agents, OpenClaw, OpenHands, OpenCode) et arrive avec des modèles Nemotron complémentaires (sûreté, reconnaissance vocale). Disponibilité prévue le 4 juin via Hugging Face, ModelScope, OpenRouter et build.nvidia.com (NIM microservices).</p>
+    <p class="item-links">→ <a href="https://nvidianews.nvidia.com/news/enterprise-software-leaders-build-ai-agents-with-nvidia">nvidianews.nvidia.com</a> — communiqué 31 mai, disponibilité modèle 4 juin</p>
+    <div class="analyse">
+      <strong>→ Pour le lecteur :</strong> un modèle ouvert, self-hostable et explicitement conçu pour l'orchestration d'agents (mémoire, outils, multi-étapes) est exactement le type de socle qu'un coach adaptatif peut exploiter pour raisonner en continu sur les contraintes de l'athlète, sans dépendre d'une API propriétaire à marge. À benchmarker face aux modèles déjà utilisés sur les tâches de planification.
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Anthropic formalise le « Services Track » et lance le Partner Hub</div>
+    <p class="item-fact">Trois mois après le lancement du Claude Partner Network (40 000+ candidatures, 10 000+ consultants certifiés), Anthropic ajoute un Services Track à trois paliers — Select, Preferred, Global Premier — indexés sur le nombre de praticiens certifiés, de déploiements en production et d'endorsements clients publics. Un Partner Hub, rafraîchi quotidiennement, expose le standing des partenaires et aide les clients à trouver des intégrateurs qualifiés. La presse relie cette structuration à une démonstration de maturité business en amont d'une éventuelle IPO.</p>
+    <p class="item-links">→ <a href="https://www.anthropic.com/news/services-track-partner-hub">anthropic.com</a> — 3 juin</p>
+  </div>
+
+  <h2>M&amp;A &amp; investissements IA</h2>
+
+  <div class="item">
+    <div class="item-title">DeepSeek boucle une première levée de ~7,4 Md$ à ~59 Md$ de valorisation</div>
+    <p class="item-fact">Selon plusieurs sources (SCMP, CNBC, Bloomberg), DeepSeek finalise son premier tour externe : plus de 50 Md de yuans (~7,4 Md$) menés par Tencent (~10 Md ¥) et CATL (~5 Md ¥), avec la participation du fonds national chinois de l'IA, de NetEase et JD.com. Le fondateur Liang Wenfeng apporterait lui-même ~20 Md ¥ (~3 Md$), restant le plus gros contributeur. La valorisation post-money est estimée entre ~52 et ~59 Md$, soit environ 6× le niveau d'avril.</p>
+    <p class="item-links">→ <a href="https://www.scmp.com/tech/big-tech/article/3355818/deepseek-nears-us7b-haul-first-ever-funding-round-backing-tencent-catl">scmp.com</a> · <a href="https://www.cnbc.com/2026/06/03/deepseek-slated-to-draw-7-billion-in-maiden-fundraising-sources-say.html">cnbc.com</a> — 3 juin</p>
+    <div class="analyse">
+      <strong>→ Pour le lecteur :</strong> capitaliser un acteur open-weight à ce niveau accélère la baisse des coûts d'inférence et la disponibilité de modèles performants gratuits ou bon marché. Bonne nouvelle pour la marge d'un produit qui consomme du LLM ; mauvaise pour quiconque comptait sur l'accès au modèle comme avantage — l'avantage se déplace vers la logique de coaching et la donnée.
+    </div>
+  </div>
+
+  <h2>Sociétés innovantes IA-native</h2>
+
+  <p class="empty">Rien à signaler aujourd'hui sur ce volet (fenêtre &lt; 24h).</p>
+
+  <h2>Applications d'entraînement sportif</h2>
+
+  <p class="empty">Rien de neuf dans la fenêtre &lt; 24h. La news structurante de la semaine — le connecteur MCP Strava × Claude (1 juin) — a été couverte dans le brief du 2 juin. Le reste (deal promo Wahoo KICKR RUN, déploiement de la mise à jour trimestrielle Garmin Q2) relève du bruit et n'est pas retenu.</p>
+
+  <!-- SOURCES -->
+  <section class="sources">
+    <h2>Qualité des sources</h2>
+    <div class="src-chips">
+      <span>nvidianews.nvidia.com 🟢</span>
+      <span>anthropic.com 🟢</span>
+      <span>scmp.com 🟢</span>
+      <span>cnbc.com 🟢</span>
+      <span>bloomberg.com 🟢</span>
+      <span>press.strava.com 🟢</span>
+    </div>
+  </section>
+
+  <div class="notif-trace">
+    Notification envoyée : oui (mode systématique, phase de calibration) — triggers matchés : #4 M&amp;A IA majeur &gt;500 M$ (DeepSeek 7,4 Md$), #5 brique technique réutilisable (Nemotron 3 Ultra) — priorité : 4 (high).
+  </div>
+
+</div>
+</body>
+</html>
