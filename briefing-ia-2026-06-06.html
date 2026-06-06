@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — Veille IA & Sport endurance — 6 juin 2026</title>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1a1d21; --muted:#5c636b; --line:#e6e8eb;
+    --tldr-bg:#f6f8fa; --accent:#0b5fff;
+    --chip-ia:#0b5fff; --chip-ia-bg:#e8f0ff;
+    --chip-ma:#7a3cff; --chip-ma-bg:#f0e9ff;
+    --chip-native:#0a8a5f; --chip-native-bg:#e3f6ee;
+    --chip-sport:#d2691e; --chip-sport-bg:#fbeede;
+    --analyse-bg:#fff8e6; --analyse-bd:#e0a800;
+  }
+  *{box-sizing:border-box;}
+  html,body{width:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:18px;line-height:1.55;
+  }
+  .wrap{max-width:640px;width:100%;margin:0 auto;padding:24px 16px 56px;}
+  h1{font-size:26px;line-height:1.25;margin:0 0 6px;font-weight:700;letter-spacing:-.01em;}
+  .subtitle{font-size:15px;color:var(--muted);margin:0 0 24px;}
+  h2{font-size:20px;margin:36px 0 4px;font-weight:700;letter-spacing:-.01em;}
+  .sec-desc{font-size:14px;color:var(--muted);margin:0 0 14px;}
+  a{color:var(--accent);text-decoration:none;word-break:break-word;}
+  a:hover{text-decoration:underline;}
+  .chip{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.02em;
+    padding:3px 9px;border-radius:999px;vertical-align:middle;white-space:nowrap;}
+  .chip-ia{color:var(--chip-ia);background:var(--chip-ia-bg);}
+  .chip-ma{color:var(--chip-ma);background:var(--chip-ma-bg);}
+  .chip-native{color:var(--chip-native);background:var(--chip-native-bg);}
+  .chip-sport{color:var(--chip-sport);background:var(--chip-sport-bg);}
+
+  /* TL;DR */
+  .tldr{background:var(--tldr-bg);border:1px solid var(--line);border-radius:14px;
+    padding:18px 16px;margin:0 0 8px;}
+  .tldr h2{margin:0 0 14px;font-size:18px;}
+  .hl{padding:14px 0;border-top:1px solid var(--line);}
+  .hl:first-of-type{border-top:none;padding-top:0;}
+  .hl-title{font-size:18px;font-weight:700;margin:6px 0 4px;line-height:1.3;}
+  .hl-ctx{font-size:17px;margin:0 0 6px;}
+  .hl-read{font-size:16px;color:#3a3f45;background:#fff;border-left:3px solid var(--accent);
+    padding:6px 10px;border-radius:0 8px 8px 0;margin:6px 0;}
+  .hl-link{font-size:16px;display:inline-block;min-height:30px;}
+
+  /* corps */
+  .item{padding:16px 0;border-bottom:1px solid var(--line);}
+  .item:last-child{border-bottom:none;}
+  .item-title{font-size:19px;font-weight:700;margin:8px 0 6px;line-height:1.3;}
+  .item-fact{font-size:18px;margin:0 0 8px;}
+  .item-links{font-size:16px;margin:0 0 4px;}
+  .src-flag{font-size:13px;color:var(--muted);}
+  .analyse{font-size:17px;background:var(--analyse-bg);border-left:4px solid var(--analyse-bd);
+    padding:10px 12px;border-radius:0 8px 8px 0;margin:8px 0 2px;}
+  .analyse b{font-weight:700;}
+  .empty{font-style:italic;color:var(--muted);font-size:17px;margin:6px 0;}
+
+  /* sources */
+  .sources{margin-top:40px;border-top:2px solid var(--line);padding-top:18px;}
+  .sources h2{margin-top:0;}
+  .src-chips{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:14px;color:#3a3f45;}
+  .src-chips span{white-space:nowrap;}
+  .footnote{margin-top:28px;font-size:13px;color:var(--muted);border-top:1px solid var(--line);
+    padding-top:12px;}
+
+  @media (min-width:768px){
+    body{font-size:17px;}
+    .wrap{max-width:760px;padding:56px 48px 80px;}
+    h1{font-size:30px;}
+    h2{font-size:22px;}
+    .item-title{font-size:19px;}
+    .item-fact{font-size:17px;}
+    .hl-title{font-size:18px;}
+    .hl-ctx{font-size:16px;}
+    .hl-read{font-size:16px;}
+    .analyse{font-size:16px;}
+    .tldr{padding:26px 28px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Briefing — Veille IA &amp; Sport endurance — 6 juin 2026</h1>
+  <p class="subtitle">Samedi 6 juin 2026 · Lecture : ~5 min · 7 items couverts · fenêtre &lt; 24h</p>
+
+  <!-- TL;DR -->
+  <section class="tldr">
+    <h2>À la une</h2>
+
+    <div class="hl">
+      <span class="chip chip-ia">IA</span>
+      <div class="hl-title">ChatGPT « Dreaming V3 » : la mémoire devient automatique et auto-périmée</div>
+      <p class="hl-ctx">OpenAI déploie (4 juin, US) une mémoire qui se construit seule en tâche de fond après chaque conversation — et qui sait <em>oublier</em> un contexte devenu obsolète (un voyage passé cesse d'influencer les réponses). Coût de synthèse divisé par ~5, donc viable jusqu'au tier gratuit.</p>
+      <div class="hl-read">→ Pour le lecteur : c'est exactement le pattern d'un coach adaptatif — un état athlète qui se met à jour en continu et purge les contraintes périmées, sans saisie manuelle. Brique conceptuelle directement transposable.</div>
+      <a class="hl-link" href="https://openai.com/index/chatgpt-memory-dreaming/">openai.com — 4 juin</a>
+    </div>
+
+    <div class="hl">
+      <span class="chip chip-ma">M&amp;A</span>
+      <div class="hl-title">SpaceX lance son roadshow IPO à 75 Md$ (xAI inclus)</div>
+      <p class="hl-ctx">Roadshow ouvert le 4 juin, pricing le 11, premier échange le 12 (Nasdaq, SPCX). Viserait la plus grosse IPO de l'histoire. Avec Anthropic et OpenAI dans la file, ~160 Md$ de produits d'IPO attendus en 2026, contre 45 Md$ pour tout 2025.</p>
+      <a class="hl-link" href="https://news.crunchbase.com/venture/biggest-funding-rounds-june-5-2026/">crunchbase — 4 juin <span class="src-flag">[source secondaire]</span></a>
+    </div>
+
+    <div class="hl">
+      <span class="chip chip-native">IA-native</span>
+      <div class="hl-title">Suno lève 400 M$ (valo 5,4 Md$) malgré les procès</div>
+      <p class="hl-ctx">Série D menée par Bond, 7 mois après une valo de 2,45 Md$. 2 M d'abonnés payants, 7 M de morceaux générés/jour. Les poursuites des majors (UMG, Sony) continuent ; Warner a signé une licence.</p>
+      <div class="hl-read">→ Pour le lecteur : le marché finance agressivement les apps IA-native verticales à fort usage récurrent, même sous risque juridique. Signal favorable pour lever sur une promesse produit défendable.</div>
+      <a class="hl-link" href="https://techcrunch.com/2026/06/03/still-facing-copyright-lawsuits-ai-music-generator-suno-raises-another-400m/">techcrunch — 3 juin</a>
+    </div>
+
+    <div class="hl">
+      <span class="chip chip-ia">IA</span>
+      <div class="hl-title">« Great American AI Act » : 269 pages, et un gel de 3 ans des lois IA des États</div>
+      <p class="hl-ctx">Brouillon bipartisan dévoilé le 4 juin : cadre fédéral pour les labos &gt; 500 M$ de CA, mais préemption de 3 ans des lois IA d'État (Colorado, Californie). Syndicats contre, lobbies tech pour.</p>
+      <a class="hl-link" href="https://obernolte.house.gov/media/press-releases/obernolte-trahan-release-discussion-draft-great-american-ai-act">obernolte.house.gov — 4 juin</a>
+    </div>
+
+    <div class="hl">
+      <span class="chip chip-native">IA-native</span>
+      <div class="hl-title">Mégarounds de la semaine : Supabase 500 M$, Flourish 500 M$</div>
+      <p class="hl-ctx">Supabase (backend open-source pour développeurs et builders d'apps IA) lève 500 M$ à 10,5 Md$ ; Flourish (modèles « inspirés du cerveau ») lève 500 M$ en seed avec Bezos et Google Ventures.</p>
+      <a class="hl-link" href="https://news.crunchbase.com/venture/biggest-funding-rounds-june-5-2026/">crunchbase — 5 juin <span class="src-flag">[source secondaire]</span></a>
+    </div>
+
+  </section>
+
+  <!-- CORPS -->
+
+  <h2><span class="chip chip-ia">IA</span> IA — modèles, produits, communications</h2>
+  <p class="sec-desc">Sorties de modèle, lancements produit, prises de parole notables des labos et grands acteurs.</p>
+
+  <div class="item">
+    <div class="item-title">ChatGPT « Dreaming V3 » — mémoire synthétisée en tâche de fond</div>
+    <p class="item-fact">OpenAI a commencé à déployer le 4 juin (Plus/Pro, US d'abord) sa plus grosse refonte mémoire depuis le lancement initial de ChatGPT. Au lieu d'attendre une instruction « retiens ça », le système synthétise après-coup préférences, contraintes et projets en cours, et invalide le contexte périmé. OpenAI annonce une réduction d'environ 5× du coût de synthèse, ce qui rend la fonction viable jusqu'au tier gratuit. Des chercheurs en vie privée pointent déjà le profilage comportemental unilatéral (étude arXiv : 96 % des mémoires créées sans demande explicite).</p>
+    <p class="item-links"><a href="https://openai.com/index/chatgpt-memory-dreaming/">openai.com — 4 juin</a></p>
+    <div class="analyse"><b>→ Pour le lecteur :</b> le mécanisme est le cœur d'un coach adaptatif — un profil athlète qui se met à jour seul (charge de vie, indispo, état physique) et <em>purge</em> les contraintes résolues plutôt que de les figer. Deux enseignements transposables : (1) la synthèse asynchrone « post-session » plutôt que la saisie manuelle ; (2) l'invalidation active du contexte périmé, exactement le risque d'un plan qui reste calé sur une contrainte qui n'existe plus. À surveiller aussi : la pression réglementaire (transparence du profilage) si l'app construit un profil comportemental fin de l'athlète.</div>
+  </div>
+
+  <div class="item">
+    <div class="item-title">« Great American AI Act » — brouillon fédéral de 269 pages</div>
+    <p class="item-fact">Les représentants Obernolte (R) et Trahan (D) ont publié le 4 juin un avant-projet imposant aux acteurs &gt; 500 M$ de CA des « Frontier AI Frameworks » publics et un reporting d'incidents, en échange d'une préemption de 3 ans des lois IA des États (dont le Colorado AI Act, prévu pour le 30 juin). Réactions polarisées : rejet syndical (AFL-CIO, AFT), soutien des lobbies tech (ITI, NetChoice). Ce n'est qu'un brouillon de discussion, pas encore un texte déposé.</p>
+    <p class="item-links"><a href="https://obernolte.house.gov/media/press-releases/obernolte-trahan-release-discussion-draft-great-american-ai-act">obernolte.house.gov — 4 juin</a></p>
+  </div>
+
+  <h2><span class="chip chip-ma">M&amp;A</span> M&amp;A &amp; investissements IA</h2>
+  <p class="sec-desc">Acquisitions, fusions, levées significatives, restructurations capitalistiques, IPO.</p>
+
+  <div class="item">
+    <div class="item-title">SpaceX — roadshow IPO à 75 Md$, premier échange le 12 juin</div>
+    <p class="item-fact">Le roadshow investisseurs a démarré le 4 juin ; pricing le 11, cotation Nasdaq (SPCX) le 12. L'entité fusionnée avec xAI (depuis février) a déclaré 18,7 Md$ de CA 2025. 30 % du flottant iraient directement au retail (Robinhood, Fidelity, Schwab). Avec Anthropic (S-1 confidentiel déposé le 1er juin, valo 965 Md$) et OpenAI dans la file, Goldman projette ~160 Md$ de produits d'IPO en 2026 — un quadruplement vs 2025.</p>
+    <p class="item-links"><a href="https://news.crunchbase.com/venture/biggest-funding-rounds-june-5-2026/">crunchbase — 4 juin <span class="src-flag">[source secondaire — primaire S-1/roadshow non liée]</span></a></p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Mégarounds de la semaine — Supabase, Flourish, AlphaSense, Ramp</div>
+    <p class="item-fact">Selon le récap Crunchbase de la semaine du 5 juin : Supabase 500 M$ (valo 10,5 Md$, mené par GIC), Flourish 500 M$ en seed (modèles « inspirés du cerveau » ; Bezos, Lux, Google Ventures), AlphaSense 350 M$ (valo 7,5 Md$), Ramp 750 M$ (valo 44 Md$). Le marché reste en surchauffe sur l'IA d'entreprise.</p>
+    <p class="item-links"><a href="https://news.crunchbase.com/venture/biggest-funding-rounds-june-5-2026/">crunchbase — 5 juin <span class="src-flag">[source secondaire]</span></a></p>
+  </div>
+
+  <h2><span class="chip chip-native">IA-native</span> Sociétés innovantes IA-native</h2>
+  <p class="sec-desc">Startups ou produits dont la proposition de valeur centrale repose sur une techno IA (hors géants).</p>
+
+  <div class="item">
+    <div class="item-title">Suno — 400 M$ en Série D, valo 5,4 Md$</div>
+    <p class="item-fact">Le générateur de musique IA a annoncé le 3 juin une Série D de 400 M$ menée par Bond, sept mois après une valo de 2,45 Md$. La plateforme dépasse 2 M d'abonnés payants et ~7 M de morceaux générés par jour. Les poursuites des ayants droit (Universal, Sony, GEMA) continuent sur la question du fair-use ; Warner a signé une licence en novembre.</p>
+    <p class="item-links"><a href="https://techcrunch.com/2026/06/03/still-facing-copyright-lawsuits-ai-music-generator-suno-raises-another-400m/">techcrunch — 3 juin</a></p>
+    <div class="analyse"><b>→ Pour le lecteur :</b> illustration nette qu'une app IA-native verticale, à usage quotidien récurrent et forte rétention, lève vite et cher même sous nuage juridique. Le signal utile n'est pas la musique mais le multiple : la défensibilité perçue vient de l'usage et de la donnée propriétaire, pas du modèle sous-jacent — argument à structurer pour un produit de coaching adaptatif.</div>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Supabase — 500 M$ (valo 10,5 Md$)</div>
+    <p class="item-fact">Le backend open-source pour développeurs et builders d'apps IA lève 500 M$, mené par GIC. Croissance portée par l'adoption côté équipes qui construisent des applications IA.</p>
+    <p class="item-links"><a href="https://news.crunchbase.com/venture/biggest-funding-rounds-june-5-2026/">crunchbase — 5 juin <span class="src-flag">[source secondaire]</span></a></p>
+    <div class="analyse"><b>→ Pour le lecteur :</b> brique d'infra directement pertinente pour la stack d'une app IA-native (auth, base, stockage, edge functions). À garder en tête comme option pour itérer vite, sans construire l'ossature backend soi-même.</div>
+  </div>
+
+  <h2><span class="chip chip-sport">Sport</span> Applications d'entraînement sportif</h2>
+  <p class="sec-desc">News de la watchlist (concurrents directs, indirects, à surveiller).</p>
+
+  <div class="item">
+    <p class="empty">Rien à signaler aujourd'hui sur ce volet.</p>
+    <p class="src-flag">Aucune annonce de la watchlist dans la fenêtre &lt; 24h. Les mouvements structurants récents (Garmin rachète Strava — 2,1 Md$ ; Zwift rachète Rouvy/FulGaz ; partenariat Wahoo×Coros) datent d'avril et sortent de la fenêtre.</p>
+  </div>
+
+  <!-- SOURCES -->
+  <section class="sources">
+    <h2>Qualité des sources</h2>
+    <div class="src-chips">
+      <span>openai.com 🟢</span>
+      <span>obernolte.house.gov 🟢</span>
+      <span>techcrunch.com 🟢</span>
+      <span>news.crunchbase.com 🟡</span>
+      <span>buildfastwithai.com 🟠 (corroboration)</span>
+    </div>
+    <p class="footnote">
+      🟢 primaire · 🟡 secondaire (média d'industrie) · 🟠 tertiaire (digest/agrégateur).<br>
+      Note de sourcing : l'IPO SpaceX et les mégarounds sont corroborés via Crunchbase (secondaire) ; le S-1 SpaceX et les communiqués de levée primaires n'ont pas été liés directement faute d'URL primaire propre au moment de la rédaction. Suno, Dreaming V3 et le Great American AI Act disposent de liens primaires.<br><br>
+      Notification haut-impact envoyée : oui (mode systématique) — triggers correspondant à la grille de priorité : aucun trigger « concurrent direct / frontier / sport » ne matche ; financements IA notables sans lien direct produit — priorité : 3.
+    </p>
+  </section>
+
+</div>
+</body>
+</html>
