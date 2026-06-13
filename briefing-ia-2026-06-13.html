@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — Veille IA & Sport endurance — 13 juin 2026</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --ink-faint: #767676;
+    --rule: #e6e6e6;
+    --rule-soft: #f0f0f0;
+    --accent: #2f4858;
+    --tldr-bg: #f6f8f9;
+    --tldr-border: #d7e0e4;
+    --analyse-bg: #fff8ec;
+    --analyse-border: #e8b84b;
+    --link: #1b6ca8;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.55;
+  }
+  .wrap {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 16px 56px;
+  }
+  h1 {
+    font-size: 26px;
+    line-height: 1.2;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .subtitle {
+    font-size: 15px;
+    color: var(--ink-faint);
+    margin: 0 0 28px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--rule);
+  }
+  h2 {
+    font-size: 20px;
+    line-height: 1.25;
+    margin: 40px 0 4px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+  }
+  h2 .sec-desc {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--ink-faint);
+    margin-top: 4px;
+  }
+  .chip {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 4px;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  .chip-ia      { background: #e8f0fe; color: #1a56b8; }
+  .chip-ma      { background: #ecf7ec; color: #1f7a37; }
+  .chip-native  { background: #f3ecfb; color: #6b34b0; }
+  .chip-sport   { background: #fdeee5; color: #c0540f; }
+
+  /* TL;DR */
+  .tldr {
+    background: var(--tldr-bg);
+    border: 1px solid var(--tldr-border);
+    border-radius: 10px;
+    padding: 18px 16px;
+    margin: 0 0 8px;
+  }
+  .tldr-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 14px;
+  }
+  .headline {
+    padding: 14px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .headline:first-of-type { border-top: none; padding-top: 0; }
+  .headline-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 8px 0 4px;
+    line-height: 1.3;
+  }
+  .headline-context {
+    font-size: 17px;
+    color: var(--ink-soft);
+    margin: 0 0 6px;
+  }
+  .analyse {
+    background: var(--analyse-bg);
+    border-left: 3px solid var(--analyse-border);
+    padding: 8px 12px;
+    margin: 8px 0 4px;
+    font-size: 17px;
+    border-radius: 0 6px 6px 0;
+  }
+  .analyse b { color: #8a6400; }
+
+  /* Body items */
+  .item {
+    padding: 16px 0 8px;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .item:first-of-type { border-top: none; }
+  .item-title {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    line-height: 1.3;
+  }
+  .item-fact {
+    font-size: 18px;
+    color: var(--ink-soft);
+    margin: 0 0 8px;
+  }
+  .item-links {
+    font-size: 16px;
+    margin: 6px 0 0;
+  }
+  a { color: var(--link); text-decoration: none; word-break: break-word; overflow-wrap: anywhere; }
+  a:hover { text-decoration: underline; }
+  .date { color: var(--ink-faint); font-size: 14px; }
+  .empty { font-style: italic; color: var(--ink-faint); font-size: 17px; margin: 10px 0; }
+  .min-tap { display: inline-block; min-height: 24px; line-height: 24px; }
+
+  /* Sources */
+  .sources {
+    margin-top: 44px;
+    padding-top: 20px;
+    border-top: 2px solid var(--rule);
+  }
+  .sources h2 { border: none; padding: 0; margin: 0 0 12px; }
+  .source-chips { display: flex; flex-wrap: wrap; gap: 8px 14px; font-size: 14px; color: var(--ink-soft); }
+  .legend { font-size: 13px; color: var(--ink-faint); margin-top: 14px; line-height: 1.6; }
+  .footnote { font-size: 12px; color: var(--ink-faint); margin-top: 28px; padding-top: 14px; border-top: 1px solid var(--rule-soft); }
+
+  @media (min-width: 768px) {
+    body { font-size: 17px; }
+    .wrap { max-width: 760px; padding: 56px 48px 80px; }
+    h1 { font-size: 30px; }
+    h2 { font-size: 22px; }
+    .tldr { padding: 26px 26px; }
+    .headline-title { font-size: 18px; }
+    .headline-context { font-size: 16px; }
+    .analyse { font-size: 16px; }
+    .item-title { font-size: 19px; }
+    .item-fact { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Briefing — Veille IA &amp; Sport endurance — 13 juin 2026</h1>
+  <p class="subtitle">Samedi 13 juin 2026 · Lecture : ~5 min · 5 items · Fenêtre : dernières ~36h</p>
+
+  <!-- TL;DR -->
+  <div class="tldr">
+    <p class="tldr-label">À la une</p>
+
+    <div class="headline">
+      <span class="chip chip-ia">IA</span>
+      <div class="headline-title">ChatGPT refond sa mémoire : rappel factuel de 68% → 83%</div>
+      <p class="headline-context">OpenAI déploie une nouvelle architecture de mémoire (nom interne « Dreaming V3 ») : page de mémoire lisible, contrôle fin des sujets retenus, capacité doublée pour Plus/Pro. Rollout US d'abord.</p>
+      <div class="analyse"><b>→ Pour le lecteur :</b> la personnalisation longitudinale par mémoire est exactement la brique d'un coach « qui s'adapte à l'athlète ». À benchmarker comme état de l'art de la rétention de contexte utilisateur.</div>
+      <p class="item-links"><span class="date">12 juin</span></p>
+    </div>
+
+    <div class="headline">
+      <span class="chip chip-ma">M&amp;A</span>
+      <div class="headline-title">OpenAI rachète Ona (ex-Gitpod) pour muscler Codex</div>
+      <p class="headline-context">OpenAI acquiert l'allemand Ona, plateforme cloud d'agents persistants, pour faire tourner Codex sur des tâches longues (de quelques minutes à plusieurs jours) dans le cloud du client. Codex revendiqué à 5M d'utilisateurs/semaine.</p>
+      <p class="item-links"><span class="date">11 juin</span></p>
+    </div>
+
+    <div class="headline">
+      <span class="chip chip-ma">M&amp;A</span>
+      <div class="headline-title">Prometheus (Bezos) lève 12 Md$ à 41 Md$ de valorisation</div>
+      <p class="headline-context">La startup d'« ingénieur général artificiel » co-dirigée par Bezos boucle une Série B record (JPMorgan, BlackRock, Goldman, DST). Cible : l'IA pour l'ingénierie, la fabrication et le design de médicaments.</p>
+      <p class="item-links"><span class="date">11 juin</span></p>
+    </div>
+
+    <div class="headline">
+      <span class="chip chip-native">IA-native</span>
+      <div class="headline-title">NEURA Robotics : Série C record jusqu'à 1,4 Md$ (Physical AI)</div>
+      <p class="headline-context">L'allemand NEURA lève auprès de Tether, Nvidia, Amazon, Qualcomm, Bosch pour sa plateforme de Physical AI (humanoïdes, bras robotisés). Valorisation ~7 Md$, objectif production de masse d'ici 2030.</p>
+      <p class="item-links"><span class="date">10 juin</span></p>
+    </div>
+
+  </div>
+
+  <!-- SECTION 1 -->
+  <h2><span class="chip chip-ia">IA</span> IA — modèles, produits, communications
+    <span class="sec-desc">Sorties de modèle, lancements produit, offres, prises de parole notables des labos et grands acteurs.</span>
+  </h2>
+
+  <div class="item">
+    <p class="item-title">OpenAI déploie une nouvelle architecture de mémoire pour ChatGPT</p>
+    <p class="item-fact">OpenAI ouvre une refonte de la mémoire de ChatGPT, construite sur le processus de fond « dreaming » introduit en 2025. Selon ses évaluations internes, le rappel factuel passe de 67,9% (2025) à 82,8%, l'adhérence aux préférences de 55,3% à 71,3%, et la précision dans le temps de 52,2% à 75,1%. Côté utilisateur : une page de synthèse lisible de ce que ChatGPT a retenu, des contrôles d'ajout/mise à jour, et des réglages sur les sujets à soulever. Déploiement aux US pour Plus et Pro (capacité de mémoire doublée), élargissement annoncé « dans les semaines à venir ».</p>
+    <p class="item-links"><a class="min-tap" href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">OpenAI — Release Notes</a> · <a class="min-tap" href="https://www.neowin.net/news/openai-is-rolling-out-a-major-upgrade-to-chatgpt-memory/">Neowin</a> <span class="date">— 12 juin</span></p>
+    <div class="analyse"><b>→ Pour le lecteur :</b> une mémoire utilisateur fiable et auditable est le socle d'un coaching réellement adaptatif (préférences, contraintes de vie, historique). C'est la référence à viser pour la couche « profil athlète persistant » du produit.</div>
+  </div>
+
+  <div class="item">
+    <p class="item-title">Retrait de GPT-5.2 dans ChatGPT, bascule automatique vers GPT-5.5</p>
+    <p class="item-fact">Toujours le 12 juin, OpenAI indique que les modèles GPT-5.2 (Instant, Thinking, Pro) ne sont plus disponibles dans ChatGPT ; les conversations existantes basculent automatiquement vers le modèle GPT-5.5 correspondant. Mouvement de fond habituel : raccourcissement du cycle de vie des modèles côté produit grand public.</p>
+    <p class="item-links"><a class="min-tap" href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">OpenAI — Release Notes</a> <span class="date">— 12 juin</span></p>
+  </div>
+
+  <!-- SECTION 2 -->
+  <h2><span class="chip chip-ma">M&amp;A</span> M&amp;A &amp; investissements IA
+    <span class="sec-desc">Acquisitions, fusions, levées significatives, partenariats stratégiques à impact financier.</span>
+  </h2>
+
+  <div class="item">
+    <p class="item-title">OpenAI acquiert Ona (ex-Gitpod) pour les agents Codex</p>
+    <p class="item-fact">OpenAI annonce le rachat d'Ona, startup allemande (anciennement Gitpod) qui fournit des environnements cloud sécurisés et persistants où un agent continue à travailler après la fermeture du laptop. Objectif : permettre à Codex de tenir des tâches longues — de quelques minutes à des heures, voire des jours — dans le cloud du client. OpenAI revendique plus de 5M d'utilisateurs hebdomadaires de Codex (+400% depuis le début d'année). Les deux sociétés resteront des entités séparées ; prix non divulgué, sous réserve d'approbations réglementaires.</p>
+    <p class="item-links"><a class="min-tap" href="https://thenextweb.com/news/openai-acquires-ona-codex">The Next Web</a> · <a class="min-tap" href="https://builtin.com/articles/openai-acquires-ona-20260611">Built In</a> <span class="date">— 11 juin</span></p>
+    <div class="analyse"><b>→ Pour le lecteur :</b> signal que l'infra « agents persistants longue durée » devient stratégique. Pour un plan d'entraînement qui se reconfigure en continu, ce type de runtime agentique persistant est la brique d'orchestration à surveiller (recalcul de plan en tâche de fond, pas à la requête).</div>
+  </div>
+
+  <div class="item">
+    <p class="item-title">Prometheus (Jeff Bezos) : 12 Md$ en Série B à ~41 Md$</p>
+    <p class="item-fact">Prometheus, co-dirigée par Jeff Bezos et le professeur Vik Bajaj, annonce une Série B de 12 Md$ valorisant la société ~41 Md$ (investisseurs : JPMorgan, BlackRock, Goldman Sachs, DST Global, Arch Venture). La société, lancée fin 2025 avec 6,2 Md$, développe une IA pour les tâches physiques — ingénierie, fabrication, design de médicaments — décrite par Bezos comme un « ingénieur général artificiel ». Un des plus gros tours d'amorçage/Série B jamais réalisés.</p>
+    <p class="item-links"><a class="min-tap" href="https://www.axios.com/2026/06/11/prometheus-bezos-industrial-ai">Axios</a> · <a class="min-tap" href="https://www.cnbc.com/2026/06/11/project-prometheus-bezos-bajaj-live-updates.html">CNBC</a> <span class="date">— 11 juin</span></p>
+  </div>
+
+  <!-- SECTION 3 -->
+  <h2><span class="chip chip-native">IA-native</span> Sociétés innovantes IA-native
+    <span class="sec-desc">Startups/produits dont la proposition de valeur centrale repose sur une techno IA (hors géants couverts en 1).</span>
+  </h2>
+
+  <div class="item">
+    <p class="item-title">NEURA Robotics : Série C record jusqu'à 1,4 Md$ pour sa plateforme Physical AI</p>
+    <p class="item-fact">L'allemand NEURA Robotics annonce une Série C menée par Tether (jusqu'à 1,4 Md$), avec Nvidia, Amazon, Qualcomm, Bosch et Schaeffler. Valorisation ~7 Md$. NEURA développe une plateforme full-stack de « Physical AI » : humanoïdes, bras robotisés de précision, robots mobiles autonomes et de service. L'entreprise vise une production de masse (millions de robots) d'ici 2030. Présenté comme le plus gros apport de capital à ce jour pour une société de robotique full-stack.</p>
+    <p class="item-links"><a class="min-tap" href="https://www.businesswire.com/news/home/20260610204575/en/NEURA-Robotics-Announces-Record-Series-C-of-up-to-$1.4-Billion-to-Accelerate-the-Worlds-Leading-Physical-AI-Platform">NEURA / BusinessWire</a> · <a class="min-tap" href="https://www.bloomberg.com/news/articles/2026-06-10/tether-backs-german-robotics-startup-neura-in-1-4-billion-round">Bloomberg</a> <span class="date">— 10 juin</span></p>
+  </div>
+
+  <!-- SECTION 4 -->
+  <h2><span class="chip chip-sport">Sport</span> Applications d'entraînement sportif
+    <span class="sec-desc">Veille concurrentielle de la watchlist (directs / indirects / à surveiller).</span>
+  </h2>
+
+  <div class="item">
+    <p class="empty">Rien à signaler aujourd'hui sur ce volet.</p>
+    <p class="item-fact" style="font-size:15px;color:var(--ink-faint);">Aucune annonce de la watchlist dans la fenêtre des dernières ~36h. Pour contexte (hors fenêtre) : l'épisode de confidentialité Strava (test 2–4 juin, rétropédalage) et le serveur COROS MCP (mi-mai, premier MCP officiel d'une marque de montres endurance) restent les signaux récents les plus pertinents sur l'axe « données → IA ».</p>
+  </div>
+
+  <!-- SOURCES -->
+  <div class="sources">
+    <h2>Qualité des sources</h2>
+    <div class="source-chips">
+      <span>openai.com 🟢</span>
+      <span>axios.com 🟢</span>
+      <span>cnbc.com 🟢</span>
+      <span>bloomberg.com 🟢</span>
+      <span>businesswire.com 🟢</span>
+      <span>thenextweb.com 🟡</span>
+      <span>neowin.net 🟡</span>
+      <span>builtin.com 🟠</span>
+    </div>
+    <p class="legend">🟢 primaire (officiel / média de référence) · 🟡 secondaire (média d'industrie) · 🟠 tertiaire (blog / agrégateur)</p>
+  </div>
+
+  <p class="footnote">
+    Notification haut-impact envoyée : oui — triggers : [M&amp;A / contrat IA majeur &gt; 500 M$ : Prometheus 12 Md$, OpenAI/Ona] — priorité : 4 (high).<br>
+    Note d'exécution : run automatisé un samedi, journée IA modérée. Items M&amp;A/funding datés du 10–11 juin retenus faute d'actualité strictement &lt;24h ; volet sport vide (honnête, pas de remplissage). Annonces de modèles « frontier » circulant sur des agrégateurs (Claude/Gemini) écartées faute de source primaire vérifiable.
+  </p>
+
+</div>
+</body>
+</html>
