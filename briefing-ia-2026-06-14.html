@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — Veille IA & Sport endurance — 14 juin 2026</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --ink-faint: #767676;
+    --rule: #e6e6e6;
+    --rule-soft: #f0f0f0;
+    --accent: #2f4858;
+    --tldr-bg: #f6f8f9;
+    --tldr-border: #d7e0e4;
+    --analyse-bg: #fff8ec;
+    --analyse-border: #e8b84b;
+    --link: #1b6ca8;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.55;
+  }
+  .wrap {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 16px 56px;
+  }
+  h1 {
+    font-size: 26px;
+    line-height: 1.2;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .subtitle {
+    font-size: 15px;
+    color: var(--ink-faint);
+    margin: 0 0 28px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--rule);
+  }
+  h2 {
+    font-size: 20px;
+    line-height: 1.25;
+    margin: 40px 0 4px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+  }
+  h2 .sec-desc {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--ink-faint);
+    margin-top: 4px;
+  }
+  .chip {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 4px;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  .chip-ia      { background: #e8f0fe; color: #1a56b8; }
+  .chip-ma      { background: #ecf7ec; color: #1f7a37; }
+  .chip-native  { background: #f3ecfb; color: #6b34b0; }
+  .chip-sport   { background: #fdeee5; color: #c0540f; }
+
+  /* TL;DR */
+  .tldr {
+    background: var(--tldr-bg);
+    border: 1px solid var(--tldr-border);
+    border-radius: 10px;
+    padding: 18px 16px;
+    margin: 0 0 8px;
+  }
+  .tldr-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 14px;
+  }
+  .headline {
+    padding: 14px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .headline:first-of-type { border-top: none; padding-top: 0; }
+  .headline-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 8px 0 4px;
+    line-height: 1.3;
+  }
+  .headline-context {
+    font-size: 17px;
+    color: var(--ink-soft);
+    margin: 0 0 6px;
+  }
+  .analyse {
+    background: var(--analyse-bg);
+    border-left: 3px solid var(--analyse-border);
+    padding: 8px 12px;
+    margin: 8px 0 4px;
+    font-size: 17px;
+    border-radius: 0 6px 6px 0;
+  }
+  .analyse b { color: #8a6400; }
+
+  /* Body items */
+  .item {
+    padding: 16px 0 8px;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .item:first-of-type { border-top: none; }
+  .item-title {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    line-height: 1.3;
+  }
+  .item-fact {
+    font-size: 18px;
+    color: var(--ink-soft);
+    margin: 0 0 8px;
+  }
+  .item-links {
+    font-size: 16px;
+    margin: 6px 0 0;
+  }
+  a { color: var(--link); text-decoration: none; word-break: break-word; overflow-wrap: anywhere; }
+  a:hover { text-decoration: underline; }
+  .date { color: var(--ink-faint); font-size: 14px; }
+  .empty { font-style: italic; color: var(--ink-faint); font-size: 17px; margin: 10px 0; }
+  .min-tap { display: inline-block; min-height: 24px; line-height: 24px; }
+
+  /* Sources */
+  .sources {
+    margin-top: 44px;
+    padding-top: 20px;
+    border-top: 2px solid var(--rule);
+  }
+  .sources h2 { border: none; padding: 0; margin: 0 0 12px; }
+  .source-chips { display: flex; flex-wrap: wrap; gap: 8px 14px; font-size: 14px; color: var(--ink-soft); }
+  .legend { font-size: 13px; color: var(--ink-faint); margin-top: 14px; line-height: 1.6; }
+  .footnote { font-size: 12px; color: var(--ink-faint); margin-top: 28px; padding-top: 14px; border-top: 1px solid var(--rule-soft); }
+
+  @media (min-width: 768px) {
+    body { font-size: 17px; }
+    .wrap { max-width: 760px; padding: 56px 48px 80px; }
+    h1 { font-size: 30px; }
+    h2 { font-size: 22px; }
+    .tldr { padding: 26px 26px; }
+    .headline-title { font-size: 18px; }
+    .headline-context { font-size: 16px; }
+    .analyse { font-size: 16px; }
+    .item-title { font-size: 19px; }
+    .item-fact { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Briefing — Veille IA &amp; Sport endurance — 14 juin 2026</h1>
+  <p class="subtitle">Dimanche 14 juin 2026 · Lecture : ~5 min · 7 items · Fenêtre : dernières ~48h (run week-end)</p>
+
+  <!-- TL;DR -->
+  <div class="tldr">
+    <p class="tldr-label">À la une</p>
+
+    <div class="headline">
+      <span class="chip chip-ma">M&amp;A</span>
+      <div class="headline-title">SpaceX (SPCX) débute à +25% : plus grosse IPO de l'histoire</div>
+      <p class="headline-context">L'action clôture à 168,70 $ (IPO à 135 $), ~1,77 T$ de capitalisation. Débuts « ordonnés » qui valident la thèse de valorisation infra IA sur laquelle Anthropic (IPO visée Q4) et OpenAI calent leurs propres calendriers.</p>
+      <div class="analyse"><b>→ Pour le lecteur :</b> la fenêtre d'IPO IA s'ouvre — climat de financement favorable pour les startups IA, y compris sport-tech IA, dans les prochains trimestres.</div>
+      <p class="item-links"><span class="date">12 juin</span></p>
+    </div>
+
+    <div class="headline">
+      <span class="chip chip-ma">M&amp;A</span>
+      <div class="headline-title">Anthropic dépasse OpenAI en adoption business US (1re fois)</div>
+      <p class="headline-context">Selon l'indice Ramp (50 000+ entreprises US), l'adoption Claude monte à 34,4% en avril vs 32,3% pour OpenAI. Moteur : Claude Code. Un rapport IDC tempère (19% d'usage « intensif » seulement).</p>
+      <p class="item-links"><span class="date">12 juin</span></p>
+    </div>
+
+    <div class="headline">
+      <span class="chip chip-sport">Sport</span>
+      <div class="headline-title">AI Endurance arrive sur les compteurs Hammerhead Karoo</div>
+      <p class="headline-context">L'app AI Endurance entre dans la bibliothèque d'extensions du Karoo (OS 1.636.2450, 11 juin) : analyse HRV temps réel et métriques de coaching IA directement sur le compteur vélo.</p>
+      <div class="analyse"><b>→ Pour le lecteur :</b> concurrent direct qui pousse le coaching adaptatif HRV en temps réel <em>on-device</em>. L'axe « adaptatif » se grignote, et la distribution via head-units devient un canal à ne pas négliger.</div>
+      <p class="item-links"><span class="date">13 juin</span></p>
+    </div>
+
+    <div class="headline">
+      <span class="chip chip-native">IA-native</span>
+      <div class="headline-title">EngineAI dépose en confidentiel pour une IPO à Hong Kong</div>
+      <p class="headline-context">Le fabricant chinois d'humanoïdes (fondé 2023, valorisé ~1,5 Md$) vise une cotation à Hong Kong et a ouvert une usine cadençant un robot toutes les 15 min. Vague d'IPO humanoïdes chinois (Unitree ~7 Md$, Linkerbot, Dreame).</p>
+      <p class="item-links"><span class="date">12 juin</span></p>
+    </div>
+
+  </div>
+
+  <!-- SECTION 1 -->
+  <h2><span class="chip chip-ia">IA</span> IA — modèles, produits, communications
+    <span class="sec-desc">Sorties de modèle, lancements produit, offres, prises de parole notables des labos et grands acteurs.</span>
+  </h2>
+
+  <div class="item">
+    <p class="item-title">Fuite d'un checkpoint « GPT-5.6 kindle-alpha » dans les canaux dev</p>
+    <p class="item-fact">Un checkpoint OpenAI non publié, identifié comme GPT-5.6 « kindle-alpha », circule depuis début juin dans des discussions de développeurs via des chemins de test liés à Codex. Les testeurs rapportent un meilleur raisonnement, du code, et surtout un net saut en vision (sortie SVG plus nette, point faible historique de la famille GPT-5.x), ainsi qu'une fenêtre de contexte rapportée autour de 1,5 M tokens. À traiter comme une rumeur : OpenAI n'a publié aucun model card ni annonce officielle. Les marchés de prédiction tablent sur ~80-89% de chances d'une sortie avant fin juin.</p>
+    <p class="item-links"><a class="min-tap" href="https://windowsforum.com/threads/gpt-5-6-kindle-alpha-leak-early-reports-on-reasoning-coding-and-vision.423497/">Windows Forum</a> · <a class="min-tap" href="https://perplexityaimagazine.com/ai-news/gpt-56-release-date-features-leaks-openai-2026/">Perplexity AI Magazine</a> <span class="date">— 7-12 juin · [signal de fuite, non confirmé]</span></p>
+    <div class="analyse"><b>→ Pour le lecteur :</b> le saut en vision est la dimension à surveiller pour de l'analyse multimodale photo/vidéo d'entraînement (posture, technique de course/nage). Brique potentiellement réutilisable — à valider seulement après model card officiel.</div>
+  </div>
+
+  <div class="item">
+    <p class="item-title">Claude Code ajoute une commande « /fork » et une nouvelle CLI</p>
+    <p class="item-fact">Pendant la semaine de Microsoft Build 2026, Anthropic a introduit de nouvelles fonctionnalités pour Claude Code, dont une commande « /fork » (brancher une session existante en variante parallèle, façon git branch) et une nouvelle interface en ligne de commande. Cela suit l'ajout récent des sous-agents imbriqués et d'une recherche de plugins. Objectif affiché : rapprocher la gestion de sessions IA des workflows de versioning déjà familiers aux devs.</p>
+    <p class="item-links"><a class="min-tap" href="https://www.geeky-gadgets.com/gpt-5-6-leaks-microsoft-build-2026/">Geeky Gadgets</a> · <a class="min-tap" href="https://releasebot.io/updates/anthropic">Releasebot (tracker Anthropic)</a> <span class="date">— ~12 juin</span></p>
+  </div>
+
+  <!-- SECTION 2 -->
+  <h2><span class="chip chip-ma">M&amp;A</span> M&amp;A &amp; investissements IA
+    <span class="sec-desc">Acquisitions, fusions, levées significatives, partenariats stratégiques à impact financier.</span>
+  </h2>
+
+  <div class="item">
+    <p class="item-title">SpaceX (SPCX) : débuts à +25%, plus grosse IPO de l'histoire</p>
+    <p class="item-fact">SpaceX a clôturé sa première séance au Nasdaq le 12 juin à 168,70 $, contre un prix d'IPO de 135 $ (+~25%), pour une capitalisation d'environ 1,77 T$. Le titre a ouvert à 150 $ et oscillé entre 150,00 $ et 176,52 $. L'entité publique intègre xAI (Grok, X, data centers Colossus) racheté en février 2026 ; le S-1 révèle une perte cumulée de 41,3 Md$ depuis 2002. Des débuts qualifiés d'« ordonnés » — ni IPO cassée, ni euphorie spéculative — lus comme un feu vert pour les cotations à venir d'Anthropic et OpenAI.</p>
+    <p class="item-links"><a class="min-tap" href="https://www.cnbc.com/2026/06/12/spacex-ipo-spcx-live-updates.html">CNBC (live, 12 juin)</a> · <a class="min-tap" href="https://www.kiplinger.com/investing/live/spacex-ipo-spcx-stock-updates-and-commentary">Kiplinger</a> <span class="date">— 12 juin</span></p>
+    <div class="analyse"><b>→ Pour le lecteur :</b> validation publique des multiples premium sur l'infra IA = climat de levée plus porteur en aval pour les jeunes pousses IA, sport-tech incluse, sur les 2-3 prochains trimestres.</div>
+  </div>
+
+  <div class="item">
+    <p class="item-title">Anthropic passe devant OpenAI en adoption business US (indice Ramp)</p>
+    <p class="item-fact">Selon la release de mai de l'indice Ramp (dépenses réelles de 50 000+ entreprises US), l'adoption d'Anthropic est montée de 3,8 pts à 34,4% en avril, tandis qu'OpenAI reculait de 2,9 pts à 32,3% — première fois que plus d'entreprises US paient pour Claude que pour ChatGPT. Moteur principal : Claude Code, produit à la croissance la plus rapide de la société. Nuance : une enquête IDC (1 000+ organisations) ne crédite Claude que de 19% d'usage « intensif », derrière OpenAI et Google — Ramp mesure l'adoption (qui paie), IDC la profondeur d'usage. En toile de fond, un débat de reconnaissance des revenus (Anthropic comptabilise en brut, OpenAI en net) qui devient un point sensible avant les S-1.</p>
+    <p class="item-links"><a class="min-tap" href="https://venturebeat.com/technology/anthropic-finally-beat-openai-in-business-ai-adoption-but-3-big-threats-could-erase-its-lead">VentureBeat</a> · <a class="min-tap" href="https://techwireasia.com/2026/06/anthropic-claude-enterprise-ai-openai-google/">TechWire Asia</a> <span class="date">— 12 juin</span></p>
+    <div class="analyse"><b>→ Pour le lecteur :</b> Claude s'impose comme plateforme dev par défaut côté entreprise — signal pertinent pour les arbitrages de stack (modèle, coût au token, durabilité du fournisseur) d'une app construite sur un LLM.</div>
+  </div>
+
+  <div class="item">
+    <p class="item-title">Anthropic sécurise jusqu'à 5 GW de calcul auprès d'Amazon</p>
+    <p class="item-fact">Dans son bilan des cinq premiers mois de 2026, Anthropic a signé un nouvel accord avec Amazon pour jusqu'à 5 GW de capacité d'entraînement et d'inférence, et élargi ses travaux avec Google et Broadcom sur l'infra de prochaine génération. La société a aussi indiqué un run-rate de revenus dépassant 30 Md$ (vs ~9 Md$ fin 2025) et plus de 1 000 clients dépensant >1 M$/an. Le coût du calcul sera une ligne majeure de son futur S-1.</p>
+    <p class="item-links"><a class="min-tap" href="https://techwireasia.com/2026/06/anthropic-claude-enterprise-ai-openai-google/">TechWire Asia</a> <span class="date">— 12 juin</span></p>
+  </div>
+
+  <!-- SECTION 3 -->
+  <h2><span class="chip chip-native">IA-native</span> Sociétés innovantes IA-native
+    <span class="sec-desc">Startups/produits dont la proposition de valeur centrale repose sur une techno IA (hors géants couverts en 1).</span>
+  </h2>
+
+  <div class="item">
+    <p class="item-title">EngineAI dépose en confidentiel pour une IPO à Hong Kong — la vague humanoïdes chinois s'accélère</p>
+    <p class="item-fact">EngineAI (Shenzhen, fondé 2023), fabricant d'humanoïdes et quadrupèdes construits autour de l'« IA incarnée », a déposé un dossier confidentiel d'IPO à Hong Kong (avec CICC et Citic). Série B en avril 2026 (~27,9 M$) valorisant la société >1,5 Md$ ; usine de 12 000 m² ouverte le 1er juin cadençant un humanoïde toutes les 15 min, calibrée pour 10 000 unités. L'opération s'inscrit dans une vague : Unitree a déposé pour une IPO à ~7 Md$, Linkerbot vise ~6 Md$, Dreame lorgne Hong Kong — ~22,6 Md$ déjà levés en IPO hongkongaises sur la période, concentrés sur l'IA et la robotique.</p>
+    <p class="item-links"><a class="min-tap" href="https://thenextweb.com/news/engineai-hong-kong-ipo-humanoid-robots">The Next Web (via Bloomberg)</a> · <a class="min-tap" href="https://cryptobriefing.com/engineai-hong-kong-ipo-filing/">CryptoBriefing</a> <span class="date">— 12 juin</span></p>
+  </div>
+
+  <!-- SECTION 4 -->
+  <h2><span class="chip chip-sport">Sport</span> Applications d'entraînement sportif
+    <span class="sec-desc">Veille concurrentielle de la watchlist (directs / indirects / à surveiller).</span>
+  </h2>
+
+  <div class="item">
+    <p class="item-title">AI Endurance débarque sur les compteurs Hammerhead Karoo</p>
+    <p class="item-fact">L'app AI Endurance (concurrent direct, watchlist) est entrée dans la bibliothèque d'extensions des compteurs vélo Hammerhead Karoo, via la mise à jour de l'OS Karoo 1.636.2450 (11 juin). Une fois installée, l'extension fournit une analyse HRV (variabilité de la fréquence cardiaque) en temps réel et des métriques de coaching IA additionnelles directement sur l'écran du compteur. Couverture détaillée dans le deep-dive firmware hebdomadaire de the5krunner (13 juin).</p>
+    <p class="item-links"><a class="min-tap" href="https://the5krunner.com/2026/06/13/3-deep-dive-feature-files-week-ending-13-june-2026/">the5krunner</a> · <a class="min-tap" href="https://shop.sram.com/blogs/change-logs/karoo-software-build-version-1-636-2450">Hammerhead / SRAM (release notes)</a> <span class="date">— 11-13 juin</span></p>
+    <div class="analyse"><b>→ Pour le lecteur :</b> un concurrent direct avance précisément sur l'axe différenciant — adaptation au signal physiologique en temps réel — et capture le terrain <em>on-device</em>. À intégrer dans le positionnement : la valeur ne sera pas dans la mesure HRV (qui se commoditise sur le head-unit) mais dans la qualité de la reconfiguration de plan qui en découle.</div>
+  </div>
+
+  <!-- SOURCES -->
+  <div class="sources">
+    <h2>Qualité des sources</h2>
+    <div class="source-chips">
+      <span>cnbc.com 🟢</span>
+      <span>kiplinger.com 🟢</span>
+      <span>venturebeat.com 🟢</span>
+      <span>thenextweb.com 🟡</span>
+      <span>techwireasia.com 🟡</span>
+      <span>the5krunner.com 🟡</span>
+      <span>shop.sram.com 🟢</span>
+      <span>geeky-gadgets.com 🟠</span>
+      <span>releasebot.io 🟠</span>
+      <span>windowsforum.com 🟠</span>
+      <span>perplexityaimagazine.com 🟠</span>
+      <span>cryptobriefing.com 🟠</span>
+    </div>
+    <p class="legend">🟢 primaire (officiel / média de référence) · 🟡 secondaire (média d'industrie) · 🟠 tertiaire (blog / agrégateur)</p>
+  </div>
+
+  <p class="footnote">
+    Notification haut-impact envoyée : oui — triggers : [M&amp;A / événement IA majeur &gt; 500 M$ : IPO SpaceX, plus grosse de l'histoire] + [feature concurrent direct sur axe adaptatif : AI Endurance × Karoo] — priorité : 4 (high).<br>
+    Note d'exécution : run automatisé un dimanche. Actualité dominée par l'IPO SpaceX (12 juin) ; items datés du 11-13 juin retenus faute d'actualité strictement &lt;24h. La fuite GPT-5.6 est signalée comme rumeur non confirmée (pas de model card). Items déjà couverts le 13 juin (mémoire ChatGPT, OpenAI/Ona, Prometheus, NEURA) volontairement écartés pour éviter les doublons.
+  </p>
+
+</div>
+</body>
+</html>
