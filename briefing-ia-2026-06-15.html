@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — Veille IA &amp; Sport endurance — 15 juin 2026</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #1a1a1a;
+    --muted: #5c6470;
+    --line: #e4e7ec;
+    --card: #f7f8fa;
+    --tldr-bg: #f0f4ff;
+    --tldr-border: #c7d4f7;
+    --accent: #2c5cff;
+    --analyse-bg: #fff8e9;
+    --analyse-border: #e9c96b;
+    --chip-ia: #2c5cff;
+    --chip-ma: #b5471f;
+    --chip-native: #0a8a5f;
+    --chip-sport: #8636c8;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0; width: 100%;
+    -webkit-text-size-adjust: 100%; text-size-adjust: 100%;
+    background: var(--bg); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+  }
+  .wrap {
+    max-width: 640px; width: 100%; margin: 0 auto;
+    padding: 24px 16px 56px;
+  }
+  h1 {
+    font-size: 26px; line-height: 1.25; margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .subtitle {
+    font-size: 15px; color: var(--muted); margin: 0 0 28px;
+  }
+  h2 {
+    font-size: 20px; margin: 40px 0 4px; letter-spacing: -0.01em;
+  }
+  .section-desc { font-size: 14px; color: var(--muted); margin: 0 0 16px; }
+  .chip {
+    display: inline-block; font-size: 12px; font-weight: 700;
+    color: #fff; padding: 2px 9px; border-radius: 11px;
+    vertical-align: middle; letter-spacing: 0.02em;
+  }
+  .chip-IA { background: var(--chip-ia); }
+  .chip-MA { background: var(--chip-ma); }
+  .chip-native { background: var(--chip-native); }
+  .chip-Sport { background: var(--chip-sport); }
+
+  /* TL;DR */
+  .tldr {
+    background: var(--tldr-bg); border: 1px solid var(--tldr-border);
+    border-radius: 14px; padding: 18px 16px; margin-bottom: 8px;
+  }
+  .tldr h2 { margin: 0 0 14px; font-size: 18px; color: var(--accent); }
+  .headline { padding: 14px 0; border-top: 1px solid var(--tldr-border); }
+  .headline:first-of-type { border-top: none; padding-top: 0; }
+  .headline-title { font-size: 18px; font-weight: 700; margin: 6px 0 4px; }
+  .headline-context { font-size: 17px; margin: 0 0 6px; }
+  .reader {
+    display: block; font-size: 17px; margin: 8px 0 0;
+    padding: 8px 12px; background: var(--analyse-bg);
+    border-left: 3px solid var(--analyse-border); border-radius: 4px;
+  }
+  .reader b { font-weight: 700; }
+
+  /* Body items */
+  .item { padding: 16px 0; border-top: 1px solid var(--line); }
+  .item:first-of-type { border-top: none; }
+  .item-title { font-size: 19px; font-weight: 700; margin: 0 0 6px; }
+  .item-fact { font-size: 18px; margin: 0 0 8px; }
+  .empty { font-style: italic; color: var(--muted); font-size: 17px; }
+
+  .links { font-size: 16px; margin: 4px 0 0; }
+  .links a { color: var(--accent); text-decoration: none; word-break: break-word; }
+  .links a:hover { text-decoration: underline; }
+  .date { color: var(--muted); }
+  .tag-sec { color: var(--muted); font-size: 13px; }
+
+  /* Sources */
+  .sources {
+    margin-top: 44px; padding: 18px 16px; background: var(--card);
+    border-radius: 14px;
+  }
+  .sources h2 { margin: 0 0 12px; font-size: 18px; }
+  .src-list { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; }
+  .src-list span { white-space: nowrap; }
+
+  .footer-note {
+    margin-top: 28px; font-size: 13px; color: var(--muted);
+    border-top: 1px solid var(--line); padding-top: 14px;
+  }
+
+  @media (min-width: 768px) {
+    .wrap { max-width: 760px; padding: 56px 48px 80px; }
+    body { font-size: 17px; }
+    h1 { font-size: 30px; }
+    h2 { font-size: 22px; }
+    .subtitle { font-size: 15px; }
+    .tldr { padding: 26px 28px; }
+    .headline-title { font-size: 18px; }
+    .headline-context { font-size: 16px; }
+    .reader { font-size: 16px; }
+    .item-title { font-size: 19px; }
+    .item-fact { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Briefing — Veille IA &amp; Sport endurance — 15 juin 2026</h1>
+  <p class="subtitle">Lundi 15 juin 2026 · Lecture : ~5 min · 4 items · Fenêtre &lt; 24 h (journée calme : l'actualité réellement fraîche du jour se résume au sommet du G7 ; les autres items, bien sourcés, datent de la semaine écoulée et sont datés explicitement).</p>
+
+  <!-- TL;DR -->
+  <div class="tldr">
+    <h2>À la une</h2>
+
+    <div class="headline">
+      <span class="chip chip-IA">IA</span>
+      <div class="headline-title">Les patrons d'OpenAI, Anthropic et Google DeepMind au G7 d'Évian</div>
+      <p class="headline-context">Altman, Amodei et Hassabis siègent ensemble pour la première fois devant les dirigeants du G7 (15–17 juin, Évian-les-Bains). L'IA est au cœur de l'agenda, avec un déjeuner de travail dédié au déploiement « sûr et rapide » de la technologie.</p>
+      <p class="links"><a href="https://qz.com/openai-google-deepmind-anthropic-ceos-g7-france-061226">qz.com</a> · <a href="https://www.bloomberg.com/news/articles/2026-06-12/anthropic-openai-google-executives-plan-to-attend-g7-summit">bloomberg.com</a> <span class="date">— 12 juin (sommet 15–17 juin)</span></p>
+    </div>
+
+    <div class="headline">
+      <span class="chip chip-MA">M&amp;A</span>
+      <div class="headline-title">Moonshot AI vise 30 Md$ de valorisation, 3ᵉ tour en 6 mois</div>
+      <p class="headline-context">Le créateur du chatbot chinois Kimi cherche jusqu'à 2 Md$, multipliant sa valorisation par ~7 depuis décembre (4 Md$ → 30 Md$). ARR &gt; 200 M$ en avril. Signal fort de la cadence de financement de l'IA chinoise.</p>
+      <p class="reader">→ <b>Pour le lecteur :</b> des modèles quasi-frontier à très bas coût (lignée Kimi) deviennent une option API crédible pour la couche coaching adaptatif — pression durable à la baisse sur les coûts d'inférence.</p>
+      <p class="links"><a href="https://www.bloomberg.com/news/articles/2026-06-08/china-s-moonshot-ai-seeks-30-billion-value-in-new-funding-talks">bloomberg.com</a> · <a href="https://technode.com/2026/06/08/kimi-reaches-30-billion-valuation-after-sixfold-increase-in-half-a-year/">technode.com</a> <span class="date">— 8 juin</span></p>
+    </div>
+
+    <div class="headline">
+      <span class="chip chip-native">IA-native</span>
+      <div class="headline-title">EngineAI dépose en confidentiel pour une IPO à Hong Kong</div>
+      <p class="headline-context">Le fabricant de robots humanoïdes de Shenzhen (Série B à 1,5 Md$) rejoint la vague d'introductions de la robotique chinoise — Unitree (~7 Md$) et Linkerbot (~6 Md$) suivent. Usine ouverte le 1ᵉʳ juin : un humanoïde toutes les 15 min.</p>
+      <p class="links"><a href="https://www.bloomberg.com/news/articles/2026-06-12/humanoid-robot-manufacturer-engineai-is-said-to-file-for-hong-kong-ipo">bloomberg.com</a> · <a href="https://cryptobriefing.com/engineai-hong-kong-ipo-filing/">cryptobriefing.com</a> <span class="date">— 12 juin</span></p>
+    </div>
+
+  </div>
+
+  <!-- Section 1 -->
+  <h2><span class="chip chip-IA">IA</span> &nbsp;IA — modèles, produits, communications</h2>
+  <p class="section-desc">Sorties de modèle, lancements produit, prises de parole notables des labos et grands acteurs.</p>
+
+  <div class="item">
+    <div class="item-title">Les trois grands labos réunis au G7 d'Évian (15–17 juin)</div>
+    <p class="item-fact">Sam Altman (OpenAI), Dario Amodei (Anthropic) et Demis Hassabis (Google DeepMind) assistent ensemble au sommet du G7, à l'invitation personnelle d'Emmanuel Macron — une première. L'Élysée a prévu un déjeuner de travail consacré au déploiement « sûr, rapide et efficace » de l'IA. Cette présence prolonge la lettre commune (avec Microsoft AI) adressée au Congrès américain le 5 juin, appelant à un dépistage obligatoire des commandes d'ADN/ARN de synthèse face au risque biologique amplifié par l'IA.</p>
+    <p class="links"><a href="https://qz.com/openai-google-deepmind-anthropic-ceos-g7-france-061226">qz.com</a> · <a href="https://thenextweb.com/news/g7-ai-summit-altman-amodei-hassabis">thenextweb.com</a> · <a href="https://qz.com/ai-ceos-synthetic-dna-screening-bioweapons-congress-060526">qz.com (lettre, 5 juin)</a> <span class="date">— 15 juin</span></p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Pas de sortie de modèle frontier vérifiable dans la fenêtre &lt; 24 h</div>
+    <p class="item-fact">Aucune annonce officielle de modèle frontier (OpenAI, Anthropic, Google, Meta, xAI, Mistral, DeepSeek, Moonshot) n'est sourçable de façon primaire sur les dernières 24 h. Les nombreux « lancements » remontés par les agrégateurs SEO ce mois-ci ne sont pas confirmés par communiqué officiel et ont été écartés (discipline anti-fluff).</p>
+  </div>
+
+  <!-- Section 2 -->
+  <h2><span class="chip chip-MA">M&amp;A</span> &nbsp;M&amp;A &amp; investissements IA</h2>
+  <p class="section-desc">Acquisitions, fusions, levées significatives, partenariats à impact financier.</p>
+
+  <div class="item">
+    <div class="item-title">Moonshot AI : jusqu'à 2 Md$ recherchés, valorisation visée 30 Md$</div>
+    <p class="item-fact">Le laboratoire pékinois derrière Kimi entame son troisième financement en six mois, juste après un tour mené par Meituan le valorisant à 20 Md$. Si l'objectif est atteint, la valorisation aura été multipliée par ~7 depuis décembre 2025 (≈ 4 Md$). ARR &gt; 200 M$ en avril, tiré par Kimi.</p>
+    <p class="reader">→ <b>Pour le lecteur :</b> la course chinoise tire les coûts d'inférence vers le bas. Des modèles type Kimi, performants et bon marché via API, sont des briques candidates pour la génération/adaptation de plans — à benchmarker contre les options OpenAI/Anthropic sur le ratio qualité/coût.</p>
+    <p class="links"><a href="https://www.bloomberg.com/news/articles/2026-06-08/china-s-moonshot-ai-seeks-30-billion-value-in-new-funding-talks">bloomberg.com</a> · <a href="https://www.scmp.com/tech/article/3356348/moonshot-ai-eyes-us30-billion-valuation-chinas-ai-race-intensifies">scmp.com</a> <span class="date">— 8 juin</span></p>
+  </div>
+
+  <!-- Section 3 -->
+  <h2><span class="chip chip-native">IA-native</span> &nbsp;Sociétés innovantes IA-native</h2>
+  <p class="section-desc">Startups/produits dont la valeur centrale repose sur l'IA (hors géants déjà couverts).</p>
+
+  <div class="item">
+    <div class="item-title">EngineAI vers une IPO confidentielle à Hong Kong</div>
+    <p class="item-fact">EngineAI (Shenzhen, fondée en 2023), spécialiste des humanoïdes et quadrupèdes à « systèmes d'IA incarnée », a déposé en confidentiel pour une cotation à Hong Kong, avec CICC et CITIC. Le dépôt suit une Série B de 200 M$ (valorisation 1,5 Md$) et l'ouverture le 1ᵉʳ juin d'une usine produisant un humanoïde toutes les 15 minutes. Il s'inscrit dans une vague d'introductions de la robotique chinoise (Unitree ~7 Md$, Linkerbot ~6 Md$).</p>
+    <p class="links"><a href="https://www.bloomberg.com/news/articles/2026-06-12/humanoid-robot-manufacturer-engineai-is-said-to-file-for-hong-kong-ipo">bloomberg.com</a> · <a href="https://thenextweb.com/news/engineai-hong-kong-ipo-humanoid-robots">thenextweb.com</a> <span class="date">— 12 juin</span></p>
+  </div>
+
+  <!-- Section 4 -->
+  <h2><span class="chip chip-Sport">Sport</span> &nbsp;Applications d'entraînement sportif</h2>
+  <p class="section-desc">News de la watchlist (concurrents directs, indirects, à surveiller).</p>
+
+  <div class="item">
+    <p class="empty">Rien à signaler dans la fenêtre &lt; 24 h. Aucun mouvement vérifiable sur la watchlist (TrainingPeaks, TrainerRoad, Athletica.ai, 2PEAK, Humango, AI Endurance, Enduco, Strava, Garmin, Zwift, Wahoo, Whoop, Coros…) aujourd'hui.</p>
+    <p class="item-fact" style="margin-top:12px;">Contexte récent hors fenêtre, pour mémoire : le 2 juin, Tymewear a intégré sa techno respiratoire aux compteurs Wahoo ELEMNT (insights de respiration en temps réel). Signal de la commoditisation continue de la couche capteur — l'avantage produit se joue sur la couche logicielle/coaching.</p>
+    <p class="links"><a href="https://www.bicycleretailer.com/announcements/2026/06/02/new-tymewear-now-integrated-wahoo-elemnt-bike-computers">bicycleretailer.com</a> <span class="date">— 2 juin</span></p>
+  </div>
+
+  <!-- Sources -->
+  <div class="sources">
+    <h2>Qualité des sources</h2>
+    <div class="src-list">
+      <span>bloomberg.com 🟢</span>
+      <span>qz.com 🟢</span>
+      <span>thenextweb.com 🟢</span>
+      <span>scmp.com 🟢</span>
+      <span>technode.com 🟡</span>
+      <span>bicycleretailer.com 🟡</span>
+      <span>cryptobriefing.com 🟠</span>
+    </div>
+  </div>
+
+  <p class="footer-note">
+    Notification haut-impact envoyée : oui (mode systématique — 1 push/jour) — triggers haut-impact correspondant à un item &lt; 24 h : aucun (l'item du jour, le G7, est de nature politique/communication, pas un déclencheur produit/M&amp;A direct) — priorité : 3.<br>
+    Note de calibration : les items M&amp;A (Moonshot) et IA-native (EngineAI) sont bien sourcés mais datent de la semaine (8 et 12 juin), non du jour ; ils ne sont donc pas comptés comme triggers &lt; 24 h. Priorité maintenue à 3 (journée substantielle mais sans déclencheur frais), plutôt que 2 (journée plate) ou 4 (déclencheur frais).
+  </p>
+
+</div>
+</body>
+</html>
