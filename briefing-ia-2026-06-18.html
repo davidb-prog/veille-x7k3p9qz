@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — Veille IA &amp; Sport endurance — 18 juin 2026</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #1a1a1a;
+    --muted: #5c5c5c;
+    --line: #e6e6e6;
+    --accent: #1f4ea8;
+    --tldr-bg: #f5f7fb;
+    --tldr-border: #1f4ea8;
+    --chip-ia: #1f4ea8;
+    --chip-ma: #8a4b00;
+    --chip-native: #0a7a4a;
+    --chip-sport: #a01f5b;
+    --analyse-bg: #fbf6ec;
+    --analyse-border: #c79a3a;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+  }
+  .wrap {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 16px 56px;
+  }
+  h1 {
+    font-size: 26px;
+    line-height: 1.25;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .subtitle {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 0 0 28px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 40px 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--line);
+  }
+  .chip {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 3px 9px;
+    border-radius: 5px;
+    vertical-align: middle;
+  }
+  .chip.ia { background: var(--chip-ia); }
+  .chip.ma { background: var(--chip-ma); }
+  .chip.native { background: var(--chip-native); }
+  .chip.sport { background: var(--chip-sport); }
+
+  /* TL;DR */
+  .tldr {
+    background: var(--tldr-bg);
+    border-left: 4px solid var(--tldr-border);
+    border-radius: 8px;
+    padding: 18px 16px;
+    margin: 0 0 8px;
+  }
+  .tldr h2 {
+    border: none;
+    margin: 0 0 14px;
+    padding: 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+  }
+  .headline {
+    padding: 12px 0;
+    border-top: 1px solid var(--line);
+  }
+  .headline:first-of-type { border-top: none; padding-top: 0; }
+  .headline-title {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 8px 0 4px;
+    line-height: 1.3;
+  }
+  .headline-context {
+    font-size: 17px;
+    margin: 0 0 6px;
+  }
+  .analyse {
+    background: var(--analyse-bg);
+    border-left: 3px solid var(--analyse-border);
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-size: 17px;
+  }
+  .analyse strong { color: #7a5a14; }
+
+  /* Body items */
+  .item {
+    margin: 0 0 22px;
+    padding-bottom: 4px;
+  }
+  .item-title {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    line-height: 1.3;
+  }
+  .item-fact {
+    font-size: 18px;
+    margin: 0 0 8px;
+  }
+  .item-links {
+    font-size: 16px;
+    margin: 4px 0 0;
+  }
+  .item-links a { word-break: break-word; }
+  a { color: var(--accent); }
+  .empty { color: var(--muted); font-style: italic; }
+
+  /* Sources */
+  .sources {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    font-size: 15px;
+    color: var(--muted);
+  }
+  .sources span { white-space: nowrap; }
+  .footer-note {
+    margin-top: 40px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  @media (min-width: 768px) {
+    .wrap { max-width: 760px; padding: 56px 48px 80px; }
+    body { font-size: 17px; }
+    h1 { font-size: 30px; }
+    h2 { font-size: 22px; }
+    .item-title { font-size: 19px; }
+    .item-fact { font-size: 17px; }
+    .headline-title { font-size: 18px; }
+    .headline-context { font-size: 16px; }
+    .analyse { font-size: 16px; }
+    .subtitle { font-size: 15px; }
+    .tldr { padding: 26px 28px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Briefing — Veille IA &amp; Sport endurance — 18 juin 2026</h1>
+  <p class="subtitle">Jeudi 18 juin 2026 · Lecture : ~4 min · 4 items · fenêtre &lt; 24h</p>
+
+  <!-- TL;DR -->
+  <section class="tldr">
+    <h2>À la une</h2>
+
+    <div class="headline">
+      <span class="chip ma">M&amp;A</span>
+      <span class="headline-title">SpaceX rachète Anysphere (Cursor) pour 60 Md$, plus gros rachat de startup VC de l'histoire</span>
+      <p class="headline-context">Opération 100 % en actions, annoncée trois jours après l'IPO record de SpaceX, qui passe devant Microsoft en capitalisation. Elle parachève la consolidation des outils de code IA (Cursor + Grok Build sous SpaceX, Copilot/Microsoft, Codex/OpenAI, Claude Code/Anthropic).</p>
+      <div class="analyse"><strong>→ Pour le lecteur :</strong> signal de vitesse — une catégorie logicielle IA (l'IDE assisté) s'est consolidée en &lt; 18 mois. La couche outillage se rachète ; l'avantage durable se loge dans la donnée propriétaire et l'expérience verticale, pas dans le wrapper.</div>
+      <p class="item-links"><a href="https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo/">TechCrunch — 16 juin</a></p>
+    </div>
+
+    <div class="headline">
+      <span class="chip ia">IA</span>
+      <span class="headline-title">G7 d'Evian : Amodei et Hassabis appellent à une coalition IA menée par les États-Unis</span>
+      <p class="headline-context">Première fois que les trois labos frontier (OpenAI, Anthropic, Google DeepMind) sont représentés au niveau chefs d'État. En toile de fond : les contrôles à l'export américains sur les derniers modèles d'Anthropic, qui nourrissent en Europe la crainte d'un « kill switch » US.</p>
+      <p class="item-links"><a href="https://www.cnbc.com/2026/06/17/anthropic-amodei-google-hassabis-us-ai-coalition-g7.html">CNBC — 17 juin</a></p>
+    </div>
+
+    <div class="headline">
+      <span class="chip ia">IA</span>
+      <span class="headline-title">OpenAI publie LifeSciBench : 750 tâches expertes, meilleur modèle à 36,1 %</span>
+      <p class="headline-context">Benchmark sciences du vivant construit avec 173 scientifiques ; 79 % des tâches exigent un raisonnement multi-étapes. Le plafond bas (36,1 %) confirme que les modèles restent loin du raisonnement expert de bout en bout, malgré le marketing.</p>
+      <p class="item-links"><a href="https://openai.com/index/introducing-life-sci-bench/">OpenAI — 17 juin</a></p>
+    </div>
+
+    <div class="headline">
+      <span class="chip native">IA-native</span>
+      <span class="headline-title">Odyssey lève 310 M$ (Série B) sur les « world models » et l'IA physique</span>
+      <p class="headline-context">Tour mené avec Amazon, AMD Ventures, GV et EQT. Les world models — simulation/génération du réel à partir de capteurs et de vidéo — sont l'un des axes techniques les plus financés du moment.</p>
+      <div class="analyse"><strong>→ Pour le lecteur :</strong> brique à surveiller — un world model multimodal entraîné sur de la vidéo de mouvement pourrait, à terme, analyser une session d'entraînement (posture, technique) sans capteurs dédiés. À ranger dans la veille « inputs futurs du plan adaptatif ».</div>
+      <p class="item-links"><a href="https://techstartups.com/2026/06/17/venture-capital-startup-funding-roundup-june-17-2026/">Tech Startups — 17 juin <em>[source secondaire]</em></a></p>
+    </div>
+
+  </section>
+
+  <!-- Corps -->
+  <h2><span class="chip ia">IA</span>&nbsp; IA — modèles, produits, communications</h2>
+
+  <div class="item">
+    <p class="item-title">OpenAI publie LifeSciBench, un benchmark sciences du vivant qui plafonne à 36,1 %</p>
+    <p class="item-fact">OpenAI a dévoilé LifeSciBench, un benchmark de 750 tâches rédigées et notées par 173 scientifiques de la biotech et de la pharma, couvrant sept domaines biologiques et sept types de workflows (analyse, conception, raisonnement scientifique, validation, communication…). 79 % des tâches demandent plusieurs étapes de raisonnement (4 en moyenne). Le meilleur modèle testé ne passe que 36,1 % des tâches.</p>
+    <p class="item-links"><a href="https://openai.com/index/introducing-life-sci-bench/">openai.com — 17 juin</a> · <a href="https://www.marktechpost.com/2026/06/17/openai-releases-lifescibench-a-750-task-benchmark-grading-ai-models-on-real-life-science-research-with-expert-written-rubric/">MarkTechPost — 17 juin</a></p>
+    <div class="analyse"><strong>→ Pour le lecteur :</strong> rappel utile pour calibrer les promesses produit. Sur du raisonnement expert multi-étapes (ce qu'exige un vrai coaching adaptatif), l'état de l'art reste sous les 40 % — un coach IA crédible se construit avec des garde-fous métier et de la donnée structurée, pas en déléguant le jugement au LLM brut.</div>
+  </div>
+
+  <div class="item">
+    <p class="item-title">G7 d'Evian : appel à une coalition IA occidentale, tensions sur l'export des modèles Anthropic</p>
+    <p class="item-fact">Au sommet du G7, une douzaine de dirigeants tech (dont Sam Altman) ont rejoint les chefs d'État. Dario Amodei (Anthropic) et Demis Hassabis (Google DeepMind) ont plaidé pour une coalition IA menée par les États-Unis : accès structuré aux modèles frontier, commerce de puces excluant la Chine, coopération sur les risques cyber et bioterrorisme. Altman a réclamé un « forum international » pour des standards de test partagés. En arrière-plan, les restrictions américaines à l'export des derniers modèles d'Anthropic alimentent en Europe la crainte d'une dépendance (« kill switch »).</p>
+    <p class="item-links"><a href="https://www.cnbc.com/2026/06/17/anthropic-amodei-google-hassabis-us-ai-coalition-g7.html">CNBC — 17 juin</a> · <a href="https://www.cnbc.com/2026/06/17/g7-trump-ai-tech-leaders-openai-anthropic-google.html">CNBC (G7 / tech) — 17 juin</a></p>
+  </div>
+
+  <h2><span class="chip ma">M&amp;A</span>&nbsp; M&amp;A &amp; investissements IA</h2>
+
+  <div class="item">
+    <p class="item-title">SpaceX acquiert Anysphere (Cursor) pour 60 Md$ en actions</p>
+    <p class="item-fact">SpaceX a annoncé le rachat d'Anysphere, éditeur de l'assistant de code Cursor, pour 60 Md$ entièrement en actions — le plus gros rachat de startup financée par VC jamais réalisé, et l'acquisition de logiciel IA la plus chère annoncée à ce jour. Clôture visée au T3 2026, sous réserve d'approbations réglementaires. L'opération comble le retard de SpaceXAI (issue de l'absorption de xAI) sur l'outillage de code et achève la consolidation du marché des IDE IA. Les droits d'acquisition avaient été verrouillés dès avril (frais de rupture de 1,5 Md$ + 8,5 Md$ de compute).</p>
+    <p class="item-links"><a href="https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo/">TechCrunch — 16 juin</a> · <a href="https://www.cnbc.com/2026/06/16/spacex-spcx-cursor-acquisition-ipo.html">CNBC — 16 juin</a></p>
+    <div class="analyse"><strong>→ Pour le lecteur :</strong> deux signaux. (1) Vitesse de consolidation : une catégorie d'app IA peut être verrouillée par les géants en &lt; 18 mois — pertinent si un acteur capteur (Garmin, Strava) décide d'absorber un coach IA. (2) Le différenciateur n'est pas l'accès au modèle (commoditisé) mais la donnée propriétaire et la verticalisation — exactement la thèse « le plan s'adapte aux contraintes de l'athlète ».</div>
+  </div>
+
+  <h2><span class="chip native">IA-native</span>&nbsp; Sociétés innovantes IA-native</h2>
+
+  <div class="item">
+    <p class="item-title">Odyssey lève 310 M$ (Série B) sur les world models et l'IA physique</p>
+    <p class="item-fact">La startup Odyssey (Palo Alto), positionnée sur les world models et l'IA physique, a levé 310 M$ en Série B auprès de Natural Capital, Amazon, AMD Ventures, GV et EQT (avec Jeff Dean et Elad Gil parmi les soutiens). Le même jour, Twenty (cyber offensif, défense US) levait 100 M$ à 1 Md$ de valorisation.</p>
+    <p class="item-links"><a href="https://techstartups.com/2026/06/17/venture-capital-startup-funding-roundup-june-17-2026/">Tech Startups — 17 juin <em>[source secondaire — primaire non consolidée]</em></a></p>
+    <div class="analyse"><strong>→ Pour le lecteur :</strong> les world models multimodaux (vidéo, capteurs) sont la brique à observer pour l'analyse de geste/technique sans matériel additionnel. Pas mûr pour la prod, mais à inscrire dans la roadmap « inputs futurs » du moteur adaptatif.</div>
+  </div>
+
+  <h2><span class="chip sport">Sport</span>&nbsp; Applications d'entraînement sportif</h2>
+
+  <div class="item">
+    <p class="empty">Rien à signaler aujourd'hui sur ce volet — aucune annonce de la watchlist (TrainingPeaks, TrainerRoad, Athletica.ai, 2PEAK, Humango, AI Endurance, Enduco, Strava, Garmin, Zwift, Wahoo, Whoop, Coros…) datée dans la fenêtre &lt; 24h. Le dernier mouvement notable reste le connecteur MCP Strava→Claude (1 juin) et le rachat de Strava par Garmin (1 avril), tous deux hors fenêtre.</p>
+  </div>
+
+  <!-- Qualité des sources -->
+  <h2>Qualité des sources</h2>
+  <div class="sources">
+    <span>openai.com 🟢</span>
+    <span>techcrunch.com 🟢</span>
+    <span>cnbc.com 🟢</span>
+    <span>marktechpost.com 🟡</span>
+    <span>techstartups.com 🟠</span>
+  </div>
+  <p class="footer-note">
+    🟢 primaire · 🟡 secondaire (média d'industrie) · 🟠 tertiaire (agrégateur/digest)<br>
+    Le rachat SpaceX–Cursor a été annoncé le 16 juin mais domine le cycle d'actu du 17 ; conservé comme item structurant. Le tour de table Odyssey n'a pas pu être recoupé sur une source primaire au moment de la rédaction — signalé comme secondaire.<br>
+    Notification haut-impact envoyée : oui — triggers : #4 (M&amp;A IA majeur &gt; 500 M$ — SpaceX/Cursor) — priorité : 4.
+  </p>
+
+</div>
+</body>
+</html>
