@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — Veille IA &amp; Sport endurance — 21 juin 2026</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #1a1a1a;
+    --muted: #5c5c5c;
+    --line: #e6e6e6;
+    --accent: #1f4ea8;
+    --tldr-bg: #f5f7fb;
+    --tldr-border: #1f4ea8;
+    --chip-ia: #1f4ea8;
+    --chip-ma: #8a4b00;
+    --chip-native: #0a7a4a;
+    --chip-sport: #a01f5b;
+    --analyse-bg: #fbf6ec;
+    --analyse-border: #c79a3a;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+  }
+  .wrap {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 16px 56px;
+  }
+  h1 {
+    font-size: 26px;
+    line-height: 1.25;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .subtitle {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 0 0 28px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 40px 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--line);
+  }
+  .chip {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 3px 9px;
+    border-radius: 5px;
+    vertical-align: middle;
+  }
+  .chip.ia { background: var(--chip-ia); }
+  .chip.ma { background: var(--chip-ma); }
+  .chip.native { background: var(--chip-native); }
+  .chip.sport { background: var(--chip-sport); }
+
+  /* TL;DR */
+  .tldr {
+    background: var(--tldr-bg);
+    border-left: 4px solid var(--tldr-border);
+    border-radius: 8px;
+    padding: 18px 16px;
+    margin: 0 0 8px;
+  }
+  .tldr h2 {
+    border: none;
+    margin: 0 0 14px;
+    padding: 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+  }
+  .headline {
+    padding: 12px 0;
+    border-top: 1px solid var(--line);
+  }
+  .headline:first-of-type { border-top: none; padding-top: 0; }
+  .headline-title {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 8px 0 4px;
+    line-height: 1.3;
+  }
+  .headline-context {
+    font-size: 17px;
+    margin: 0 0 6px;
+  }
+  .analyse {
+    background: var(--analyse-bg);
+    border-left: 3px solid var(--analyse-border);
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin: 8px 0;
+    font-size: 17px;
+  }
+  .analyse strong { color: #7a5a14; }
+
+  /* Body items */
+  .item {
+    margin: 0 0 22px;
+    padding-bottom: 4px;
+  }
+  .item-title {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    line-height: 1.3;
+  }
+  .item-fact {
+    font-size: 18px;
+    margin: 0 0 8px;
+  }
+  .item-links {
+    font-size: 16px;
+    margin: 4px 0 0;
+  }
+  .item-links a { word-break: break-word; }
+  a { color: var(--accent); }
+  .empty { color: var(--muted); font-style: italic; }
+
+  /* Sources */
+  .sources {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    font-size: 15px;
+    color: var(--muted);
+  }
+  .sources span { white-space: nowrap; }
+  .footer-note {
+    margin-top: 40px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  @media (min-width: 768px) {
+    .wrap { max-width: 760px; padding: 56px 48px 80px; }
+    body { font-size: 17px; }
+    h1 { font-size: 30px; }
+    h2 { font-size: 22px; }
+    .item-title { font-size: 19px; }
+    .item-fact { font-size: 17px; }
+    .headline-title { font-size: 18px; }
+    .headline-context { font-size: 16px; }
+    .analyse { font-size: 16px; }
+    .subtitle { font-size: 15px; }
+    .tldr { padding: 26px 28px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Briefing — Veille IA &amp; Sport endurance — 21 juin 2026</h1>
+  <p class="subtitle">Dimanche 21 juin 2026 · Lecture : ~4 min · 3 items · fenêtre &lt; 24h · journée calme</p>
+
+  <!-- TL;DR -->
+  <section class="tldr">
+    <h2>À la une</h2>
+
+    <div class="headline">
+      <span class="chip ia">IA</span>
+      <span class="headline-title">Claude Fable 5 / Mythos 5 toujours hors ligne — jour 9 du blocage à l'export</span>
+      <p class="headline-context">Neuf jours après la directive de contrôle à l'export du 12 juin, Anthropic n'a toujours pas réactivé ses deux modèles frontier. La fenêtre d'essai gratuit pour les abonnés payants ferme le 22 juin : ils paieront plein tarif pour un modèle indisponible. Restauration toujours en négociation.</p>
+      <div class="analyse"><strong>→ Pour le lecteur :</strong> cas d'école de risque fournisseur — un modèle frontier peut disparaître du jour au lendemain sur décision d'un État. Architecture multi-fournisseurs (abstraction de la couche LLM, bascule à chaud) = hygiène de base pour un coach IA en production.</div>
+      <p class="item-links"><a href="https://www.anthropic.com/news/fable-mythos-access">anthropic.com — communiqué</a> · <a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-21-2026">Build Fast with AI — 21 juin <em>[agrégateur — statut du jour]</em></a></p>
+    </div>
+
+    <div class="headline">
+      <span class="chip ia">IA</span>
+      <span class="headline-title">Gemini 3.5 Pro toujours en preview restreinte — 9 jours avant la deadline de juin</span>
+      <p class="headline-context">Le modèle promis « disponibilité générale en juin » par Sundar Pichai (Google I/O, 19 mai) reste réservé à quelques clients Vertex AI. Specs confirmées : fenêtre de 2 M de tokens, mode de raisonnement « Deep Think », tarif estimé ~15/60 $ par million de tokens. Pas encore dans l'app Gemini ni l'API publique.</p>
+      <p class="item-links"><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-21-2026">Build Fast with AI — 21 juin <em>[agrégateur — source primaire indisponible]</em></a></p>
+    </div>
+
+    <div class="headline">
+      <span class="chip ia">IA</span>
+      <span class="headline-title">Amazon lâche « Artificial », le film sur Sam Altman, sur fond de partenariat OpenAI à 50 Md$</span>
+      <p class="headline-context">Amazon MGM abandonne le film quasi terminé de Luca Guadagnino sur le licenciement-réintégration d'Altman en 2023, pourtant bien reçu en projection-test. CAA le propose à d'autres studios. Contexte difficile à ignorer : l'investissement de 50 Md$ d'Amazon dans OpenAI annoncé en février.</p>
+      <p class="item-links"><a href="https://variety.com/2026/film/global/luca-guadagnino-sam-altman-movie-artificial-dropped-amazon-1236785830/">Variety — 20 juin</a></p>
+    </div>
+
+  </section>
+
+  <!-- Corps -->
+  <h2><span class="chip ia">IA</span>&nbsp; IA — modèles, produits, communications</h2>
+
+  <div class="item">
+    <p class="item-title">Claude Fable 5 / Mythos 5 : neuvième jour hors ligne, échéances qui se rapprochent</p>
+    <p class="item-fact">Anthropic n'a toujours pas réactivé Claude Fable 5 et Mythos 5, suspendus mondialement depuis la directive de contrôle à l'export américaine du 12 juin. L'API <code>claude-fable-5</code> renvoie encore des erreurs au 21 juin. La date butoir de remboursement des crédits d'usage (20 juin) est passée ; la fenêtre d'essai gratuit pour les abonnés Pro/Max/Team/Enterprise ferme le 22 juin. Le blocage tient à une exigence de la Maison-Blanche — éliminer tous les jailbreaks avant relance — jugée techniquement irréaliste par la communauté sécurité. Opus 4.8 et Sonnet 4.6 restent, eux, pleinement disponibles.</p>
+    <p class="item-links"><a href="https://www.anthropic.com/news/fable-mythos-access">anthropic.com — communiqué Fable/Mythos</a> · <a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-21-2026">Build Fast with AI — 21 juin <em>[agrégateur — statut du jour]</em></a></p>
+    <div class="analyse"><strong>→ Pour le lecteur :</strong> la leçon est directement actionnable. Ne jamais coder en dur une dépendance à un seul modèle : abstraire la couche LLM derrière une interface unique et garder une bascule (Opus, GPT, Gemini, open-source) prête. Un coach adaptatif qui s'effondre parce qu'un modèle est retiré n'est pas livrable.</div>
+  </div>
+
+  <div class="item">
+    <p class="item-title">Gemini 3.5 Pro : toujours pas livré au public, 9 jours avant la fin de la fenêtre annoncée</p>
+    <p class="item-fact">Au 21 juin, Gemini 3.5 Pro reste en preview limitée pour quelques clients entreprise Vertex AI. Il n'est ni dans l'app Gemini, ni dans Google AI Studio, ni dans l'API générale. Google avait promis une disponibilité générale « en juin » lors de Google I/O (19 mai). Caractéristiques confirmées : fenêtre de contexte de 2 millions de tokens (le double de Gemini 3.5 Flash), mode « Deep Think » pour le raisonnement multi-étapes, multimodal. Tarif fuité estimé ~15 $ / 60 $ par million de tokens entrée/sortie.</p>
+    <p class="item-links"><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-21-2026">Build Fast with AI — 21 juin <em>[agrégateur — source primaire indisponible]</em></a></p>
+    <div class="analyse"><strong>→ Pour le lecteur :</strong> les 2 M de tokens de contexte sont la brique à surveiller — assez pour injecter l'historique d'entraînement complet d'un athlète (mois de séances, capteurs) dans un seul prompt sans pipeline RAG complexe. À tester dès la sortie publique.</div>
+  </div>
+
+  <div class="item">
+    <p class="item-title">Amazon MGM abandonne « Artificial », le biopic sur Sam Altman</p>
+    <p class="item-fact">Amazon MGM Studios a renoncé à distribuer « Artificial », le film quasi terminé de Luca Guadagnino sur OpenAI (Andrew Garfield en Altman, Monica Barbaro en Mira Murati, Yura Borisov en Ilya Sutskever), centré sur l'éviction-réintégration d'Altman en novembre 2023. Le film avait passé plusieurs projections-tests avec un bon accueil. CAA le démarche désormais auprès d'autres studios. Déclaration officielle d'Amazon : le film « serait mieux servi par un autre distributeur ». En arrière-plan, l'investissement de 50 Md$ d'Amazon dans OpenAI (février 2026).</p>
+    <p class="item-links"><a href="https://variety.com/2026/film/global/luca-guadagnino-sam-altman-movie-artificial-dropped-amazon-1236785830/">Variety — 20 juin</a></p>
+  </div>
+
+  <h2><span class="chip ma">M&amp;A</span>&nbsp; M&amp;A &amp; investissements IA</h2>
+
+  <div class="item">
+    <p class="empty">Rien à signaler dans la fenêtre &lt; 24h. Aucune opération nouvelle datée du 20-21 juin. Le mouvement structurant récent reste le rachat de Cursor (Anysphere) par SpaceX pour 60 Md$ (16 juin), couvert dans le brief du 18 juin — hors fenêtre aujourd'hui.</p>
+  </div>
+
+  <h2><span class="chip native">IA-native</span>&nbsp; Sociétés innovantes IA-native</h2>
+
+  <div class="item">
+    <p class="empty">Rien à signaler dans la fenêtre &lt; 24h. Pas de levée ni de lancement IA-native daté du 20-21 juin remontant à une source primaire. (Pour mémoire, hors fenêtre : DeepSeek V4, modèle open-source 1,6 T entraîné sur Huawei Ascend, est sorti le 24 avril — pas une news du jour.)</p>
+  </div>
+
+  <h2><span class="chip sport">Sport</span>&nbsp; Applications d'entraînement sportif</h2>
+
+  <div class="item">
+    <p class="empty">Rien à signaler aujourd'hui sur ce volet — aucune annonce de la watchlist (TrainingPeaks, TrainerRoad, Athletica.ai, 2PEAK, Humango, AI Endurance, Enduco, Strava, Garmin, Zwift, Wahoo, Whoop, Coros…) datée dans la fenêtre &lt; 24h. Mouvements de fond récents mais hors fenêtre : refonte « strength training » de Strava avec 14 partenaires dont Whoop, Runna, Garmin, Coros (mai), et partenariat Coros–Wahoo (avril).</p>
+  </div>
+
+  <!-- Qualité des sources -->
+  <h2>Qualité des sources</h2>
+  <div class="sources">
+    <span>anthropic.com 🟢</span>
+    <span>variety.com 🟢</span>
+    <span>buildfastwithai.com 🟠</span>
+  </div>
+  <p class="footer-note">
+    🟢 primaire · 🟡 secondaire (média d'industrie) · 🟠 tertiaire (agrégateur/digest)<br>
+    Journée calme : la plupart des items marquants du cycle (Grok 4.3 sur Bedrock le 15 juin, DeepSeek V4 le 24 avril, SpaceX/Cursor le 16 juin) sont hors de la fenêtre &lt; 24h et ont été écartés ou renvoyés en backdrop. Les statuts Fable 5 et Gemini 3.5 Pro sont des mises à jour valides au 21 juin ; le détail quotidien n'ayant pas de source primaire dédiée, il est attribué à l'agrégateur Build Fast with AI, le communiqué officiel Anthropic servant de primaire pour le fond.<br>
+    Notification envoyée : oui — triggers : aucun (journée calme, mode systématique) — priorité : 2 (low).
+  </p>
+
+</div>
+</body>
+</html>
