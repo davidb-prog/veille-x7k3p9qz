@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — Veille IA &amp; Sport endurance — 22 juin 2026</title>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1a1a1a; --muted:#5c6470; --line:#e6e8ec;
+    --card:#f7f8fa; --accent:#2d4a7c;
+    --ia:#2563eb; --ia-bg:#e8f0fe;
+    --ma:#7c3aed; --ma-bg:#f1e9fe;
+    --native:#0d9488; --native-bg:#e2f6f3;
+    --sport:#d9760f; --sport-bg:#fdeedd;
+    --green:#16a34a; --yellow:#ca8a04; --orange:#ea580c;
+  }
+  *{box-sizing:border-box;}
+  html,body{width:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;font-size:18px;
+  }
+  .wrap{max-width:640px;width:100%;margin:0 auto;padding:24px 16px 56px;}
+  h1{font-size:26px;line-height:1.25;margin:0 0 6px;letter-spacing:-.01em;}
+  .subtitle{font-size:15px;color:var(--muted);margin:0 0 28px;}
+  h2{font-size:20px;margin:36px 0 14px;padding-bottom:6px;border-bottom:2px solid var(--line);letter-spacing:-.01em;}
+  .chip{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.02em;
+    padding:2px 9px;border-radius:999px;vertical-align:middle;text-transform:uppercase;}
+  .chip.ia{color:var(--ia);background:var(--ia-bg);}
+  .chip.ma{color:var(--ma);background:var(--ma-bg);}
+  .chip.native{color:var(--native);background:var(--native-bg);}
+  .chip.sport{color:var(--sport);background:var(--sport-bg);}
+  /* TL;DR */
+  .tldr{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 16px;margin:0 0 8px;}
+  .tldr h2{margin-top:0;border:0;padding:0;font-size:18px;color:var(--accent);}
+  .hl{padding:14px 0;border-top:1px solid var(--line);}
+  .hl:first-of-type{border-top:0;padding-top:8px;}
+  .hl-title{font-size:18px;font-weight:700;margin:6px 0 4px;}
+  .hl-context{font-size:17px;color:#2c333d;margin:0 0 6px;}
+  .reader{font-size:17px;color:#234;background:#eef4ff;border-left:3px solid var(--ia);
+    padding:8px 12px;border-radius:0 8px 8px 0;margin:8px 0 4px;}
+  .reader.sport{background:var(--sport-bg);border-left-color:var(--sport);}
+  a{color:var(--accent);word-break:break-word;}
+  .src{display:inline-block;min-height:44px;line-height:44px;font-size:16px;}
+  .date{color:var(--muted);font-size:14px;}
+  /* Body items */
+  .item{padding:16px 0;border-top:1px solid var(--line);}
+  .item:first-of-type{border-top:0;}
+  .item-title{font-size:19px;font-weight:700;margin:0 0 6px;}
+  .fact{font-size:18px;margin:0 0 8px;}
+  .links{font-size:16px;margin:6px 0 0;}
+  .empty{font-style:italic;color:var(--muted);font-size:17px;}
+  /* Sources quality */
+  .sources{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-top:20px;}
+  .sources .row{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px;color:#333;}
+  .note{font-size:13px;color:var(--muted);margin-top:24px;border-top:1px dashed var(--line);padding-top:12px;}
+  @media (min-width:768px){
+    body{font-size:17px;}
+    .wrap{max-width:760px;padding:48px 48px 80px;}
+    h1{font-size:30px;}
+    h2{font-size:22px;}
+    .tldr{padding:26px 24px;}
+    .fact{font-size:17px;}
+    .hl-context{font-size:16px;}
+    .reader{font-size:16px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Briefing — Veille IA &amp; Sport endurance — 22 juin 2026</h1>
+  <p class="subtitle">Lundi 22 juin 2026 · Lecture : ~5 min · 8 items couverts · fenêtre &lt;24h (week-end calme — items datés honnêtement, les plus frais remontent à J-1 à J-8)</p>
+
+  <!-- TL;DR -->
+  <div class="tldr">
+    <h2>À la une</h2>
+
+    <div class="hl">
+      <span class="chip ia">IA</span>
+      <div class="hl-title">Claude Fable 5 toujours hors ligne — J+9, la fenêtre d'essai gratuit se ferme aujourd'hui</div>
+      <p class="hl-context">Neuf jours après la directive de contrôle à l'export du gouvernement US (12 juin), Fable 5 et Mythos 5 restent suspendus mondialement. Le 22 juin marque la fermeture de la fenêtre d'essai gratuit pour les abonnés payants — qui paient désormais plein tarif pour un modèle indisponible.</p>
+      <div class="reader">→ Pour le lecteur : un fournisseur de modèle peut disparaître du jour au lendemain. L'architecture multi-fournisseur (abstraction d'un provider, fallback) devient une hygiène de base, pas une option, pour une app qui s'appuie sur l'IA.</div>
+      <a class="src" href="https://www.anthropic.com/news/fable-mythos-access">anthropic.com — Statement Fable 5 / Mythos 5</a> <span class="date">· 12 juin (statut au 21 juin)</span>
+    </div>
+
+    <div class="hl">
+      <span class="chip ia">IA</span>
+      <div class="hl-title">DeepSeek V4 en preview : MoE 1,6 T entraîné sur Huawei Ascend</div>
+      <p class="hl-context">DeepSeek a publié une preview open-source de V4-Pro (1,6 trillion de paramètres, MoE), premier modèle quasi-frontier chinois entraîné sur puces Huawei Ascend 950 plutôt que NVIDIA. Selon le CFR, meilleure option open-source du moment, mais toujours en retrait des modèles fermés US.</p>
+      <a class="src" href="https://www.cfr.org/articles/deepseek-v4-signals-a-new-phase-in-the-u-s-china-ai-rivalry">cfr.org — DeepSeek V4 analysis</a> <span class="date">· ~18 juin</span>
+    </div>
+
+    <div class="hl">
+      <span class="chip ma">M&amp;A</span>
+      <div class="hl-title">SpaceX dépose son acquisition de Cursor à 60 Md$ (SEC)</div>
+      <p class="hl-context">SpaceX a déposé le 16 juin auprès de la SEC une acquisition all-stock de Cursor à 60 Md$ (~4 Md$ de revenus annualisés). Un modèle de coding conjoint, entraîné sur l'infra xAI Colossus, est attendu dans Cursor et un nouveau produit « Grok Build ». Closing visé T3 2026.</p>
+      <a class="src" href="https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo/">techcrunch.com</a> <span class="date">· 16 juin</span>
+    </div>
+
+    <div class="hl">
+      <span class="chip native">IA-native</span>
+      <div class="hl-title">Grok 4.3 disponible (GA) sur Amazon Bedrock</div>
+      <p class="hl-context">xAI rend Grok 4.3 généralement disponible sur Bedrock (1 M tokens de contexte, niveaux d'effort de raisonnement configurables, 1,25 $/2,50 $ par M tokens). Accès API entreprise sans compte xAI séparé — la couche modèle se banalise côté distribution.</p>
+      <a class="src" href="https://releasebot.io/updates/xai">releasebot.io/updates/xai</a> <span class="date">· ~19 juin [source secondaire]</span>
+    </div>
+
+    <div class="hl">
+      <span class="chip sport">Sport</span>
+      <div class="hl-title">Watchlist endurance : aucun mouvement dans la fenêtre 24h</div>
+      <p class="hl-context">Rien de neuf chez les concurrents directs (TrainingPeaks, TrainerRoad, Athletica, AI Endurance…) ni indirects sur les dernières 24h. Le dernier mouvement structurant reste l'ouverture de Strava au strength training + intégrations partenaires (Garmin, Whoop, Coros, Runna) de fin mai.</p>
+      <a class="src" href="https://www.sgieurope.com/technology/stravas-most-uploaded-sport-type-gets-rebuilt/121390.article">sgieurope.com (contexte, fin mai)</a> <span class="date">· hors fenêtre</span>
+    </div>
+
+  </div>
+
+  <!-- Section 1 -->
+  <h2><span class="chip ia">IA</span> &nbsp;IA — modèles, produits, communications</h2>
+
+  <div class="item">
+    <div class="item-title">Fable 5 / Mythos 5 : suspension mondiale, J+9 — échéances du 20 et 22 juin</div>
+    <p class="fact">Suite à la directive de contrôle à l'export US du 12 juin, Anthropic maintient Fable 5 et Mythos 5 hors ligne. Le directeur international Chris Ciauri a déclaré le 18 juin « disponibles à nouveau d'ici quelques jours » — sans restauration au 21 juin. La Maison-Blanche exigerait l'élimination de tous les jailbreaks avant relance, exigence jugée techniquement impossible par la communauté sécurité. Le 22 juin ferme la fenêtre d'essai gratuit pour les abonnés payants.</p>
+    <p class="links"><a href="https://www.anthropic.com/news/fable-mythos-access">anthropic.com — statement</a> <span class="date">· 12 juin (statut 21 juin)</span></p>
+    <div class="reader">→ Pour le lecteur : valide la thèse multi-provider. Concevoir la couche IA du produit avec une abstraction provider + fallback (Opus/Sonnet, Gemini, open-source local) évite qu'une décision réglementaire externe gèle l'app du jour au lendemain.</div>
+  </div>
+
+  <div class="item">
+    <div class="item-title">DeepSeek V4-Pro (preview) — MoE 1,6 T sur Huawei Ascend</div>
+    <p class="fact">Preview open-source d'un MoE 1,6 trillion de paramètres, disponible via site, apps et API. Fait notable : entraînement sur Huawei Ascend 950, première bascule publique hors NVIDIA pour un modèle de ce calibre. Le CFR et le papier technique DeepSeek reconnaissent un écart persistant avec les modèles fermés US.</p>
+    <p class="links"><a href="https://www.cfr.org/articles/deepseek-v4-signals-a-new-phase-in-the-u-s-china-ai-rivalry">cfr.org</a> <span class="date">· ~18 juin</span></p>
+    <div class="reader">→ Pour le lecteur : un open-source 1,6 T librement déployable est une brique de repli crédible pour un fallback auto-hébergé, et fait pression à la baisse sur les coûts d'inférence — variable de marge directe pour une app IA grand public.</div>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Gemini 3.5 Pro toujours en preview restreint — la fenêtre « juin » se referme</div>
+    <p class="fact">Au 21 juin, Gemini 3.5 Pro reste en preview pour quelques clients Vertex AI entreprise, sans disponibilité publique (app Gemini, AI Studio, API générale). Specs confirmées : contexte 2 M tokens, mode de raisonnement « Deep Think ». Pichai avait promis une GA en juin à Google I/O (19 mai) ; il reste neuf jours.</p>
+    <p class="links"><a href="https://growwingassistant.com/ai-news/gemini-3-5-pro-release-date-june-2026-every-confirmed-spec-pricing-when-it-drops/">tracker Gemini 3.5 Pro</a> <span class="date">· 19 juin [source secondaire]</span></p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Grok 4.3 en GA sur Amazon Bedrock</div>
+    <p class="fact">xAI publie Grok 4.3 sur Bedrock (model ID xai.grok-4.3) : contexte 1 M tokens, effort de raisonnement configurable, tarif 1,25 $/2,50 $ par M tokens. Distribution via AWS sans contrat xAI direct, dans le sillage du marketplace de plugins Grok Build (11 juin) et du Agent Dashboard (15 juin).</p>
+    <p class="links"><a href="https://releasebot.io/updates/xai">releasebot.io/updates/xai</a> <span class="date">· ~19 juin [source secondaire]</span></p>
+  </div>
+
+  <!-- Section 2 -->
+  <h2><span class="chip ma">M&amp;A</span> &nbsp;M&amp;A &amp; investissements IA</h2>
+
+  <div class="item">
+    <div class="item-title">SpaceX → Cursor : dépôt SEC d'une acquisition all-stock à 60 Md$</div>
+    <p class="fact">SpaceX a déposé le 16 juin son acquisition de Cursor (~4 Md$ de revenus annualisés, dont 2,6 Md$ entreprise). Avant l'offre, Cursor finalisait une levée de ~2 Md$ (a16z, Thrive, Nvidia) à ~50 Md$ de valorisation. Closing attendu T3 2026, sous réserve réglementaire. Objectif affiché : reprendre à Claude Code et OpenAI Codex la part de marché du coding IA.</p>
+    <p class="links"><a href="https://techcrunch.com/2026/06/16/spacex-to-acquire-cursor-for-60b-in-stock-days-after-blockbuster-ipo/">techcrunch.com</a> <span class="date">· 16 juin</span></p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">OpenAI Partner Network — 150 M$, objectif 300 000 consultants certifiés d'ici décembre</div>
+    <p class="fact">OpenAI a lancé le 14 juin son premier programme partenaires mondial (150 M$), axé Codex, API GPT-5.5 entreprise et produits Sites/Annotations. Calendrier qui coïncide avec la préparation d'une IPO visée T4 2026 (~850 Md$). Concurrence frontale avec le Claude Partner Network (lancé le 3 juin) et l'écosystème Google Cloud.</p>
+    <p class="links"><a href="https://thecreatorsai.com/p/fable-5-shutdown-spacex-buys-cursor">thecreatorsai.com</a> <span class="date">· 14 juin [agrégateur — source primaire indisponible]</span></p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Talents : John Jumper quitte Google DeepMind pour Anthropic</div>
+    <p class="fact">Le prix Nobel de chimie John Jumper (AlphaFold) quitte Google DeepMind pour Anthropic — en plein bras de fer juridique/réglementaire d'Anthropic avec le gouvernement US. Mouvement symétrique côté Google : Noam Shazeer, co-lead de Gemini, annoncé en partance vers OpenAI. La guerre des talents frontier s'intensifie.</p>
+    <p class="links"><a href="https://www.cnbc.com/2026/06/19/john-jumper-to-leave-google-deepmind-for-anthropic.html">cnbc.com</a> <span class="date">· 19 juin</span></p>
+  </div>
+
+  <!-- Section 3 -->
+  <h2><span class="chip native">IA-native</span> &nbsp;Sociétés innovantes IA-native</h2>
+
+  <div class="item">
+    <div class="item-title">Reuters Institute : 10 % des adultes utilisent un chatbot IA pour s'informer chaque semaine</div>
+    <p class="fact">Le Digital News Report 2026 du Reuters Institute relève que 10 % des personnes dans le monde utilisent désormais un chatbot IA pour l'actualité chaque semaine (7 % un an plus tôt), mais seuls 4 % cliquent vers la source originale. Parts de marché web (18 juin) : ChatGPT 54,7 %, Gemini 27,4 %, Claude 8,2 %.</p>
+    <p class="links"><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-21-2026">buildfastwithai.com (relai)</a> <span class="date">· ~18 juin [agrégateur]</span></p>
+    <div class="reader">→ Pour le lecteur : l'IA conversationnelle devient une interface de découverte par défaut, à coût de trafic quasi nul pour la source. Pour l'acquisition d'une app endurance, anticiper que les recommandations passeront de plus en plus par des assistants, pas par le SEO classique.</div>
+  </div>
+
+  <div class="item empty"><em>Rien d'autre de structurant à signaler aujourd'hui sur ce volet (hors géants déjà couverts en section 1).</em></div>
+
+  <!-- Section 4 -->
+  <h2><span class="chip sport">Sport</span> &nbsp;Applications d'entraînement sportif</h2>
+
+  <div class="item">
+    <p class="empty"><em>Rien à signaler aujourd'hui sur ce volet.</em> Aucun mouvement des concurrents directs (TrainingPeaks, TrainerRoad, Athletica.ai, 2PEAK, Humango, AI Endurance, Enduco, Nolio) ni indirects (Strava, Garmin, Zwift, Wahoo, Whoop, Coros, TriDot) dans la fenêtre &lt;24h.</p>
+    <div class="reader sport">→ Pour le lecteur : journée silencieuse côté concurrence = signal en soi, pas un manque. Contexte de fond récent à garder à l'œil : l'extension de Strava au strength training (fin mai) avec 14 intégrations partenaires, et son connecteur de données vers Claude réservé aux abonnés — la plateforme social/données se renforce sans (encore) attaquer le cœur « plan adaptatif multisport ».</div>
+  </div>
+
+  <!-- Sources quality -->
+  <div class="sources">
+    <h2 style="border:0;padding:0;margin:0 0 10px;font-size:16px;">Qualité des sources</h2>
+    <div class="row">
+      <span>anthropic.com 🟢</span>
+      <span>cnbc.com 🟢</span>
+      <span>techcrunch.com 🟢</span>
+      <span>cfr.org 🟢</span>
+      <span>sgieurope.com 🟡</span>
+      <span>releasebot.io 🟠</span>
+      <span>growwingassistant.com 🟠</span>
+      <span>buildfastwithai.com 🟠</span>
+      <span>thecreatorsai.com 🟠</span>
+    </div>
+  </div>
+
+  <p class="note">
+    Notification haut-impact envoyée : oui (mode systématique — push quotidien) — triggers : aucun trigger « haut-impact » ne matche dans la fenêtre 24h (pas de mouvement concurrent direct, pas de M&amp;A &gt;500 M$ daté du jour, pas de modèle frontier directement réutilisable publié aujourd'hui) — priorité : 2 (low, signal « brief dispo »).<br>
+    Fenêtre &lt;24h pauvre (week-end) : les items les plus frais et live au 22 juin sont datés honnêtement (J-1 à J-8). La saga Fable 5 a une échéance réelle aujourd'hui (fermeture de la fenêtre d'essai gratuit).
+  </p>
+
+</div>
+</body>
+</html>
