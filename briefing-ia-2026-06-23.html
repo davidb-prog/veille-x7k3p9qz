@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — Veille IA &amp; Sport endurance — 23 juin 2026</title>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1a1a1a; --muted:#6b6b6b; --line:#e6e6e6;
+    --card:#fafafa; --accent:#1f6feb;
+    --chip-ia:#0b6bcb; --chip-ia-bg:#e7f0fb;
+    --chip-ma:#9333ea; --chip-ma-bg:#f3e8ff;
+    --chip-nat:#0f766e; --chip-nat-bg:#d8f3ef;
+    --chip-sport:#c2410c; --chip-sport-bg:#ffeede;
+    --analysis-bg:#fff8e6; --analysis-border:#e0a800;
+  }
+  *{box-sizing:border-box;}
+  html,body{width:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;margin:0;padding:0;background:var(--bg);}
+  body{
+    color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:18px; line-height:1.55;
+  }
+  .wrap{max-width:640px;width:100%;margin:0 auto;padding:20px 16px 56px;}
+  h1{font-size:26px;line-height:1.25;margin:0 0 8px;font-weight:700;}
+  .subtitle{font-size:15px;color:var(--muted);margin:0 0 28px;}
+  h2{font-size:20px;margin:36px 0 14px;font-weight:700;border-bottom:2px solid var(--line);padding-bottom:6px;}
+  a{color:var(--accent);text-decoration:none;word-break:break-word;}
+  a:hover{text-decoration:underline;}
+  .chip{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.02em;
+    padding:3px 9px;border-radius:999px;vertical-align:middle;}
+  .chip-ia{color:var(--chip-ia);background:var(--chip-ia-bg);}
+  .chip-ma{color:var(--chip-ma);background:var(--chip-ma-bg);}
+  .chip-nat{color:var(--chip-nat);background:var(--chip-nat-bg);}
+  .chip-sport{color:var(--chip-sport);background:var(--chip-sport-bg);}
+
+  /* TL;DR */
+  .tldr{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 16px;margin:0 0 8px;}
+  .tldr h2{border:0;margin:0 0 14px;font-size:18px;}
+  .hl{padding:14px 0;border-top:1px solid var(--line);}
+  .hl:first-of-type{border-top:0;padding-top:0;}
+  .hl-title{font-size:18px;font-weight:700;display:block;margin:8px 0 4px;}
+  .hl-context{font-size:17px;margin:4px 0 6px;}
+  .hl a{font-size:16px;display:inline-block;min-height:24px;}
+  .reader{font-size:17px;background:var(--analysis-bg);border-left:3px solid var(--analysis-border);
+    padding:8px 12px;margin:8px 0 4px;border-radius:0 8px 8px 0;}
+
+  /* Body items */
+  .item{padding:18px 0;border-top:1px solid var(--line);}
+  .item:first-of-type{border-top:0;}
+  .item-title{font-size:19px;font-weight:700;margin:0 0 6px;}
+  .item-fact{font-size:18px;margin:0 0 8px;}
+  .item-links{font-size:16px;margin:6px 0 0;}
+  .date{color:var(--muted);}
+  .empty{font-style:italic;color:var(--muted);font-size:17px;}
+
+  /* Sources */
+  .sources{display:flex;flex-wrap:wrap;gap:8px 14px;font-size:15px;margin-top:10px;}
+  .sources span{white-space:nowrap;}
+  .footnote{font-size:13px;color:var(--muted);margin-top:28px;border-top:1px solid var(--line);padding-top:14px;}
+
+  @media (min-width:768px){
+    body{font-size:17px;}
+    .wrap{max-width:760px;padding:48px 48px 80px;}
+    h1{font-size:30px;}
+    h2{font-size:22px;}
+    .item-title{font-size:19px;}
+    .item-fact{font-size:17px;}
+    .hl-title{font-size:18px;}
+    .hl-context{font-size:16px;}
+    .reader{font-size:16px;}
+    .tldr{padding:26px 24px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Briefing — Veille IA &amp; Sport endurance — 23 juin 2026</h1>
+  <p class="subtitle">Mardi 23 juin 2026 · Lecture : ~5 min · 4 items couverts · fenêtre &lt; 24h</p>
+
+  <!-- TL;DR -->
+  <section class="tldr">
+    <h2>À la une</h2>
+
+    <div class="hl">
+      <span class="chip chip-ma">M&amp;A</span>
+      <span class="hl-title">Sell-off tech mondial : le marché doute de la soutenabilité de l'IA</span>
+      <p class="hl-context">Rotation hors des « Magnificent 7 » mardi : Alphabet −5 %, Micron −10 %, le Kospi coréen clôture −10 % (Samsung et SK Hynix &gt;−12 %). Le déclencheur invoqué : interrogations sur le retour sur les capex IA et la concurrence chinoise.</p>
+      <a href="https://www.cnbc.com/2026/06/23/tech-stocks-sell-off-mag7-samsung-sk-hynix.html">CNBC — 23 juin</a>
+    </div>
+
+    <div class="hl">
+      <span class="chip chip-ia">IA</span>
+      <span class="hl-title">Fuite de cerveaux chez Google : Shazeer file chez OpenAI, Jumper chez Anthropic</span>
+      <p class="hl-context">Deux départs majeurs en une semaine — Noam Shazeer (co-lead Gemini, co-auteur de « Attention Is All You Need ») vers OpenAI, John Jumper (AlphaFold, Nobel 2024) vers Anthropic. Alphabet signe sa pire séance en plus d'un an.</p>
+      <a href="https://www.cnbc.com/2026/06/22/alphabet-goog-stock-ai-departures.html">CNBC — 22 juin</a>
+    </div>
+
+    <div class="hl">
+      <span class="chip chip-sport">Sport</span>
+      <span class="hl-title">Runalyze ouvre un serveur MCP — le dataset sport le plus riche exposé à l'IA</span>
+      <p class="hl-context">Runalyze publie un serveur Model Context Protocol qui donne à un agent IA l'accès aux activités, splits, VO2max, CTL/ATL/TSB, ratio aigu:chronique, monotonie, baseline HRV — agrégés depuis Garmin, Polar, Suunto, COROS, Whoop, Oura, etc.</p>
+      <div class="reader">→ Pour le lecteur : c'est la brique « contexte athlète » que ton moteur adaptatif consomme. Si la donnée multi-capteurs devient un MCP standard, l'avantage se déplace vers la qualité de la reconfiguration du plan, pas l'accès à la donnée.</div>
+      <a href="https://the5krunner.com/2026/06/22/runalyze-mcp-server/">the5krunner — 22 juin</a>
+    </div>
+
+    <div class="hl">
+      <span class="chip chip-nat">IA-native</span>
+      <span class="hl-title">Samsung déploie ChatGPT + Codex à l'échelle mondiale</span>
+      <p class="hl-context">Un des plus gros déploiements entreprise d'OpenAI : ChatGPT Enterprise pour tous les salariés en Corée et toute la division DX dans le monde, Codex pour le dev. Signal de standardisation des agents IA en interne grand groupe.</p>
+      <a href="https://openai.com/index/samsung-electronics-chatgpt-codex-deployment/">OpenAI — 22 juin</a>
+    </div>
+  </section>
+
+  <!-- Section 1 -->
+  <h2>IA — modèles, produits, communications</h2>
+
+  <div class="item">
+    <p class="item-title">Alphabet perd deux chercheurs IA stars en une semaine</p>
+    <p class="item-fact">Noam Shazeer, VP engineering et co-lead des modèles Gemini, a annoncé son départ pour OpenAI (18 juin). Dans la foulée, John Jumper — co-créateur d'AlphaFold et prix Nobel 2024 — quitte DeepMind pour Anthropic (19 juin). Le 22 juin, l'action Alphabet clôture en baisse d'environ 5 %, sa pire séance depuis plus d'un an, le marché y voyant un signal sur la capacité de Google à retenir ses talents malgré ~141 Md$ levés en dette et capitaux depuis octobre.</p>
+    <p class="item-links"><a href="https://www.cnbc.com/2026/06/22/alphabet-goog-stock-ai-departures.html">CNBC — 22 juin</a> · <a href="https://www.cnbc.com/2026/06/19/john-jumper-to-leave-google-deepmind-for-anthropic.html">CNBC (Jumper) — 19 juin</a></p>
+  </div>
+
+  <div class="item">
+    <p class="item-title">Samsung Electronics déploie ChatGPT Enterprise et Codex</p>
+    <p class="item-fact">OpenAI annonce le déploiement de ChatGPT à tous les employés de Samsung Electronics en Corée et à toute la division Device eXperience (DX) dans le monde, avec Codex côté développement. L'un des plus larges déploiements entreprise d'OpenAI à ce jour, couvrant dev logiciel, marketing, R&amp;D produit et industrialisation.</p>
+    <p class="item-links"><a href="https://openai.com/index/samsung-electronics-chatgpt-codex-deployment/">OpenAI — 22 juin</a></p>
+  </div>
+
+  <!-- Section 2 -->
+  <h2>M&amp;A &amp; investissements IA</h2>
+
+  <div class="item">
+    <p class="item-title">Correction tech : le marché réévalue la trajectoire de dépenses IA</p>
+    <p class="item-fact">Sell-off global mardi 23 juin sur les valeurs technologiques. Sortie marquée des « Magnificent 7 » : Amazon ~−5 %, Meta −2 %, Alphabet −5 %, Micron &gt;−10 %. En Asie, le Kospi clôture −10 %, plombé par Samsung et SK Hynix (&gt;−12 % chacun). Les facteurs cités : doutes sur la soutenabilité de la croissance IA et concurrence des acteurs chinois. Pas une opération M&amp;A en soi, mais un repricing du financement de l'écosystème IA.</p>
+    <p class="item-links"><a href="https://www.cnbc.com/2026/06/23/tech-stocks-sell-off-mag7-samsung-sk-hynix.html">CNBC — 23 juin</a></p>
+    <div class="reader">→ Pour le lecteur : un cycle de financement IA qui se resserre durcit la collecte pour les startups sport-tech IA-native. À l'inverse, ça valorise les modèles à coûts d'inférence maîtrisés et à différenciation produit réelle plutôt que « wrappers » dépendants de capex externes.</div>
+  </div>
+
+  <!-- Section 3 -->
+  <h2>Sociétés innovantes IA-native</h2>
+  <div class="item">
+    <p class="empty">Rien à signaler aujourd'hui sur ce volet (dans la fenêtre &lt; 24h, hors items déjà couverts ci-dessus).</p>
+  </div>
+
+  <!-- Section 4 -->
+  <h2>Applications d'entraînement sportif</h2>
+
+  <div class="item">
+    <p class="item-title">Runalyze lance un serveur MCP pour l'IA</p>
+    <p class="item-fact">Runalyze met en ligne un serveur Model Context Protocol qui expose à un agent IA la donnée sport la plus large à ce jour : activités, splits et estimations VO2max, plus les métriques d'entraînement (CTL, ATL, TSB, ratio aigu:chronique, monotonie/strain, « marathon shape », baseline et plage normale de HRV). Contrairement à une source mono-marque, Runalyze agrège déjà les uploads de Garmin, Polar, Suunto, COROS, Whoop, Oura et d'autres, et ajoute une couche santé par-dessus la couche entraînement.</p>
+    <p class="item-links"><a href="https://the5krunner.com/2026/06/22/runalyze-mcp-server/">the5krunner — 22 juin</a> <span class="date">[source secondaire spécialisée]</span></p>
+    <div class="reader">→ Pour le lecteur : exactement la « brique contexte athlète » de ton positionnement adaptatif. Deux lectures — opportunité (consommer ce MCP plutôt que rebâtir l'ingestion multi-capteurs) ; menace (si l'accès data devient commodité MCP, le différenciant se reporte entièrement sur la qualité de reconfiguration du plan, ton cœur de promesse).</div>
+  </div>
+
+  <!-- Sources -->
+  <h2>Qualité des sources</h2>
+  <div class="sources">
+    <span>cnbc.com 🟢</span>
+    <span>openai.com 🟢</span>
+    <span>the5krunner.com 🟡</span>
+  </div>
+
+  <p class="footnote">
+    Items volontairement limités : journée à faible densité d'actualité primaire dans la fenêtre &lt; 24h. Plusieurs « scoops » circulant sur des fermes de contenu (ex. acquisitions à plusieurs dizaines de Md$, sorties de modèles frontier) n'ont pas été retenus faute de source primaire fiable et datée. Pas de remplissage.<br><br>
+    Notification haut-impact envoyée : oui — trigger : #5 (brique technique réutilisable — Runalyze MCP) + signal marché macro IA — priorité : 3.
+  </p>
+
+</div>
+</body>
+</html>
