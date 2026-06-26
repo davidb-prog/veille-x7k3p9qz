@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — Veille IA &amp; Sport endurance — 26 juin 2026</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #1a1a1a;
+    --ink-soft: #555;
+    --line: #e6e6e6;
+    --accent: #1f5fbf;
+    --tldr-bg: #f5f8ff;
+    --tldr-border: #c9dbf7;
+    --analyse-bg: #fff7ed;
+    --analyse-border: #f0a13a;
+    --ia: #2563eb;
+    --ma: #b45309;
+    --native: #7c3aed;
+    --sport: #047857;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: var(--bg);
+    color: var(--ink);
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+  }
+  .wrap {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+  }
+  h1 {
+    font-size: 26px;
+    line-height: 1.25;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .subtitle {
+    font-size: 15px;
+    color: var(--ink-soft);
+    margin: 0 0 28px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 36px 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--line);
+  }
+  .chip {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 999px;
+    color: #fff;
+    vertical-align: middle;
+  }
+  .chip-ia { background: var(--ia); }
+  .chip-ma { background: var(--ma); }
+  .chip-native { background: var(--native); }
+  .chip-sport { background: var(--sport); }
+
+  /* TL;DR */
+  .tldr {
+    background: var(--tldr-bg);
+    border: 1px solid var(--tldr-border);
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin: 0 0 8px;
+  }
+  .tldr h2 {
+    border: 0;
+    margin: 0 0 12px;
+    padding: 0;
+    font-size: 18px;
+  }
+  .headline {
+    padding: 12px 0;
+    border-top: 1px solid var(--tldr-border);
+  }
+  .headline:first-of-type { border-top: 0; padding-top: 0; }
+  .headline-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 6px 0 4px;
+    line-height: 1.3;
+  }
+  .headline-context {
+    font-size: 17px;
+    color: var(--ink);
+    margin: 0 0 6px;
+  }
+
+  /* Body items */
+  .item { margin: 0 0 24px; }
+  .item-title {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    line-height: 1.3;
+  }
+  .item-fact {
+    font-size: 18px;
+    margin: 0 0 8px;
+  }
+  .item-links {
+    font-size: 16px;
+    margin: 0;
+  }
+  .empty { font-style: italic; color: var(--ink-soft); font-size: 17px; }
+
+  a { color: var(--accent); word-break: break-word; }
+  .analyse {
+    background: var(--analyse-bg);
+    border-left: 4px solid var(--analyse-border);
+    border-radius: 0 8px 8px 0;
+    padding: 10px 12px;
+    margin: 8px 0 0;
+    font-size: 17px;
+  }
+  .analyse b { color: var(--ma); }
+
+  /* Sources */
+  .sources {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 2px solid var(--line);
+  }
+  .sources h2 { border: 0; padding: 0; margin: 0 0 10px; }
+  .sources-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+    font-size: 15px;
+    color: var(--ink-soft);
+  }
+  .legend { font-size: 13px; color: var(--ink-soft); margin-top: 10px; }
+  .footnote {
+    margin-top: 28px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    border-top: 1px dashed var(--line);
+    padding-top: 12px;
+  }
+
+  @media (min-width: 768px) {
+    .wrap { max-width: 760px; padding: 56px 48px 80px; }
+    h1 { font-size: 30px; }
+    .subtitle { font-size: 15px; }
+    h2 { font-size: 22px; }
+    .tldr { padding: 26px 26px; }
+    .headline-title { font-size: 18px; }
+    .headline-context { font-size: 16px; }
+    .item-title { font-size: 19px; }
+    .item-fact { font-size: 17px; }
+    .analyse { font-size: 16px; }
+    body { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Briefing — Veille IA &amp; Sport endurance</h1>
+  <p class="subtitle">Vendredi 26 juin 2026 · Lecture : ~4 min · 3 items couverts · Fenêtre : &lt; 24 h (journée calme — quelques items de rattrapage datés)</p>
+
+  <!-- TL;DR -->
+  <section class="tldr">
+    <h2>À la une</h2>
+
+    <div class="headline">
+      <span class="chip chip-ia">IA</span>
+      <div class="headline-title">OpenAI dévoile « Jalapeño », sa première puce d'inférence avec Broadcom</div>
+      <p class="headline-context">ASIC pensé de zéro pour l'inférence LLM, conçu en 9 mois, premier maillon d'une plateforme matérielle multi-générations. Premier silicium reçu chez OpenAI, déploiement visé fin 2026. Objectif : descendre le coût de l'inférence et réduire la dépendance à Nvidia. (24 juin)</p>
+      <p class="analyse">→ <b>Pour le lecteur :</b> chaque baisse du coût d'inférence rend viable un moteur adaptatif qui ré-infère le plan en continu (chaque activité, chaque contrainte). Le poste « coût par recalcul » est ton principal frein unitaire — il se desserre.</p>
+    </div>
+
+    <div class="headline">
+      <span class="chip chip-ia">IA</span>
+      <div class="headline-title">GPT-5.6 : la fenêtre de sortie « juin » glisse vers juillet</div>
+      <p class="headline-context">Le chief scientist d'OpenAI le décrit comme une « amélioration significative » sur GPT-5.5, mais aucune date officielle ; les marchés de prédiction ont vu s'effondrer la probabilité d'une sortie 22–28 juin. Même schéma que Gemini 3.5 Pro : la cadence frontier patine côté annonces. (24 juin, marchés de prédiction)</p>
+    </div>
+
+    <div class="headline">
+      <span class="chip chip-ma">M&amp;A</span>
+      <div class="headline-title">Palantir × Zeta Global : accord 7 ans, ~100 M$ de revenus visés</div>
+      <p class="headline-context">Zeta ré-architecture son Data Cloud sur Palantir Foundry, avec son interface IA « Athena » au-dessus, pour vendre une couche data+IA d'exécution marketing aux entreprises. Signe que Foundry devient l'infra-socle de produits IA verticaux tiers. (23 juin)</p>
+    </div>
+
+  </section>
+
+  <!-- Corps -->
+  <h2><span class="chip chip-ia">IA</span> &nbsp;Modèles, produits, communications</h2>
+
+  <div class="item">
+    <div class="item-title">OpenAI &amp; Broadcom dévoilent « Jalapeño », première puce d'inférence d'OpenAI</div>
+    <p class="item-fact">OpenAI et Broadcom ont présenté Jalapeño, le premier « Intelligence Processor » d'OpenAI : un ASIC architecturé spécifiquement pour l'inférence LLM (et non l'entraînement), moins flexible mais moins cher qu'un GPU Nvidia et taillé pour des tâches IA précises. Conçu du design au tape-out en neuf mois, c'est le premier maillon d'une plateforme de calcul multi-générations co-développée avec Broadcom. Un premier échantillon physique a été livré à OpenAI cette semaine ; le déploiement initial est visé pour fin 2026, avec montée en puissance les années suivantes.</p>
+    <p class="item-links">🔗 <a href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip/">OpenAI — 24 juin</a> · <a href="https://investors.broadcom.com/news-releases/news-release-details/openai-and-broadcom-unveil-llm-optimized-intelligence-processor">Broadcom — 24 juin</a> · <a href="https://www.cnbc.com/2026/06/24/openai-and-broadcom-reveal-jalapeno-first-ai-chip-in-partnership.html">CNBC — 24 juin</a></p>
+    <p class="analyse">→ <b>Pour le lecteur :</b> la guerre se déplace sur le coût unitaire de l'inférence — exactement le poste qui conditionne un produit qui ré-infère le plan en continu plutôt qu'une fois. À surveiller : la répercussion sur les tarifs API d'OpenAI, qui détermine directement ta marge par utilisateur actif.</p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">GPT-5.6 : la sortie attendue en juin glisse probablement à juillet</div>
+    <p class="item-fact">Jakub Pachocki (chief scientist OpenAI) a qualifié GPT-5.6 d'« amélioration significative » sur GPT-5.5, mais OpenAI n'a, à ce jour, ni page produit, ni billet de blog, ni date officielle. Les marchés de prédiction qui pariaient massivement (~83 %) sur une sortie entre le 22 et le 28 juin ont vu cette probabilité s'effondrer, repoussant l'échéance la plus probable en juillet. Les caractéristiques évoquées (contexte élargi, latence Codex, tarifs API en baisse) proviennent de tests communautaires, pas d'OpenAI — à traiter avec prudence.</p>
+    <p class="item-links">🔗 <a href="https://www.techtimes.com/articles/318492/20260616/gpt-56-openai-chief-scientist-calls-it-meaningful-leap-june-launch-nears.htm">TechTimes — 16 juin</a> <em>[source secondaire — rumeur / marchés de prédiction, pas de communiqué officiel]</em></p>
+  </div>
+
+  <h2><span class="chip chip-ma">M&amp;A</span> &nbsp;M&amp;A &amp; investissements IA</h2>
+
+  <div class="item">
+    <div class="item-title">Palantir et Zeta Global signent un partenariat stratégique de 7 ans</div>
+    <p class="item-fact">Annoncé à Cannes, l'accord prévoit que Zeta Global ré-architecture son Data Cloud sur Palantir Foundry, avec par-dessus « Athena », l'interface IA conversationnelle de Zeta, pour offrir aux entreprises un chemin gouverné de la donnée jusqu'à l'exécution marketing en temps réel. Deal sur 7 ans visant plus de 100 M$ de revenus, accueilli positivement par les analystes (Needham, DA Davidson). Item de rattrapage : annonce du 23 juin, hors fenêtre stricte mais non couvert dans les éditions précédentes.</p>
+    <p class="item-links">🔗 <a href="https://zetaglobal.com/news/palantir-and-zeta-global-announce-strategic-partnership/">Communiqué Zeta Global — 23 juin</a> · <a href="https://www.adweek.com/media/palantir-and-zeta-global-ink-7-year-deal-targeting-100m-in-annual-revenue/">Adweek — 23 juin</a></p>
+    <p class="analyse">→ <b>Pour le lecteur :</b> exemple net de l'« infra-socle IA loué à un tiers vertical » (Foundry sous une appli métier). À méditer pour ton make-or-buy : la couche data/inférence se loue de plus en plus, l'avantage défendable se loge dans la couche métier propriétaire — ici le moteur d'adaptation physiologique.</p>
+  </div>
+
+  <h2><span class="chip chip-native">IA-native</span> &nbsp;Sociétés innovantes IA-native</h2>
+  <div class="item">
+    <p class="empty">Rien de nouveau à signaler aujourd'hui — pas de levée ou de lancement IA-native daté des dernières 24 h non déjà couvert. (La vague de Series C « agents IA en production » du 24 juin — Assort 120 M$, Taktile 110 M$ — a été traitée dans l'édition du 25 juin.)</p>
+  </div>
+
+  <h2><span class="chip chip-sport">Sport</span> &nbsp;Applications d'entraînement sportif</h2>
+  <div class="item">
+    <p class="empty">Rien à signaler aujourd'hui sur ce volet — aucune annonce de la watchlist datée des dernières 24 h et sourçable par un lien primaire. (Hors fenêtre : couverture endurance dominée par les deals Amazon Prime Day 23–26 juin et les fuites récurrentes autour du bracelet Garmin CIRQA — rien de structurant.)</p>
+  </div>
+
+  <!-- Qualité des sources -->
+  <section class="sources">
+    <h2>Qualité des sources</h2>
+    <div class="sources-chips">
+      <span>openai.com 🟢</span>
+      <span>broadcom.com 🟢</span>
+      <span>cnbc.com 🟢</span>
+      <span>zetaglobal.com 🟢</span>
+      <span>adweek.com 🟡</span>
+      <span>techtimes.com 🟠</span>
+    </div>
+    <p class="legend">🟢 primaire (communiqué / média de référence) · 🟡 secondaire (média d'industrie) · 🟠 tertiaire (digest / agrégateur)</p>
+  </section>
+
+  <p class="footnote">Notification haut-impact envoyée : non — aucun trigger ne matche (journée calme, items de rattrapage infra/cadence frontier, pas de mouvement concurrent ni de M&amp;A &gt; 500 M$ daté du jour) — priorité : 2 (low). · Mode push systématique (phase de calibration).</p>
+
+</div>
+</body>
+</html>
