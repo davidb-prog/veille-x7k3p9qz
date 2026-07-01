@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — Veille IA &amp; Sport endurance — 1 juillet 2026</title>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1a1a1a; --muted:#5b6470; --line:#e6e8eb;
+    --card:#f7f8f9; --accent:#2b6ccb;
+    --chip-ia:#2563eb; --chip-ia-bg:#e8efff;
+    --chip-ma:#7c3aed; --chip-ma-bg:#f0e9ff;
+    --chip-native:#0891b2; --chip-native-bg:#e2f5fa;
+    --chip-sport:#dc7609; --chip-sport-bg:#fdefd9;
+    --analysis-bg:#f0f7f2; --analysis-border:#3f9e5a;
+  }
+  *{box-sizing:border-box;}
+  html,body{width:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55; font-size:18px;
+  }
+  .wrap{max-width:640px;width:100%;margin:0 auto;padding:24px 16px 56px;}
+  h1{font-size:26px;line-height:1.25;margin:0 0 8px;font-weight:700;letter-spacing:-0.01em;}
+  .subtitle{font-size:15px;color:var(--muted);margin:0 0 28px;}
+  h2{font-size:20px;margin:36px 0 4px;font-weight:700;letter-spacing:-0.01em;}
+  .sec-desc{font-size:14px;color:var(--muted);margin:0 0 16px;}
+  a{color:#1d4ed8;word-break:break-word;}
+
+  /* TL;DR */
+  .tldr{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 16px;margin-bottom:8px;}
+  .tldr-title{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin:0 0 14px;}
+  .headline{padding:14px 0;border-top:1px solid var(--line);}
+  .headline:first-of-type{border-top:none;padding-top:0;}
+  .headline-title{font-size:18px;font-weight:700;margin:8px 0 4px;line-height:1.3;}
+  .headline-context{font-size:17px;color:#33383f;margin:0 0 8px;}
+  .headline .an{font-size:16px;}
+
+  .chip{display:inline-block;font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;letter-spacing:0.02em;vertical-align:middle;}
+  .chip.ia{color:var(--chip-ia);background:var(--chip-ia-bg);}
+  .chip.ma{color:var(--chip-ma);background:var(--chip-ma-bg);}
+  .chip.native{color:var(--chip-native);background:var(--chip-native-bg);}
+  .chip.sport{color:var(--chip-sport);background:var(--chip-sport-bg);}
+
+  /* Items */
+  .item{padding:16px 0;border-bottom:1px solid var(--line);}
+  .item:last-child{border-bottom:none;}
+  .item-title{font-size:19px;font-weight:700;margin:0 0 8px;line-height:1.3;}
+  .item-fact{font-size:18px;margin:0 0 10px;}
+  .item-links{font-size:16px;margin:2px 0;}
+  .item-links a{display:inline-block;min-height:24px;}
+  .date{color:var(--muted);}
+  .empty{font-style:italic;color:var(--muted);font-size:17px;margin:8px 0 0;}
+
+  .analysis{
+    background:var(--analysis-bg);border-left:3px solid var(--analysis-border);
+    padding:10px 14px;border-radius:0 8px 8px 0;margin:10px 0 4px;font-size:17px;
+  }
+  .analysis b{color:#2b7a44;}
+
+  /* Sources */
+  .sources{margin-top:40px;border-top:2px solid var(--line);padding-top:16px;}
+  .sources h2{margin-top:0;}
+  .src-chips{display:flex;flex-wrap:wrap;gap:8px 10px;font-size:14px;color:#33383f;}
+  .src-chips span{white-space:nowrap;}
+  .legend{font-size:13px;color:var(--muted);margin:10px 0 0;}
+  .footer{margin-top:28px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;}
+
+  @media (min-width:768px){
+    .wrap{max-width:760px;padding:56px 48px 80px;}
+    body{font-size:17px;}
+    h1{font-size:30px;}
+    h2{font-size:22px;}
+    .subtitle{font-size:15px;}
+    .item-title{font-size:19px;}
+    .item-fact{font-size:17px;}
+    .headline-title{font-size:18px;}
+    .headline-context{font-size:16px;}
+    .analysis{font-size:16px;}
+    .tldr{padding:26px 28px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Briefing — Veille IA &amp; Sport endurance — 1 juillet 2026</h1>
+  <p class="subtitle">Mercredi 1 juillet 2026 · Lecture : ~5 min · 3 items couverts · Fenêtre : &lt; 24h</p>
+
+  <!-- TL;DR -->
+  <div class="tldr">
+    <p class="tldr-title">À la une</p>
+
+    <div class="headline">
+      <span class="chip ia">IA</span>
+      <div class="headline-title">Anthropic lance Claude Sonnet 5 : quasi-niveau Opus, ~60 % moins cher</div>
+      <p class="headline-context">Le nouveau Sonnet, « le plus agentique » à ce jour, se rapproche des performances d'Opus 4.8 tout en coûtant nettement moins. Tarif de lancement 2 $/10 $ par million de tokens jusqu'au 31 août, puis 3 $/15 $. Modèle par défaut des plans Free et Pro.</p>
+      <p class="analysis">→ <b>Pour le lecteur :</b> faire tourner des boucles d'agents autonomes (re-planification par athlète, ajustement en continu) devient bien plus abordable — un coach adaptatif « live » à l'échelle passe du prototype coûteux au raisonnable.</p>
+      <p class="an"><a href="https://www.anthropic.com/news/claude-sonnet-5">anthropic.com — Introducing Claude Sonnet 5</a> <span class="date">(30 juin)</span></p>
+    </div>
+
+    <div class="headline">
+      <span class="chip ia">IA</span>
+      <div class="headline-title">Anthropic dévoile Claude Science, un « établi » de recherche agentique</div>
+      <p class="headline-context">Workbench beta (macOS/Linux) qui agrège 60+ bases scientifiques et exécute des analyses multi-étapes en langage naturel — chaque figure livrée avec le code exact qui l'a produite. Second lancement produit d'Anthropic le même jour, à l'approche de son IPO.</p>
+      <p class="analysis">→ <b>Pour le lecteur :</b> patron réutilisable — un agent vertical qui raisonne sur un corpus de bases-métier (ici bio/chimie ; chez vous : physiologie, capteurs, historiques d'entraînement) et rend un livrable traçable. Le modèle produit « workbench domaine » se généralise.</p>
+      <p class="an"><a href="https://www.bloomberg.com/news/articles/2026-06-30/anthropic-releases-claude-science-for-automating-research">bloomberg.com</a> · <a href="https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/">technologyreview.com</a> <span class="date">(30 juin)</span></p>
+    </div>
+
+    <div class="headline">
+      <span class="chip ia">IA</span>
+      <div class="headline-title">GitHub Copilot : première clôture mensuelle au compteur, factures ×10 à ×50</div>
+      <p class="headline-context">30 juin = premier cycle complet depuis le passage au billing à l'usage (1er juin). Les utilisateurs intensifs d'agents rapportent des bonds de 29 $ à 750 $, voire 3 000 $. Fin de l'ère forfait illimité sur l'outillage dev IA.</p>
+      <p class="analysis">→ <b>Pour le lecteur :</b> avertissement de coût direct — une app qui lance des agents LLM par utilisateur doit modéliser son pricing sur l'inférence au token. Le Sonnet 5 « agents moins chers » (headline 1) compense en partie cette pression.</p>
+      <p class="an"><a href="https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/">github.blog</a> <span class="date">(clôture 30 juin)</span></p>
+    </div>
+  </div>
+
+  <!-- Section 1 -->
+  <h2>1 · IA — modèles, produits, communications</h2>
+  <p class="sec-desc">Sorties de modèle, lancements produit, prises de parole des labos et grands acteurs.</p>
+
+  <div class="item">
+    <div class="item-title">Claude Sonnet 5 — le modèle mid-tier « le plus agentique » d'Anthropic</div>
+    <p class="item-fact">Anthropic a publié le 30 juin Claude Sonnet 5, présenté comme atteignant un niveau proche de son modèle phare Opus 4.8 (il le dépasse même légèrement sur un benchmark de knowledge work) pour environ 60 % moins cher par token en tarif standard. Conçu pour planifier, utiliser des outils (navigateur, terminal) et tourner en autonomie. Disponible partout : défaut Free/Pro, plus Max/Team/Enterprise, Claude Code et l'API. Tarif d'intro 2 $/10 $ par million de tokens (entrée/sortie) jusqu'au 31 août, puis 3 $/15 $. Anthropic revendique aussi une baisse des « comportements indésirables » et une meilleure résistance aux injections de prompt.</p>
+    <p class="item-links"><a href="https://www.anthropic.com/news/claude-sonnet-5">anthropic.com — Introducing Claude Sonnet 5</a> · <a href="https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/">techcrunch.com</a> <span class="date">(30 juin)</span></p>
+    <p class="analysis">→ <b>Pour le lecteur :</b> le coût d'exécution d'agents autonomes chute — c'est précisément la brique qui rend viable une re-planification adaptative en continu, par athlète, sans exploser l'unit economics. À tester comme moteur de raisonnement des ajustements de plan.</p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Claude Science — workbench agentique pour la recherche</div>
+    <p class="item-fact">Le même jour, Anthropic a lancé en beta Claude Science, un « établi » pour scientifiques réunissant plus de 60 bases de données. Il automatise des tâches multi-étapes de biologie/chimie (analyse de littérature, prédiction de structures protéiques, préparation de figures et manuscrits), chaque sortie s'accompagnant du code et de l'environnement exacts qui l'ont générée. Beta macOS/Linux pour les plans payants ; Anthropic financera jusqu'à 50 projets « AI for Science » (jusqu'à 30 000 $ de crédits, candidatures jusqu'au 15 juillet). MIT Tech Review le qualifie de « nouveau produit phare » et signale une manœuvre d'expansion des revenus avant l'IPO.</p>
+    <p class="item-links"><a href="https://www.bloomberg.com/news/articles/2026-06-30/anthropic-releases-claude-science-for-automating-research">bloomberg.com</a> · <a href="https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/">technologyreview.com</a> <span class="date">(30 juin)</span></p>
+    <p class="analysis">→ <b>Pour le lecteur :</b> template produit directement transposable — un agent qui interroge en langage naturel un empilement de bases-métier et rend un livrable traçable (code + provenance). Pour une app de coaching, l'équivalent serait un agent qui croise physiologie, données capteurs et historique pour justifier chaque adaptation de plan.</p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">GitHub Copilot — fin du forfait illimité, première facture au compteur</div>
+    <p class="item-fact">Le 30 juin marque la première clôture mensuelle complète depuis le passage de Copilot au billing à l'usage (1er juin). Complétions et Next Edit restent gratuits, mais les sessions agentiques, l'accès aux modèles frontier et les tâches autonomes multi-étapes sont facturés au token — une seule session agentique pouvant coûter 30-40 $. Captures à l'appui, des développeurs rapportent des factures 10× à 50× supérieures. Le CPO de GitHub assume : « Copilot n'est plus le même produit qu'il y a un an. » Signal d'un basculement structurel : le coût marginal de l'inférence frontier ne tend pas vers zéro, et les abonnements forfaitaires perdent de l'argent sur chaque power user.</p>
+    <p class="item-links"><a href="https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/">github.blog</a> <span class="date">(clôture de cycle 30 juin)</span></p>
+    <p class="analysis">→ <b>Pour le lecteur :</b> à intégrer dès la conception du pricing — si l'adaptation se fait via des agents LLM par utilisateur, le coût variable d'inférence doit être répercuté ou plafonné. L'arrivée de Sonnet 5 (agents ~60 % moins chers) desserre l'étau côté coût unitaire.</p>
+  </div>
+
+  <!-- Section 2 -->
+  <h2>2 · M&amp;A &amp; investissements IA</h2>
+  <p class="sec-desc">Acquisitions, fusions, levées significatives, restructurations capitalistiques, partenariats à impact financier.</p>
+  <p class="empty">Rien à signaler aujourd'hui sur ce volet dans la fenêtre &lt; 24h. (Les mouvements majeurs récents — clôture de la levée de 84,75 Md$ d'Alphabet, rachat de Modular par Qualcomm à 3,92 Md$, fonds IA de 300 M$ de BMW — datent du 2 au 25 juin, hors fenêtre.)</p>
+
+  <!-- Section 3 -->
+  <h2>3 · Sociétés innovantes IA-native</h2>
+  <p class="sec-desc">Startups ou produits dont la proposition de valeur centrale repose sur une techno IA (hors géants couverts en 1).</p>
+  <p class="empty">Rien à signaler aujourd'hui sur ce volet dans la fenêtre &lt; 24h.</p>
+
+  <!-- Section 4 -->
+  <h2>4 · Applications d'entraînement sportif</h2>
+  <p class="sec-desc">News de la watchlist (concurrents directs / indirects / à surveiller).</p>
+  <p class="empty">Rien à signaler aujourd'hui sur ce volet dans la fenêtre &lt; 24h. (Aucune annonce datée du 30 juin – 1 juillet côté TrainingPeaks, TrainerRoad, Athletica, Humango, Strava/Garmin, TriDot, Whoop &amp; co. Les signaux récents — IntervalCoach le 23 juin, mises à jour Coros/Zwift — sont hors fenêtre.)</p>
+
+  <!-- Sources -->
+  <div class="sources">
+    <h2>Qualité des sources</h2>
+    <div class="src-chips">
+      <span>anthropic.com 🟢</span>
+      <span>techcrunch.com 🟢</span>
+      <span>bloomberg.com 🟢</span>
+      <span>technologyreview.com 🟢</span>
+      <span>github.blog 🟢</span>
+      <span>venturebeat.com 🟢</span>
+      <span>buildfastwithai.com 🟠</span>
+    </div>
+    <p class="legend">🟢 primaire (communiqué officiel / média de référence) · 🟡 secondaire (média d'industrie) · 🟠 tertiaire (blog / digest / agrégateur)</p>
+  </div>
+
+  <div class="footer">
+    Notification haut-impact envoyée : oui (mode systématique — phase de calibration) — trigger : #5 brique technique réutilisable (Claude Sonnet 5, agents moins chers) — priorité : 3 (default).<br>
+    Généré automatiquement le 1 juillet 2026 · moteur <em>brief-actu</em>.
+  </div>
+
+</div>
+</body>
+</html>
