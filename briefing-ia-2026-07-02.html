@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing IA &amp; Sport endurance — 2 juillet 2026</title>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1a1a1a; --muted:#5c6470; --line:#e6e8ec;
+    --accent:#2b6cb0; --card:#f7f8fa;
+    --chip-ia:#e8f0fe; --chip-ia-ink:#1a56db;
+    --chip-ma:#eafaf1; --chip-ma-ink:#0f7b52;
+    --chip-native:#f3ecfb; --chip-native-ink:#7c3aed;
+    --chip-sport:#fff2e8; --chip-sport-ink:#c2410c;
+    --anal-bg:#fbf7ee; --anal-bd:#e0b64d;
+  }
+  *{box-sizing:border-box;}
+  html,body{width:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;
+  }
+  .wrap{max-width:640px;width:100%;margin:0 auto;padding:24px 16px 56px;}
+  h1{font-size:26px;line-height:1.25;margin:0 0 6px;font-weight:700;letter-spacing:-.01em;}
+  .subtitle{font-size:15px;color:var(--muted);margin:0 0 28px;}
+  h2{font-size:20px;margin:36px 0 14px;padding-bottom:6px;border-bottom:2px solid var(--line);font-weight:700;}
+  .chip{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;
+        padding:3px 8px;border-radius:6px;vertical-align:middle;}
+  .chip.ia{background:var(--chip-ia);color:var(--chip-ia-ink);}
+  .chip.ma{background:var(--chip-ma);color:var(--chip-ma-ink);}
+  .chip.native{background:var(--chip-native);color:var(--chip-native-ink);}
+  .chip.sport{background:var(--chip-sport);color:var(--chip-sport-ink);}
+
+  /* TL;DR */
+  .tldr{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 16px;margin-bottom:8px;}
+  .tldr h2{margin:0 0 14px;border:0;padding:0;font-size:18px;}
+  .hl{padding:14px 0;border-top:1px solid var(--line);}
+  .hl:first-of-type{border-top:0;padding-top:0;}
+  .hl-title{font-size:18px;font-weight:700;margin:8px 0 4px;line-height:1.3;}
+  .hl-context{font-size:17px;color:#2c333d;margin:0 0 6px;}
+  .hl a,.item a{color:var(--accent);text-decoration:none;font-size:16px;word-break:break-word;}
+  .hl a{display:inline-block;min-height:44px;line-height:44px;}
+  .hl a:hover,.item a:hover{text-decoration:underline;}
+
+  /* Corps */
+  .item{padding:18px 0;border-top:1px solid var(--line);}
+  .item:first-child{border-top:0;}
+  .item-title{font-size:19px;font-weight:700;margin:0 0 8px;line-height:1.3;}
+  .item-fact{font-size:18px;margin:0 0 8px;}
+  .item-links{font-size:16px;}
+  .empty{font-style:italic;color:var(--muted);font-size:17px;margin:8px 0;}
+  .analysis{background:var(--anal-bg);border-left:4px solid var(--anal-bd);
+            padding:10px 14px;border-radius:0 8px 8px 0;font-size:17px;margin:10px 0 2px;}
+  .analysis strong{color:#8a6516;}
+  .date{color:var(--muted);font-weight:600;}
+
+  /* Sources */
+  .sources{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+  .src{font-size:13px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:4px 10px;color:#374151;}
+  .footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);}
+  .notif-log{margin-top:8px;font-size:12px;color:var(--muted);}
+
+  @media (min-width:768px){
+    .wrap{max-width:760px;padding:56px 48px 80px;}
+    body{font-size:17px;}
+    h1{font-size:30px;}
+    h2{font-size:22px;}
+    .subtitle{font-size:15px;}
+    .tldr{padding:26px;}
+    .hl-title{font-size:18px;}
+    .hl-context{font-size:16px;}
+    .item-title{font-size:19px;}
+    .item-fact{font-size:17px;}
+    .analysis{font-size:16px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Briefing — Veille IA &amp; Sport endurance — 2 juillet 2026</h1>
+  <p class="subtitle">Jeudi 2 juillet 2026 · Lecture : ~4 min · Fenêtre : dernières 24h · 3 items retenus</p>
+
+  <!-- TL;DR -->
+  <section class="tldr">
+    <h2>À la une</h2>
+
+    <div class="hl">
+      <span class="chip ma">M&amp;A</span>
+      <div class="hl-title">MGX clôture l'un des plus gros fonds IA jamais levés : 49 Md$</div>
+      <p class="hl-context">Le véhicule d'Abu Dhabi, déjà au capital d'OpenAI et d'Anthropic, a bouclé au-dessus de sa cible de 45 Md$ pour investir sur toute la stack IA (semis, infra, plateformes). Une concentration de capital record côté infrastructure et frontier.</p>
+      <p class="analysis"><strong>→ Pour le lecteur :</strong> le capital massif se loge dans l'infra et les labos, pas dans les apps verticales. Pour un builder endurance, la différenciation défendable reste la couche produit/coaching adaptatif, pas la course au modèle.</p>
+      <a href="https://www.cnbc.com/2026/07/01/mgx-ai-fund-uae-49-billion.html">cnbc.com — <span class="date">1 juil</span></a>
+    </div>
+
+    <div class="hl">
+      <span class="chip ia">IA</span>
+      <div class="hl-title">Anthropic redéploie Claude Fable 5 dans le monde entier</div>
+      <p class="hl-context">Après la levée des contrôles à l'export par le Dept. of Commerce, Fable 5 redevient accessible mondialement dès le 1er juillet sur Claude Platform, Claude.ai, Claude Code et Cowork — clôturant l'épisode de suspension ouvert mi-juin.</p>
+      <a href="https://www.anthropic.com/news/redeploying-fable-5">anthropic.com — <span class="date">1 juil</span></a>
+    </div>
+
+    <div class="hl">
+      <span class="chip ia">IA</span>
+      <div class="hl-title">Claude Sonnet 5 devient le modèle par défaut Free &amp; Pro</div>
+      <p class="hl-context">Sorti le 30 juin, Sonnet 5 s'approche d'Opus 4.8 en performance agentique à prix réduit (2 $/10 $ le M tokens en intro). Il bascule en défaut pour tous les comptes Free et Pro à partir du 1er juillet.</p>
+      <p class="analysis"><strong>→ Pour le lecteur :</strong> un modèle quasi-frontier agentique à coût en baisse abaisse le ticket d'entrée d'un coach IA embarqué (chat, raisonnement sur l'historique capteurs). Brique directement pertinente pour la stack produit.</p>
+      <a href="https://www.anthropic.com/news/claude-sonnet-5">anthropic.com — <span class="date">30 juin</span></a>
+    </div>
+  </section>
+
+  <!-- Corps -->
+  <h2>IA — modèles, produits, communications</h2>
+
+  <div class="item">
+    <div class="item-title">Claude Fable 5 de nouveau disponible mondialement</div>
+    <p class="item-fact">Le Département du Commerce américain a levé les contrôles à l'export qui pesaient sur Fable 5 et Mythos 5 depuis le 12 juin. Anthropic a confirmé le redéploiement de Fable 5 pour tous les utilisateurs à l'international à partir du 1er juillet, sur l'ensemble de ses surfaces (Platform, Claude.ai, Code, Cowork). L'épisode faisait suite à un rapport de chercheurs Amazon sur le contournement de garde-fous ; Anthropic a depuis établi que des modèles moins capables identifiaient les mêmes vulnérabilités.</p>
+    <p class="item-links"><a href="https://www.anthropic.com/news/redeploying-fable-5">anthropic.com/news/redeploying-fable-5</a> — <span class="date">1 juil</span></p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Claude Sonnet 5 : par défaut sur Free &amp; Pro</div>
+    <p class="item-fact">Sonnet 5, présenté le 30 juin, est décrit par Anthropic comme son modèle Sonnet le plus agentique — capable de planifier et d'utiliser des outils (navigateur, terminal) de façon autonome, avec une performance proche d'Opus 4.8 pour un coût inférieur. Tarif d'intro : 2 $ en entrée / 10 $ en sortie par M tokens jusqu'au 31 août, puis 3 $/15 $. Il devient le modèle par défaut des comptes Free et Pro à partir du 1er juillet.</p>
+    <p class="item-links"><a href="https://www.anthropic.com/news/claude-sonnet-5">anthropic.com/news/claude-sonnet-5</a> — <span class="date">30 juin</span></p>
+    <p class="analysis"><strong>→ Pour le lecteur :</strong> la baisse continue du coût d'un modèle agentique quasi-frontier réduit le coût marginal d'un assistant/coach conversationnel intégré au produit, et rend viable un raisonnement plus riche sur les données d'entraînement de l'athlète.</p>
+  </div>
+
+  <h2>M&amp;A &amp; investissements IA</h2>
+
+  <div class="item">
+    <div class="item-title">MGX boucle un fonds IA de 49 Md$</div>
+    <p class="item-fact">La société d'investissement d'Abu Dhabi MGX a annoncé le 1er juillet la clôture d'un fonds de 49 Md$ dédié à l'IA, au-dessus de sa cible initiale de 45 Md$ — l'un des plus gros véhicules jamais constitués sur le secteur. Les capitaux proviennent d'investisseurs du Golfe, d'Amérique du Nord, d'Asie et d'Europe. MGX, déjà au capital d'OpenAI et d'Anthropic, a soutenu 14 sociétés à ce jour et vise l'ensemble de la stack : semi-conducteurs, infrastructure et plateformes IA.</p>
+    <p class="item-links"><a href="https://www.cnbc.com/2026/07/01/mgx-ai-fund-uae-49-billion.html">cnbc.com</a> · <a href="https://www.thenationalnews.com/business/markets/2026/07/01/abu-dhabis-ai-investment-firm-mgx-raises-49bn-for-new-fund/">thenationalnews.com</a> — <span class="date">1 juil</span></p>
+    <p class="analysis"><strong>→ Pour le lecteur :</strong> le capital-signal de l'année se dirige vers l'infra et les modèles, pas vers les applications verticales. Confirme qu'un produit d'entraînement IA ne se défend pas sur la puissance de calcul mais sur l'usage, la donnée athlète et l'adaptativité.</p>
+  </div>
+
+  <h2>Sociétés innovantes IA-native</h2>
+  <p class="empty">Rien à signaler aujourd'hui sur ce volet.</p>
+
+  <h2>Applications d'entraînement sportif</h2>
+  <p class="empty">Rien à signaler aujourd'hui sur ce volet. (Dernier mouvement marquant hors fenêtre : consolidation Strava / Garmin / Runna courant Q2 2026.)</p>
+
+  <!-- Sources -->
+  <h2>Qualité des sources</h2>
+  <div class="sources">
+    <span class="src">anthropic.com 🟢</span>
+    <span class="src">cnbc.com 🟢</span>
+    <span class="src">thenationalnews.com 🟢</span>
+  </div>
+
+  <div class="footer">
+    <p>Brief généré automatiquement — fenêtre stricte de 24h. Journée calme sur le périmètre : GPT-5.6 Sol (preview OpenAI, 26 juin) et les modèles image Gemini annoncés fin juin sont hors fenêtre et écartés. Aucune actualité sourçable sur la watchlist sport endurance dans les dernières 24h.</p>
+    <p class="notif-log">Notification push envoyée : oui — triggers : modèle frontier (Sonnet 5, lien produit indirect) + fonds IA majeur (MGX 49 Md$, non sport-tech) — priorité : 3.</p>
+  </div>
+
+</div>
+</body>
+</html>
