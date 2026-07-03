@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing IA &amp; Sport endurance — 3 juillet 2026</title>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1a1a1a; --muted:#5c6470; --line:#e6e8ec;
+    --accent:#2b6cb0; --card:#f7f8fa;
+    --chip-ia:#e8f0fe; --chip-ia-ink:#1a56db;
+    --chip-ma:#eafaf1; --chip-ma-ink:#0f7b52;
+    --chip-native:#f3ecfb; --chip-native-ink:#7c3aed;
+    --chip-sport:#fff2e8; --chip-sport-ink:#c2410c;
+    --anal-bg:#fbf7ee; --anal-bd:#e0b64d;
+  }
+  *{box-sizing:border-box;}
+  html,body{width:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;
+  }
+  .wrap{max-width:640px;width:100%;margin:0 auto;padding:24px 16px 56px;}
+  h1{font-size:26px;line-height:1.25;margin:0 0 6px;font-weight:700;letter-spacing:-.01em;}
+  .subtitle{font-size:15px;color:var(--muted);margin:0 0 28px;}
+  h2{font-size:20px;margin:36px 0 14px;padding-bottom:6px;border-bottom:2px solid var(--line);font-weight:700;}
+  .chip{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;
+        padding:3px 8px;border-radius:6px;vertical-align:middle;}
+  .chip.ia{background:var(--chip-ia);color:var(--chip-ia-ink);}
+  .chip.ma{background:var(--chip-ma);color:var(--chip-ma-ink);}
+  .chip.native{background:var(--chip-native);color:var(--chip-native-ink);}
+  .chip.sport{background:var(--chip-sport);color:var(--chip-sport-ink);}
+
+  /* TL;DR */
+  .tldr{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 16px;margin-bottom:8px;}
+  .tldr h2{margin:0 0 14px;border:0;padding:0;font-size:18px;}
+  .hl{padding:14px 0;border-top:1px solid var(--line);}
+  .hl:first-of-type{border-top:0;padding-top:0;}
+  .hl-title{font-size:18px;font-weight:700;margin:8px 0 4px;line-height:1.3;}
+  .hl-context{font-size:17px;color:#2c333d;margin:0 0 6px;}
+  .hl a,.item a{color:var(--accent);text-decoration:none;font-size:16px;word-break:break-word;}
+  .hl a{display:inline-block;min-height:44px;line-height:44px;}
+  .hl a:hover,.item a:hover{text-decoration:underline;}
+
+  /* Corps */
+  .item{padding:18px 0;border-top:1px solid var(--line);}
+  .item:first-child{border-top:0;}
+  .item-title{font-size:19px;font-weight:700;margin:0 0 8px;line-height:1.3;}
+  .item-fact{font-size:18px;margin:0 0 8px;}
+  .item-links{font-size:16px;}
+  .empty{font-style:italic;color:var(--muted);font-size:17px;margin:8px 0;}
+  .analysis{background:var(--anal-bg);border-left:4px solid var(--anal-bd);
+            padding:10px 14px;border-radius:0 8px 8px 0;font-size:17px;margin:10px 0 2px;}
+  .analysis strong{color:#8a6516;}
+  .date{color:var(--muted);font-weight:600;}
+
+  /* Sources */
+  .sources{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+  .src{font-size:13px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:4px 10px;color:#374151;}
+  .footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);}
+  .notif-log{margin-top:8px;font-size:12px;color:var(--muted);}
+
+  @media (min-width:768px){
+    .wrap{max-width:760px;padding:56px 48px 80px;}
+    body{font-size:17px;}
+    h1{font-size:30px;}
+    h2{font-size:22px;}
+    .subtitle{font-size:15px;}
+    .tldr{padding:26px;}
+    .hl-title{font-size:18px;}
+    .hl-context{font-size:16px;}
+    .item-title{font-size:19px;}
+    .item-fact{font-size:17px;}
+    .analysis{font-size:16px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Briefing — Veille IA &amp; Sport endurance — 3 juillet 2026</h1>
+  <p class="subtitle">Vendredi 3 juillet 2026 · Lecture : ~5 min · Fenêtre : dernières 24h · 10 items retenus</p>
+
+  <!-- TL;DR -->
+  <section class="tldr">
+    <h2>À la une</h2>
+
+    <div class="hl">
+      <span class="chip ma">M&amp;A</span>
+      <div class="hl-title">Twelve Labs lève 100 M$ et signe un contrat AWS pour la « vidéo-compréhension »</div>
+      <p class="hl-context">Série B co-menée par NEA et Naver, avec Amazon, NVIDIA et Index. Twelve Labs ne génère pas de vidéo (à la Sora/Veo) mais l'indexe et la requête — modèles Marengo (perception) et Pegasus (raisonnement), jusqu'à 2 h de contexte. Contrat pluriannuel AWS Trainium à la clé.</p>
+      <p class="analysis"><strong>→ Pour le lecteur :</strong> exactement la brique « comprendre une vidéo d'entraînement » (analyse de geste, posture, technique). Une API tierce mature sur ce créneau peut remplacer un développement lourd interne — à évaluer comme dépendance vs différenciateur.</p>
+      <a href="https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html">globenewswire.com — <span class="date">1 juil</span></a>
+    </div>
+
+    <div class="hl">
+      <span class="chip ia">IA</span>
+      <div class="hl-title">NVIDIA dévoile Nemotron TwoTower, un modèle de langage par diffusion 2,4× plus rapide</div>
+      <p class="hl-context">Nemotron-Labs-TwoTower découple contexte et débruitage en deux « tours » : 98,7 % de la qualité de référence pour 2,42× de débit de génération. Poids ouverts sur Hugging Face, papier sur arXiv. Un signal de plus que la diffusion textuelle sort du labo.</p>
+      <a href="https://huggingface.co/nvidia/Nemotron-Labs-TwoTower-30B-A3B-Base-BF16">huggingface.co — <span class="date">2 juil</span></a>
+    </div>
+
+    <div class="hl">
+      <span class="chip ma">M&amp;A</span>
+      <div class="hl-title">Together AI lève 800 M$ à 8,3 Md$ pour abaisser le coût de l'inférence</div>
+      <p class="hl-context">Tour mené par Aramco Ventures (avec NVIDIA, General Catalyst, Vista). Le neocloud open-source passe de 3,3 Md$ début 2025 à 8,3 Md$. La thèse : rendre l'IA « frontier » accessible et moins chère via des modèles ouverts.</p>
+      <a href="https://www.businesswire.com/news/home/20260701243402/en/Together-AI-Raises-%24800-Million-at-%248.3-Billion-Valuation-to-Make-Frontier-AI-Accessible-to-All">businesswire.com — <span class="date">1 juil</span></a>
+    </div>
+
+    <div class="hl">
+      <span class="chip ia">IA</span>
+      <div class="hl-title">Remote Labor Index : Fable 5 en tête sur du vrai travail à distance (16,1 %)</div>
+      <p class="hl-context">CAIS et Scale AI mesurent si le livrable d'un modèle serait accepté par un vrai client, sur 240 projets réels dans 23 domaines. Fable 5 domine les modèles publics — mais le plafond reste bas, la plupart des tâches ne passent pas.</p>
+      <p class="analysis"><strong>→ Pour le lecteur :</strong> le benchmark qui compte pour un produit, ce n'est pas « QCM académique » mais « livrable accepté ». Un plafond à 16 % rappelle que l'IA reste un copilote, pas un coach autonome — l'humain (ou la règle métier) garde la main sur la validation du plan.</p>
+      <a href="https://x.com/CAIS/status/2072360965522489789">x.com/CAIS — <span class="date">2 juil</span></a>
+    </div>
+  </section>
+
+  <!-- Corps -->
+  <h2>IA — modèles, produits, communications</h2>
+
+  <div class="item">
+    <div class="item-title">NVIDIA : Nemotron-Labs-TwoTower, modèle de langage par diffusion</div>
+    <p class="item-fact">NVIDIA a publié Nemotron-Labs-TwoTower, un modèle de langage par diffusion dont l'architecture sépare le contexte et le débruitage en deux tours distinctes. NVIDIA rapporte 98,7 % de la qualité de référence pour un débit de génération 2,42× supérieur, avec des modes diffusion masquée et autorégressif. Les poids (variante 30B-A3B) sont sur Hugging Face, le papier sur arXiv.</p>
+    <p class="item-links"><a href="https://huggingface.co/nvidia/Nemotron-Labs-TwoTower-30B-A3B-Base-BF16">huggingface.co</a> · <a href="https://arxiv.org/abs/2606.26493">arxiv.org</a> — <span class="date">2 juil</span></p>
+    <p class="analysis"><strong>→ Pour le lecteur :</strong> une génération plus rapide à qualité quasi constante réduit la latence d'un assistant embarqué (retour instantané pendant une séance). À garder à l'œil si le produit vise du feedback temps réel plutôt que du batch nocturne.</p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">xAI ouvre Voice Agent Builder (Grok Voice, no-code)</div>
+    <p class="item-fact">xAI a lancé Voice Agent Builder, un produit no-code pour construire des agents téléphoniques « humains » à partir de Grok Voice : 80+ voix, clonage vocal, playbooks, bases de connaissances, garde-fous, numéro gratuit ou transfert SIP. Tarif annoncé : 0,05 $ la minute.</p>
+    <p class="item-links"><a href="https://x.ai/voice">x.ai/voice</a> — <span class="date">2 juil</span></p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Google : Gemini Omni Flash (vidéo) et Gemini Spark sur macOS</div>
+    <p class="item-fact">Google a mis à disposition Gemini Omni Flash, un modèle de génération et d'édition vidéo via API, piloté par prompts conversationnels, images de référence et révisions multi-tours. En parallèle, Gemini Spark arrive en bêta dans l'app Gemini sur macOS (abonnés AI Ultro US), avec support MCP personnalisé et intégrations Canva, Dropbox, Instacart, OpenTable, Zillow.</p>
+    <p class="item-links"><a href="https://ai.google.dev/gemini-api/docs/omni">ai.google.dev</a> — <span class="date">2 juil</span></p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Remote Labor Index : Fable 5 domine, mais le plafond reste bas</div>
+    <p class="item-fact">CAIS et Scale AI Labs ont mis à jour le Remote Labor Index, qui teste des modèles sur 240 projets réels de travail à distance (23 domaines) et mesure si un client accepterait le livrable. Fable 5 mène les modèles publics à 16,1 %. La lecture partagée par les commentateurs : un saut réel, mais la grande majorité des tâches restent non livrables telles quelles.</p>
+    <p class="item-links"><a href="https://x.com/CAIS/status/2072360965522489789">x.com/CAIS</a> — <span class="date">2 juil</span></p>
+  </div>
+
+  <h2>M&amp;A &amp; investissements IA</h2>
+
+  <div class="item">
+    <div class="item-title">Twelve Labs : 100 M$ en Série B + contrat AWS Trainium</div>
+    <p class="item-fact">TwelveLabs a annoncé une Série B de 100 M$ co-menée par NEA et Naver, avec Amazon, NVIDIA, Radical, Index et Korea Investment Partners. La société construit une « super-intelligence vidéo » : ses modèles Marengo (perception) et Pegasus (raisonnement) indexent et interrogent des archives vidéo jusqu'à 2 h de contexte, plutôt que de générer de la vidéo. AWS signe un contrat pluriannuel pour héberger ses charges sur puces Trainium. Effectif ~178 personnes, contre ~58 un an plus tôt.</p>
+    <p class="item-links"><a href="https://www.globenewswire.com/news-release/2026/07/01/3320545/0/en/twelvelabs-raises-100-million-in-series-b-funding-to-build-video-superintelligence.html">globenewswire.com</a> · <a href="https://www.bloomberg.com/news/articles/2026-07-01/video-search-startup-raises-100-million-from-amazon-vc-funds">bloomberg.com</a> — <span class="date">1 juil</span></p>
+    <p class="analysis"><strong>→ Pour le lecteur :</strong> la « compréhension de vidéo » se structure en catégorie financée et outillée (API + modèles). Pour un produit endurance qui voudrait analyser la vidéo d'un geste (course, nage, position vélo), c'est une brique achetable — arbitrage classique build vs buy à poser tôt.</p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Together AI : 800 M$ à 8,3 Md$ de valorisation</div>
+    <p class="item-fact">Together AI, neocloud spécialisé dans l'infrastructure GPU et les modèles ouverts, a levé 800 M$ en Série C, portant sa valorisation à 8,3 Md$ (contre 3,3 Md$ début 2025). Tour mené par Aramco Ventures, avec NVIDIA, General Catalyst, Vista Equity et d'autres. Objectif affiché : rendre l'IA « frontier » plus accessible et moins chère via l'open-model.</p>
+    <p class="item-links"><a href="https://www.businesswire.com/news/home/20260701243402/en/Together-AI-Raises-%24800-Million-at-%248.3-Billion-Valuation-to-Make-Frontier-AI-Accessible-to-All">businesswire.com</a> · <a href="https://techcrunch.com/2026/07/01/neocloud-together-ai-raises-800m-leaps-to-8-3b-valuation/">techcrunch.com</a> — <span class="date">1 juil</span></p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Venice devient licorne : 65 M$ en Série A à 1 Md$</div>
+    <p class="item-fact">Venice, plateforme d'IA « privacy-first » et sans restriction, a levé 65 M$ en Série A menée par Dragonfly, à une valorisation de 1 Md$. TechCrunch cite plus de 70 M$ de revenu annualisé et 3,5 M d'utilisateurs enregistrés. Positionnement : confidentialité et absence de garde-fous imposés comme argument de vente.</p>
+    <p class="item-links"><a href="https://venice.ai/blog/venice-raises-65-million-series-a">venice.ai</a> · <a href="https://techcrunch.com/2026/07/01/venice-ai-becomes-a-unicorn-with-65m-series-a-as-its-privacy-first-ai-platform-takes-off/">techcrunch.com</a> — <span class="date">1 juil</span></p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Meta explore la revente de son excédent de calcul IA</div>
+    <p class="item-fact">Meta étudierait le lancement d'une activité cloud pour revendre sa capacité de calcul IA excédentaire, voire un accès hébergé à des modèles — une piste pour rentabiliser ses dépenses d'infrastructure massives. Le titre a bondi d'environ 9 % à l'annonce, les investisseurs y voyant un retour possible sur les capex IA.</p>
+    <p class="item-links"><a href="https://www.cnbc.com/2026/07/01/meta-stock-cloud-ai-compute.html">cnbc.com</a> — <span class="date">1 juil</span></p>
+  </div>
+
+  <h2>Sociétés innovantes IA-native</h2>
+
+  <div class="item">
+    <div class="item-title">Weave Robotics lance Isaac 1, robot domestique</div>
+    <p class="item-fact">Weave Robotics a présenté Isaac 1, robot mobile pour tâches ménagères (pliage du linge notamment), livraisons prévues cet automne. Positionné « privacy-first », torse rétractable, coques textiles interchangeables. Modèle économique : 250 $ de dépôt, puis 449 $/mois en abonnement ou 7 999 $ à l'achat.</p>
+    <p class="item-links"><a href="https://www.weaverobotics.com/isaac-1">weaverobotics.com</a> — <span class="date">2 juil</span></p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Thinking Machines × Bridgewater : le fine-tune expert bat le frontier</div>
+    <p class="item-fact">Thinking Machines Lab rapporte, avec Bridgewater, un modèle fine-tuné (données labellisées par experts + distillation on-policy) qui trie les documents financiers méritant l'attention d'un analyste : 84,7 % de précision, 29,8 % d'erreurs en moins que les meilleurs modèles frontier, et un coût d'inférence 13,8× inférieur. Une démonstration que la donnée experte bat encore le modèle de base sur le jugement métier fin.</p>
+    <p class="item-links"><a href="https://thinkingmachines.ai/news/learning-to-replicate-expert-judgment-in-financial-tasks/">thinkingmachines.ai</a> — <span class="date">2 juil</span></p>
+    <p class="analysis"><strong>→ Pour le lecteur :</strong> signal fort pour un produit vertical : la défense ne vient pas du modèle mais de la donnée experte (coaching endurance labellisé). Un petit modèle spécialisé, bien nourri, peut battre un frontier générique en coût et en pertinence sur l'adaptativité du plan.</p>
+  </div>
+
+  <h2>Applications d'entraînement sportif</h2>
+  <p class="empty">Rien à signaler aujourd'hui sur ce volet. Aucune actualité sourçable sur la watchlist (directs, indirects, à surveiller) dans les dernières 24h. Dernier mouvement marquant hors fenêtre : partenariat COROS × Wahoo et rachat de Runna par Strava, courant Q2 2026.</p>
+
+  <!-- Sources -->
+  <h2>Qualité des sources</h2>
+  <div class="sources">
+    <span class="src">globenewswire.com 🟢</span>
+    <span class="src">bloomberg.com 🟢</span>
+    <span class="src">businesswire.com 🟢</span>
+    <span class="src">techcrunch.com 🟢</span>
+    <span class="src">venice.ai 🟢</span>
+    <span class="src">cnbc.com 🟢</span>
+    <span class="src">huggingface.co 🟢</span>
+    <span class="src">arxiv.org 🟢</span>
+    <span class="src">ai.google.dev 🟢</span>
+    <span class="src">x.ai 🟢</span>
+    <span class="src">weaverobotics.com 🟢</span>
+    <span class="src">thinkingmachines.ai 🟢</span>
+    <span class="src">x.com (CAIS) 🟡</span>
+  </div>
+
+  <div class="footer">
+    <p>Brief généré automatiquement — fenêtre stricte de 24h (2–3 juillet). Journée dense côté financements et modèles ; watchlist sport endurance calme. Hors périmètre : suite de l'épisode Fable 5 (redéploiement couvert le 2 juillet) et débats coût/performance des modèles, non repris ici.</p>
+    <p class="notif-log">Notification push envoyée : oui — triggers : brique multimodale vidéo réutilisable (Twelve Labs, trigger 5) + deal IA &gt; 500 M$ (Together AI, trigger 4, non sport-tech / non concurrent) — priorité : 3 (aligné sur la calibration MGX de la veille, pas de mouvement concurrent direct).</p>
+  </div>
+
+</div>
+</body>
+</html>
