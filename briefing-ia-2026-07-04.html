@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing IA &amp; Sport endurance — 4 juillet 2026</title>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1a1a1a; --muted:#5c6470; --line:#e6e8ec;
+    --accent:#2b6cb0; --card:#f7f8fa;
+    --chip-ia:#e8f0fe; --chip-ia-ink:#1a56db;
+    --chip-ma:#eafaf1; --chip-ma-ink:#0f7b52;
+    --chip-native:#f3ecfb; --chip-native-ink:#7c3aed;
+    --chip-sport:#fff2e8; --chip-sport-ink:#c2410c;
+    --anal-bg:#fbf7ee; --anal-bd:#e0b64d;
+  }
+  *{box-sizing:border-box;}
+  html,body{width:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;
+  }
+  .wrap{max-width:640px;width:100%;margin:0 auto;padding:24px 16px 56px;}
+  h1{font-size:26px;line-height:1.25;margin:0 0 6px;font-weight:700;letter-spacing:-.01em;}
+  .subtitle{font-size:15px;color:var(--muted);margin:0 0 28px;}
+  h2{font-size:20px;margin:36px 0 14px;padding-bottom:6px;border-bottom:2px solid var(--line);font-weight:700;}
+  .chip{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;
+        padding:3px 8px;border-radius:6px;vertical-align:middle;}
+  .chip.ia{background:var(--chip-ia);color:var(--chip-ia-ink);}
+  .chip.ma{background:var(--chip-ma);color:var(--chip-ma-ink);}
+  .chip.native{background:var(--chip-native);color:var(--chip-native-ink);}
+  .chip.sport{background:var(--chip-sport);color:var(--chip-sport-ink);}
+
+  /* TL;DR */
+  .tldr{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 16px;margin-bottom:8px;}
+  .tldr h2{margin:0 0 14px;border:0;padding:0;font-size:18px;}
+  .hl{padding:14px 0;border-top:1px solid var(--line);}
+  .hl:first-of-type{border-top:0;padding-top:0;}
+  .hl-title{font-size:18px;font-weight:700;margin:8px 0 4px;line-height:1.3;}
+  .hl-context{font-size:17px;color:#2c333d;margin:0 0 6px;}
+  .hl a,.item a{color:var(--accent);text-decoration:none;font-size:16px;word-break:break-word;}
+  .hl a{display:inline-block;min-height:44px;line-height:44px;}
+  .hl a:hover,.item a:hover{text-decoration:underline;}
+
+  /* Corps */
+  .item{padding:18px 0;border-top:1px solid var(--line);}
+  .item:first-child{border-top:0;}
+  .item-title{font-size:19px;font-weight:700;margin:0 0 8px;line-height:1.3;}
+  .item-fact{font-size:18px;margin:0 0 8px;}
+  .item-links{font-size:16px;}
+  .empty{font-style:italic;color:var(--muted);font-size:17px;margin:8px 0;}
+  .analysis{background:var(--anal-bg);border-left:4px solid var(--anal-bd);
+            padding:10px 14px;border-radius:0 8px 8px 0;font-size:17px;margin:10px 0 2px;}
+  .analysis strong{color:#8a6516;}
+  .date{color:var(--muted);font-weight:600;}
+
+  /* Sources */
+  .sources{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+  .src{font-size:13px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:4px 10px;color:#374151;}
+  .footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);}
+  .notif-log{margin-top:8px;font-size:12px;color:var(--muted);}
+
+  @media (min-width:768px){
+    .wrap{max-width:760px;padding:56px 48px 80px;}
+    body{font-size:17px;}
+    h1{font-size:30px;}
+    h2{font-size:22px;}
+    .subtitle{font-size:15px;}
+    .tldr{padding:26px;}
+    .hl-title{font-size:18px;}
+    .hl-context{font-size:16px;}
+    .item-title{font-size:19px;}
+    .item-fact{font-size:17px;}
+    .analysis{font-size:16px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Briefing — Veille IA &amp; Sport endurance — 4 juillet 2026</h1>
+  <p class="subtitle">Samedi 4 juillet 2026 · Lecture : ~4 min · Fenêtre : depuis le brief du 3 juillet · Jour férié US (Independence Day) — actualité calme · 3 items retenus</p>
+
+  <!-- TL;DR -->
+  <section class="tldr">
+    <h2>À la une</h2>
+
+    <div class="hl">
+      <span class="chip ma">M&amp;A</span>
+      <div class="hl-title">MGX (Abu Dhabi) clôture un fonds IA de 49 Md$, l'un des plus gros jamais levés</div>
+      <p class="hl-context">Le véhicule, backer d'OpenAI et d'Anthropic, dépasse sa cible de 45 Md$ et vise l'infrastructure IA (data centers, compute, puces). Un signal de plus de la concentration extrême du capital vers une poignée d'acteurs d'infrastructure.</p>
+      <a href="https://www.cnbc.com/2026/07/01/mgx-ai-fund-uae-49-billion.html">cnbc.com — <span class="date">1 juil</span></a>
+    </div>
+
+    <div class="hl">
+      <span class="chip ia">IA</span>
+      <div class="hl-title">Emploi US en berne : +57 000 postes en juin, l'IA citée comme facteur</div>
+      <p class="hl-context">Le rapport BLS (publié un jour plus tôt pour le 4-Juillet) rate largement le consensus. Les commentateurs pointent les coupes tech redirigées vers l'infra IA et l'érosion des postes juniors de « travail de savoir ». Chômage à 4,2 %, mais via une chute de la participation.</p>
+      <a href="https://www.bls.gov/news.release/archives/empsit_07022026.htm">bls.gov — <span class="date">2 juil</span></a>
+    </div>
+
+    <div class="hl">
+      <span class="chip ia">IA</span>
+      <div class="hl-title">Maison-Blanche : cadre « volontaire » sur les modèles frontier attendu la semaine du 7 juillet</div>
+      <p class="hl-context">Selon le FT et Reuters (2 juil.), Google notamment est en discussion avant ses sorties de modèles de code. Le cadre définira quels modèles déclenchent une revue gouvernementale pré-lancement — de facto obligatoire après l'épisode Fable 5. Échéance ferme : 1er août.</p>
+      <a href="https://finance.yahoo.com/technology/ai/articles/us-talks-ai-companies-voluntary-001646707.html">finance.yahoo.com (Reuters) — <span class="date">2 juil</span></a>
+    </div>
+  </section>
+
+  <!-- Corps -->
+  <h2>IA — modèles, produits, communications</h2>
+
+  <div class="item">
+    <div class="item-title">Emploi US : +57 000 postes en juin, l'IA pointée comme facteur structurel</div>
+    <p class="item-fact">Le rapport emploi du BLS pour juin 2026, publié le 2 juillet (un jour d'avance à cause du férié du 4-Juillet), affiche seulement +57 000 postes non agricoles, très en deçà du consensus (~115 000) et en net ralentissement vs mai (+129 000 révisé). Le taux de chômage recule paradoxalement à 4,2 %, tiré par une baisse de la participation (61,5 %, plus bas depuis mars 2021). Les analystes lient la faiblesse aux licenciements tech redirigés vers les capex IA et à l'érosion des postes juniors d'administration, contenu et support.</p>
+    <p class="item-links"><a href="https://www.bls.gov/news.release/archives/empsit_07022026.htm">bls.gov</a> · <a href="https://www.cnbc.com/2026/07/02/jobs-report-june-2026-.html">cnbc.com</a> — <span class="date">2 juil</span></p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Cadre US « volontaire » sur les modèles frontier : annonce imminente</div>
+    <p class="item-fact">Le FT (2 juil.) rapporte que la Maison-Blanche finalise avec les labos un cadre de standards volontaires pour la sortie des modèles frontier, avec une annonce possible dès la semaine du 7 juillet. Reuters confirme que Google est dans les discussions, en amont de ses sorties de modèles de code (Gemini 3.5 Pro attendu en juillet). Le dispositif met en œuvre l'executive order du 2 juin : benchmarks classifiés pour désigner un « covered frontier model », fenêtre de revue gouvernementale pré-lancement de 30 jours, et règles d'accès international. Nominalement volontaire, mais de facto requis après l'épisode Fable 5 (19 jours hors ligne). Échéance de mise en œuvre : 1er août.</p>
+    <p class="item-links"><a href="https://finance.yahoo.com/technology/ai/articles/us-talks-ai-companies-voluntary-001646707.html">finance.yahoo.com (Reuters)</a> · <a href="https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/">whitehouse.gov</a> — <span class="date">2 juil</span></p>
+    <p class="analysis"><strong>→ Pour le lecteur :</strong> impact indirect mais réel — ce cadre conditionne la disponibilité et le calendrier des modèles frontier US sur lesquels un produit IA s'appuie. Un décalage de sortie ou un blocage export (cf. Fable 5) est un risque d'approvisionnement à intégrer dans le choix d'un fournisseur de modèle.</p>
+  </div>
+
+  <h2>M&amp;A &amp; investissements IA</h2>
+
+  <div class="item">
+    <div class="item-title">MGX clôture un fonds IA de 49 Md$, au-dessus de sa cible</div>
+    <p class="item-fact">Le fonds souverain émirati MGX (Abu Dhabi), déjà investisseur dans OpenAI et Anthropic, a annoncé le 1er juillet la clôture de MGX Fund 1 à 49 Md$ de commitments, au-dessus de sa cible de 45 Md$ — l'un des plus gros véhicules jamais dédiés à l'IA. L'orientation affichée : l'infrastructure (data centers, compute, semi-conducteurs) plutôt que la couche applicative. Le closing renforce le poids des capitaux souverains du Golfe dans le financement de la vague IA.</p>
+    <p class="item-links"><a href="https://www.cnbc.com/2026/07/01/mgx-ai-fund-uae-49-billion.html">cnbc.com</a> · <a href="https://www.thenationalnews.com/business/markets/2026/07/01/abu-dhabis-ai-investment-firm-mgx-raises-49bn-for-new-fund/">thenationalnews.com</a> — <span class="date">1 juil</span></p>
+    <p class="analysis"><strong>→ Pour le lecteur :</strong> pas d'impact produit direct, mais un signal de fond : le capital se massifie sur l'infrastructure (compute), ce qui tire vers le bas le coût d'inférence à moyen terme — favorable à un produit qui consomme de l'API modèle plutôt que d'entraîner le sien.</p>
+  </div>
+
+  <h2>Sociétés innovantes IA-native</h2>
+  <p class="empty">Rien à signaler sur ce volet dans la fenêtre. Aucune sortie ou levée IA-native nette depuis le brief du 3 juillet (jour férié US).</p>
+
+  <h2>Applications d'entraînement sportif</h2>
+  <p class="empty">Rien à signaler sur ce volet. Aucune actualité sourçable sur la watchlist (directs, indirects, à surveiller) depuis le brief du 3 juillet. Dernier mouvement marquant hors fenêtre : refonte « strength training » de Strava et rachat de Runna par Strava, courant Q2 2026.</p>
+
+  <!-- Sources -->
+  <h2>Qualité des sources</h2>
+  <div class="sources">
+    <span class="src">bls.gov 🟢</span>
+    <span class="src">cnbc.com 🟢</span>
+    <span class="src">whitehouse.gov 🟢</span>
+    <span class="src">finance.yahoo.com (Reuters) 🟢</span>
+    <span class="src">thenationalnews.com 🟡</span>
+  </div>
+
+  <div class="footer">
+    <p>Brief généré automatiquement — fenêtre « depuis le dernier brief » (3–4 juillet). Le 4 juillet est férié aux États-Unis (Independence Day) : très peu d'actualité primaire nouvelle. Les 3 items retenus sont les développements nets depuis le brief du 3 juillet (MGX, emploi US, cadre frontier US) ; aucun n'a été gonflé pour remplir. Watchlist sport endurance : calme. Une journée silencieuse est un signal, pas un bug.</p>
+    <p class="notif-log">Notification push envoyée : oui — mode systématique (1 push/jour). Aucun trigger haut-impact strict (pas de concurrent direct, pas de modèle frontier, pas de sport-tech, pas de brique technique réutilisable). Item le plus saillant : MGX 49 Md$ (signal marché, sans impact produit direct) — priorité : 3 (default).</p>
+  </div>
+
+</div>
+</body>
+</html>
