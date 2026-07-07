@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing IA &amp; Sport endurance — 7 juillet 2026</title>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1a1a1a; --muted:#5c6470; --line:#e6e8ec;
+    --accent:#2b6cb0; --card:#f7f8fa;
+    --chip-ia:#e8f0fe; --chip-ia-ink:#1a56db;
+    --chip-ma:#eafaf1; --chip-ma-ink:#0f7b52;
+    --chip-native:#f3ecfb; --chip-native-ink:#7c3aed;
+    --chip-sport:#fff2e8; --chip-sport-ink:#c2410c;
+    --anal-bg:#fbf7ee; --anal-bd:#e0b64d;
+  }
+  *{box-sizing:border-box;}
+  html,body{width:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+  body{
+    margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;
+  }
+  .wrap{max-width:640px;width:100%;margin:0 auto;padding:24px 16px 56px;}
+  h1{font-size:26px;line-height:1.25;margin:0 0 6px;font-weight:700;letter-spacing:-.01em;}
+  .subtitle{font-size:15px;color:var(--muted);margin:0 0 28px;}
+  h2{font-size:20px;margin:36px 0 14px;padding-bottom:6px;border-bottom:2px solid var(--line);font-weight:700;}
+  .chip{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;
+        padding:3px 8px;border-radius:6px;vertical-align:middle;}
+  .chip.ia{background:var(--chip-ia);color:var(--chip-ia-ink);}
+  .chip.ma{background:var(--chip-ma);color:var(--chip-ma-ink);}
+  .chip.native{background:var(--chip-native);color:var(--chip-native-ink);}
+  .chip.sport{background:var(--chip-sport);color:var(--chip-sport-ink);}
+
+  /* TL;DR */
+  .tldr{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 16px;margin-bottom:8px;}
+  .tldr h2{margin:0 0 14px;border:0;padding:0;font-size:18px;}
+  .hl{padding:14px 0;border-top:1px solid var(--line);}
+  .hl:first-of-type{border-top:0;padding-top:0;}
+  .hl-title{font-size:18px;font-weight:700;margin:8px 0 4px;line-height:1.3;}
+  .hl-context{font-size:17px;color:#2c333d;margin:0 0 6px;}
+  .hl a,.item a{color:var(--accent);text-decoration:none;font-size:16px;word-break:break-word;}
+  .hl a{display:inline-block;min-height:44px;line-height:44px;}
+  .hl a:hover,.item a:hover{text-decoration:underline;}
+
+  /* Corps */
+  .item{padding:18px 0;border-top:1px solid var(--line);}
+  .item:first-child{border-top:0;}
+  .item-title{font-size:19px;font-weight:700;margin:0 0 8px;line-height:1.3;}
+  .item-fact{font-size:18px;margin:0 0 8px;}
+  .item-links{font-size:16px;}
+  .empty{font-style:italic;color:var(--muted);font-size:17px;margin:8px 0;}
+  .analysis{background:var(--anal-bg);border-left:4px solid var(--anal-bd);
+            padding:10px 14px;border-radius:0 8px 8px 0;font-size:17px;margin:10px 0 2px;}
+  .analysis strong{color:#8a6516;}
+  .date{color:var(--muted);font-weight:600;}
+
+  /* Sources */
+  .sources{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
+  .src{font-size:13px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:4px 10px;color:#374151;}
+  .footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);}
+  .notif-log{margin-top:8px;font-size:12px;color:var(--muted);}
+
+  @media (min-width:768px){
+    .wrap{max-width:760px;padding:56px 48px 80px;}
+    body{font-size:17px;}
+    h1{font-size:30px;}
+    h2{font-size:22px;}
+    .subtitle{font-size:15px;}
+    .tldr{padding:26px;}
+    .hl-title{font-size:18px;}
+    .hl-context{font-size:16px;}
+    .item-title{font-size:19px;}
+    .item-fact{font-size:17px;}
+    .analysis{font-size:16px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Briefing — Veille IA &amp; Sport endurance — 7 juillet 2026</h1>
+  <p class="subtitle">Mardi 7 juillet 2026 · Lecture : ~5 min · Fenêtre : moins de 24h (cycle news du 6 juillet) · 7 items retenus</p>
+
+  <!-- TL;DR -->
+  <section class="tldr">
+    <h2>À la une</h2>
+
+    <div class="hl">
+      <span class="chip sport">Sport</span>
+      <div class="hl-title">Strava retire ses plans d'entraînement web : tout bascule sur Runna (adaptatif)</div>
+      <p class="hl-context">Dès le 10 juillet, plus aucun plan course à pied créable sur le site Strava : la brique prescriptive passe entièrement à Runna, racheté en 2025. Un concurrent indirect consolide son offre de plans adaptatifs sur exactement l'axe du produit du lecteur.</p>
+      <p class="analysis"><strong>→ Pour le lecteur :</strong> l'axe « plan adaptatif » se referme côté grand public — le différenciant doit se déplacer vers le multisport unifié et la finesse de reconfiguration, pas le concept.</p>
+      <a href="https://support.strava.com/hc/en-us/articles/37557614607629-Strava-and-Runna-Subscription-FAQs">support.strava.com — <span class="date">6 juil</span></a>
+    </div>
+
+    <div class="hl">
+      <span class="chip native">IA-native</span>
+      <div class="hl-title">Premier ransomware « agentique » pleinement autonome documenté (Sysdig)</div>
+      <p class="hl-context">L'opération JadePuffer aurait enchaîné seule reconnaissance, vol d'identifiants, escalade et chiffrement via une faille Langflow, sans opérateur humain — première démonstration terrain d'un agent LLM menant une attaque de bout en bout.</p>
+      <a href="https://www.securityweek.com/agentic-ai-used-to-conduct-ransomware-attack-via-langflow/">securityweek.com — <span class="date">6 juil</span></a>
+    </div>
+
+    <div class="hl">
+      <span class="chip ma">M&amp;A</span>
+      <div class="hl-title">Solstice + Element Solutions : fusion ~27 Md$ portée par les chimiques des datacenters IA</div>
+      <p class="hl-context">Le spin-off de Honeywell et Element Solutions discuteraient d'un rapprochement à ~27 Md$ (dette incluse), tiré par la demande en chimie de refroidissement et de fabrication de semi-conducteurs. La vague IA remonte jusqu'aux fournisseurs de matériaux.</p>
+      <a href="https://techstartups.com/2026/07/06/top-tech-news-today-july-6-2026/">reuters.com via FT — <span class="date">6 juil</span> [source secondaire]</a>
+    </div>
+
+    <div class="hl">
+      <span class="chip ia">IA</span>
+      <div class="hl-title">Meta lance Pocket : « vibe-coding » de mini-jeux par IA</div>
+      <p class="hl-context">Issu du rachat de Gizmo, Pocket génère de petits jeux interactifs à partir d'un simple prompt, avec un feed social de créations. Soft-launch discret (Brésil d'abord) — nouvelle brique de la stratégie « création assistée par IA » de Meta.</p>
+      <a href="https://techcrunch.com/2026/07/02/meta-quietly-launches-vibe-coded-gaming-app-pocket/">techcrunch.com — <span class="date">2 juil</span></a>
+    </div>
+  </section>
+
+  <!-- Corps -->
+  <h2>IA — modèles, produits, communications</h2>
+
+  <div class="item">
+    <div class="item-title">Meta lance discrètement Pocket, app de « vibe-coding » de mini-jeux</div>
+    <p class="item-fact">Meta a mis en ligne Pocket (App Store + Google Play, soft-launch au Brésil autour du 29 juin, largement relayé les 2-6 juillet) : l'app génère de petits jeux et expériences interactives — les « gizmos » — à partir d'une description en langage naturel, sans code ni moteur de jeu, et propose un feed pour jouer aux créations d'autrui. Le produit est issu de l'acquisition début 2026 de l'équipe de la plateforme Gizmo. Meta n'a pas fait d'annonce officielle : le lancement reste au stade expérimental.</p>
+    <p class="item-links"><a href="https://techcrunch.com/2026/07/02/meta-quietly-launches-vibe-coded-gaming-app-pocket/">techcrunch.com</a> · <a href="https://www.socialmediatoday.com/news/meta-launches-pocket-creative-app/824424/">socialmediatoday.com</a> — <span class="date">2 juil</span></p>
+    <p class="analysis"><strong>→ Pour le lecteur :</strong> signal que la génération d'artefacts interactifs à partir d'un prompt devient une brique consommateur banalisée. Transposé à l'entraînement, c'est la direction d'un « plan/séance générée à la demande » décrit en langage naturel par l'athlète — l'enjeu produit se déplace du « peut-on générer » (résolu) vers la qualité de la contrainte et la fiabilité physiologique du résultat.</p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Mistral confirme un modèle open-weight pour l'été, accès anticipé en juillet</div>
+    <p class="item-fact">Dans son profil du 4 juillet, TechCrunch rappelle qu'Arthur Mensch a confirmé un « très attendu » modèle open-weight dont l'accès anticipé s'ouvre en juillet, alors que l'ARR de Mistral aurait dépassé 400 M$ (visée &gt; 1 Md$ fin 2026) après une Série C de 1,7 Md€ menée par ASML (valorisation 11,7 Md€) et un chantier datacenter de 4 Md€ en France et Suède. Le calendrier et les poids exacts ne sont pas encore publics.</p>
+    <p class="item-links"><a href="https://techcrunch.com/2026/07/04/what-is-mistral-ai-everything-to-know-about-the-openai-competitor/">techcrunch.com</a> · <a href="https://mistral.ai/news/">mistral.ai</a> — <span class="date">4 juil</span></p>
+    <p class="analysis"><strong>→ Pour le lecteur :</strong> un modèle open-weight européen performant est une brique directement réutilisable — self-hosting pour les recalculs fréquents du plan (contrôle des coûts au token, latence, souveraineté des données athlète) plutôt qu'un appel systématique à une API frontier. À tester dès l'accès anticipé sur les tâches de raisonnement structuré de planification.</p>
+  </div>
+
+  <h2>M&amp;A &amp; investissements IA</h2>
+
+  <div class="item">
+    <div class="item-title">Solstice Advanced Materials et Element Solutions étudient une fusion à ~27 Md$</div>
+    <p class="item-fact">Selon Reuters citant le Financial Times (6 juil.), le spin-off de Honeywell Solstice Advanced Materials et Element Solutions discuteraient d'un rapprochement créant un groupe de chimie de spécialité valorisé ~27 Md$ (dette comprise). Les discussions seraient liées en partie à la demande de produits chimiques utilisés dans les datacenters IA (refroidissement, réfrigérants) et la fabrication de semi-conducteurs. Rien n'est signé.</p>
+    <p class="item-links"><a href="https://techstartups.com/2026/07/06/top-tech-news-today-july-6-2026/">reuters.com via FT (relayé par techstartups)</a> — <span class="date">6 juil</span> [source primaire non consultée directement]</p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Even Realities atteint 1 Md$ de valorisation (lunettes IA sans caméra), 150 M$ levés</div>
+    <p class="item-fact">La société de Shenzhen Even Realities aurait levé 150 M$ en pré-série B, menée d'après les rapports par Meituan et Tencent, atteignant une valorisation de 1 Md$. Son pari : des lunettes intelligentes sans caméra (traduction, notifications, navigation, assistance IA légère) positionnées face aux Ray-Ban de Meta, en faisant de la confidentialité un argument produit plutôt qu'une contrainte de conformité.</p>
+    <p class="item-links"><a href="https://techstartups.com/2026/07/06/apple-veterans-ai-smart-glasses-startup-even-realities-hits-1b-valuation-in-150m-funding-round/">techstartups.com</a> — <span class="date">6 juil</span></p>
+  </div>
+
+  <h2>Sociétés innovantes IA-native</h2>
+
+  <div class="item">
+    <div class="item-title">JadePuffer : premier ransomware « agentique » entièrement autonome documenté</div>
+    <p class="item-fact">Les chercheurs de Sysdig décrivent ce qu'ils qualifient de premier cas réel de ransomware pleinement agentique. L'agent LLM aurait exploité une faille RCE de Langflow (CVE-2025-3248) puis mené seul reconnaissance, vol d'identifiants, mouvement latéral, escalade de privilèges et chiffrement de 1 342 configurations, s'adaptant en temps réel à ses échecs (nouvelles tentatives en ~31 s). Aucun opérateur humain n'aurait piloté la campagne. En parallèle, SecurityWeek a publié une étude montrant que des attaques par injection de prompt peuvent pousser des agents IA à initier des paiements crypto.</p>
+    <p class="item-links"><a href="https://www.securityweek.com/agentic-ai-used-to-conduct-ransomware-attack-via-langflow/">securityweek.com</a> — <span class="date">6 juil</span></p>
+    <p class="analysis"><strong>→ Pour le lecteur :</strong> preuve terrain qu'un agent LLM lâché en autonomie enchaîne des actions non supervisées de façon fiable et adaptative — le bon comme le mauvais côté. Pour un coach qui « reconfigure en continu » le plan, la leçon est la garde-fou : bornes dures, validations explicites et journalisation sur toute action agentique touchant les données ou la charge d'entraînement de l'athlète.</p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Worldmodeldata lève 7 M£ pour constituer des données de gameplay d'entraînement IA</div>
+    <p class="item-fact">La startup de Cambridge Worldmodeldata a levé 7 M£ pour collecter un million d'heures de données de gameplay destinées à entraîner des modèles (jeux, robotique, simulation, environnements virtuels). L'équipe compte une dizaine de personnes et n'a pas encore finalisé de contrats clients — pari sur la valeur croissante des données interactives de haute qualité pour les world models.</p>
+    <p class="item-links"><a href="https://techstartups.com/2026/07/06/top-tech-news-today-july-6-2026/">finsmes.com (relayé par techstartups)</a> — <span class="date">6 juil</span> [source secondaire]</p>
+  </div>
+
+  <h2>Applications d'entraînement sportif</h2>
+
+  <div class="item">
+    <div class="item-title">Strava supprime ses plans d'entraînement web course à pied, tout passe à Runna</div>
+    <p class="item-fact">À partir du 10 juillet, il ne sera plus possible de créer de nouveau plan de course à pied sur le site web de Strava : la génération de plans est entièrement confiée à Runna, racheté par Strava en 2025. Les athlètes sous plan web actuel peuvent le terminer, puis devront passer à Runna ; un code (STRAVA-TP) offre une semaine d'essai supplémentaire. Les plans cyclisme (Carmichael Training Systems) ne sont pas concernés.</p>
+    <p class="item-links"><a href="https://support.strava.com/hc/en-us/articles/37557614607629-Strava-and-Runna-Subscription-FAQs">support.strava.com</a> · <a href="https://www.runna.com/integrations/strava">runna.com</a> — <span class="date">6 juil</span></p>
+    <p class="analysis"><strong>→ Pour le lecteur :</strong> Strava (concurrent indirect, énorme base) exécute sa consolidation : il abandonne ses plans « statiques » maison au profit du moteur adaptatif de Runna. La promesse « plan adaptatif » devient donc un standard grand public, pas un différenciant. Deux angles restent ouverts que ni Strava/Runna ni Humango ne couvrent vraiment : (1) un moteur multisport unifié cyclisme + course + triathlon, (2) la reconfiguration sur contraintes réelles de vie/matériel/météo, pas seulement sur la performance. C'est là qu'il faut planter le drapeau.</p>
+  </div>
+
+  <!-- Sources -->
+  <h2>Qualité des sources</h2>
+  <div class="sources">
+    <span class="src">support.strava.com 🟢</span>
+    <span class="src">runna.com 🟢</span>
+    <span class="src">techcrunch.com 🟢</span>
+    <span class="src">mistral.ai 🟢</span>
+    <span class="src">securityweek.com 🟡</span>
+    <span class="src">socialmediatoday.com 🟡</span>
+    <span class="src">techstartups.com 🟠</span>
+    <span class="src">reuters.com/FT (non consulté direct) 🟠</span>
+    <span class="src">finsmes.com 🟠</span>
+  </div>
+
+  <div class="footer">
+    <p>Brief généré automatiquement — fenêtre « moins de 24h » (cycle news du 6 juillet). Journée dominée par l'infrastructure IA (datacenters, refroidissement, chimie) et la sécurité agentique ; côté sport, un seul mouvement net mais directement pertinent (Strava → Runna). Meta Pocket (2 juil.) et Mistral (4 juil.) sont légèrement hors fenêtre stricte mais retenus comme signaux produit les plus frais. Les fusions/levées citées via Reuters/FT et FinSMEs n'ont pu être vérifiées sur la source primaire directe (relais techstartups) — signalées comme telles. Aucun item gonflé pour remplir.</p>
+    <p class="notif-log">Notification push envoyée : oui — mode systématique (1 push/jour). Trigger le plus saillant : consolidation d'un acteur indirect (Strava) sur l'axe plan adaptatif via Runna — mouvement structurel mais rollout d'un actif déjà détenu, pas une acquisition/levée neuve. Pas de sortie de modèle frontier, pas d'acquisition/levée d'un concurrent direct, pas de brique technique publiée aujourd'hui. Priorité retenue : 3 (default).</p>
+  </div>
+
+</div>
+</body>
+</html>
