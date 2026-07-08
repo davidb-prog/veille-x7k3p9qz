@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — Veille IA &amp; Sport endurance — 8 juillet 2026</title>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1a1a1a; --muted:#5c5c5c; --line:#e5e5e5;
+    --accent:#1f5fbf; --card:#f7f8fa; --tldr:#f0f5ff; --tldr-border:#c9dbf5;
+    --chip-ia:#e8f0fe; --chip-ia-ink:#1a56c4;
+    --chip-ma:#fdeede; --chip-ma-ink:#a85400;
+    --chip-native:#eafaf0; --chip-native-ink:#137a45;
+    --chip-sport:#fce9f1; --chip-sport-ink:#a31259;
+    --analysis-bg:#fbf8ee; --analysis-border:#e3c56b;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;width:100%;background:var(--bg);color:var(--ink);
+    -webkit-text-size-adjust:100%;text-size-adjust:100%;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;}
+  .wrap{max-width:640px;width:100%;margin:0 auto;padding:24px 16px 56px;}
+  h1{font-size:26px;line-height:1.25;margin:0 0 6px;font-weight:700;letter-spacing:-0.01em;}
+  .subtitle{font-size:15px;color:var(--muted);margin:0 0 28px;}
+  h2{font-size:20px;margin:36px 0 14px;padding-bottom:6px;border-bottom:2px solid var(--line);font-weight:700;letter-spacing:-0.01em;}
+  a{color:var(--accent);word-break:break-word;overflow-wrap:anywhere;}
+  .chip{display:inline-block;font-size:12px;font-weight:700;padding:3px 9px;border-radius:20px;
+    letter-spacing:0.02em;vertical-align:middle;}
+  .chip.ia{background:var(--chip-ia);color:var(--chip-ia-ink);}
+  .chip.ma{background:var(--chip-ma);color:var(--chip-ma-ink);}
+  .chip.native{background:var(--chip-native);color:var(--chip-native-ink);}
+  .chip.sport{background:var(--chip-sport);color:var(--chip-sport-ink);}
+
+  /* TL;DR */
+  .tldr{background:var(--tldr);border:1px solid var(--tldr-border);border-radius:14px;
+    padding:18px 16px;margin:0 0 8px;}
+  .tldr .eyebrow{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;
+    color:var(--accent);margin:0 0 12px;}
+  .hl{padding:14px 0;border-top:1px solid var(--tldr-border);}
+  .hl:first-of-type{border-top:none;padding-top:0;}
+  .hl-title{font-size:18px;font-weight:700;margin:8px 0 5px;line-height:1.3;}
+  .hl-context{font-size:17px;color:#2c2c2c;margin:0 0 6px;}
+  .hl a{display:inline-block;min-height:20px;font-size:16px;}
+  .analysis{background:var(--analysis-bg);border-left:4px solid var(--analysis-border);
+    border-radius:0 8px 8px 0;padding:9px 12px;margin:8px 0 2px;font-size:17px;}
+  .analysis b{color:#7a5c00;}
+
+  /* Body items */
+  .item{padding:16px 0;border-top:1px solid var(--line);}
+  .item:first-of-type{border-top:none;}
+  .item-title{font-size:19px;font-weight:700;margin:0 0 6px;line-height:1.3;}
+  .item-fact{font-size:18px;margin:0 0 8px;}
+  .item-links{font-size:16px;color:var(--muted);}
+  .item-links a{margin-right:4px;}
+  .date{color:var(--muted);white-space:nowrap;}
+  .empty{font-style:italic;color:var(--muted);font-size:17px;}
+  .flag{font-size:14px;color:#a85400;font-style:italic;}
+
+  /* Sources */
+  .sources{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px;}
+  .src-chip{background:var(--card);border:1px solid var(--line);border-radius:8px;
+    padding:5px 9px;font-size:14px;color:#333;}
+  .foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);
+    font-size:13px;color:var(--muted);}
+  .legend{font-size:14px;color:var(--muted);margin:6px 0 0;}
+
+  @media (min-width:768px){
+    .wrap{max-width:760px;padding:56px 48px 80px;}
+    body{font-size:17px;}
+    h1{font-size:30px;}
+    h2{font-size:22px;}
+    .subtitle{font-size:15px;}
+    .tldr{padding:26px 28px;}
+    .hl-title{font-size:18px;}
+    .hl-context{font-size:16px;}
+    .analysis{font-size:16px;}
+    .item-title{font-size:19px;}
+    .item-fact{font-size:17px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Briefing — Veille IA &amp; Sport endurance — 8 juillet 2026</h1>
+  <p class="subtitle">Mercredi 8 juillet 2026 · Lecture : ~5 min · Fenêtre : dernières 24h · 11 items couverts</p>
+
+  <!-- ===================== TL;DR ===================== -->
+  <section class="tldr">
+    <p class="eyebrow">À la une</p>
+
+    <div class="hl">
+      <span class="chip ia">IA</span>
+      <div class="hl-title">OpenAI lance GPT-Live, un modèle vocal « full-duplex »</div>
+      <p class="hl-context">Nouvelle génération de modèles vocaux qui écoutent et parlent en même temps, délèguent le raisonnement lourd à GPT-5.5 en arrière-plan et affichent des cartes visuelles. Déploiement mondial dans ChatGPT dès aujourd'hui ; API « bientôt ».</p>
+      <div class="analysis"><b>→ Pour le lecteur :</b> brique de coaching conversationnel temps réel directement pertinente pour un coach IA vocal — mais l'API n'est pas encore ouverte, à surveiller pour l'intégration.</div>
+      <p><a href="https://openai.com/index/introducing-gpt-live/">openai.com — 8 juillet</a></p>
+    </div>
+
+    <div class="hl">
+      <span class="chip ma">M&amp;A</span>
+      <div class="hl-title">SambaNova lève 1 Md$ à 11 Md$ + devient partenaire d'inférence de JPMorgan</div>
+      <p class="hl-context">Premier closing d'une Série F menée par General Atlantic. Signal fort : JPMorganChase choisit SambaNova pour son inférence IA on-premise sécurisée — les banques internalisent leur infra plutôt que de tout confier au cloud.</p>
+      <div class="analysis"><b>→ Pour le lecteur :</b> la couche inférence se commoditise et migre on-premise ; l'avantage d'un produit endurance restera la couche logicielle/coaching adaptative, pas le compute.</div>
+      <p><a href="https://techcrunch.com/2026/07/08/sambanova-draws-1b-at-11b-valuation-in-series-f-first-close/">techcrunch.com — 8 juillet</a></p>
+    </div>
+
+    <div class="hl">
+      <span class="chip native">IA-native</span>
+      <div class="hl-title">Monogram sort du stealth avec 40 M$ et une IA qui génère l'interface</div>
+      <p class="hl-context">La startup d'Eren Bali (ex-Udemy) lance une app iOS dont l'IA génère à la volée une interface visuelle interactive (menus, cartes) plutôt qu'une réponse texte. Seed mené par DST Global et Lux Capital.</p>
+      <div class="analysis"><b>→ Pour le lecteur :</b> la « génération d'UI adaptative » est réutilisable pour afficher dynamiquement un plan, un graphe de progression ou une séance reconfigurée selon les contraintes de l'athlète.</div>
+      <p><a href="https://www.monogram.ai/blog/introducing-monogram">monogram.ai — 7 juillet</a></p>
+    </div>
+
+    <div class="hl">
+      <span class="chip sport">Sport</span>
+      <div class="hl-title">Getahead lance « Strava for your mind », un coach mental IA pour l'endurance</div>
+      <p class="hl-context">Nouvel entrant adjacent : évaluation psychologique sur 10 dimensions, plan personnalisé tiré de 250+ séances, coach IA contextuel voix/texte. Partenariats HYROX, Ultra X. Premium 14,99 £/mois.</p>
+      <div class="analysis"><b>→ Pour le lecteur :</b> même pattern que ton positionnement — « assessment → plan personnalisé adaptatif + coach IA » — appliqué au mental. La vague coaching-IA + personnalisation s'étend, et valide la thèse produit sur un segment voisin.</div>
+      <p><a href="https://endurance.biz/2026/industry-news/strava-for-your-mind-getahead-launches-mental-performance-platform-for-endurance-athletes/">endurance.biz — 8 juillet</a></p>
+    </div>
+
+  </section>
+
+  <!-- ===================== SECTION 1 ===================== -->
+  <h2><span class="chip ia">IA</span>&nbsp; IA — modèles, produits, communications</h2>
+
+  <div class="item">
+    <div class="item-title">GPT-Live : voix full-duplex + délégation au modèle frontier</div>
+    <p class="item-fact">OpenAI lance GPT-Live, une génération de modèles vocaux à architecture full-duplex (écoute et parle simultanément, gère les interruptions et les silences). Pour les tâches complexes (recherche, raisonnement), le modèle délègue en arrière-plan à GPT-5.5 tout en maintenant la conversation, et peut afficher des cartes visuelles (météo, sport, bourse). Deux versions — GPT-Live-1 (défaut Go/Plus/Pro) et GPT-Live-1 mini (défaut Free) — déployées mondialement dans ChatGPT dès aujourd'hui. Reste flou : date d'ouverture de l'API et couverture linguistique (accent non-natif possible sur certaines langues). Pas encore de vidéo ni de partage d'écran.</p>
+    <p class="item-links"><a href="https://openai.com/index/introducing-gpt-live/">openai.com/introducing-gpt-live</a> · <a href="https://deploymentsafety.openai.com/gpt-live">system card</a> · <span class="date">8 juillet</span></p>
+    <div class="analysis"><b>→ Pour le lecteur :</b> un coach vocal naturel en temps réel (encouragements, ajustements pendant l'effort) devient une brique crédible ; à intégrer via l'API dès son ouverture. La délégation en arrière-plan est un pattern d'archi intéressant : dialogue fluide en façade, calcul lourd (replanification du plan) découplé.</div>
+  </div>
+
+  <div class="item">
+    <div class="item-title">OpenAI attaque la fiabilité des benchmarks de code (SWE-Bench Pro)</div>
+    <p class="item-fact">OpenAI publie un audit affirmant qu'environ 30 % des tâches du benchmark SWE-Bench Pro sont « cassées » (tests trop stricts, prompts sous-spécifiés, couverture faible) et retire sa recommandation d'adopter ce benchmark. Signal sur la crédibilité des comparaisons de modèles de codage publiées par les labos.</p>
+    <p class="item-links"><a href="https://openai.com/index/separating-signal-from-noise-coding-evaluations/">openai.com/separating-signal-from-noise</a> · <span class="date">8 juillet</span></p>
+  </div>
+
+  <!-- ===================== SECTION 2 ===================== -->
+  <h2><span class="chip ma">M&amp;A</span>&nbsp; M&amp;A &amp; investissements IA</h2>
+
+  <div class="item">
+    <div class="item-title">SambaNova : 1 Md$ (Série F, 1er closing) à 11 Md$ + deal JPMorgan</div>
+    <p class="item-fact">Le fabricant de puces IA SambaNova (Palo Alto) lève 1 Md$ mené par General Atlantic, à 11 Md$ de valorisation, un second closing attendu dans les prochaines semaines (T. Rowe Price, Capital Group, BlackRock, QIA, Intel…). Surtout, SambaNova est retenu par JPMorganChase comme « partenaire d'infrastructure d'inférence » pour de l'IA on-premise sécurisée (systèmes SN40L/SN50). Cinq mois après une Série E de 350 M$ ; Intel avait discuté un rachat à ~1,6 Md$ fin 2025.</p>
+    <p class="item-links"><a href="https://techcrunch.com/2026/07/08/sambanova-draws-1b-at-11b-valuation-in-series-f-first-close/">techcrunch.com — SambaNova Series F</a> · <span class="date">8 juillet</span></p>
+    <div class="analysis"><b>→ Pour le lecteur :</b> signal que l'inférence devient une commodité (banques, souverains internalisent). Pour un produit endurance, la différenciation ne viendra pas du modèle brut mais de la boucle d'adaptation propriétaire.</div>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Norm Ai : 120 M$ (Série C), licorne à 1,2 Md$</div>
+    <p class="item-fact">La startup new-yorkaise de legal AI lève 120 M$ mené par Khosla Ventures (Bain, Craft, Coatue, Vanguard, New York Life). Modèle IA-native : agents IA supervisés par des avocats, facturation à l'outcome plutôt qu'à l'heure. Plus de 260 M$ levés au total.</p>
+    <p class="item-links"><a href="https://www.prnewswire.com/news-releases/norm-ai-raises-120-million-at-a-1-2-billion-valuation-led-by-khosla-ventures-to-deliver-the-full-stack-model-for-legal-ai-302819152.html">prnewswire.com (communiqué)</a> · <a href="https://techcrunch.com/2026/07/07/ai-law-startup-norm-raises-120m-hits-unicorn-valuation/">techcrunch.com</a> · <span class="date">7 juillet</span></p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Prime Intellect : 130 M$ (Série A) à 1 Md$</div>
+    <p class="item-fact">Prime Intellect, infrastructure « full-stack » pour que les entreprises entraînent leurs propres agents IA, lève 130 M$ mené par Radical Ventures (Nvidia Ventures, Intel Capital, Dell, Iconiq). ARR annualisé revendiqué de 100 M$ ; clients cités : Ramp, Zapier.</p>
+    <p class="item-links"><a href="https://techcrunch.com/2026/07/08/prime-intellect-raises-130m-series-a-to-help-enterprises-build-their-own-ai-agents/">techcrunch.com — Prime Intellect</a> · <span class="date">8 juillet</span></p>
+    <div class="analysis"><b>→ Pour le lecteur :</b> l'infra pour entraîner ses propres agents/modèles verticaux se démocratise — piste pour un moteur de planification propriétaire (RL/agents) sans repartir de zéro.</div>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Paradigm boucle un 4e fonds à 1,2 Md$ (crypto → IA &amp; robotique)</div>
+    <p class="item-fact">Le VC Paradigm (Matt Huang, Fred Ehrsam) clôture son 4e fonds à 1,2 Md$ et élargit explicitement son mandat à la robotique et l'IA. Montant sous l'objectif initial de 1,5 Md$.</p>
+    <p class="item-links"><a href="https://www.paradigm.xyz/writing/announcing-our-fourth-fund">paradigm.xyz (blog)</a> · <a href="https://techcrunch.com/2026/07/08/crypto-vc-firm-paradigm-raises-1-2b-to-invest-in-technical-frontier-startups/">techcrunch.com</a> · <span class="date">8 juillet</span></p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Figma rachète l'équipe de Bud (ex-Orchids), vibe-coding IA</div>
+    <p class="item-fact">Acqui-hire : Figma récupère l'équipe derrière Bud (ex-Orchids), plateforme d'agents IA / vibe-coding backée par Y Combinator. Bud et Orchids ferment le 18 juillet. Montant non divulgué.</p>
+    <p class="item-links"><a href="https://techcrunch.com/2026/07/07/figma-acquires-team-behind-a-vibe-coding-app/">techcrunch.com — Figma/Bud</a> · <span class="date">7 juillet</span></p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Microsoft substitue ses modèles MAI à OpenAI/Anthropic dans certaines apps</div>
+    <p class="item-fact">Selon Bloomberg, Microsoft remplacerait OpenAI et Anthropic par ses propres modèles MAI dans Excel et Outlook (dizaines de milliers de prompts/semaine traités en interne), dans une logique de réduction de coûts et de dépendance. <span class="flag">Corps de l'article Bloomberg non consultable au moment de la rédaction — titre daté 7 juillet, à confirmer.</span></p>
+    <p class="item-links"><a href="https://www.bloomberg.com/news/articles/2026-07-07/microsoft-replaces-openai-anthropic-with-own-ai-in-some-apps">bloomberg.com [source secondaire]</a> · <span class="date">7 juillet</span></p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Meta investirait ~10 Md$ dans son 1er data center au Canada</div>
+    <p class="item-fact">Selon Bloomberg, Meta prévoirait un premier data center canadien (Sturgeon County, Alberta ; ~1 GW) pour ses ambitions IA. <span class="flag">Corps de l'article Bloomberg non consultable au moment de la rédaction — titre daté 8 juillet, à confirmer.</span></p>
+    <p class="item-links"><a href="https://www.bloomberg.com/news/articles/2026-07-08/meta-to-build-first-data-center-in-canada-expanding-global-fleet">bloomberg.com [source secondaire]</a> · <span class="date">8 juillet</span></p>
+  </div>
+
+  <!-- ===================== SECTION 3 ===================== -->
+  <h2><span class="chip native">IA-native</span>&nbsp; Sociétés innovantes IA-native</h2>
+
+  <div class="item">
+    <div class="item-title">Monogram : l'IA génère l'interface, pas juste le texte (40 M$ seed)</div>
+    <p class="item-fact">Fondée par Eren Bali (co-fondateur Coursera/Udemy), Monogram sort du stealth avec une app iOS grand public dont la techno centrale génère à la volée une UI visuelle et interactive (menus dynamiques, cartes) au lieu d'une réponse texte. Seed de 40 M$ mené par DST Global et Lux Capital (Conviction, Gradient Ventures, + angels dont Arthur Mensch/Mistral). Le billet de blog est daté du 30 juin, mais la sortie de stealth publique a eu lieu le 7 juillet.</p>
+    <p class="item-links"><a href="https://www.monogram.ai/blog/introducing-monogram">monogram.ai (blog)</a> · <span class="date">7 juillet</span></p>
+    <div class="analysis"><b>→ Pour le lecteur :</b> la brique « generative UI » est la plus directement réutilisable de la journée — afficher un plan reconfiguré, un feedback de séance ou un graphe adaptatif comme interface générée, pas comme chat texte. À tester comme couche de rendu.</div>
+  </div>
+
+  <div class="item">
+    <div class="item-title">JadePuffer : premier ransomware « agentique » documenté</div>
+    <p class="item-fact">Des chercheurs documentent JadePuffer, décrit comme le premier ransomware « agentique » capable de s'adapter pendant l'attaque (l'agent retente, ajuste ses actions, exécute le workflow d'extorsion de bout en bout). Ce n'est pas un produit mais un signal marquant sur la maturité des agents autonomes.</p>
+    <p class="item-links">bleepingcomputer.com <span class="flag">[URL exacte non vérifiée]</span> · <span class="date">7 juillet</span></p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Framer lance des « AI Agents » sur le canvas de design</div>
+    <p class="item-fact">Framer déploie des agents IA opérant directement sur le canvas (concevoir, rédiger, analyser, organiser des sites), avec branchement d'IA externes (Claude Code, Codex) et fonction de « branching » pour tester avant publication. En tête du leaderboard Product Hunt du 7 juillet. Item mineur (Framer n'est pas purement IA-native).</p>
+    <p class="item-links"><a href="https://www.producthunt.com/leaderboard/daily/2026/7/7">producthunt.com [agrégateur]</a> · <span class="date">7 juillet</span></p>
+  </div>
+
+  <!-- ===================== SECTION 4 ===================== -->
+  <h2><span class="chip sport">Sport</span>&nbsp; Applications d'entraînement sportif</h2>
+
+  <p class="empty" style="margin-bottom:8px;">Aucun mouvement sur les concurrents <b>directs</b> (TrainingPeaks, TrainerRoad, Athletica.ai, 2PEAK, Humango, AI Endurance, Enduco, Nolio) ni les <b>indirects</b> dans les dernières 24h. Deux signaux adjacents à noter :</p>
+
+  <div class="item">
+    <div class="item-title">Getahead lance sa plateforme de performance mentale (« Strava for your mind »)</div>
+    <p class="item-fact">Nouvel entrant adjacent, positionné entre psychologie du sport et wearables. Cœur produit : un « Mental Edge Assessment » qui cartographie le profil psychologique sur 10 dimensions, puis un plan personnalisé tiré de 250+ séances et un coach IA contextuel accessible en voix ou texte. Partenariats HYROX, Ultra X, Race For Impact. Dispo iOS/Android, premium 14,99 £/mois.</p>
+    <p class="item-links"><a href="https://endurance.biz/2026/industry-news/strava-for-your-mind-getahead-launches-mental-performance-platform-for-endurance-athletes/">endurance.biz — Getahead</a> · <span class="date">8 juillet</span></p>
+    <div class="analysis"><b>→ Pour le lecteur :</b> même architecture que ta promesse (« assessment → plan personnalisé + coach IA adaptatif »), transposée au mental. Deux lectures : concurrent potentiel sur l'attention de l'athlète endurance, ou brique/partenaire complémentaire à ton plan physique. La thèse « coaching IA personnalisé » se valide sur un segment voisin.</div>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Garmin : la marque « CIRQA » réapparaît dans de nouveaux dépôts (rumeur)</div>
+    <p class="item-fact">La marque « CIRQA » de Garmin apparaît dans les bases CIPO (Canada) et EUIPO (Europe) après un dépôt USPTO de février. La description pointe vers un capteur porté axé récupération/vigilance/performance (type Whoop/Fitbit) dont les données alimenteraient Garmin Connect. Rien d'officiel confirmé par Garmin.</p>
+    <p class="item-links"><a href="https://gadgetsandwearables.com/2026/07/08/garmin-cirqa-new-trademark-filings/">gadgetsandwearables.com [tertiaire]</a> · <span class="date">8 juillet</span></p>
+  </div>
+
+  <!-- ===================== SOURCES ===================== -->
+  <h2>Qualité des sources</h2>
+  <div class="sources">
+    <span class="src-chip">openai.com 🟢</span>
+    <span class="src-chip">deploymentsafety.openai.com 🟢</span>
+    <span class="src-chip">prnewswire.com 🟢</span>
+    <span class="src-chip">paradigm.xyz 🟢</span>
+    <span class="src-chip">monogram.ai 🟢</span>
+    <span class="src-chip">techcrunch.com 🟡</span>
+    <span class="src-chip">endurance.biz 🟡</span>
+    <span class="src-chip">bloomberg.com 🟡</span>
+    <span class="src-chip">bleepingcomputer.com 🟡</span>
+    <span class="src-chip">gadgetsandwearables.com 🟠</span>
+    <span class="src-chip">producthunt.com 🟠</span>
+  </div>
+  <p class="legend">🟢 primaire · 🟡 secondaire (média d'industrie / premium) · 🟠 tertiaire (agrégateur, blog)</p>
+
+  <div class="foot">
+    Généré automatiquement le 8 juillet 2026 — fenêtre : dernières 24h. Les items Bloomberg (Microsoft MAI, Meta Canada) sont retenus au titre mais leur corps n'a pas pu être consulté ; à confirmer. Aucune actualité des concurrents directs de la watchlist dans la fenêtre.<br><br>
+    <b>Notification haut-impact envoyée : oui</b> — triggers : #4 (levée/contrat IA &gt; 500 M$ — SambaNova 1 Md$ + partenariat institutionnel JPMorgan) · #5 (brique technique réutilisable — GPT-Live, coaching conversationnel) — priorité : 4 (high).
+  </div>
+
+</div>
+</body>
+</html>
