@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — Veille IA &amp; Sport endurance — 11 juillet 2026</title>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1a1a1a; --muted:#5c5c5c; --line:#e5e5e5;
+    --accent:#1f5fbf; --card:#f7f8fa; --tldr:#f0f5ff; --tldr-border:#c9dbf5;
+    --chip-ia:#e8f0fe; --chip-ia-ink:#1a56c4;
+    --chip-ma:#fdeede; --chip-ma-ink:#a85400;
+    --chip-native:#eafaf0; --chip-native-ink:#137a45;
+    --chip-sport:#fce9f1; --chip-sport-ink:#a31259;
+    --analysis-bg:#fbf8ee; --analysis-border:#e3c56b;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;width:100%;background:var(--bg);color:var(--ink);
+    -webkit-text-size-adjust:100%;text-size-adjust:100%;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;}
+  .wrap{max-width:640px;width:100%;margin:0 auto;padding:24px 16px 56px;}
+  h1{font-size:26px;line-height:1.25;margin:0 0 6px;font-weight:700;letter-spacing:-0.01em;}
+  .subtitle{font-size:15px;color:var(--muted);margin:0 0 28px;}
+  h2{font-size:20px;margin:36px 0 14px;padding-bottom:6px;border-bottom:2px solid var(--line);font-weight:700;letter-spacing:-0.01em;}
+  a{color:var(--accent);word-break:break-word;overflow-wrap:anywhere;}
+  .chip{display:inline-block;font-size:12px;font-weight:700;padding:3px 9px;border-radius:20px;
+    letter-spacing:0.02em;vertical-align:middle;}
+  .chip.ia{background:var(--chip-ia);color:var(--chip-ia-ink);}
+  .chip.ma{background:var(--chip-ma);color:var(--chip-ma-ink);}
+  .chip.native{background:var(--chip-native);color:var(--chip-native-ink);}
+  .chip.sport{background:var(--chip-sport);color:var(--chip-sport-ink);}
+
+  /* TL;DR */
+  .tldr{background:var(--tldr);border:1px solid var(--tldr-border);border-radius:14px;
+    padding:18px 16px;margin:0 0 8px;}
+  .tldr .eyebrow{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;
+    color:var(--accent);margin:0 0 12px;}
+  .hl{padding:14px 0;border-top:1px solid var(--tldr-border);}
+  .hl:first-of-type{border-top:none;padding-top:0;}
+  .hl-title{font-size:18px;font-weight:700;margin:8px 0 5px;line-height:1.3;}
+  .hl-context{font-size:17px;color:#2c2c2c;margin:0 0 6px;}
+  .hl a{display:inline-block;min-height:20px;font-size:16px;}
+  .analysis{background:var(--analysis-bg);border-left:4px solid var(--analysis-border);
+    border-radius:0 8px 8px 0;padding:9px 12px;margin:8px 0 2px;font-size:17px;}
+  .analysis b{color:#7a5c00;}
+
+  /* Body items */
+  .item{padding:16px 0;border-top:1px solid var(--line);}
+  .item:first-of-type{border-top:none;}
+  .item-title{font-size:19px;font-weight:700;margin:0 0 6px;line-height:1.3;}
+  .item-fact{font-size:18px;margin:0 0 8px;}
+  .item-links{font-size:16px;color:var(--muted);}
+  .item-links a{margin-right:4px;}
+  .date{color:var(--muted);white-space:nowrap;}
+  .empty{font-style:italic;color:var(--muted);font-size:17px;}
+  .flag{font-size:14px;color:#a85400;font-style:italic;}
+
+  /* Sources */
+  .sources{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px;}
+  .src-chip{background:var(--card);border:1px solid var(--line);border-radius:8px;
+    padding:5px 9px;font-size:14px;color:#333;}
+  .foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);
+    font-size:13px;color:var(--muted);}
+  .legend{font-size:14px;color:var(--muted);margin:6px 0 0;}
+
+  @media (min-width:768px){
+    .wrap{max-width:760px;padding:56px 48px 80px;}
+    body{font-size:17px;}
+    h1{font-size:30px;}
+    h2{font-size:22px;}
+    .subtitle{font-size:15px;}
+    .tldr{padding:26px 28px;}
+    .hl-title{font-size:18px;}
+    .hl-context{font-size:16px;}
+    .analysis{font-size:16px;}
+    .item-title{font-size:19px;}
+    .item-fact{font-size:17px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Briefing — Veille IA &amp; Sport endurance — 11 juillet 2026</h1>
+  <p class="subtitle">Samedi 11 juillet 2026 · Lecture : ~5 min · Fenêtre élargie : ~72h (briefs des 9 et 10 juillet non générés) · 6 items couverts</p>
+
+  <!-- ===================== TL;DR ===================== -->
+  <section class="tldr">
+    <p class="eyebrow">À la une</p>
+
+    <div class="hl">
+      <span class="chip ia">IA</span>
+      <div class="hl-title">OpenAI lance GPT-5.6 (Sol / Terra / Luna) et l'agent ChatGPT Work</div>
+      <p class="hl-context">Nouvelle famille frontier en trois tailles, état de l'art revendiqué en code et travail de connaissance, plus un agent qui « reste des heures » sur une tâche pour produire docs, slides et web apps. Riposte directe à Claude Cowork.</p>
+      <div class="analysis"><b>→ Pour le lecteur :</b> Sol serait 54 % plus efficace en tokens sur les tâches agentiques et Luna descend à 1 $/6 $ par Mtok — le coût d'un backend de coach conversationnel/replanification continue de chuter.</div>
+      <p><a href="https://openai.com/index/gpt-5-6/">openai.com — 9 juillet</a></p>
+    </div>
+
+    <div class="hl">
+      <span class="chip ia">IA</span>
+      <div class="hl-title">Meta fait payer un modèle pour la première fois : Muse Spark 1.1 + Meta Model API</div>
+      <p class="hl-context">Meta ouvre son modèle maison aux développeurs externes via une API publique (1,25 $/4,25 $ par Mtok) — rupture avec des années de poids ouverts gratuits, et signal que l'ère du frontier « gratuit » se referme.</p>
+      <p><a href="https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/">ai.meta.com — 9 juillet</a></p>
+    </div>
+
+    <div class="hl">
+      <span class="chip sport">Sport</span>
+      <div class="hl-title">Strava met la base de courses de Runna dans son app, devant 195 M d'utilisateurs</div>
+      <p class="hl-context">Nouvel onglet Events : découverte de courses (filtres distance, D+, température) branchée sur la base Runna, avec génération immédiate d'un plan Runna vers l'objectif choisi. Première intégration produit depuis le rachat.</p>
+      <div class="analysis"><b>→ Pour le lecteur :</b> Strava verrouille le funnel « je choisis ma course → je reçois mon plan » à l'échelle. Ton canal d'acquisition doit contourner ce point d'entrée — et ta différenciation (adaptatif, multisport) devient l'argument face à un plan Runna course-à-pied.</div>
+      <p><a href="https://press.strava.com/articles/strava-adds-race-and-club-event-discovery-elevating-community-led-training-during-peak-running-season">press.strava.com — 9 juillet</a></p>
+    </div>
+
+    <div class="hl">
+      <span class="chip sport">Sport</span>
+      <div class="hl-title">Garmin Cirqa : lancement attendu le 15 ou le 22 juillet</div>
+      <p class="hl-context">Les fenêtres FCC et de pré-publication de marque UK se referment fin juillet : le bracelet-capteur type Whoop de Garmin sortirait mi-mois, métriques cœur gratuites mais coaching IA derrière l'abonnement Connect+.</p>
+      <p><a href="https://the5krunner.com/2026/07/10/garmin-cirqa-launch-dates-july/">the5krunner.com — 10 juillet</a></p>
+    </div>
+  </section>
+
+  <!-- ===================== SECTION 1 ===================== -->
+  <h2><span class="chip ia">IA</span>&nbsp; IA — modèles, produits, communications</h2>
+
+  <div class="item">
+    <div class="item-title">GPT-5.6 en trois tailles + ChatGPT Work, l'agent « bureau » d'OpenAI</div>
+    <p class="item-fact">OpenAI met en disponibilité générale la famille GPT-5.6 : Sol (frontier, 5 $/30 $ par Mtok), Terra (2,50 $/15 $) et Luna (1 $/6 $), avec état de l'art revendiqué en code, cybersécurité et science — Sam Altman annonce 54 % d'efficacité token en plus sur les tâches agentiques de code. En parallèle, ChatGPT Work (propulsé par GPT-5.6, intégrant Codex) s'attaque aux tâches longues : collecte d'infos dans les apps de l'utilisateur, production de docs/sheets/slides/web apps. Déploiement web et mobile depuis les plans Pro/Enterprise/Edu, puis Plus et Business les jours suivants. Positionné frontalement contre Claude Cowork d'Anthropic.</p>
+    <p class="item-links"><a href="https://openai.com/index/gpt-5-6/">openai.com — GPT-5.6</a> · <a href="https://www.axios.com/2026/07/09/ai-openai-gpt-release">axios.com</a> · <span class="date">9 juillet</span></p>
+    <div class="analysis"><b>→ Pour le lecteur :</b> le rapport coût/capacité de la couche modèle s'améliore encore d'un cran (Luna à 1 $/6 $) — dimensionner le moteur de replanification sur un tier « Terra/Luna » plutôt que frontier devient de plus en plus défendable.</div>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Muse Spark 1.1 : Meta ouvre (et monétise) son modèle maison via la Meta Model API</div>
+    <p class="item-fact">Meta Superintelligence Labs publie Muse Spark 1.1, modèle de raisonnement multimodal orienté tâches agentiques (contexte 1M tokens, gains en tool use, computer use et code). Nouveauté structurante : la Meta Model API, en preview publique pour les développeurs US, à 1,25 $/4,25 $ par Mtok (20 $ de crédits offerts). C'est la première fois que Meta fait payer l'accès à un de ses modèles — fin de la doctrine « poids ouverts gratuits » qui avait fait de Llama la base de tout un écosystème.</p>
+    <p class="item-links"><a href="https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/">ai.meta.com (blog officiel)</a> · <span class="date">9 juillet</span></p>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Claude Cowork arrive sur mobile et web</div>
+    <p class="item-fact">Anthropic étend Cowork (annoncé le 7, déploiement effectif le 9) au-delà du desktop : les sessions agentiques tournent dans le cloud même appareil fermé, avec suivi et validation depuis l'iPhone/Android. Beta progressive en commençant par le plan Max, limites d'usage doublées jusqu'au 5 août. Anthropic indique que la majorité des usages Cowork ne sont pas du code — même terrain que ChatGPT Work, lancé le même jour.</p>
+    <p class="item-links"><a href="https://techcrunch.com/2026/07/07/the-coding-agent-wars-are-spilling-into-the-rest-of-the-office-claude-cowork/">techcrunch.com</a> · <a href="https://venturebeat.com/technology/anthropic-brings-claude-cowork-to-mobile-and-web-as-usage-data-shows-most-users-arent-coding">venturebeat.com</a> · <span class="date">7–9 juillet</span></p>
+  </div>
+
+  <!-- ===================== SECTION 2 ===================== -->
+  <h2><span class="chip ma">M&amp;A</span>&nbsp; M&amp;A &amp; investissements IA</h2>
+
+  <div class="item">
+    <p class="empty">Rien à signaler aujourd'hui sur ce volet.</p>
+    <p class="item-fact" style="font-size:15px;color:var(--muted);">Les gros mouvements de la semaine (SambaNova 1 Md$, Prime Intellect 130 M$) étaient déjà couverts dans le brief du 8 juillet ; aucun deal IA significatif daté des 9–11 juillet n'a passé le filtre de sourcing.</p>
+  </div>
+
+  <!-- ===================== SECTION 3 ===================== -->
+  <h2><span class="chip native">IA-native</span>&nbsp; Sociétés innovantes IA-native</h2>
+
+  <div class="item">
+    <div class="item-title">Bespoke Labs lève 40 M$ pour des environnements d'entraînement d'agents</div>
+    <p class="item-fact">Série A de 40 M$ pour construire des environnements simulés où des agents IA apprennent, se testent et s'évaluent à grande échelle avant mise en production. Pari : la fiabilité des agents passera par la simulation systématique, pas seulement par de meilleurs modèles.</p>
+    <p class="item-links"><a href="https://techstartups.com/2026/07/09/venture-capital-startup-funding-roundup-july-9-2026-sequoia-khosla-ventures-y-combinator-a16z-accel/">techstartups.com</a> <span class="flag">[source secondaire]</span> · <span class="date">9 juillet</span></p>
+    <div class="analysis"><b>→ Pour le lecteur :</b> le pattern « simuler avant de déployer » s'applique directement à un moteur de replanification : tester l'agent sur des milliers de saisons d'athlètes synthétiques (blessures, imprévus, météo) avant de le laisser toucher un vrai plan.</div>
+  </div>
+
+  <!-- ===================== SECTION 4 ===================== -->
+  <h2><span class="chip sport">Sport</span>&nbsp; Applications d'entraînement sportif</h2>
+
+  <div class="item">
+    <div class="item-title">Strava lance un onglet Events avec la base de courses Runna intégrée</div>
+    <p class="item-fact">Strava ajoute un onglet Events (dans Groups) qui expose pour la première fois la base de courses de Runna directement dans l'app, devant 195 M d'utilisateurs revendiqués : recherche par distance, date, lieu, sport, dénivelé et température, puis génération d'un plan Runna personnalisé calé sur la course choisie. Le Club Organizer Hub est refondu en parallèle. Runna reste un produit séparé, mais c'est la première brique d'intégration produit depuis le rachat de 2025.</p>
+    <p class="item-links"><a href="https://press.strava.com/articles/strava-adds-race-and-club-event-discovery-elevating-community-led-training-during-peak-running-season">press.strava.com (communiqué)</a> · <a href="https://the5krunner.com/2026/07/09/strava-race-discovery-runna/">the5krunner.com</a> · <span class="date">9 juillet</span></p>
+    <div class="analysis"><b>→ Pour le lecteur :</b> menace la plus directe du jour : Strava s'installe sur le moment exact où un athlète décide de son objectif — l'endroit où ton produit veut commencer. Réponses possibles : jouer la différenciation (multisport + adaptatif vs plan course-à-pied Runna) et sécuriser des canaux d'objectifs que Strava ne couvre pas (triathlon, cyclosportives).</div>
+  </div>
+
+  <div class="item">
+    <div class="item-title">Garmin Cirqa : la fenêtre de lancement se précise (15 ou 22 juillet)</div>
+    <p class="item-fact">Après les dépôts de marque repérés la semaine dernière, the5krunner croise la fenêtre de confidentialité FCC et la pré-publication de marque UK (toutes deux closes fin juillet) pour situer le lancement du bracelet-capteur type Whoop au 15 ou 22 juillet. Attendu : FC 24/7, Body Battery, Sleep Score, HRV, Training Readiness — métriques cœur gratuites dans Garmin Connect, mais coaching/insights IA derrière l'abonnement Connect+. Rien d'officiel de Garmin à ce stade.</p>
+    <p class="item-links"><a href="https://the5krunner.com/2026/07/10/garmin-cirqa-launch-dates-july/">the5krunner.com</a> · <span class="date">10 juillet</span></p>
+  </div>
+
+  <p class="empty" style="margin-top:10px;">Aucun mouvement des concurrents directs (TrainingPeaks, TrainerRoad, Athletica.ai, 2PEAK, Humango, AI Endurance, Enduco, Nolio) dans la fenêtre.</p>
+
+  <!-- ===================== SOURCES ===================== -->
+  <h2>Qualité des sources</h2>
+  <div class="sources">
+    <span class="src-chip">openai.com 🟢</span>
+    <span class="src-chip">ai.meta.com 🟢</span>
+    <span class="src-chip">press.strava.com 🟢</span>
+    <span class="src-chip">axios.com 🟢</span>
+    <span class="src-chip">techcrunch.com 🟡</span>
+    <span class="src-chip">venturebeat.com 🟡</span>
+    <span class="src-chip">the5krunner.com 🟡</span>
+    <span class="src-chip">techstartups.com 🟠</span>
+  </div>
+  <p class="legend">🟢 primaire · 🟡 secondaire (média d'industrie / premium) · 🟠 tertiaire (agrégateur, blog)</p>
+
+  <div class="foot">
+    <p>Généré automatiquement le 11 juillet 2026. <b>Fenêtre élargie à ~72h</b> : les briefs des 9 et 10 juillet n'ayant pas été générés, cette édition rattrape les annonces du 9 juillet (GPT-5.6, Muse Spark, Strava Events) en plus des dernières 24h.</p>
+    <p>Notification haut-impact envoyée : <b>oui</b> — triggers : #2 (mouvement structurant marché adjacent — Strava intègre la base de courses Runna devant 195 M d'utilisateurs) · #3 (modèle frontier — GPT-5.6) — priorité : 4 (high).</p>
+  </div>
+
+</div>
+</body>
+</html>
