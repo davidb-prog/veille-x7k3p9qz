@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — Veille IA &amp; Sport endurance — 12 juillet 2026</title>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1a1a1a; --muted:#5c5c5c; --line:#e5e5e5;
+    --accent:#1f5fbf; --card:#f7f8fa; --tldr:#f0f5ff; --tldr-border:#c9dbf5;
+    --chip-ia:#e8f0fe; --chip-ia-ink:#1a56c4;
+    --chip-ma:#fdeede; --chip-ma-ink:#a85400;
+    --chip-native:#eafaf0; --chip-native-ink:#137a45;
+    --chip-sport:#fce9f1; --chip-sport-ink:#a31259;
+    --analysis-bg:#fbf8ee; --analysis-border:#e3c56b;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;width:100%;background:var(--bg);color:var(--ink);
+    -webkit-text-size-adjust:100%;text-size-adjust:100%;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;}
+  .wrap{max-width:640px;width:100%;margin:0 auto;padding:24px 16px 56px;}
+  h1{font-size:26px;line-height:1.25;margin:0 0 6px;font-weight:700;letter-spacing:-0.01em;}
+  .subtitle{font-size:15px;color:var(--muted);margin:0 0 28px;}
+  h2{font-size:20px;margin:36px 0 14px;padding-bottom:6px;border-bottom:2px solid var(--line);font-weight:700;letter-spacing:-0.01em;}
+  a{color:var(--accent);word-break:break-word;overflow-wrap:anywhere;}
+  .chip{display:inline-block;font-size:12px;font-weight:700;padding:3px 9px;border-radius:20px;
+    letter-spacing:0.02em;vertical-align:middle;}
+  .chip.ia{background:var(--chip-ia);color:var(--chip-ia-ink);}
+  .chip.ma{background:var(--chip-ma);color:var(--chip-ma-ink);}
+  .chip.native{background:var(--chip-native);color:var(--chip-native-ink);}
+  .chip.sport{background:var(--chip-sport);color:var(--chip-sport-ink);}
+
+  /* TL;DR */
+  .tldr{background:var(--tldr);border:1px solid var(--tldr-border);border-radius:14px;
+    padding:18px 16px;margin:0 0 8px;}
+  .tldr .eyebrow{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;
+    color:var(--accent);margin:0 0 12px;}
+  .hl{padding:14px 0;border-top:1px solid var(--tldr-border);}
+  .hl:first-of-type{border-top:none;padding-top:0;}
+  .hl-title{font-size:18px;font-weight:700;margin:8px 0 5px;line-height:1.3;}
+  .hl-context{font-size:17px;color:#2c2c2c;margin:0 0 6px;}
+  .hl a{display:inline-block;min-height:20px;font-size:16px;}
+  .analysis{background:var(--analysis-bg);border-left:4px solid var(--analysis-border);
+    border-radius:0 8px 8px 0;padding:9px 12px;margin:8px 0 2px;font-size:17px;}
+  .analysis b{color:#7a5c00;}
+
+  /* Body items */
+  .item{padding:16px 0;border-top:1px solid var(--line);}
+  .item:first-of-type{border-top:none;}
+  .item-title{font-size:19px;font-weight:700;margin:0 0 6px;line-height:1.3;}
+  .item-fact{font-size:18px;margin:0 0 8px;}
+  .item-links{font-size:16px;color:var(--muted);}
+  .item-links a{margin-right:4px;}
+  .date{color:var(--muted);white-space:nowrap;}
+  .empty{font-style:italic;color:var(--muted);font-size:17px;}
+  .flag{font-size:14px;color:#a85400;font-style:italic;}
+
+  /* Sources */
+  .sources{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px;}
+  .src-chip{background:var(--card);border:1px solid var(--line);border-radius:8px;
+    padding:5px 9px;font-size:14px;color:#333;}
+  .foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);
+    font-size:13px;color:var(--muted);}
+  .legend{font-size:14px;color:var(--muted);margin:6px 0 0;}
+
+  @media (min-width:768px){
+    .wrap{max-width:760px;padding:56px 48px 80px;}
+    body{font-size:17px;}
+    h1{font-size:30px;}
+    h2{font-size:22px;}
+    .subtitle{font-size:15px;}
+    .tldr{padding:26px 28px;}
+    .hl-title{font-size:18px;}
+    .hl-context{font-size:16px;}
+    .analysis{font-size:16px;}
+    .item-title{font-size:19px;}
+    .item-fact{font-size:17px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Briefing — Veille IA &amp; Sport endurance — 12 juillet 2026</h1>
+  <p class="subtitle">Dimanche 12 juillet 2026 · Lecture : ~5 min · 4 items couverts</p>
+
+  <!-- ══════════ À LA UNE ══════════ -->
+  <div class="tldr">
+    <p class="eyebrow">À la une</p>
+
+    <div class="hl">
+      <span class="chip ia">IA</span>
+      <p class="hl-title">Apple attaque OpenAI en justice pour vol de secrets industriels</p>
+      <p class="hl-context">Plainte fédérale en Californie du Nord : Apple accuse OpenAI et son chef hardware Tang Tan (ex-Apple) d'avoir orchestré l'exfiltration de secrets — jusqu'à des « show and tell » de pièces Apple en entretien d'embauche. Rupture brutale après le partenariat ChatGPT-iPhone de 2024.</p>
+      <a href="https://www.cnbc.com/2026/07/10/apple-openai-lawsuit-trade-secrets.html">CNBC</a> <span class="date">— 10 juillet</span>
+    </div>
+
+    <div class="hl">
+      <span class="chip ia">IA</span>
+      <p class="hl-title">OpenAI revendique la preuve d'une conjecture ouverte depuis 50 ans</p>
+      <p class="hl-context">GPT-5.6 Sol Ultra aurait produit en moins d'une heure, via 64 sous-agents parallèles, une preuve de la conjecture Cycle Double Cover (Seymour, 1979). La communauté mathématique vérifie encore — pas de formalisation Lean à ce stade.</p>
+      <a href="https://x.com/__eknight__/status/2075643450196971805">Annonce OpenAI (X)</a> <span class="date">— 10 juillet</span>
+    </div>
+
+    <div class="hl">
+      <span class="chip ia">IA</span>
+      <p class="hl-title">Boko Haram utilise tous les grands chatbots pour planifier ses attaques</p>
+      <p class="hl-context">Étude Cambridge (CASP) relayée par le New York Times : 57 entretiens d'ex-membres documentent l'usage de ChatGPT, Claude, Gemini, Grok et DeepSeek pour la planification d'attaques et les engins explosifs, filtres de sécurité contournés par des requêtes déguisées.</p>
+      <a href="https://the-decoder.com/terrorist-groups-are-using-every-major-ai-chatbot-for-attack-planning-and-weapons-development/">The Decoder</a> <span class="date">— 11 juillet</span> <span class="flag">[source primaire NYT sous paywall]</span>
+    </div>
+  </div>
+
+  <!-- ══════════ SECTION 1 ══════════ -->
+  <h2>IA — modèles, produits, communications</h2>
+
+  <div class="item">
+    <p class="item-title">Apple poursuit OpenAI pour vol de secrets industriels « à tous les niveaux »</p>
+    <p class="item-fact">Apple a déposé plainte vendredi soir devant la cour fédérale de Californie du Nord (après la parution du brief d'hier) contre OpenAI et deux ex-employés. Les allégations : Tang Tan, chef du hardware d'OpenAI et ancien VP d'Apple, aurait demandé à des candidats encore salariés d'Apple d'apporter de « vraies pièces » en entretien ; OpenAI aurait coaché des partants pour contourner les procédures de sécurité ; un ex-employé aurait volé un laptop. Contexte : OpenAI a racheté io, la société de Jony Ive, pour 6,4 Md$ et prépare son premier hardware grand public. OpenAI dément : « nous n'avons aucun intérêt pour les secrets d'autres entreprises ». Selon Bloomberg (Gurman), la plainte cristallise des mois de tensions autour du départ de Tan et de sa relation avec John Ternus, pressenti comme futur CEO d'Apple.</p>
+    <p class="item-links">
+      <a href="https://www.cnbc.com/2026/07/10/apple-openai-lawsuit-trade-secrets.html">CNBC</a> <span class="date">— 10 juillet</span> ·
+      <a href="https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/">TechCrunch</a> <span class="date">— 10 juillet</span>
+    </p>
+  </div>
+
+  <div class="item">
+    <p class="item-title">GPT-5.6 Sol Ultra : une preuve revendiquée de la conjecture Cycle Double Cover</p>
+    <p class="item-fact">Au lendemain de la mise en disponibilité générale de Sol Ultra, OpenAI a publié le prompt et un PDF de preuve de la conjecture Cycle Double Cover — tout graphe sans pont admet une collection de cycles couvrant chaque arête exactement deux fois — obtenue en moins d'une heure par 64 sous-agents parallèles, en s'appuyant sur le théorème des 8-flots. Ce qui reste flou : la preuve n'est pas formalisée (pas de Lean), la vérification par la communauté est en cours, et le mathématicien Thomas Bloom pointe l'absence de citations. Si elle tient, c'est le premier problème ouvert majeur de théorie des graphes résolu par un LLM.</p>
+    <p class="item-links">
+      <a href="https://x.com/__eknight__/status/2075643450196971805">Annonce (X)</a> <span class="date">— 10 juillet</span> ·
+      <a href="https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proof.pdf">PDF de la preuve (OpenAI)</a> <span class="date">— 10 juillet</span> ·
+      <a href="https://the-decoder.com/openais-gpt-5-6-sol-ultra-reportedly-solves-a-50-year-old-math-problem-in-under-an-hour/">The Decoder</a> <span class="date">— 12 juillet</span>
+    </p>
+  </div>
+
+  <div class="item">
+    <p class="item-title">Étude Cambridge : Boko Haram a des « unités IA » dédiées, tous les grands chatbots concernés</p>
+    <p class="item-fact">L'étude d'Antonia Jülich (Cambridge Programme on AI Science &amp; Policy), fondée sur 57 entretiens avec 27 ex-membres, documente un usage opérationnel des chatbots grand public par les deux factions de Boko Haram : planification d'attaques, amélioration d'engins explosifs, maintenance d'armes, renseignement. Les garde-fous sont contournés en maquillant les requêtes en projets académiques ou de production de films — avec des formations dispensées par des liaisons ISIS. Le New York Times en a fait une enquête publiée vendredi, largement reprise samedi.</p>
+    <p class="item-links">
+      <a href="https://the-decoder.com/terrorist-groups-are-using-every-major-ai-chatbot-for-attack-planning-and-weapons-development/">The Decoder</a> <span class="date">— 11 juillet</span> <span class="flag">[source primaire NYT sous paywall]</span>
+    </p>
+  </div>
+
+  <div class="item">
+    <p class="item-title">Indeed : les offres d'emploi dev logiciel US en hausse de ~15 % depuis Claude Code</p>
+    <p class="item-fact">L'analyse d'Indeed Hiring Lab (publiée le 8 juillet, largement médiatisée ce week-end) montre que les offres de développement logiciel aux US ont progressé d'environ 15 % depuis le lancement de Claude Code en février 2025, alors que l'ensemble des offres reculait de 7 %. Nuances : la reprise porte surtout sur des postes senior, et le volume reste ~27,5 % sous le niveau pré-pandémie. L'économiste Guillermo Gallacher parle d'une « coïncidence qu'on ne peut pas ignorer » entre outils agentiques et rebond des embauches.</p>
+    <p class="item-links">
+      <a href="https://www.hiringlab.org/2026/07/08/ai-and-job-postings-from-destruction-to-creation/">Indeed Hiring Lab</a> <span class="date">— 8 juillet</span> ·
+      <a href="https://finance.yahoo.com/economy/policy/article/good-news-software-developers-job-postings-are-ticking-up-post-claude-code-154726595.html">Yahoo Finance</a> <span class="date">— 11 juillet</span>
+    </p>
+  </div>
+
+  <!-- ══════════ SECTION 2 ══════════ -->
+  <h2>M&amp;A &amp; investissements IA</h2>
+  <p class="empty">Rien à signaler aujourd'hui sur ce volet.</p>
+
+  <!-- ══════════ SECTION 3 ══════════ -->
+  <h2>Sociétés innovantes IA-native</h2>
+  <p class="empty">Rien à signaler aujourd'hui sur ce volet.</p>
+
+  <!-- ══════════ SECTION 4 ══════════ -->
+  <h2>Applications d'entraînement sportif</h2>
+  <p class="empty">Rien à signaler aujourd'hui sur ce volet. (Prochain jalon attendu : lancement Garmin Cirqa, fenêtre du 15 ou 22 juillet.)</p>
+
+  <!-- ══════════ SOURCES ══════════ -->
+  <h2>Qualité des sources</h2>
+  <div class="sources">
+    <span class="src-chip">cnbc.com 🟢</span>
+    <span class="src-chip">techcrunch.com 🟢</span>
+    <span class="src-chip">x.com (OpenAI) 🟢</span>
+    <span class="src-chip">cdn.openai.com 🟢</span>
+    <span class="src-chip">hiringlab.org 🟢</span>
+    <span class="src-chip">finance.yahoo.com 🟢</span>
+    <span class="src-chip">the-decoder.com 🟡</span>
+  </div>
+  <p class="legend">🟢 primaire · 🟡 secondaire (média d'industrie) · 🟠 tertiaire</p>
+
+  <p class="foot">Brief généré le dimanche 12 juillet 2026 · Fenêtre : &lt;24h (les items Apple/OpenAI et Sol Ultra, datés du 10 juillet au soir US, ont émergé après la parution du brief d'hier et n'y figuraient pas — inclus ici à titre de rattrapage).<br>
+  Notification envoyée : oui (mode systématique) — triggers haut-impact : aucun — priorité : 2.</p>
+
+</div>
+</body>
+</html>
