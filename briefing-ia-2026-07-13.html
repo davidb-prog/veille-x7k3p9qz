@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — Veille IA &amp; Sport endurance — 13 juillet 2026</title>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1a1a1a; --muted:#5c5c5c; --line:#e5e5e5;
+    --accent:#1f5fbf; --card:#f7f8fa; --tldr:#f0f5ff; --tldr-border:#c9dbf5;
+    --chip-ia:#e8f0fe; --chip-ia-ink:#1a56c4;
+    --chip-ma:#fdeede; --chip-ma-ink:#a85400;
+    --chip-native:#eafaf0; --chip-native-ink:#137a45;
+    --chip-sport:#fce9f1; --chip-sport-ink:#a31259;
+    --analysis-bg:#fbf8ee; --analysis-border:#e3c56b;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;width:100%;background:var(--bg);color:var(--ink);
+    -webkit-text-size-adjust:100%;text-size-adjust:100%;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;}
+  .wrap{max-width:640px;width:100%;margin:0 auto;padding:24px 16px 56px;}
+  h1{font-size:26px;line-height:1.25;margin:0 0 6px;font-weight:700;letter-spacing:-0.01em;}
+  .subtitle{font-size:15px;color:var(--muted);margin:0 0 28px;}
+  h2{font-size:20px;margin:36px 0 14px;padding-bottom:6px;border-bottom:2px solid var(--line);font-weight:700;letter-spacing:-0.01em;}
+  a{color:var(--accent);word-break:break-word;overflow-wrap:anywhere;}
+  .chip{display:inline-block;font-size:12px;font-weight:700;padding:3px 9px;border-radius:20px;
+    letter-spacing:0.02em;vertical-align:middle;}
+  .chip.ia{background:var(--chip-ia);color:var(--chip-ia-ink);}
+  .chip.ma{background:var(--chip-ma);color:var(--chip-ma-ink);}
+  .chip.native{background:var(--chip-native);color:var(--chip-native-ink);}
+  .chip.sport{background:var(--chip-sport);color:var(--chip-sport-ink);}
+  /* TL;DR */
+  .tldr{background:var(--tldr);border:1px solid var(--tldr-border);border-radius:14px;
+    padding:18px 16px;margin:0 0 8px;}
+  .tldr .eyebrow{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;
+    color:var(--accent);margin:0 0 12px;}
+  .hl{padding:14px 0;border-top:1px solid var(--tldr-border);}
+  .hl:first-of-type{border-top:none;padding-top:0;}
+  .hl-title{font-size:18px;font-weight:700;margin:8px 0 5px;line-height:1.3;}
+  .hl-context{font-size:17px;color:#2c2c2c;margin:0 0 6px;}
+  .hl a{display:inline-block;min-height:20px;font-size:16px;}
+  .analysis{background:var(--analysis-bg);border-left:4px solid var(--analysis-border);
+    border-radius:0 8px 8px 0;padding:9px 12px;margin:8px 0 2px;font-size:17px;}
+  .analysis b{color:#7a5c00;}
+  /* Body items */
+  .item{padding:16px 0;border-top:1px solid var(--line);}
+  .item:first-of-type{border-top:none;}
+  .item-title{font-size:19px;font-weight:700;margin:0 0 6px;line-height:1.3;}
+  .item-fact{font-size:18px;margin:0 0 8px;}
+  .item-links{font-size:16px;color:var(--muted);}
+  .item-links a{margin-right:4px;}
+  .date{color:var(--muted);white-space:nowrap;}
+  .empty{font-style:italic;color:var(--muted);font-size:17px;}
+  .flag{font-size:14px;color:#a85400;font-style:italic;}
+  /* Sources */
+  .sources{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px;}
+  .src-chip{background:var(--card);border:1px solid var(--line);border-radius:8px;
+    padding:5px 9px;font-size:14px;color:#333;}
+  .foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);
+    font-size:13px;color:var(--muted);}
+  .legend{font-size:14px;color:var(--muted);margin:6px 0 0;}
+  @media (min-width:768px){
+    .wrap{max-width:760px;padding:56px 48px 80px;}
+    body{font-size:17px;}
+    h1{font-size:30px;}
+    h2{font-size:22px;}
+    .subtitle{font-size:15px;}
+    .tldr{padding:26px 28px;}
+    .hl-title{font-size:18px;}
+    .hl-context{font-size:16px;}
+    .analysis{font-size:16px;}
+    .item-title{font-size:19px;}
+    .item-fact{font-size:17px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Briefing — Veille IA &amp; Sport endurance — 13 juillet 2026</h1>
+<p class="subtitle">Lundi 13 juillet 2026 · Lecture : ~3 min · 3 items couverts</p>
+
+<!-- ═══════════ À LA UNE ═══════════ -->
+<div class="tldr">
+  <p class="eyebrow">À la une</p>
+
+  <div class="hl">
+    <span class="chip ia">IA</span>
+    <p class="hl-title">Grok 4.5 au verdict des benchmarks indépendants : 4e, pas « Opus-class »</p>
+    <p class="hl-context">Artificial Analysis place Grok 4.5 quatrième de son Intelligence Index (derrière Fable 5, GPT-5.5, Opus 4.8) — mais sur le front coût/performance, il écrase tout : 0,31 $ par tâche, ~60 % moins cher qu'Opus 4.8. Revers : le taux d'hallucination bondit de 25 % à 54 %.</p>
+    <div class="analysis">→ <b>Pour le lecteur :</b> candidat backend agentique low-cost sérieux (2 $/6 $ par Mtok), mais un taux d'hallucination doublé disqualifie tout usage en conseil d'entraînement non vérifié.</div>
+    <a href="https://artificialanalysis.ai/articles/grok-4-5-brings-spacexai-to-the-the-intelligence-frontier">Artificial Analysis</a> <span class="date">— 8 juillet</span> <span class="flag">[rattrapage — non couvert dans les briefs précédents]</span>
+  </div>
+
+  <div class="hl">
+    <span class="chip ia">IA</span>
+    <p class="hl-title">Gemini 3.5 Pro attendu jeudi 17 juillet, avec un contexte de 2M tokens</p>
+    <p class="hl-context">Des leaks convergents (non confirmés par Google) datent la GA au 17 juillet : nouveau pré-entraînement complet (base 2.5 Pro abandonnée), fenêtre de 2M tokens — le double du champ frontier actuel — et mode « Deep Think » réservé à l'abonnement Ultra à 250 $/mois.</p>
+    <a href="https://www.techtimes.com/articles/319877/20260708/gemini-35-pro-targets-july-17-deepseeks-july-24-deadline-hits-developers-now.htm">Tech Times</a> <span class="date">— 8 juillet</span> <span class="flag">[source secondaire — pas de confirmation officielle Google]</span>
+  </div>
+
+  <div class="hl">
+    <span class="chip sport">Sport</span>
+    <p class="hl-title">Garmin Cirqa : les premiers communiqués presse pourraient partir dès demain</p>
+    <p class="hl-context">Selon le calendrier reconstitué par the5krunner, les 14 et 21 juillet sont les dates probables d'envoi des premiers communiqués, pour un lancement mercredi 15 ou 22 — le concurrent screenless de Whoop entre dans sa semaine décisive.</p>
+    <a href="https://the5krunner.com/2026/07/10/garmin-cirqa-launch-dates-july/">the5krunner</a> <span class="date">— 10 juillet</span>
+  </div>
+</div>
+
+<!-- ═══════════ SECTION 1 ═══════════ -->
+<h2><span class="chip ia">IA</span>&nbsp; IA — modèles, produits, communications</h2>
+
+<div class="item">
+  <p class="item-title">Grok 4.5 : les chiffres indépendants derrière le claim « Opus-class »</p>
+  <p class="item-fact">Lancé les 8–9 juillet (passé entre les mailles des briefs précédents — inclus ici à titre de rattrapage), Grok 4.5 a maintenant son évaluation indépendante complète. Artificial Analysis le classe 4e de l'Intelligence Index (score 54), derrière Fable 5, GPT-5.5 et Opus 4.8 mais devant tous les modèles open weights et les Gemini actuels — loin du « Opus-class, peut-être plus » revendiqué au lancement. Sa vraie force est ailleurs : 0,31 $ par tâche d'Intelligence Index, 2,49 $ par tâche de coding agent (contre 11,80 $ pour Fable 5 dans Claude Code), grâce à un prix bas (2 $/6 $ par Mtok) et une frugalité token remarquable (~1,9M tokens par tâche de code vs 7,2M pour Fable 5). Point noir : sur AA-Omniscience, le taux d'hallucination passe de 25 % (Grok 4.3) à 54 %. À noter aussi : contexte réduit à 500k tokens (vs 1M sur Grok 4.3).</p>
+  <p class="item-links"><a href="https://artificialanalysis.ai/articles/grok-4-5-brings-spacexai-to-the-the-intelligence-frontier">Artificial Analysis</a> <span class="date">— 8 juillet</span> · <a href="https://the-decoder.com/grok-4-5-is-so-cheap-compared-to-fable-5-and-gpt-5-5-that-benchmark-gaps-may-not-matter-much/">The Decoder</a> <span class="date">— juillet</span></p>
+  <div class="analysis">→ <b>Pour le lecteur :</b> pour un moteur de replanification qui enchaîne des tâches agentiques (ingestion capteurs, recalcul de plan), Grok 4.5 est désormais l'option la moins chère du peloton de tête — mais un modèle qui hallucine une fois sur deux quand il ne sait pas est inutilisable sans couche de vérification pour du conseil d'entraînement. À cantonner aux étapes vérifiables (calculs, orchestration), pas à la génération de recommandations.</div>
+</div>
+
+<div class="item">
+  <p class="item-title">Gemini 3.5 Pro : GA visée le 17 juillet, repartir de zéro pour rattraper le peloton</p>
+  <p class="item-fact">Les leaks qui circulent depuis le 8–10 juillet convergent sur une disponibilité générale jeudi 17 juillet — six semaines après la promesse initiale de l'I/O de mai. Google aurait abandonné la base Gemini 2.5 Pro pour un pré-entraînement entièrement nouveau, motivé par trois lacunes jugées incorrigibles : raisonnement mathématique, génération SVG et qualité d'image. Au menu annoncé : contexte de 2M tokens (le double du field actuel) et couche de raisonnement « Deep Think » gated derrière l'abonnement Ultra à 250 $/mois. Rien de tout cela n'est confirmé par Google — le modèle atterrirait dans la semaine la plus concurrentielle de l'histoire du secteur, cinq jours après GPT-5.6 et neuf après Grok 4.5.</p>
+  <p class="item-links"><a href="https://www.techtimes.com/articles/319877/20260708/gemini-35-pro-targets-july-17-deepseeks-july-24-deadline-hits-developers-now.htm">Tech Times</a> <span class="date">— 8 juillet</span> · <a href="https://www.geeky-gadgets.com/gemini-pro-scraps-base-model/">Geeky Gadgets</a> <span class="date">— juillet</span> <span class="flag">[sources secondaires — pas de confirmation officielle]</span></p>
+</div>
+
+<!-- ═══════════ SECTION 2 ═══════════ -->
+<h2><span class="chip ma">M&amp;A</span>&nbsp; M&amp;A &amp; investissements IA</h2>
+<p class="empty">Rien à signaler aujourd'hui sur ce volet.</p>
+
+<!-- ═══════════ SECTION 3 ═══════════ -->
+<h2><span class="chip native">IA-native</span>&nbsp; Sociétés innovantes IA-native</h2>
+<p class="empty">Rien à signaler aujourd'hui sur ce volet.</p>
+
+<!-- ═══════════ SECTION 4 ═══════════ -->
+<h2><span class="chip sport">Sport</span>&nbsp; Applications d'entraînement sportif</h2>
+
+<div class="item">
+  <p class="item-title">Garmin Cirqa : semaine décisive, communiqués presse possibles dès le 14</p>
+  <p class="item-fact">Le faisceau d'indices se resserre : la marque UK est passée en pré-publication le 2 juillet (parution au Trade Marks Journal attendue entre le 16 et le 23), et le pattern historique de Garmin — annonces consumer le mercredi de mi-mois — pointe vers le 15 ou le 22 juillet, avec envoi des communiqués à la presse dès les 14 ou 21. Attendu : bracelet screenless type Whoop à 249–299 $, deux tailles, FC 24/7, Body Battery, Sleep Score, HRV et Training Readiness — métriques cœur gratuites, coaching IA derrière Connect+. Toujours rien d'officiel de Garmin.</p>
+  <p class="item-links"><a href="https://the5krunner.com/2026/07/10/garmin-cirqa-launch-dates-july/">the5krunner</a> <span class="date">— 10 juillet</span></p>
+</div>
+<p class="empty">Aucun mouvement des concurrents directs (TrainingPeaks, TrainerRoad, Athletica.ai, 2PEAK, Humango, AI Endurance, Enduco, Nolio) dans la fenêtre.</p>
+
+<!-- ═══════════ QUALITÉ DES SOURCES ═══════════ -->
+<h2>Qualité des sources</h2>
+<div class="sources">
+  <span class="src-chip">artificialanalysis.ai 🟡</span>
+  <span class="src-chip">the5krunner.com 🟡</span>
+  <span class="src-chip">the-decoder.com 🟡</span>
+  <span class="src-chip">techtimes.com 🟠</span>
+  <span class="src-chip">geeky-gadgets.com 🟠</span>
+</div>
+<p class="legend">🟢 primaire · 🟡 secondaire (média d'industrie) · 🟠 tertiaire</p>
+
+<div class="foot">
+  <p>Brief généré le lundi 13 juillet 2026 · Fenêtre : &lt;24h — journée strictement calme (dimanche) : aucun item daté des dernières 24h n'a passé le filtre. Les items Grok 4.5 et Gemini 3.5 Pro (8–10 juillet) sont des rattrapages jamais couverts dans les briefs précédents, signalés comme tels.</p>
+  <p>Notification envoyée : oui (mode systématique) — triggers haut-impact : aucun dans la fenêtre — priorité : 2.</p>
+</div>
+
+</div>
+</body>
+</html>
