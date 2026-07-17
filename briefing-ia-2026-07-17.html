@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Briefing — Veille IA &amp; Sport endurance — 17 juillet 2026</title>
+<style>
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #fafafa;
+    color: #1a1a2e;
+    line-height: 1.55;
+    font-size: 18px;
+  }
+  .container {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 16px 48px;
+    box-sizing: border-box;
+  }
+  h1 {
+    font-size: 26px;
+    line-height: 1.25;
+    margin: 0 0 8px;
+    color: #111;
+  }
+  .subtitle {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 28px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 36px 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #e0e0e6;
+    color: #16213e;
+  }
+  a { color: #0f4c9c; word-break: break-word; }
+  .chip {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 9px;
+    border-radius: 10px;
+    vertical-align: middle;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+  }
+  .chip-ia { background: #e3edfb; color: #1155a5; }
+  .chip-ma { background: #f0e6fa; color: #6a2fa3; }
+  .chip-native { background: #e2f5e9; color: #1e7a41; }
+  .chip-sport { background: #fdeddc; color: #b35c0e; }
+  /* TL;DR */
+  .tldr {
+    background: #ffffff;
+    border: 1px solid #e4e4ea;
+    border-radius: 12px;
+    padding: 18px 16px;
+    margin-bottom: 8px;
+  }
+  .tldr h2 {
+    margin-top: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+    font-size: 20px;
+  }
+  .headline { margin-bottom: 20px; }
+  .headline:last-child { margin-bottom: 4px; }
+  .headline-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 6px 0 4px;
+    line-height: 1.35;
+  }
+  .headline-context {
+    font-size: 17px;
+    color: #333;
+    margin: 0 0 6px;
+  }
+  .headline-link {
+    font-size: 15px;
+    display: inline-block;
+    padding: 6px 0;
+    min-height: 20px;
+  }
+  /* Corps */
+  .item { margin-bottom: 26px; }
+  .item-title {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    line-height: 1.35;
+  }
+  .item-fact { font-size: 18px; margin: 0 0 8px; }
+  .item-links { font-size: 16px; margin: 0 0 8px; }
+  .item-links a { display: inline-block; padding: 4px 0; }
+  .analysis {
+    font-size: 17px;
+    background: #f4f7fb;
+    border-left: 3px solid #0f4c9c;
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+    margin-top: 8px;
+    color: #24344d;
+  }
+  .analysis .prefix { font-weight: 700; color: #0f4c9c; }
+  .empty-section { font-style: italic; color: #888; font-size: 17px; }
+  .src-note { font-size: 14px; color: #999; }
+  /* Qualité des sources */
+  .sources-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .src-chip {
+    background: #fff;
+    border: 1px solid #e0e0e6;
+    border-radius: 16px;
+    padding: 5px 12px;
+    font-size: 14px;
+    color: #444;
+    white-space: nowrap;
+  }
+  footer {
+    margin-top: 44px;
+    padding-top: 16px;
+    border-top: 1px solid #e4e4ea;
+    font-size: 13px;
+    color: #999;
+  }
+  @media (min-width: 768px) {
+    body { font-size: 17px; }
+    .container { max-width: 760px; padding: 56px 48px 72px; }
+    h1 { font-size: 30px; }
+    h2 { font-size: 22px; }
+    .tldr { padding: 26px 28px; }
+    .tldr h2 { font-size: 22px; }
+    .headline-title { font-size: 18px; }
+    .headline-context { font-size: 16px; }
+    .item-title { font-size: 19px; }
+    .item-fact { font-size: 17px; }
+    .analysis { font-size: 16px; }
+  }
+  @media print {
+    body { background: #fff; }
+    .tldr { border-color: #ccc; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Briefing — Veille IA &amp; Sport endurance — 17 juillet 2026</h1>
+<div class="subtitle">Vendredi 17 juillet 2026 · Lecture : ~5 min · 5 items couverts</div>
+
+<!-- ================= TL;DR ================= -->
+<div class="tldr">
+  <h2>À la une</h2>
+
+  <div class="headline">
+    <span class="chip chip-ia">IA</span>
+    <div class="headline-title">Kimi K3 : Moonshot publie le plus gros modèle open-weight jamais sorti</div>
+    <p class="headline-context">Un MoE de 2,8 billions de paramètres, 3e mondial sur GDPval-AA v2 derrière Fable 5 Max et GPT-5.6 Sol Max — l'open-weight chinois entre en zone quasi-frontier, poids publics le 27 juillet.</p>
+    <p class="headline-context analysis" style="margin-top:6px;"><span class="prefix">→ Pour le lecteur :</span> un quasi-frontier open-weight à 3 $/M tokens input rend une couche coaching IA propriétaire (ou auto-hébergée) nettement moins chère — pour vous comme pour vos concurrents.</p>
+    <a class="headline-link" href="https://www.axios.com/2026/07/16/moonshot-kimi-ai-china-model-openai-anthropic">Axios — 16 juil</a>
+  </div>
+
+  <div class="headline">
+    <span class="chip chip-ia">IA</span>
+    <div class="headline-title">Gemini 3.5 Pro attendu aujourd'hui, après reconstruction complète du modèle de base</div>
+    <p class="headline-context">Google a jeté l'architecture héritée de 2.5 Pro après des échecs structurels (tool-calling récursif, raisonnement mathématique) et vise une GA ce 17 juillet — aucune spec officiellement confirmée à l'heure de rédaction.</p>
+    <a class="headline-link" href="https://www.techtimes.com/articles/320308/20260713/gemini-35-pro-targets-july-17-after-full-rebuild-every-spec-remains-unconfirmed.htm">TechTimes — 13 juil</a>
+  </div>
+
+  <div class="headline">
+    <span class="chip chip-ma">M&amp;A</span>
+    <div class="headline-title">TSMC : trimestre record, la demande IA dépasse toujours l'offre</div>
+    <p class="headline-context">40,2 Md$ de CA au T2 (+33,7 %), profit net record, prévision annuelle relevée à +40 % — le socle infrastructure de la vague IA ne montre aucun signe de ralentissement.</p>
+    <a class="headline-link" href="https://www.techtimes.com/articles/320696/20260716/tsmc-posts-record-quarter-ai-chip-demand-pushes-full-year-growth-outlook-past-40.htm">TechTimes — 16 juil</a>
+  </div>
+
+  <div class="headline">
+    <span class="chip chip-sport">Sport</span>
+    <div class="headline-title">Garmin Cirqa : une nouvelle fuite confirme les capteurs clés, lancement imminent</div>
+    <p class="headline-context">Le prochain wearable Garmin se précise à quelques jours d'un lancement attendu le 15 ou le 22 juillet — seul signal de la watchlist sur les dernières 24h.</p>
+    <a class="headline-link" href="https://the5krunner.com/2026/07/16/garmin-cirqa-july-leak-sensors/">the5krunner — 16 juil</a>
+  </div>
+
+</div>
+
+<!-- ================= CORPS ================= -->
+
+<h2>IA — modèles, produits, communications</h2>
+
+<div class="item">
+  <div class="item-title">Moonshot AI sort Kimi K3, plus gros modèle open-weight au monde et 3e sur GDPval</div>
+  <p class="item-fact">Kimi K3 est un MoE sparse de 2,8 billions de paramètres (16 experts activés sur 896), contexte 1M tokens, raisonnement "thinking mode" permanent, bâti sur les architectures Kimi Delta Attention et Attention Residuals. Sur GDPval-AA v2 (tâches réelles, 44 métiers), il se classe 3e (1 687 points) derrière Claude Fable 5 Max et GPT-5.6 Sol Max, devant Claude Opus 4.8 — une première pour un modèle open-weight. Tarifs API : 3 $/M input (0,30 $ en cache), 15 $/M output ; publication des poids annoncée pour le 27 juillet, juste avant la World AI Conference de Shanghai.</p>
+  <p class="item-links"><a href="https://techcrunch.com/2026/07/16/moonshots-upcoming-kimi-3-is-expected-to-close-the-gap-with-anthropics-opus-4-8/">TechCrunch — 16 juil</a> · <a href="https://www.axios.com/2026/07/16/moonshot-kimi-ai-china-model-openai-anthropic">Axios — 16 juil</a> · <a href="https://venturebeat.com/technology/chinas-moonshot-ai-releases-kimi-k3-the-largest-open-source-model-ever-rivaling-top-u-s-systems">VentureBeat — 16 juil</a></p>
+  <div class="analysis"><span class="prefix">→ Pour le lecteur :</span> un modèle quasi-frontier dont les poids seront publics change l'équation coût d'une couche coaching IA : inference auto-hébergée ou négociée à bas prix, sans dépendance à un seul fournisseur américain. C'est aussi une baisse du ticket d'entrée pour tout nouvel entrant "adaptatif" — l'avantage défendable se déplace encore un peu plus vers la donnée athlète et la logique d'adaptation, pas le modèle.</div>
+</div>
+
+<div class="item">
+  <div class="item-title">Gemini 3.5 Pro : GA visée aujourd'hui après un rebuild complet du modèle de base</div>
+  <p class="item-fact">Google aurait abandonné l'architecture dérivée de 2.5 Pro après que les tests enterprise Vertex AI ont révélé des échecs structurels en tool-calling récursif, génération SVG et raisonnement mathématique, et repris le pré-entraînement de zéro — d'où le report de juin au 17 juillet. À la veille du lancement, aucun endpoint API, model card ni benchmark officiel n'était publié ; les specs qui circulent (contexte 2M, mode Deep Think réservé à l'offre Ultra, ~15 $/60 $ par M tokens) restent des estimations tierces non confirmées par Google.</p>
+  <p class="item-links"><a href="https://www.techtimes.com/articles/320308/20260713/gemini-35-pro-targets-july-17-after-full-rebuild-every-spec-remains-unconfirmed.htm">TechTimes — 13 juil</a> · <a href="https://hackernoon.com/google-delays-gemini-35-pro-to-july-17-the-strategic-play-behind-the-scrapped-base-model">HackerNoon — juil <span class="src-note">[source secondaire]</span></a></p>
+  <div class="analysis"><span class="prefix">→ Pour le lecteur :</span> si la GA tient et que le tool-calling récursif est effectivement le point corrigé, c'est un candidat à tester pour un moteur de planification adaptative multi-étapes (chaînes d'outils longues : contraintes athlète → recalcul de plan → écriture séances).</div>
+</div>
+
+<div class="item">
+  <div class="item-title">Régulation : Anthropic soutient les lois d'État, OpenAI pousse la préemption fédérale</div>
+  <p class="item-fact">Selon Politico, Anthropic endosse une série de lois d'État de plus en plus exigeantes (Californie SB 53, RAISE Act de New York, SB 315 Illinois, projet Massachusetts), tandis qu'OpenAI milite pour un standard fédéral unique préemptant les règles étatiques. Les deux stratégies s'expliquent aussi par les introductions en bourse visées au T4 2026 : Anthropic satisfait déjà les exigences de ces lois, qui deviennent de fait une barrière pour ses rivaux.</p>
+  <p class="item-links"><a href="https://aiweekly.co/alerts/anthropic-pushes-state-by-state-ratchet-on-ai-safety-rules">AI Weekly — 16 juil <span class="src-note">[source secondaire — article Politico primaire non accessible]</span></a></p>
+</div>
+
+<h2>M&amp;A &amp; investissements IA</h2>
+
+<div class="item">
+  <div class="item-title">TSMC : T2 record à 40,2 Md$ (+33,7 %), prévision annuelle relevée au-dessus de +40 %</div>
+  <p class="item-fact">Résultats publiés le 16 juillet : profit net en hausse de 77 % (record trimestriel absolu), le HPC pèse désormais 66 % du chiffre d'affaires, et le management indique que la demande en 2 nm dépasse toujours l'offre. Guidance T3 : 44,6–45,8 Md$ (+12 % séquentiel), capex 2026 relevé à 60–64 Md$, plus une nouvelle expansion de 100 Md$ en Arizona. Aucun signal de modération de la demande en puces IA — la question que tout le marché posait ce trimestre.</p>
+  <p class="item-links"><a href="https://www.techtimes.com/articles/320696/20260716/tsmc-posts-record-quarter-ai-chip-demand-pushes-full-year-growth-outlook-past-40.htm">TechTimes — 16 juil</a> · <a href="https://www.investing.com/news/company-news/tsmc-q2-2026-slides-ai-demand-drives-record-margins-hpc-surges-20-93CH-4794789">Investing.com — 16 juil</a></p>
+</div>
+
+<h2>Sociétés innovantes IA-native</h2>
+
+<p class="empty-section">Rien à signaler aujourd'hui sur ce volet.</p>
+
+<h2>Applications d'entraînement sportif</h2>
+
+<div class="item">
+  <div class="item-title">Garmin Cirqa : une fuite du 16 juillet confirme les capteurs clés avant un lancement attendu sous quelques jours</div>
+  <p class="item-fact">Nouvelle fuite sur le prochain produit Garmin "Cirqa", qui confirme les capteurs embarqués ; the5krunner situe le lancement le plus probable au 15 ou au 22 juillet — le 15 étant passé, l'annonce est donc attendue autour du 22. La catégorie exacte du produit et son positionnement logiciel (coaching, Connect+) restent non confirmés par Garmin. Rien d'autre à signaler sur la watchlist (directs, indirects, émergents) sur les dernières 24h.</p>
+  <p class="item-links"><a href="https://the5krunner.com/2026/07/16/garmin-cirqa-july-leak-sensors/">the5krunner — 16 juil</a> · <a href="https://the5krunner.com/2026/07/10/garmin-cirqa-launch-dates-july/">the5krunner (dates de lancement) — 10 juil</a></p>
+</div>
+
+<!-- ================= QUALITÉ DES SOURCES ================= -->
+
+<h2>Qualité des sources</h2>
+<div class="sources-chips">
+  <span class="src-chip">techcrunch.com 🟢</span>
+  <span class="src-chip">axios.com 🟢</span>
+  <span class="src-chip">venturebeat.com 🟡</span>
+  <span class="src-chip">investing.com 🟡</span>
+  <span class="src-chip">the5krunner.com 🟡</span>
+  <span class="src-chip">techtimes.com 🟠</span>
+  <span class="src-chip">hackernoon.com 🟠</span>
+  <span class="src-chip">aiweekly.co 🟠</span>
+</div>
+
+<footer>
+  Brief généré automatiquement le 17 juillet 2026 · Fenêtre : &lt; 24h · Compétence : brief-actu<br>
+  Notification envoyée : oui (mode systématique) — trigger : sortie modèle quasi-frontier (Kimi K3, Moonshot) — priorité : 3
+</footer>
+
+</div>
+</body>
+</html>
